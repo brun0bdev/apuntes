@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>BrunoB — Developer</title>
+		<meta name="description" content="Simple landing page for BrunoB — Developer. Contact, links, and projects." />
+		<meta name="author" content="Bruno B." />
+		<meta name="theme-color" content="#313338" media="(prefers-color-scheme: dark)">
+		<meta name="theme-color" content="#f2f3f5" media="(prefers-color-scheme: light)">
+
+		<!-- Open Graph / Social -->
+		<meta property="og:title" content="BrunoB — Developer" />
+		<meta property="og:description" content="I build simple, fast web experiences." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://brunob.me" />
+		<meta property="og:image" content="" />
+		<meta name="twitter:card" content="summary" />
+
+
+
+		<style>
+					:root {
+						--bg: #f2f3f5;           
+						--fg: #1e1f22;          
+						--muted: #4e5058;        
+						--card: #ffffff;         
+						--accent: #5865F2;       
+						--accent-contrast: #ffffff;
+						--border: #e3e5e8;       
+						--shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+					}
+							:root.dark {
+								--bg: #313338;          
+								--fg: #dbdee1;           
+								--muted: #b5bac1;       
+								--card: #2b2d31;         
+								--accent: #5865F2;      
+								--accent-contrast: #ffffff;
+								--border: #3f4147;  
+								--shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+							}
+					@media (prefers-color-scheme: dark) {
+						:root {
+							--bg: #313338;
+							--fg: #dbdee1;
+							--muted: #b5bac1;
+							--card: #2b2d31;
+							--accent: #5865F2;
+							--accent-contrast: #ffffff;
+							--border: #3f4147;
+							--shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+						}
+					}
+
+			* { box-sizing: border-box; }
+			html, body { height: 100%; }
+					body {
+						margin: 0;
+						font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+						color: var(--fg);
+						background:
+							radial-gradient(900px 500px at -10% -10%, rgba(255, 255, 255, 0.04), transparent 55%),
+							radial-gradient(800px 600px at 110% 0%, rgba(0, 0, 0, 0.08), transparent 60%),
+							var(--bg);
+						line-height: 1.6;
+					}
+
+			.container {
+				max-width: 1024px;
+				margin: 0 auto;
+				padding: 24px;
+			}
+
+			header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 12px 0 0;
+			}
+			.brand {
+				display: inline-flex;
+				align-items: center;
+				gap: 12px;
+				text-decoration: none;
+				color: inherit;
+			}
+					.logo {
+						width: 40px; height: 40px;
+						border-radius: 12px;
+						background: linear-gradient(135deg, #5865F2, #7289da);
+						color: var(--accent-contrast);
+						display: grid; place-items: center;
+						font-weight: 800;
+						box-shadow: var(--shadow);
+					}
+			.brand span { font-weight: 700; letter-spacing: 0.2px; }
+
+			.actions { display: flex; gap: 10px; align-items: center; }
+					.btn, .link {
+				display: inline-flex; align-items: center; gap: 8px;
+						border-radius: 10px; border: 1px solid var(--border);
+						padding: 10px 14px; text-decoration: none; color: inherit;
+						background: var(--card);
+			}
+					.btn.primary { background: var(--accent); color: var(--accent-contrast); border-color: transparent; }
+					.btn:hover, .link:hover { filter: brightness(0.98); transform: translateY(-1px); transition: 150ms; }
+			.icon { width: 18px; height: 18px; }
+
+			main {
+				padding: 56px 0 48px;
+				display: grid; gap: 28px;
+			}
+			h1 {
+				margin: 0;
+				font-size: clamp(28px, 4vw, 40px);
+				line-height: 1.15;
+				letter-spacing: -0.02em;
+			}
+			p.lead { margin: 6px 0 0; color: var(--muted); font-size: clamp(16px, 2.2vw, 18px); }
+
+			.cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+				gap: 16px;
+			}
+					.card {
+						background: var(--card);
+						border: 1px solid var(--border);
+						border-radius: 14px;
+						padding: 16px;
+						box-shadow: var(--shadow);
+					}
+			.card h3 { margin: 0 0 6px; font-size: 18px; }
+			.card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+			footer { border-top: 1px solid var(--border); margin-top: 20px; padding-top: 16px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+			.small { font-size: 13px; }
+
+			.theme-toggle { cursor: pointer; background: transparent; border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; color: inherit; }
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<a class="brand" href="#" aria-label="Home">
+					<span>BrunoB.me</span>
+				</a>
+				<div class="actions">
+					<a class="link" href="https://github.com/brun0bdev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+						<svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.7c0 5.36 3.46 9.9 8.26 11.5.6.1.82-.27.82-.6v-2.1c-3.36.75-4.07-1.47-4.07-1.47-.55-1.42-1.34-1.8-1.34-1.8-1.09-.75.08-.74.08-.74 1.21.09 1.84 1.27 1.84 1.27 1.07 1.86 2.81 1.32 3.5 1.01.11-.8.42-1.32.76-1.63-2.68-.31-5.5-1.38-5.5-6.16 0-1.36.47-2.47 1.25-3.35-.13-.31-.54-1.57.12-3.27 0 0 1.01-.33 3.32 1.27.97-.28 2.01-.42 3.04-.43 1.03.01 2.07.15 3.04.43 2.3-1.6 3.32-1.27 3.32-1.27.66 1.7.25 2.96.12 3.27.78.88 1.25 1.99 1.25 3.35 0 4.79-2.83 5.85-5.52 6.16.43.38.82 1.11.82 2.24v3.33c0 .33.22.71.83.59 4.79-1.6 8.25-6.14 8.25-11.5A11.5 11.5 0 0 0 12 .5Z"/></svg>
+						<span class="small">GitHub</span>
+					</a>
+				</div>
+			</header>
+
+			<main>
+				<div>
+					<h1>BrunoB — Developer</h1>
+					<p class="lead">I build simple, fast web experiences.</p>
+				</div>
+
+				<div class="cta">
+					<a class="btn primary" href="apuntes/index.html">
+						<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+						</svg>
+						View Notes
+					</a>
+				</div>
+
+				<div class="grid">
+					<div class="card">
+						<h3>Programming Notes</h3>
+						<p>Tutorials and concepts about algorithms, data structures, and programming.</p>
+					</div>
+					<div class="card">
+						<h3>Practical Examples</h3>
+						<p>Sample code in multiple languages with detailed explanations.</p>
+					</div>
+					<div class="card">
+						<h3>Complexity Analysis</h3>
+						<p>Time and space complexity analysis with Big O notation.</p>
+					</div>
+				</div>
+			</main>
+
+			<footer>
+				<span class="small">© <span id="year"></span> BrunoB.me</span>
+				<nav class="small" aria-label="Links">
+					<a class="link" href="mailto:info@brunob.dev">Email</a>
+					<a class="link" href="https://github.com/brun0bdev" target="_blank" rel="noopener noreferrer">GitHub</a>
+				</nav>
+			</footer>
+		</div>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Bruno B.",
+				"url": "https://brunob.me",
+				"email": "mailto:contacto@brunob.me",
+				"sameAs": [
+					"https://github.com/BrunoB"
+				]
+			}
+		</script>
+
+	</body>
+	</html>
+

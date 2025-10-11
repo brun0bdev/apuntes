@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Static Arrays — BrunoB Notes</title>
+		<meta name="description" content="Learn about static arrays in typed languages like Java, C++ and C#. Core operations, time complexity, and practical examples." />
+		<meta name="author" content="Bruno B." />
+		<meta name="theme-color" content="#313338" media="(prefers-color-scheme: dark)">
+		<meta name="theme-color" content="#f2f3f5" media="(prefers-color-scheme: light)">
+
+		<meta property="og:title" content="Static Arrays — BrunoB Notes" />
+		<meta property="og:description" content="Learn about static arrays in typed languages like Java, C++ and C#." />
+		<meta property="og:type" content="article" />
+
+		<link rel="stylesheet" href="../../assets/css/article.css">
+
+		<style>
+			:root {
+				--bg: #f2f3f5;           
+				--fg: #1e1f22;          
+				--muted: #4e5058;        
+				--card: #ffffff;         
+				--accent: #5865F2;       
+				--accent-contrast: #ffffff;
+				--border: #e3e5e8;       
+				--shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+			}
+			:root.dark {
+				--bg: #313338;          
+				--fg: #dbdee1;           
+				--muted: #b5bac1;       
+				--card: #2b2d31;         
+				--accent: #5865F2;      
+				--accent-contrast: #ffffff;
+				--border: #3f4147;  
+				--shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--bg: #313338;
+					--fg: #dbdee1;
+					--muted: #b5bac1;
+					--card: #2b2d31;
+					--accent: #5865F2;
+					--accent-contrast: #ffffff;
+					--border: #3f4147;
+					--shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+				}
+			}
+
+			* { box-sizing: border-box; }
+			html, body { height: 100%; }
+			body {
+				margin: 0;
+				font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+				color: var(--fg);
+				background:
+					radial-gradient(900px 500px at -10% -10%, rgba(255, 255, 255, 0.04), transparent 55%),
+					radial-gradient(800px 600px at 110% 0%, rgba(0, 0, 0, 0.08), transparent 60%),
+					var(--bg);
+				line-height: 1.6;
+			}
+
+			.container {
+				max-width: 1024px;
+				margin: 0 auto;
+				padding: 24px;
+			}
+
+			header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 12px 0 0;
+				margin-bottom: 32px;
+			}
+			.brand {
+				display: inline-flex;
+				align-items: center;
+				gap: 12px;
+				text-decoration: none;
+				color: inherit;
+			}
+			.logo {
+				width: 40px; height: 40px;
+				border-radius: 12px;
+				background: linear-gradient(135deg, #5865F2, #7289da);
+				color: var(--accent-contrast);
+				display: grid; place-items: center;
+				font-weight: 800;
+				box-shadow: var(--shadow);
+			}
+			.brand span { font-weight: 700; letter-spacing: 0.2px; }
+
+			.actions { display: flex; gap: 10px; align-items: center; }
+			.btn, .link {
+				display: inline-flex; align-items: center; gap: 8px;
+				border-radius: 10px; border: 1px solid var(--border);
+				padding: 10px 14px; text-decoration: none; color: inherit;
+				background: var(--card);
+			}
+			.btn:hover, .link:hover { filter: brightness(0.98); transform: translateY(-1px); transition: 150ms; }
+			.icon { width: 18px; height: 18px; }
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<a class="brand" href="../../index.html" aria-label="Home">
+					<div class="logo">B</div>
+					<span>BrunoB.me</span>
+				</a>
+				<div class="actions">
+					<a class="link" href="../index.html">
+						<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+						</svg>
+						<span class="small">Notes</span>
+					</a>
+				</div>
+			</header>
+
+			<div class="article-container">
+				<div class="article-header">
+					<h1 class="article-title">Static Arrays</h1>
+					<div class="article-meta">
+						<span>Data Structures</span>
+						<span>•</span>
+						<span>5 min read</span>
+						<span>•</span>
+						<span>Level: Beginner</span>
+					</div>
+				</div>
+
+				<div class="article-content">
+					<p>In statically typed languages like Java, C++ and C#, arrays must have a size and type assigned when initialized. These are known as <strong>static arrays</strong>.</p>
+
+					<p>They’re called static because the size of the array cannot change once declared. And once the array is full, it can’t store additional elements. Some dynamically typed languages like Python and JavaScript don’t have static arrays to begin with. They have an alternative, which we’ll discuss in the next lesson.</p>
+
+					<p>Let’s cover the key array operations and their associated time complexity.</p>
+
+					<h2>Reading from an array</h2>
+					<p>To read an individual element from an array we can choose the position we want to access via an index. Below we’ve initialized an array of size 3 called <code>myArray</code>. We also attempt to access an arbitrary element using the index <code>i</code>.</p>
+
+					<div class="code-section">
+						<div class="code-tabs">
+							<button class="code-tab active" data-lang="cpp">C++</button>
+							<button class="code-tab" data-lang="c">C</button>
+							<button class="code-tab" data-lang="java">Java</button>
+							<button class="code-tab" data-lang="kotlin">Kotlin</button>
+							<button class="code-tab" data-lang="python">Python</button>
+						</div>
+						<div class="code-content active" data-lang="cpp">
+							<pre><code><span class="code-comment">// initialize myArray</span>
+<span class="code-type">int</span> myArray[<span class="code-number">3</span>] = {<span class="code-number">1</span>, <span class="code-number">3</span>, <span class="code-number">5</span>};
+
+<span class="code-comment">// access an arbitrary element, where i is the index of the desired value</span>
+myArray[i];</code></pre>
+						</div>
+						<div class="code-content" data-lang="c">
+							<pre><code><span class="code-comment">// initialize myArray</span>
+<span class="code-type">int</span> myArray[<span class="code-number">3</span>] = {<span class="code-number">1</span>, <span class="code-number">3</span>, <span class="code-number">5</span>};
+
+<span class="code-comment">// access an arbitrary element, where i is the index of the desired value</span>
+myArray[i];</code></pre>
+						</div>
+						<div class="code-content" data-lang="java">
+							<pre><code><span class="code-comment">// initialize myArray</span>
+<span class="code-type">int</span>[] myArray = {<span class="code-number">1</span>, <span class="code-number">3</span>, <span class="code-number">5</span>};
+
+<span class="code-comment">// access an arbitrary element, where i is the index of the desired value</span>
+myArray[i];</code></pre>
+						</div>
+						<div class="code-content" data-lang="kotlin">
+							<pre><code><span class="code-comment">// initialize myArray</span>
+<span class="code-keyword">val</span> myArray = <span class="code-function">intArrayOf</span>(<span class="code-number">1</span>, <span class="code-number">3</span>, <span class="code-number">5</span>)
+
+<span class="code-comment">// access an arbitrary element, where i is the index of the desired value</span>
+myArray[i]</code></pre>
+						</div>
+						<div class="code-content" data-lang="python">
+							<pre><code><span class="code-comment"># initialize my_array</span>
+my_array = [<span class="code-number">1</span>, <span class="code-number">3</span>, <span class="code-number">5</span>]
+
+<span class="code-comment"># access an arbitrary element, where i is the index of the desired value</span>
+my_array[i]</code></pre>
+						</div>
+					</div>
+
+					<div class="article-image">
+						<img src="../../assets/images/array-access-example.avif" alt="Array access example" loading="lazy">
+						<figcaption>Visualizing element access in an array</figcaption>
+					</div>
+
+					<p>Accessing a single element in an array is always instantaneous because each <code>myArray</code> index is mapped to an address in RAM. Regardless of the input array size, the time taken to access a single element is the same. We refer to this operation as <strong>O(1)</strong> in terms of time complexity.</p>
+
+					<div class="note-box">
+						<p>A common confusion is that <strong>O(1)</strong> is always fast. This isn’t necessarily true. There could be 1000 operations and the time complexity could still be <strong>O(1)</strong>. If the number of operations doesn’t grow as the size of the input grows, then it’s <strong>O(1)</strong>.</p>
+					</div>
+
+					<h2>Traversing through an array</h2>
+					<p>We can also read all values in an array by traversing it. Below are examples of how we could iterate through <code>myArray</code> from start to finish using loops.</p>
+
+					<div class="code-section">
+						<div class="code-tabs">
+							<button class="code-tab active" data-lang="cpp">C++</button>
+							<button class="code-tab" data-lang="c">C</button>
+							<button class="code-tab" data-lang="java">Java</button>
+							<button class="code-tab" data-lang="kotlin">Kotlin</button>
+							<button class="code-tab" data-lang="python">Python</button>
+						</div>
+						<div class="code-content active" data-lang="cpp">
+							<pre><code><span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < length; i++) {
+    <span class="code-function">cout</span> << myArray[i];
+}
+
+<span class="code-comment">// OR</span>
+
+<span class="code-type">int</span> i = <span class="code-number">0</span>;
+<span class="code-keyword">while</span> (i < length) {
+    <span class="code-function">cout</span> << myArray[i];
+    i++;
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="c">
+							<pre><code><span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < length; i++) {
+    <span class="code-function">printf</span>(<span class="code-string">"%d "</span>, myArray[i]);
+}
+
+<span class="code-comment">// OR</span>
+
+<span class="code-type">int</span> i = <span class="code-number">0</span>;
+<span class="code-keyword">while</span> (i < length) {
+    <span class="code-function">printf</span>(<span class="code-string">"%d "</span>, myArray[i]);
+    i++;
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="java">
+							<pre><code><span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < length; i++) {
+    System.out.<span class="code-function">println</span>(myArray[i]);
+}
+
+<span class="code-comment">// OR</span>
+
+<span class="code-type">int</span> i = <span class="code-number">0</span>;
+<span class="code-keyword">while</span> (i < length) {
+    System.out.<span class="code-function">println</span>(myArray[i]);
+    i++;
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="kotlin">
+							<pre><code><span class="code-keyword">for</span> (i <span class="code-keyword">in</span> <span class="code-number">0</span> <span class="code-keyword">until</span> length) {
+    <span class="code-function">println</span>(myArray[i])
+}
+
+<span class="code-comment">// OR</span>
+
+<span class="code-keyword">var</span> i = <span class="code-number">0</span>
+<span class="code-keyword">while</span> (i < length) {
+    <span class="code-function">println</span>(myArray[i])
+    i++
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="python">
+							<pre><code><span class="code-keyword">for</span> i <span class="code-keyword">in</span> <span class="code-builtin">range</span>(length):
+    <span class="code-function">print</span>(my_array[i])
+
+<span class="code-comment"># OR</span>
+
+i = <span class="code-number">0</span>
+<span class="code-keyword">while</span> i < length:
+    <span class="code-function">print</span>(my_array[i])
+    i += <span class="code-number">1</span></code></pre>
+						</div>
+					</div>
+					<div class="note-box">
+						<p>The last element in an array is always at index <strong>n-1</strong> where <strong>n</strong> is the size of the array. If our array size is <strong>3</strong>, the last accessible index is <strong>2</strong>.</p>
+					</div>
+					
+
+					<p>To traverse an array of size <strong>n</strong>, the time complexity is <strong>O(n)</strong>. This means the number of operations grows linearly with the size of the array.</p>
+
+					<p>For example, with an array of size 10 we’d perform 10 operations to traverse it; with an array of size 100, we’d perform 100 operations, and so on.</p>
+
+					<h2>Deleting from an array</h2>
+					
+					<h3>Deleting from the end of the array</h3>
+					<p>In statically typed languages, all array indices are filled with 0s or some default value upon initialization, denoting an empty array.</p>
+
+					<p>When we want to remove an element at the last index of an array, setting its value to 0/null or -1 is the best we can do. This is known as a <strong>soft delete</strong>. The element isn’t being “deleted” per se, but overwritten with a value that denotes an empty slot. We’d also reduce the length by 1 since we have one fewer element after deletion.</p>
+
+					<div class="code-section">
+						<div class="code-tabs">
+							<button class="code-tab active" data-lang="cpp">C++</button>
+							<button class="code-tab" data-lang="c">C</button>
+							<button class="code-tab" data-lang="java">Java</button>
+							<button class="code-tab" data-lang="kotlin">Kotlin</button>
+							<button class="code-tab" data-lang="python">Python</button>
+						</div>
+						<div class="code-content active" data-lang="cpp">
+							<pre><code><span class="code-comment">// Remove from the last position in the array if the array
+// is not empty (i.e. length is non-zero).</span>
+<span class="code-type">void</span> <span class="code-function">removeEnd</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> length) {
+    <span class="code-keyword">if</span> (length > <span class="code-number">0</span>) {
+        <span class="code-comment">// Overwrite last element with some default value.
+        // We would also consider the length to be decreased by 1.</span>
+        arr[length - <span class="code-number">1</span>] = <span class="code-number">0</span>;
+    }
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="c">
+							<pre><code><span class="code-comment">// Remove from the last position in the array if the array
+// is not empty (i.e. length is non-zero).</span>
+<span class="code-type">void</span> <span class="code-function">removeEnd</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> length) {
+    <span class="code-keyword">if</span> (length > <span class="code-number">0</span>) {
+        <span class="code-comment">// Overwrite last element with some default value.
+        // We would also consider the length to be decreased by 1.</span>
+        arr[length - <span class="code-number">1</span>] = <span class="code-number">0</span>;
+    }
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="java">
+							<pre><code><span class="code-comment">// Remove from the last position in the array if the array
+// is not empty (i.e. length is non-zero).</span>
+<span class="code-keyword">public</span> <span class="code-type">void</span> <span class="code-function">removeEnd</span>(<span class="code-type">int</span>[] arr, <span class="code-type">int</span> length) {
+    <span class="code-keyword">if</span> (length > <span class="code-number">0</span>) {
+        <span class="code-comment">// Overwrite last element with some default value.
+        // We would also consider the length to be decreased by 1.</span>
+        arr[length - <span class="code-number">1</span>] = <span class="code-number">0</span>;
+    }
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="kotlin">
+							<pre><code><span class="code-comment">// Remove from the last position in the array if the array
+// is not empty (i.e. length is non-zero).</span>
+<span class="code-keyword">fun</span> <span class="code-function">removeEnd</span>(arr: <span class="code-type">IntArray</span>, length: <span class="code-type">Int</span>) {
+    <span class="code-keyword">if</span> (length > <span class="code-number">0</span>) {
+        <span class="code-comment">// Overwrite last element with some default value.
+        // We would also consider the length to be decreased by 1.</span>
+        arr[length - <span class="code-number">1</span>] = <span class="code-number">0</span>
+    }
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="python">
+							<pre><code><span class="code-comment"># Remove from the last position in the array if the array
+# is not empty (i.e. length is non-zero).</span>
+<span class="code-keyword">def</span> <span class="code-function">remove_end</span>(arr, length):
+    <span class="code-keyword">if</span> length > <span class="code-number">0</span>:
+        <span class="code-comment"># In Python, we can use pop() or set to None
+        # We would also consider the length to be decreased by 1.</span>
+        arr[length - <span class="code-number">1</span>] = <span class="code-keyword">None</span></code></pre>
+						</div>
+					</div>
+
+					<div class="article-image">
+						<img src="../../assets/images/deletion-at-end.avif" alt="Deletion at the end of the array" loading="lazy">
+						<figcaption>6 is removed/overwritten by 0 or -1 to denote it no longer exists. The length also decreases by 1.</figcaption>
+					</div>
+
+					<h3>Deleting at an ith index</h3>
+					<p>If instead of deleting at the end we wanted to delete an element at an arbitrary index <strong>i</strong>, would we be able to do this in <strong>O(1)</strong>?</p>
+
+					<p>We could naively replace it with a 0, but that would break the contiguous nature of our array. Note that deleting from the end of an array doesn’t make it non-contiguous, but deleting from the middle does.</p>
+
+					<p>A better approach would be the following:</p>
+					<ol>
+						<li>We’re given the deletion index <strong>i</strong>.</li>
+						<li>Iterate starting from <strong>i + 1</strong> to the end of the array.</li>
+						<li>Shift each element one position to the left.</li>
+						<li>(Optional) Replace the last element with 0 or null to mark it as empty, and decrement the length by 1.</li>
+					</ol>
+
+					<div class="code-section">
+						<div class="code-tabs">
+							<button class="code-tab active" data-lang="cpp">C++</button>
+							<button class="code-tab" data-lang="c">C</button>
+							<button class="code-tab" data-lang="java">Java</button>
+							<button class="code-tab" data-lang="kotlin">Kotlin</button>
+							<button class="code-tab" data-lang="python">Python</button>
+						</div>
+						<div class="code-content active" data-lang="cpp">
+							<pre><code><span class="code-comment">// Remove value at index i before shifting elements to the left.
+// Assuming i is a valid index.</span>
+<span class="code-type">void</span> <span class="code-function">removeMiddle</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> i, <span class="code-type">int</span> length) {
+    <span class="code-comment">// Shift starting from i + 1 to end.</span>
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> index = i + <span class="code-number">1</span>; index < length; index++) {
+        arr[index - <span class="code-number">1</span>] = arr[index];
+    }
+    <span class="code-comment">// No need to 'remove' arr[i], since we already shifted</span>
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="c">
+							<pre><code><span class="code-comment">// Remove value at index i before shifting elements to the left.
+// Assuming i is a valid index.</span>
+<span class="code-type">void</span> <span class="code-function">removeMiddle</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> i, <span class="code-type">int</span> length) {
+    <span class="code-comment">// Shift starting from i + 1 to end.</span>
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> index = i + <span class="code-number">1</span>; index < length; index++) {
+        arr[index - <span class="code-number">1</span>] = arr[index];
+    }
+    <span class="code-comment">// No need to 'remove' arr[i], since we already shifted</span>
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="java">
+							<pre><code><span class="code-comment">// Remove value at index i before shifting elements to the left.
+// Assuming i is a valid index.</span>
+<span class="code-keyword">public</span> <span class="code-type">void</span> <span class="code-function">removeMiddle</span>(<span class="code-type">int</span>[] arr, <span class="code-type">int</span> i, <span class="code-type">int</span> length) {
+    <span class="code-comment">// Shift starting from i + 1 to end.</span>
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> index = i + <span class="code-number">1</span>; index < length; index++) {
+        arr[index - <span class="code-number">1</span>] = arr[index];
+    }
+    <span class="code-comment">// No need to 'remove' arr[i], since we already shifted</span>
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="kotlin">
+							<pre><code><span class="code-comment">// Remove value at index i before shifting elements to the left.
+// Assuming i is a valid index.</span>
+<span class="code-keyword">fun</span> <span class="code-function">removeMiddle</span>(arr: <span class="code-type">IntArray</span>, i: <span class="code-type">Int</span>, length: <span class="code-type">Int</span>) {
+    <span class="code-comment">// Shift starting from i + 1 to end.</span>
+    <span class="code-keyword">for</span> (index <span class="code-keyword">in</span> i + <span class="code-number">1</span> <span class="code-keyword">until</span> length) {
+        arr[index - <span class="code-number">1</span>] = arr[index]
+    }
+    <span class="code-comment">// No need to 'remove' arr[i], since we already shifted</span>
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="python">
+							<pre><code><span class="code-comment"># Remove value at index i before shifting elements to the left.
+# Assuming i is a valid index.</span>
+<span class="code-keyword">def</span> <span class="code-function">remove_middle</span>(arr, i, length):
+    <span class="code-comment"># Shift starting from i + 1 to end.</span>
+    <span class="code-keyword">for</span> index <span class="code-keyword">in</span> <span class="code-builtin">range</span>(i + <span class="code-number">1</span>, length):
+        arr[index - <span class="code-number">1</span>] = arr[index]
+    <span class="code-comment"># No need to 'remove' arr[i], since we already shifted</span></code></pre>
+						</div>
+					</div>
+
+					<div class="article-image">
+						<img src="../../assets/images/removal-0th-index.avif" alt="Deletion at a specific index" loading="lazy">
+						<figcaption>Deleting at index 0 requires shifting all elements</figcaption>
+					</div>
+
+					<p>The worst case would be needing to shift all elements to the left. This would occur if the target index is the first index of the array. Therefore, the above code is <strong>O(n)</strong>.</p>
+
+					<h2>Insertion</h2>
+					
+					<h3>Inserting at the end</h3>
+					<p>If we want to insert an element at the end of the array, we can simply insert it at the next open position which will be at index <code>length</code> where <code>length</code> is the number of elements in the array.</p>
+
+					<div class="code-section">
+						<div class="code-tabs">
+							<button class="code-tab active" data-lang="cpp">C++</button>
+							<button class="code-tab" data-lang="c">C</button>
+							<button class="code-tab" data-lang="java">Java</button>
+							<button class="code-tab" data-lang="kotlin">Kotlin</button>
+							<button class="code-tab" data-lang="python">Python</button>
+						</div>
+						<div class="code-content active" data-lang="cpp">
+							<pre><code><span class="code-comment">// Insert n into arr at the next open position.
+// Length is the number of 'real' values in arr, and capacity
+// is the size (aka memory allocated for the fixed size array).</span>
+<span class="code-type">void</span> <span class="code-function">insertEnd</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> n, <span class="code-type">int</span> length, <span class="code-type">int</span> capacity) {
+    <span class="code-keyword">if</span> (length < capacity) {
+        arr[length] = n;
+    }
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="c">
+							<pre><code><span class="code-comment">// Insert n into arr at the next open position.
+// Length is the number of 'real' values in arr, and capacity
+// is the size (aka memory allocated for the fixed size array).</span>
+<span class="code-type">void</span> <span class="code-function">insertEnd</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> n, <span class="code-type">int</span> length, <span class="code-type">int</span> capacity) {
+    <span class="code-keyword">if</span> (length < capacity) {
+        arr[length] = n;
+    }
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="java">
+							<pre><code><span class="code-comment">// Insert n into arr at the next open position.
+// Length is the number of 'real' values in arr, and capacity
+// is the size (aka memory allocated for the fixed size array).</span>
+<span class="code-keyword">public</span> <span class="code-type">void</span> <span class="code-function">insertEnd</span>(<span class="code-type">int</span>[] arr, <span class="code-type">int</span> n, <span class="code-type">int</span> length, <span class="code-type">int</span> capacity) {
+    <span class="code-keyword">if</span> (length < capacity) {
+        arr[length] = n;
+    }
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="kotlin">
+							<pre><code><span class="code-comment">// Insert n into arr at the next open position.
+// Length is the number of 'real' values in arr, and capacity
+// is the size (aka memory allocated for the fixed size array).</span>
+<span class="code-keyword">fun</span> <span class="code-function">insertEnd</span>(arr: <span class="code-type">IntArray</span>, n: <span class="code-type">Int</span>, length: <span class="code-type">Int</span>, capacity: <span class="code-type">Int</span>) {
+    <span class="code-keyword">if</span> (length < capacity) {
+        arr[length] = n
+    }
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="python">
+							<pre><code><span class="code-comment"># Insert n into arr at the next open position.
+# Length is the number of 'real' values in arr, and capacity
+# is the size (aka memory allocated for the fixed size array).</span>
+<span class="code-keyword">def</span> <span class="code-function">insert_end</span>(arr, n, length, capacity):
+    <span class="code-keyword">if</span> length < capacity:
+        arr[length] = n</code></pre>
+						</div>
+					</div>
+
+					<p>Since we’re writing a single value to the array, the time complexity is <strong>O(1)</strong>.</p>
+
+					<div class="note-box">
+						<p><strong>Note:</strong> <code>length</code> is the number of elements inside the array, while <code>capacity</code> refers to the maximum number of elements the array can hold.</p>
+					</div>
+
+					<h3>Inserting at the ith index</h3>
+					<p>Inserting at an arbitrary index <strong>i</strong> is more complex since we might be inserting in the middle of the array.</p>
+
+					<p>Consider the array [4, 5, 6]. If we need to insert at index i = 1, or i = 0, we can’t overwrite the original value because we’d lose it. Instead, we need to shift all values, starting at index <strong>i</strong>, one position to the right.</p>
+
+					<div class="code-section">
+						<div class="code-tabs">
+							<button class="code-tab active" data-lang="cpp">C++</button>
+							<button class="code-tab" data-lang="c">C</button>
+							<button class="code-tab" data-lang="java">Java</button>
+							<button class="code-tab" data-lang="kotlin">Kotlin</button>
+							<button class="code-tab" data-lang="python">Python</button>
+						</div>
+						<div class="code-content active" data-lang="cpp">
+							<pre><code><span class="code-comment">// Insert n into index i after shifting elements to the right.
+// Assuming i is a valid index and arr is not full.</span>
+<span class="code-type">void</span> <span class="code-function">insertMiddle</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> i, <span class="code-type">int</span> n, <span class="code-type">int</span> length) {
+    <span class="code-comment">// Shift starting from the end to i.</span>
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> index = length - <span class="code-number">1</span>; index >= i; index--) {
+        arr[index + <span class="code-number">1</span>] = arr[index];
+    }
+    <span class="code-comment">// Insert at i</span>
+    arr[i] = n;
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="c">
+							<pre><code><span class="code-comment">// Insert n into index i after shifting elements to the right.
+// Assuming i is a valid index and arr is not full.</span>
+<span class="code-type">void</span> <span class="code-function">insertMiddle</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> i, <span class="code-type">int</span> n, <span class="code-type">int</span> length) {
+    <span class="code-comment">// Shift starting from the end to i.</span>
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> index = length - <span class="code-number">1</span>; index >= i; index--) {
+        arr[index + <span class="code-number">1</span>] = arr[index];
+    }
+    <span class="code-comment">// Insert at i</span>
+    arr[i] = n;
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="java">
+							<pre><code><span class="code-comment">// Insert n into index i after shifting elements to the right.
+// Assuming i is a valid index and arr is not full.</span>
+<span class="code-keyword">public</span> <span class="code-type">void</span> <span class="code-function">insertMiddle</span>(<span class="code-type">int</span>[] arr, <span class="code-type">int</span> i, <span class="code-type">int</span> n, <span class="code-type">int</span> length) {
+    <span class="code-comment">// Shift starting from the end to i.</span>
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> index = length - <span class="code-number">1</span>; index >= i; index--) {
+        arr[index + <span class="code-number">1</span>] = arr[index];
+    }
+    <span class="code-comment">// Insert at i</span>
+    arr[i] = n;
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="kotlin">
+							<pre><code><span class="code-comment">// Insert n into index i after shifting elements to the right.
+// Assuming i is a valid index and arr is not full.</span>
+<span class="code-keyword">fun</span> <span class="code-function">insertMiddle</span>(arr: <span class="code-type">IntArray</span>, i: <span class="code-type">Int</span>, n: <span class="code-type">Int</span>, length: <span class="code-type">Int</span>) {
+    <span class="code-comment">// Shift starting from the end to i.</span>
+    <span class="code-keyword">for</span> (index <span class="code-keyword">in</span> length - <span class="code-number">1</span> <span class="code-keyword">downTo</span> i) {
+        arr[index + <span class="code-number">1</span>] = arr[index]
+    }
+    <span class="code-comment">// Insert at i</span>
+    arr[i] = n
+}</code></pre>
+						</div>
+						<div class="code-content" data-lang="python">
+							<pre><code><span class="code-comment"># Insert n into index i after shifting elements to the right.
+# Assuming i is a valid index and arr is not full.</span>
+<span class="code-keyword">def</span> <span class="code-function">insert_middle</span>(arr, i, n, length):
+    <span class="code-comment"># Shift starting from the end to i.</span>
+    <span class="code-keyword">for</span> index <span class="code-keyword">in</span> <span class="code-builtin">range</span>(length - <span class="code-number">1</span>, i - <span class="code-number">1</span>, -<span class="code-number">1</span>):
+        arr[index + <span class="code-number">1</span>] = arr[index]
+    <span class="code-comment"># Insert at i</span>
+    arr[i] = n</code></pre>
+						</div>
+					</div>
+
+					<div class="article-image">
+						<img src="../../assets/images/insertion-at-i.avif" alt="Insertion at a specific index" loading="lazy">
+						<figcaption>Inserting 8 at index 1 in the array [4, 5, 6]. Shifting happens before insertion to ensure values aren’t overwritten.</figcaption>
+					</div>
+
+					<h2>Time Complexity</h2>
+					<div class="complexity-table">
+						<table>
+							<thead>
+								<tr>
+									<th>Operation</th>
+									<th>Big-O Time</th>
+									<th>Notes</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Reading</td>
+									<td><strong>O(1)</strong></td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Insertion</td>
+									<td><strong>O(n)*</strong></td>
+									<td>If inserting at the end of the array, <strong>O(1)</strong></td>
+								</tr>
+								<tr>
+									<td>Deletion</td>
+									<td><strong>O(n)*</strong></td>
+									<td>If deleting from the end of the array, <strong>O(1)</strong></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h2>Conclusion</h2>
+					<p><strong>Static arrays</strong> are a fundamental data structure with well-defined operations and predictable complexities:</p>
+					
+					<ul>
+						<li><strong>Access:</strong> O(1) — Instant via indexing</li>
+						<li><strong>Insert/Delete at end:</strong> O(1) — Efficient</li>
+						<li><strong>Insert/Delete in the middle:</strong> O(n) — Requires shifting elements</li>
+					</ul>
+
+					<p>Mastering these operations is essential for more advanced algorithms and dynamic data structures. Understanding when and how to use each operation will help you write more efficient code and solve problems optimally.</p>
+				</div>
+
+				<div class="article-nav">
+					<a href="../index.html" class="nav-link">
+						<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+						</svg>
+						Back to Notes
+					</a>
+					<a href="dynamic-arrays.html" class="nav-link">
+						Dynamic Arrays
+						<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M5 17h4V7H5v4.59l3.58-3.58L10 6l6 6-6 6-1.41-1.41L5 13.41V17z"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// Code tabs functionality
+			const codeTabs = document.querySelectorAll('.code-tab');
+			const codeContents = document.querySelectorAll('.code-content');
+
+			codeTabs.forEach(tab => {
+				tab.addEventListener('click', function() {
+					const targetLang = this.dataset.lang;
+					const codeSection = this.closest('.code-section');
+					
+					// Remove active class from all tabs and contents in this section
+					codeSection.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+					codeSection.querySelectorAll('.code-content').forEach(c => c.classList.remove('active'));
+					
+					// Add active class to clicked tab and corresponding content
+					this.classList.add('active');
+					codeSection.querySelector(`[data-lang="${targetLang}"].code-content`).classList.add('active');
+				});
+			});
+		</script>
+	</body>
+</html>
