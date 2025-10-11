@@ -38,6 +38,12 @@
     padding-bottom: 8px;
 }
 
+/* Mirror back-arrow icon for forward navigation */
+.icon.forward {
+    transform: scaleX(-1);
+    transform-origin: center;
+}
+
 .article-content h3 {
     font-size: 20px;
     margin: 24px 0 12px;
