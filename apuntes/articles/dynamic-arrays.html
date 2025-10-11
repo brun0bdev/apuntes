@@ -108,7 +108,6 @@
 		<div class="container">
 			<header>
 				<a class="brand" href="../../index.html" aria-label="Home">
-					<div class="logo">B</div>
 					<span>BrunoB.me</span>
 				</a>
 				<div class="actions">
@@ -145,23 +144,12 @@
 
 					<div class="code-section">
 						<div class="code-tabs">
-							<button class="code-tab active" data-lang="cpp">C++</button>
-							<button class="code-tab" data-lang="c">C</button>
+							<button class="code-tab active" data-lang="c">C</button>
 							<button class="code-tab" data-lang="java">Java</button>
 							<button class="code-tab" data-lang="kotlin">Kotlin</button>
 							<button class="code-tab" data-lang="python">Python</button>
 						</div>
-						<div class="code-content active" data-lang="cpp">
-							<pre><code><span class="code-comment">// Insert n in the last position of the array</span>
-<span class="code-keyword">void</span> <span class="code-function">pushback</span>(<span class="code-type">int</span> n) {
-    <span class="code-keyword">if</span> (length == capacity) {
-        <span class="code-function">resize</span>();
-    }
-    <span class="code-comment">// insert at next empty position</span>
-    arr[length++] = n;
-}</code></pre>
-						</div>
-						<div class="code-content" data-lang="c">
+						<div class="code-content active" data-lang="c">
 							<pre><code><span class="code-comment">// Insert n in the last position of the array</span>
 <span class="code-keyword">void</span> <span class="code-function">pushback</span>(<span class="code-type">int</span> n) {
     <span class="code-keyword">if</span> (length == capacity) {
@@ -207,28 +195,12 @@
 
 					<div class="code-section">
 						<div class="code-tabs">
-							<button class="code-tab active" data-lang="cpp">C++</button>
-							<button class="code-tab" data-lang="c">C</button>
+							<button class="code-tab active" data-lang="c">C</button>
 							<button class="code-tab" data-lang="java">Java</button>
 							<button class="code-tab" data-lang="kotlin">Kotlin</button>
 							<button class="code-tab" data-lang="python">Python</button>
 						</div>
-						<div class="code-content active" data-lang="cpp">
-							<pre><code><span class="code-keyword">void</span> <span class="code-function">resize</span>() {
-    <span class="code-comment">// Create new array of double capacity</span>
-    capacity = <span class="code-number">2</span> * capacity;
-    <span class="code-type">int</span> *newArr = <span class="code-keyword">new</span> <span class="code-type">int</span>[capacity];
-
-    <span class="code-comment">// Copy elements to newArr</span>
-    <span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < length; i++)
-    {
-        newArr[i] = arr[i];
-    }
-    arr = newArr;
-    <span class="code-comment">// Normally we would use smart pointers or free the old arr's memory</span>
-}</code></pre>
-						</div>
-						<div class="code-content" data-lang="c">
+						<div class="code-content active" data-lang="c">
 							<pre><code><span class="code-keyword">void</span> <span class="code-function">resize</span>() {
     <span class="code-comment">// Create new array of double capacity</span>
     capacity = <span class="code-number">2</span> * capacity;

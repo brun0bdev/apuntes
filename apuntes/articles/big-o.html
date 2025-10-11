@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Big O Notation — BrunoB Notes</title>
+    <meta name="description" content="A practical guide to Big O notation (time complexity): what it is, how to read it, common growth rates, examples, and a quick cheat sheet." />
+    <meta name="author" content="Bruno B." />
+    <meta name="theme-color" content="#313338" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f2f3f5" media="(prefers-color-scheme: light)">
+
+    <meta property="og:title" content="Big O Notation — BrunoB Notes" />
+    <meta property="og:description" content="Understand Big O notation with examples and a concise cheat sheet." />
+    <meta property="og:type" content="article" />
+
+    <link rel="stylesheet" href="../../assets/css/article.css">
+
+    <style>
+      :root {
+        --bg: #f2f3f5;           
+        --fg: #1e1f22;          
+        --muted: #4e5058;        
+        --card: #ffffff;         
+        --accent: #5865F2;       
+        --accent-contrast: #ffffff;
+        --border: #e3e5e8;       
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      }
+      :root.dark {
+        --bg: #313338;          
+        --fg: #dbdee1;           
+        --muted: #b5bac1;       
+        --card: #2b2d31;         
+        --accent: #5865F2;      
+        --accent-contrast: #ffffff;
+        --border: #3f4147;  
+        --shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #313338;
+          --fg: #dbdee1;
+          --muted: #b5bac1;
+          --card: #2b2d31;
+          --accent: #5865F2;
+          --accent-contrast: #ffffff;
+          --border: #3f4147;
+          --shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--fg);
+        background:
+          radial-gradient(900px 500px at -10% -10%, rgba(255, 255, 255, 0.04), transparent 55%),
+          radial-gradient(800px 600px at 110% 0%, rgba(0, 0, 0, 0.08), transparent 60%),
+          var(--bg);
+        line-height: 1.6;
+      }
+
+      .container { max-width: 1024px; margin: 0 auto; padding: 24px; }
+      header { display: flex; align-items: center; justify-content: space-between; padding: 12px 0 0; margin-bottom: 32px; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+      .logo { width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, #5865F2, #7289da); color: var(--accent-contrast); display: grid; place-items: center; font-weight: 800; box-shadow: var(--shadow); }
+      .brand span { font-weight: 700; letter-spacing: 0.2px; }
+      .actions { display: flex; gap: 10px; align-items: center; }
+      .btn, .link { display: inline-flex; align-items: center; gap: 8px; border-radius: 10px; border: 1px solid var(--border); padding: 10px 14px; text-decoration: none; color: inherit; background: var(--card); }
+      .btn:hover, .link:hover { filter: brightness(0.98); transform: translateY(-1px); transition: 150ms; }
+      .icon { width: 18px; height: 18px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a class="brand" href="../../index.html" aria-label="Home">
+          <span>BrunoB.me</span>
+        </a>
+        <div class="actions">
+          <a class="link" href="../index.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+            </svg>
+            <span class="small">Notes</span>
+          </a>
+        </div>
+      </header>
+
+      <div class="article-container">
+        <div class="article-header">
+          <h1 class="article-title">Big O Notation (Time Complexity)</h1>
+          <div class="article-meta">
+            <span>Complexity</span>
+            <span>•</span>
+            <span>6 min read</span>
+            <span>•</span>
+            <span>Level: Beginner</span>
+          </div>
+        </div>
+
+        <div class="article-content">
+          <p><strong>Big O notation</strong> describes how the runtime or space usage of an algorithm grows with the size of its input. It’s a language-agnostic way to compare solutions and reason about performance at scale.</p>
+
+          <h2>Why it matters</h2>
+          <ul>
+            <li>Predict performance as inputs grow</li>
+            <li>Choose data structures and algorithms wisely</li>
+            <li>Focus on scalability, not exact milliseconds</li>
+          </ul>
+
+          <h2>How to read Big O</h2>
+          <ul>
+            <li><strong>Drop constants:</strong> O(2n) → O(n), O(n + 100) → O(n)</li>
+            <li><strong>Keep the dominant term:</strong> O(n<sup>2</sup> + n) → O(n<sup>2</sup>)</li>
+            <li><strong>Worst vs Average vs Best:</strong> Unless specified, Big O often refers to the <em>worst-case</em>.</li>
+            <li><strong>Amortized:</strong> Average cost over many operations (e.g., dynamic array push)</li>
+          </ul>
+
+          <h2>Common growth rates</h2>
+          <div class="complexity-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Big O</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Constant</td><td><strong>O(1)</strong></td><td>Array indexing by position</td></tr>
+                <tr><td>Logarithmic</td><td><strong>O(log n)</strong></td><td>Binary search in a sorted array</td></tr>
+                <tr><td>Linear</td><td><strong>O(n)</strong></td><td>Traverse all elements</td></tr>
+                <tr><td>Linearithmic</td><td><strong>O(n log n)</strong></td><td>Merge sort, quicksort (avg)</td></tr>
+                <tr><td>Quadratic</td><td><strong>O(n<sup>2</sup>)</strong></td><td>Nested loops over same input</td></tr>
+                <tr><td>Linear Two Variables</td><td><strong>O(N*M)</strong></td><td>2D matrix traversal</td></tr>
+                <tr><td>Exponential</td><td><strong>O(2<sup>n</sup>)</strong></td><td>Naive subset generation</td></tr>
+                <tr><td>Factorial</td><td><strong>O(n!)</strong></td><td>Permutations of n items</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Quick examples</h2>
+          <ul>
+            <li><strong>Array access:</strong> Read by index → O(1)</li>
+            <li><strong>Scan array:</strong> Sum all values → O(n)</li>
+            <li><strong>Binary search:</strong> Halve the search space each step → O(log n)</li>
+            <li><strong>Merge sort:</strong> Divide + merge → O(n log n)</li>
+            <li><strong>Two nested loops:</strong> Compare each pair → O(n<sup>2</sup>)</li>
+          </ul>
+
+          <div class="note-box">
+            <p><strong>Amortized O(1):</strong> Appending to a dynamic array is O(1) on average, even though occasional resizes take O(n). The average cost over many appends is constant.</p>
+          </div>
+
+          <h2>Visual examples</h2>
+          <p>Here's how different time complexities look in action:</p>
+
+          <h3>O(1) - Constant Time</h3>
+          <div class="article-image">
+            <img src="../../assets/images/constant.gif" alt="O(1) Constant time complexity visualization" loading="lazy">
+            <figcaption>Array access by index - always takes the same time regardless of array size</figcaption>
+          </div>
+
+          <div class="code-section">
+            <div class="code-tabs">
+              <button class="code-tab active" data-lang="c">C</button>
+              <button class="code-tab" data-lang="java">Java</button>
+              <button class="code-tab" data-lang="python">Python</button>
+            </div>
+            <div class="code-content active" data-lang="c">
+              <pre><code><span class="code-comment">// Accessing array element by index - O(1)</span>
+<span class="code-type">int</span> <span class="code-function">getElement</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> index) {
+    <span class="code-keyword">return</span> arr[index];
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="java">
+              <pre><code><span class="code-comment">// Accessing array element by index - O(1)</span>
+<span class="code-keyword">public</span> <span class="code-type">int</span> <span class="code-function">getElement</span>(<span class="code-type">int</span>[] arr, <span class="code-type">int</span> index) {
+    <span class="code-keyword">return</span> arr[index];
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="python">
+              <pre><code><span class="code-comment"># Accessing array element by index - O(1)</span>
+<span class="code-keyword">def</span> <span class="code-function">get_element</span>(arr, index):
+    <span class="code-keyword">return</span> arr[index]</code></pre>
+            </div>
+          </div>
+
+          <h3>O(log n) - Logarithmic Time</h3>
+          <div class="article-image">
+            <img src="../../assets/images/logn.gif" alt="O(log n) Logarithmic time complexity visualization" loading="lazy">
+            <figcaption>Binary search - eliminates half the search space with each step</figcaption>
+          </div>
+
+          <div class="code-section">
+            <div class="code-tabs">
+              <button class="code-tab active" data-lang="c">C</button>
+              <button class="code-tab" data-lang="java">Java</button>
+              <button class="code-tab" data-lang="python">Python</button>
+            </div>
+            <div class="code-content active" data-lang="c">
+              <pre><code><span class="code-comment">// Binary search in sorted array - O(log n)</span>
+<span class="code-type">int</span> <span class="code-function">binarySearch</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> size, <span class="code-type">int</span> target) {
+    <span class="code-type">int</span> left = <span class="code-number">0</span>, right = size - <span class="code-number">1</span>;
+    <span class="code-keyword">while</span> (left <= right) {
+        <span class="code-type">int</span> mid = left + (right - left) / <span class="code-number">2</span>;
+        <span class="code-keyword">if</span> (arr[mid] == target) <span class="code-keyword">return</span> mid;
+        <span class="code-keyword">if</span> (arr[mid] < target) left = mid + <span class="code-number">1</span>;
+        <span class="code-keyword">else</span> right = mid - <span class="code-number">1</span>;
+    }
+    <span class="code-keyword">return</span> -<span class="code-number">1</span>;
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="java">
+              <pre><code><span class="code-comment">// Binary search in sorted array - O(log n)</span>
+<span class="code-keyword">public</span> <span class="code-type">int</span> <span class="code-function">binarySearch</span>(<span class="code-type">int</span>[] arr, <span class="code-type">int</span> target) {
+    <span class="code-type">int</span> left = <span class="code-number">0</span>, right = arr.length - <span class="code-number">1</span>;
+    <span class="code-keyword">while</span> (left <= right) {
+        <span class="code-type">int</span> mid = left + (right - left) / <span class="code-number">2</span>;
+        <span class="code-keyword">if</span> (arr[mid] == target) <span class="code-keyword">return</span> mid;
+        <span class="code-keyword">if</span> (arr[mid] < target) left = mid + <span class="code-number">1</span>;
+        <span class="code-keyword">else</span> right = mid - <span class="code-number">1</span>;
+    }
+    <span class="code-keyword">return</span> -<span class="code-number">1</span>;
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="python">
+              <pre><code><span class="code-comment"># Binary search in sorted array - O(log n)</span>
+<span class="code-keyword">def</span> <span class="code-function">binary_search</span>(arr, target):
+    left, right = <span class="code-number">0</span>, <span class="code-builtin">len</span>(arr) - <span class="code-number">1</span>
+    <span class="code-keyword">while</span> left <= right:
+        mid = left + (right - left) // <span class="code-number">2</span>
+        <span class="code-keyword">if</span> arr[mid] == target:
+            <span class="code-keyword">return</span> mid
+        <span class="code-keyword">elif</span> arr[mid] < target:
+            left = mid + <span class="code-number">1</span>
+        <span class="code-keyword">else</span>:
+            right = mid - <span class="code-number">1</span>
+    <span class="code-keyword">return</span> -<span class="code-number">1</span></code></pre>
+            </div>
+          </div>
+
+          <h3>O(n) - Linear Time</h3>
+          <div class="article-image">
+            <img src="../../assets/images/linear.gif" alt="O(n) Linear time complexity visualization" loading="lazy">
+            <figcaption>Array traversal - time grows linearly with input size</figcaption>
+          </div>
+
+          <div class="code-section">
+            <div class="code-tabs">
+              <button class="code-tab active" data-lang="c">C</button>
+              <button class="code-tab" data-lang="java">Java</button>
+              <button class="code-tab" data-lang="python">Python</button>
+            </div>
+            <div class="code-content active" data-lang="c">
+              <pre><code><span class="code-comment">// Linear search through array - O(n)</span>
+<span class="code-type">int</span> <span class="code-function">linearSearch</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> size, <span class="code-type">int</span> target) {
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < size; i++) {
+        <span class="code-keyword">if</span> (arr[i] == target) {
+            <span class="code-keyword">return</span> i;
+        }
+    }
+    <span class="code-keyword">return</span> -<span class="code-number">1</span>;
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="java">
+              <pre><code><span class="code-comment">// Linear search through array - O(n)</span>
+<span class="code-keyword">public</span> <span class="code-type">int</span> <span class="code-function">linearSearch</span>(<span class="code-type">int</span>[] arr, <span class="code-type">int</span> target) {
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < arr.length; i++) {
+        <span class="code-keyword">if</span> (arr[i] == target) {
+            <span class="code-keyword">return</span> i;
+        }
+    }
+    <span class="code-keyword">return</span> -<span class="code-number">1</span>;
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="python">
+              <pre><code><span class="code-comment"># Linear search through array - O(n)</span>
+<span class="code-keyword">def</span> <span class="code-function">linear_search</span>(arr, target):
+    <span class="code-keyword">for</span> i <span class="code-keyword">in</span> <span class="code-builtin">range</span>(<span class="code-builtin">len</span>(arr)):
+        <span class="code-keyword">if</span> arr[i] == target:
+            <span class="code-keyword">return</span> i
+    <span class="code-keyword">return</span> -<span class="code-number">1</span></code></pre>
+            </div>
+          </div>
+
+          <h3>O(n log n) - Linearithmic Time</h3>
+          <div class="article-image">
+            <img src="../../assets/images/nlogn.gif" alt="O(n log n) Linearithmic time complexity visualization" loading="lazy">
+            <figcaption>Merge sort - divide and conquer approach</figcaption>
+          </div>
+
+          <div class="code-section">
+            <div class="code-tabs">
+              <button class="code-tab active" data-lang="c">C</button>
+              <button class="code-tab" data-lang="java">Java</button>
+              <button class="code-tab" data-lang="python">Python</button>
+            </div>
+            <div class="code-content active" data-lang="c">
+              <pre><code><span class="code-comment">// Merge sort - O(n log n)</span>
+<span class="code-type">void</span> <span class="code-function">mergeSort</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> left, <span class="code-type">int</span> right) {
+    <span class="code-keyword">if</span> (left < right) {
+        <span class="code-type">int</span> mid = left + (right - left) / <span class="code-number">2</span>;
+        <span class="code-function">mergeSort</span>(arr, left, mid);
+        <span class="code-function">mergeSort</span>(arr, mid + <span class="code-number">1</span>, right);
+        <span class="code-function">merge</span>(arr, left, mid, right);
+    }
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="java">
+              <pre><code><span class="code-comment">// Merge sort - O(n log n)</span>
+<span class="code-keyword">public</span> <span class="code-type">void</span> <span class="code-function">mergeSort</span>(<span class="code-type">int</span>[] arr, <span class="code-type">int</span> left, <span class="code-type">int</span> right) {
+    <span class="code-keyword">if</span> (left < right) {
+        <span class="code-type">int</span> mid = left + (right - left) / <span class="code-number">2</span>;
+        <span class="code-function">mergeSort</span>(arr, left, mid);
+        <span class="code-function">mergeSort</span>(arr, mid + <span class="code-number">1</span>, right);
+        <span class="code-function">merge</span>(arr, left, mid, right);
+    }
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="python">
+              <pre><code><span class="code-comment"># Merge sort - O(n log n)</span>
+<span class="code-keyword">def</span> <span class="code-function">merge_sort</span>(arr):
+    <span class="code-keyword">if</span> <span class="code-builtin">len</span>(arr) <= <span class="code-number">1</span>:
+        <span class="code-keyword">return</span> arr
+    mid = <span class="code-builtin">len</span>(arr) // <span class="code-number">2</span>
+    left = <span class="code-function">merge_sort</span>(arr[:mid])
+    right = <span class="code-function">merge_sort</span>(arr[mid:])
+    <span class="code-keyword">return</span> <span class="code-function">merge</span>(left, right)</code></pre>
+            </div>
+          </div>
+
+          <h3>O(n²) - Quadratic Time</h3>
+          <div class="article-image">
+            <img src="../../assets/images/n_squared.gif" alt="O(n²) Quadratic time complexity visualization" loading="lazy">
+            <figcaption>Nested loops - comparing each element with every other element</figcaption>
+          </div>
+
+          <div class="code-section">
+            <div class="code-tabs">
+              <button class="code-tab active" data-lang="c">C</button>
+              <button class="code-tab" data-lang="java">Java</button>
+              <button class="code-tab" data-lang="python">Python</button>
+            </div>
+            <div class="code-content active" data-lang="c">
+              <pre><code><span class="code-comment">// Bubble sort - O(n²)</span>
+<span class="code-type">void</span> <span class="code-function">bubbleSort</span>(<span class="code-type">int</span> arr[], <span class="code-type">int</span> n) {
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < n - <span class="code-number">1</span>; i++) {
+        <span class="code-keyword">for</span> (<span class="code-type">int</span> j = <span class="code-number">0</span>; j < n - i - <span class="code-number">1</span>; j++) {
+            <span class="code-keyword">if</span> (arr[j] > arr[j + <span class="code-number">1</span>]) {
+                <span class="code-comment">// Swap elements</span>
+                <span class="code-type">int</span> temp = arr[j];
+                arr[j] = arr[j + <span class="code-number">1</span>];
+                arr[j + <span class="code-number">1</span>] = temp;
+            }
+        }
+    }
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="java">
+              <pre><code><span class="code-comment">// Bubble sort - O(n²)</span>
+<span class="code-keyword">public</span> <span class="code-type">void</span> <span class="code-function">bubbleSort</span>(<span class="code-type">int</span>[] arr) {
+    <span class="code-type">int</span> n = arr.length;
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < n - <span class="code-number">1</span>; i++) {
+        <span class="code-keyword">for</span> (<span class="code-type">int</span> j = <span class="code-number">0</span>; j < n - i - <span class="code-number">1</span>; j++) {
+            <span class="code-keyword">if</span> (arr[j] > arr[j + <span class="code-number">1</span>]) {
+                <span class="code-comment">// Swap elements</span>
+                <span class="code-type">int</span> temp = arr[j];
+                arr[j] = arr[j + <span class="code-number">1</span>];
+                arr[j + <span class="code-number">1</span>] = temp;
+            }
+        }
+    }
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="python">
+              <pre><code><span class="code-comment"># Bubble sort - O(n²)</span>
+<span class="code-keyword">def</span> <span class="code-function">bubble_sort</span>(arr):
+    n = <span class="code-builtin">len</span>(arr)
+    <span class="code-keyword">for</span> i <span class="code-keyword">in</span> <span class="code-builtin">range</span>(n - <span class="code-number">1</span>):
+        <span class="code-keyword">for</span> j <span class="code-keyword">in</span> <span class="code-builtin">range</span>(n - i - <span class="code-number">1</span>):
+            <span class="code-keyword">if</span> arr[j] > arr[j + <span class="code-number">1</span>]:
+                <span class="code-comment"># Swap elements</span>
+                arr[j], arr[j + <span class="code-number">1</span>] = arr[j + <span class="code-number">1</span>], arr[j]</code></pre>
+            </div>
+          </div>
+
+          <h3>O(N*M) - Linear with Two Variables</h3>
+          <div class="article-image">
+            <img src="../../assets/images/nm.gif" alt="O(N*M) Linear with two variables time complexity visualization" loading="lazy">
+            <figcaption>Processing a 2D matrix - time depends on both dimensions</figcaption>
+          </div>
+
+          <div class="code-section">
+            <div class="code-tabs">
+              <button class="code-tab active" data-lang="c">C</button>
+              <button class="code-tab" data-lang="java">Java</button>
+              <button class="code-tab" data-lang="python">Python</button>
+            </div>
+            <div class="code-content active" data-lang="c">
+              <pre><code><span class="code-comment">// Process 2D matrix - O(N*M)</span>
+<span class="code-type">void</span> <span class="code-function">processMatrix</span>(<span class="code-type">int</span> matrix[][], <span class="code-type">int</span> rows, <span class="code-type">int</span> cols) {
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < rows; i++) {
+        <span class="code-keyword">for</span> (<span class="code-type">int</span> j = <span class="code-number">0</span>; j < cols; j++) {
+            <span class="code-comment">// Process each element</span>
+            <span class="code-function">printf</span>(<span class="code-string">"%d "</span>, matrix[i][j]);
+        }
+    }
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="java">
+              <pre><code><span class="code-comment">// Process 2D matrix - O(N*M)</span>
+<span class="code-keyword">public</span> <span class="code-type">void</span> <span class="code-function">processMatrix</span>(<span class="code-type">int</span>[][] matrix) {
+    <span class="code-type">int</span> rows = matrix.length;
+    <span class="code-type">int</span> cols = matrix[<span class="code-number">0</span>].length;
+    
+    <span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < rows; i++) {
+        <span class="code-keyword">for</span> (<span class="code-type">int</span> j = <span class="code-number">0</span>; j < cols; j++) {
+            <span class="code-comment">// Process each element</span>
+            System.out.<span class="code-function">print</span>(matrix[i][j] + <span class="code-string">" "</span>);
+        }
+    }
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="python">
+              <pre><code><span class="code-comment"># Process 2D matrix - O(N*M)</span>
+<span class="code-keyword">def</span> <span class="code-function">process_matrix</span>(matrix):
+    rows = <span class="code-builtin">len</span>(matrix)
+    cols = <span class="code-builtin">len</span>(matrix[<span class="code-number">0</span>]) <span class="code-keyword">if</span> rows > <span class="code-number">0</span> <span class="code-keyword">else</span> <span class="code-number">0</span>
+    
+    <span class="code-keyword">for</span> i <span class="code-keyword">in</span> <span class="code-builtin">range</span>(rows):
+        <span class="code-keyword">for</span> j <span class="code-keyword">in</span> <span class="code-builtin">range</span>(cols):
+            <span class="code-comment"># Process each element</span>
+            <span class="code-function">print</span>(matrix[i][j], end=<span class="code-string">" "</span>)</code></pre>
+            </div>
+          </div>
+
+          <h3>O(2ⁿ) - Exponential Time</h3>
+          <div class="article-image">
+            <img src="../../assets/images/2n.gif" alt="O(2^n) Exponential time complexity visualization" loading="lazy">
+            <figcaption>Generating all subsets - runtime doubles with each additional element</figcaption>
+          </div>
+
+          <div class="code-section">
+            <div class="code-tabs">
+              <button class="code-tab active" data-lang="c">C</button>
+              <button class="code-tab" data-lang="java">Java</button>
+              <button class="code-tab" data-lang="python">Python</button>
+            </div>
+            <div class="code-content active" data-lang="c">
+              <pre><code><span class="code-comment">// Fibonacci (naive approach) - O(2^n)</span>
+<span class="code-type">int</span> <span class="code-function">fibonacci</span>(<span class="code-type">int</span> n) {
+    <span class="code-keyword">if</span> (n <= <span class="code-number">1</span>) {
+        <span class="code-keyword">return</span> n;
+    }
+    <span class="code-keyword">return</span> <span class="code-function">fibonacci</span>(n - <span class="code-number">1</span>) + <span class="code-function">fibonacci</span>(n - <span class="code-number">2</span>);
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="java">
+              <pre><code><span class="code-comment">// Fibonacci (naive approach) - O(2^n)</span>
+<span class="code-keyword">public</span> <span class="code-type">int</span> <span class="code-function">fibonacci</span>(<span class="code-type">int</span> n) {
+    <span class="code-keyword">if</span> (n <= <span class="code-number">1</span>) {
+        <span class="code-keyword">return</span> n;
+    }
+    <span class="code-keyword">return</span> <span class="code-function">fibonacci</span>(n - <span class="code-number">1</span>) + <span class="code-function">fibonacci</span>(n - <span class="code-number">2</span>);
+}</code></pre>
+            </div>
+            <div class="code-content" data-lang="python">
+              <pre><code><span class="code-comment"># Fibonacci (naive approach) - O(2^n)</span>
+<span class="code-keyword">def</span> <span class="code-function">fibonacci</span>(n):
+    <span class="code-keyword">if</span> n <= <span class="code-number">1</span>:
+        <span class="code-keyword">return</span> n
+    <span class="code-keyword">return</span> <span class="code-function">fibonacci</span>(n - <span class="code-number">1</span>) + <span class="code-function">fibonacci</span>(n - <span class="code-number">2</span>)</code></pre>
+            </div>
+          </div>
+
+          <h2>Space complexity</h2>
+          <p>Space complexity measures <em>additional</em> memory an algorithm uses relative to input size. For example, in-place operations often use <strong>O(1)</strong> extra space, while algorithms that build auxiliary structures may use <strong>O(n)</strong> space.</p>
+
+          <h2>Cheat sheet</h2>
+          <div class="complexity-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Operation</th>
+                  <th>Time</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Array index access</td>
+                  <td><strong>O(1)</strong></td>
+                  <td>Direct addressing</td>
+                </tr>
+                <tr>
+                  <td>Array traversal</td>
+                  <td><strong>O(n)</strong></td>
+                  <td>Visit each element once</td>
+                </tr>
+                <tr>
+                  <td>Binary search (sorted)</td>
+                  <td><strong>O(log n)</strong></td>
+                  <td>Halves search space</td>
+                </tr>
+                <tr>
+                  <td>Efficient sorts</td>
+                  <td><strong>O(n log n)</strong></td>
+                  <td>Merge sort, quicksort (avg)</td>
+                </tr>
+                <tr>
+                  <td>Naive double loop</td>
+                  <td><strong>O(n<sup>2</sup>)</strong></td>
+                  <td>All pairs comparisons</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Takeaways</h2>
+          <ul>
+            <li>Think in growth rates, not exact times</li>
+            <li>Prefer lower-order complexities for scalability</li>
+            <li>Consider both time and space; constraints matter</li>
+          </ul>
+        </div>
+
+        <div class="article-nav">
+          <a href="../index.html" class="nav-link">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+            </svg>
+            Back to Notes
+          </a>
+          <a href="ram.html" class="nav-link">
+            RAM
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M5 17h4V7H5v4.59l3.58-3.58L10 6l6 6-6 6-1.41-1.41L5 13.41V17z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Code tabs functionality
+      const codeTabs = document.querySelectorAll('.code-tab');
+      const codeContents = document.querySelectorAll('.code-content');
+
+      codeTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const targetLang = this.dataset.lang;
+          const codeSection = this.closest('.code-section');
+          
+          // Remove active class from all tabs and contents in this section
+          codeSection.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+          codeSection.querySelectorAll('.code-content').forEach(c => c.classList.remove('active'));
+          
+          // Add active class to clicked tab and corresponding content
+          this.classList.add('active');
+          codeSection.querySelector(`[data-lang="${targetLang}"].code-content`).classList.add('active');
+        });
+      });
+    </script>
+  </body>
+  </html>
