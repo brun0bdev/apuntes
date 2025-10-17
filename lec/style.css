@@ -275,6 +275,22 @@ main {
   background: rgba(255,255,255,0.03);
   border-radius: 6px;
   border-top: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.coach:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* Color state for coach */
+.coach.yellow {
+  background: rgba(234, 179, 8, 0.25);
+  border-left: 3px solid rgba(234, 179, 8, 0.8);
+}
+
+.coach.yellow:hover {
+  background: rgba(234, 179, 8, 0.35);
 }
 
 .coach-icon {
