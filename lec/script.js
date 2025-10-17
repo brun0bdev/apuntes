@@ -32,6 +32,14 @@ function getNextColor(currentColor) {
   return COLOR_STATES[(index + 1) % COLOR_STATES.length];
 }
 
+// Color rotation for coach: none -> yellow -> none
+const COACH_COLOR_STATES = ['', 'yellow'];
+
+function getNextCoachColor(currentColor) {
+  const index = COACH_COLOR_STATES.indexOf(currentColor);
+  return COACH_COLOR_STATES[(index + 1) % COACH_COLOR_STATES.length];
+}
+
 // Function to make an element editable
 function makeEditable(element, team, type, index) {
   element.addEventListener('dblclick', function(e) {
@@ -115,9 +123,15 @@ fetch('transfers_2026_winter.csv')
 
     lines.forEach(line => {
       const [team, role, from, to, coach, status] = line.split(',');
-      if (!teams[team]) teams[team] = { players: [], coach: null };
+      if (!teams[team]) teams[team] = { players: [], coach: null, coachStatus: '' };
       if (role === 'Coach') {
         teams[team].coach = to;
+        // Store coach color if defined
+        if (status && status.trim()) {
+          teams[team].coachStatus = status.trim();
+          const coachId = `${team}-coach`;
+          baseColors[coachId] = status.trim();
+        }
       } else {
         const playerIndex = teams[team].players.length;
         teams[team].players.push({ role, from, to });
@@ -193,10 +207,14 @@ fetch('transfers_2026_winter.csv')
             </div>
           `;
         }).join('')}
-        ${team.coach ? `<div class="coach">
-          <img src="img/roles/coach.svg" alt="Coach" class="coach-icon">
-          <span class="editable-name" data-team="${teamName}" data-type="coach" data-index="0">${teamEdits.coach && teamEdits.coach[0] ? teamEdits.coach[0] : team.coach}</span>
-        </div>` : ''}
+        ${team.coach ? (() => {
+          const coachId = `${teamName}-coach`;
+          const coachColor = finalColors[coachId] || '';
+          return `<div class="coach ${coachColor}" data-row-id="${coachId}">
+            <img src="img/roles/coach.svg" alt="Coach" class="coach-icon">
+            <span class="editable-name" data-team="${teamName}" data-type="coach" data-index="0">${teamEdits.coach && teamEdits.coach[0] ? teamEdits.coach[0] : team.coach}</span>
+          </div>`;
+        })() : ''}
       `;
       container.appendChild(card);
       
@@ -235,6 +253,35 @@ fetch('transfers_2026_winter.csv')
           saveColors(colors);
         });
       });
+      
+      // Add right-click functionality to coach row
+      const coachRow = card.querySelector('.coach');
+      if (coachRow) {
+        coachRow.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+          
+          const rowId = this.dataset.rowId;
+          const colors = loadColors();
+          const currentColor = colors[rowId] || '';
+          const nextColor = getNextCoachColor(currentColor); // Use coach-specific color rotation
+          
+          // Remove all color classes
+          this.classList.remove('red', 'yellow', 'green');
+          
+          // Add new color class if not empty
+          if (nextColor) {
+            this.classList.add(nextColor);
+          }
+          
+          // Save to localStorage
+          if (nextColor) {
+            colors[rowId] = nextColor;
+          } else {
+            delete colors[rowId];
+          }
+          saveColors(colors);
+        });
+      }
     });
     
     // Add reset button functionality
