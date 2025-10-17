@@ -122,24 +122,32 @@ fetch('transfers_2026_winter.csv')
     const baseColors = {}; // Store base colors from CSV
 
     lines.forEach(line => {
-      const [team, role, from, to, coach, status] = line.split(',');
+      const parts = line.split(',');
+      const team = parts[0];
+      const role = parts[1];
+      const from = parts[2];
+      const to = parts[3];
+      const coachOrStatus = parts[4]; // For Coach rows, this is the status; for players, this is ignored
+      const playerStatus = parts[5]; // For player rows, this is the status
+      
       if (!teams[team]) teams[team] = { players: [], coach: null, coachStatus: '' };
+      
       if (role === 'Coach') {
         teams[team].coach = to;
-        // Store coach color if defined
-        if (status && status.trim()) {
-          teams[team].coachStatus = status.trim();
+        // For coach, the status is in the 5th column (index 4)
+        if (coachOrStatus && coachOrStatus.trim()) {
+          teams[team].coachStatus = coachOrStatus.trim();
           const coachId = `${team}-coach`;
-          baseColors[coachId] = status.trim();
+          baseColors[coachId] = coachOrStatus.trim();
         }
       } else {
         const playerIndex = teams[team].players.length;
         teams[team].players.push({ role, from, to });
         
-        // Store base color if defined
-        if (status && status.trim()) {
+        // For players, the status is in the 6th column (index 5)
+        if (playerStatus && playerStatus.trim()) {
           const rowId = `${team}-${playerIndex}`;
-          baseColors[rowId] = status.trim();
+          baseColors[rowId] = playerStatus.trim();
         }
       }
     });
