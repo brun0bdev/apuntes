@@ -1,7 +1,7 @@
 Team,Role,From,To,Coach,Status
 FNATIC,Top,Oscarinin,—,,red
 FNATIC,Jungle,Razork,—,,red
-FNATIC,Mid,Poby,—,,red
+FNATIC,Mid,Poby,—,,yellow
 FNATIC,ADC,Upset,—,,red
 FNATIC,Support,Mikyx,—,,yellow
 FNATIC,Coach,,GrabzZ,
@@ -11,17 +11,17 @@ G2 ESPORTS,Mid,Caps,Caps,,green
 G2 ESPORTS,ADC,Hans Sama,Hans Sama,,green
 G2 ESPORTS,Support,Labrov,Labrov,,green
 G2 ESPORTS,Coach,,Dylan Falco,
-GIANTX,Top,Lot,—,,red
+GIANTX,Top,Lot,—,,yellow
 GIANTX,Jungle,Isma,—,,red
 GIANTX,Mid,Jackies,—,,yellow
 GIANTX,ADC,Noah,Noah,,green
 GIANTX,Support,Jun,Jun,,green
 GIANTX,Coach,,Guilhoto,
-KARMINE CORP,Top,Canna,—,,red
+KARMINE CORP,Top,Canna,—,,yellow
 KARMINE CORP,Jungle,Yike,—,,yellow
 KARMINE CORP,Mid,Vladi,—,,red
 KARMINE CORP,ADC,Caliste,Caliste,,green
-KARMINE CORP,Support,Targamas,—,,yellow
+KARMINE CORP,Support,Targamas,—,,red
 KARMINE CORP,Coach,,Zeph,yellow
 MOVISTAR KOI,Top,Mywrn,Mywrn,,yellow
 MOVISTAR KOI,Jungle,Elyoya,Elyoya,,green
@@ -32,7 +32,7 @@ MOVISTAR KOI,Coach,,Melzhet,
 NATUS VINCERE,Top,Adam,—,,yellow
 NATUS VINCERE,Jungle,Thayger,Rhilech,,green
 NATUS VINCERE,Mid,Larssen,—,,yellow
-NATUS VINCERE,ADC,Hans SamD,—,,yellow
+NATUS VINCERE,ADC,Hans SamD,Hans SamD,,green
 NATUS VINCERE,Support,Malrang,—,,red
 NATUS VINCERE,Coach,,TheRock,
 SK GAMING,Top,DnDn,—,,yellow
@@ -50,12 +50,12 @@ TEAM BDS,Coach,,Striker,
 TEAM HERETICS,Top,Carlsen,—,,red
 TEAM HERETICS,Jungle,Sheo,—,,yellow
 TEAM HERETICS,Mid,Kamiloo,—,,red
-TEAM HERETICS,ADC,Flakked,Flakked,,green
+TEAM HERETICS,ADC,Flakked,—,,yellow
 TEAM HERETICS,Support,Stend,—,,yellow
 TEAM HERETICS,Coach,,Hidon,
 TEAM VITALITY,Top,Naak Nako,Naak Nako,,green
 TEAM VITALITY,Jungle,Lyncas,Lyncas,,green
-TEAM VITALITY,Mid,Czajek,Czajek,,green
-TEAM VITALITY,ADC,Carzzy,Jopa,,yellow
+TEAM VITALITY,Mid,Czajek,Czajek,,yellow
+TEAM VITALITY,ADC,Carzzy,Jopa,,green
 TEAM VITALITY,Support,Fleshy,Fleshy,,green
 TEAM VITALITY,Coach,,Mac,
