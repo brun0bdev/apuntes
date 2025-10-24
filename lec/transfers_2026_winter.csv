@@ -2,8 +2,8 @@ Team,Role,From,To,Coach,Status
 FNATIC,Top,Oscarinin,—,,red
 FNATIC,Jungle,Razork,—,,red
 FNATIC,Mid,Poby,—,,yellow
-FNATIC,ADC,Upset,—,,red
-FNATIC,Support,Mikyx,—,,yellow
+FNATIC,ADC,Upset,—,,yellow
+FNATIC,Support,Mikyx,—,,red
 FNATIC,Coach,,GrabzZ,
 G2 ESPORTS,Top,BrokenBlade,BrokenBlade,,green
 G2 ESPORTS,Jungle,SkewMond,SkewMond,,green
@@ -18,7 +18,7 @@ GIANTX,ADC,Noah,Noah,,green
 GIANTX,Support,Jun,Jun,,green
 GIANTX,Coach,,Guilhoto,
 KARMINE CORP,Top,Canna,—,,yellow
-KARMINE CORP,Jungle,Yike,—,,yellow
+KARMINE CORP,Jungle,Yike,Yike,,green
 KARMINE CORP,Mid,Vladi,—,,red
 KARMINE CORP,ADC,Caliste,Caliste,,green
 KARMINE CORP,Support,Targamas,—,,red
@@ -42,10 +42,10 @@ SK GAMING,ADC,Keduii,—,,yellow
 SK GAMING,Support,Loopy,—,,yellow
 SK GAMING,Coach,,Own3r,
 TEAM BDS,Top,Rooster,—,,yellow
-TEAM BDS,Jungle,Boukada,—,,yellow
+TEAM BDS,Jungle,Boukada,Boukada,,green
 TEAM BDS,Mid,nuc,nuc,,yellow
 TEAM BDS,ADC,Ice,Ice,,yellow
-TEAM BDS,Support,Parus,Parus,,yellow
+TEAM BDS,Support,Parus,—,,red
 TEAM BDS,Coach,,Striker,
 TEAM HERETICS,Top,Carlsen,—,,red
 TEAM HERETICS,Jungle,Sheo,—,,yellow

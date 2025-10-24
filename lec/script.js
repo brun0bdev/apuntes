@@ -316,6 +316,8 @@ function loadTransferHistory(teams) {
   // Sample transfer history data (últimos días del mercado de fichajes)
   // En producción, esto vendría de un archivo o API
   const transferHistory = [
+    {date: '23 Oct', team: 'FNATIC', player: 'x', role: 'Mid', from: 'x', type: 'confirmed' },
+    {date: '23 Oct', team: 'TEAM VITALITY', player: 'Jopa', role: 'Adc', from: 'Carzzy', type: 'confirmed' },
     { date: '8 Oct', team: 'SK GAMING', player: 'Skeanz', role: 'Jungle', from: 'Skeanz', type: 'confirmed' },
     { date: '2 Jul', team: 'NATUS VINCERE', player: 'Rhilech', role: 'Jungle', from: 'Thayger', type: 'confirmed' },
   ];
