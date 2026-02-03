@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Embed Info & SEO -->
+    <title>LEC Versus 2026 - Calculadora de Playoffs</title>
+    <meta name="description" content="Calculadora interactiva de probabilidades y simulador de partidos para la LEC 2026. Predice quién llegará a los Playoffs.">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Open Graph (Facebook, Discord) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LEC Versus 2026 - Calculadora de Playoffs">
+    <meta property="og:description" content="Calculadora interactiva de probabilidades y simulador de partidos para la LEC 2026. Predice quién llegará a los Playoffs.">
+    <meta property="og:image" content="img/logos/lec.webp">
+    <meta property="og:site_name" content="LEC Versus 2026">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LEC Versus 2026 - Calculadora de Playoffs">
+    <meta name="twitter:description" content="Calculadora interactiva de probabilidades y simulador de partidos para la LEC 2026. Predice quién llegará a los Playoffs.">
+    <meta name="twitter:image" content="img/logos/lec.webp">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/logos/lec.webp" alt="LEC" class="header-logo">
+            <h1>LEC Versus 2026</h1>
+            <p class="subtitle">Calculadora de Probabilidades de Playoffs</p>
+        </header>
+
+        <main>
+            <!-- Tabla de Clasificación -->
+            <section class="standings-section">
+                <h2>📊 Clasificación Actual</h2>
+                <div class="standings-info">
+                    <span class="info-badge qualified">Top 8 → Playoffs</span>
+                    <span class="info-badge eliminated">9-12 → Eliminados</span>
+                </div>
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Equipo</th>
+                            <th>V</th>
+                            <th>D</th>
+                            <th>%</th>
+                            <th>Prob. Playoffs</th>
+                        </tr>
+                    </thead>
+                    <tbody id="standings-body">
+                        <!-- Se llena dinámicamente -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Simulador de Partidos -->
+            <section class="simulator-section">
+                <h2>🎮 Simulador de Partidos</h2>
+                <p class="section-desc">Selecciona el ganador de cada partido para ver cómo afecta a la clasificación</p>
+                
+                <div class="simulator-controls">
+                    <button id="reset-btn" class="btn btn-secondary">🔄 Reiniciar Simulación</button>
+                    <button id="random-btn" class="btn btn-secondary">🎲 Resultados Aleatorios</button>
+                </div>
+
+                <div class="matches-container">
+                    <div class="match-day">
+                        <h3>📅 Sábado 7 de Febrero</h3>
+                        <div id="saturday-matches" class="matches-grid">
+                            <!-- Se llena dinámicamente -->
+                        </div>
+                    </div>
+                    <div class="match-day">
+                        <h3>📅 Domingo 8 de Febrero</h3>
+                        <div id="sunday-matches" class="matches-grid">
+                            <!-- Se llena dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Escenarios de Clasificación -->
+            <section class="scenarios-section">
+                <h2>🔮 Escenarios de Clasificación</h2>
+                <p class="section-desc">Selecciona un equipo para ver qué necesita para clasificar a playoffs</p>
+                
+                <div class="team-selector">
+                    <label for="team-select">Equipo:</label>
+                    <select id="team-select">
+                        <!-- Se llena dinámicamente -->
+                    </select>
+                </div>
+
+                <div id="scenarios-content" class="scenarios-content">
+                    <!-- Se llena dinámicamente -->
+                </div>
+            </section>
+
+            <!-- Probabilidades Detalladas -->
+            <section class="probability-section">
+                <h2>📈 Análisis de Probabilidades</h2>
+                <p class="section-desc">Basado en las 4,096 combinaciones posibles de resultados</p>
+                
+                <div class="probability-stats">
+                    <div class="stat-card">
+                        <span class="stat-label">Partidos Restantes</span>
+                        <span class="stat-value" id="remaining-matches">12</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Escenarios Totales</span>
+                        <span class="stat-value">4,096</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Seleccionados</span>
+                        <span class="stat-value" id="selected-matches">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Escenarios Posibles</span>
+                        <span class="stat-value" id="possible-scenarios">4,096</span>
+                    </div>
+                </div>
+
+                <div id="probability-bars" class="probability-bars">
+                    <!-- Se llena dinámicamente -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>LEC Versus 2026 Playoff Calculator</p>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/standings.js"></script>
+    <script src="js/probability.js"></script>
+    <script src="js/scenarios.js"></script>
+    <script src="js/simulator.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
