@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Embed Info & SEO -->
+    <!-- SEO -->
     <title>LEC Versus 2026 - Calculadora de Playoffs</title>
     <meta name="description" content="Calculadora interactiva de probabilidades y simulador de partidos para la LEC 2026. Predice quién llegará a los Playoffs.">
     <meta name="theme-color" content="#6366f1">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 
-    <!-- Open Graph (Facebook, Discord) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="LEC Versus 2026 - Calculadora de Playoffs">
     <meta property="og:description" content="Calculadora interactiva de probabilidades y simulador de partidos para la LEC 2026. Predice quién llegará a los Playoffs.">
@@ -22,125 +26,286 @@
     <meta name="twitter:description" content="Calculadora interactiva de probabilidades y simulador de partidos para la LEC 2026. Predice quién llegará a los Playoffs.">
     <meta name="twitter:image" content="img/logos/lec.webp">
     
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2.1">
+    <link rel="icon" type="image/webp" href="img/logos/lec.webp">
 </head>
-<body>
+<body data-theme="dark">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+        <div class="loading-content">
+            <img src="img/logos/lec.webp" alt="" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p>Calculando escenarios...</p>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+    <!-- Sticky Navigation -->
+    <nav id="main-nav" class="main-nav" role="navigation" aria-label="Navegación principal">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand" aria-label="Inicio">
+                <img src="img/logos/lec.webp" alt="" class="nav-logo" width="28" height="28">
+                <span>LEC Versus</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#standings" class="nav-link active" data-section="standings">
+                    <span class="nav-icon" data-icon="chartBar"></span>
+                    <span class="nav-text">Clasificación</span>
+                </a>
+                <a href="#simulator" class="nav-link" data-section="simulator">
+                    <span class="nav-icon" data-icon="gamepad"></span>
+                    <span class="nav-text">Simulador</span>
+                </a>
+                <a href="#scenarios" class="nav-link" data-section="scenarios">
+                    <span class="nav-icon" data-icon="sparkles"></span>
+                    <span class="nav-text">Escenarios</span>
+                </a>
+                <a href="#probability" class="nav-link" data-section="probability">
+                    <span class="nav-icon" data-icon="trendingUp"></span>
+                    <span class="nav-text">Probabilidades</span>
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="nav-btn theme-btn" aria-label="Cambiar tema" title="Cambiar tema">
+                    <span class="theme-icon-dark" data-icon="moon"></span>
+                    <span class="theme-icon-light" data-icon="sun"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
     <div class="container">
-        <header>
-            <img src="img/logos/lec.webp" alt="LEC" class="header-logo">
+        <header class="reveal">
+            <div class="header-glow" aria-hidden="true"></div>
+            <img src="img/logos/lec.webp" alt="LEC Logo" class="header-logo" width="120" height="120">
             <h1>LEC Versus 2026</h1>
             <p class="subtitle">Calculadora de Probabilidades de Playoffs</p>
+            
+            <!-- Countdown -->
+            <div class="countdown-wrapper" id="countdown-wrapper">
+                <p class="countdown-label"><span data-icon="timer"></span> Próxima jornada en</p>
+                <div class="countdown" id="countdown" aria-label="Cuenta atrás">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="countdown-days">0</span>
+                        <span class="countdown-unit">días</span>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="countdown-hours">0</span>
+                        <span class="countdown-unit">horas</span>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="countdown-minutes">0</span>
+                        <span class="countdown-unit">min</span>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="countdown-seconds">0</span>
+                        <span class="countdown-unit">seg</span>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main>
-            <!-- Tabla de Clasificación -->
-            <section class="standings-section">
-                <h2>📊 Clasificación Actual</h2>
-                <div class="standings-info">
-                    <span class="info-badge qualified">Top 8 → Playoffs</span>
-                    <span class="info-badge eliminated">9-12 → Eliminados</span>
+            <!-- Simulation Progress -->
+            <div class="sim-progress reveal" id="sim-progress">
+                <div class="sim-progress-header">
+                    <span class="sim-progress-label"><span data-icon="target"></span> Progreso de Simulación</span>
+                    <span class="sim-progress-count" id="sim-progress-count">0 / 12 partidos</span>
                 </div>
-                <table class="standings-table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Equipo</th>
-                            <th>V</th>
-                            <th>D</th>
-                            <th>%</th>
-                            <th>Prob. Playoffs</th>
-                        </tr>
-                    </thead>
-                    <tbody id="standings-body">
-                        <!-- Se llena dinámicamente -->
-                    </tbody>
-                </table>
+                <div class="sim-progress-bar">
+                    <div class="sim-progress-fill" id="sim-progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Tabla de Clasificación -->
+            <section class="standings-section reveal" id="standings" aria-labelledby="standings-title">
+                <h2 id="standings-title"><span data-icon="chartBar"></span> Clasificación Actual</h2>
+                <div class="standings-info">
+                    <span class="info-badge qualified">
+                        <span class="badge-dot"></span>
+                        Top 8 → Playoffs
+                    </span>
+                    <span class="info-badge eliminated">
+                        <span class="badge-dot"></span>
+                        9-12 → Eliminados
+                    </span>
+                </div>
+                <div class="table-wrapper">
+                    <table class="standings-table" role="table" aria-label="Tabla de clasificación">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Equipo</th>
+                                <th scope="col">V</th>
+                                <th scope="col">D</th>
+                                <th scope="col">%</th>
+                                <th scope="col">Prob. Playoffs</th>
+                            </tr>
+                        </thead>
+                        <tbody id="standings-body">
+                        </tbody>
+                    </table>
+                </div>
             </section>
 
             <!-- Simulador de Partidos -->
-            <section class="simulator-section">
-                <h2>🎮 Simulador de Partidos</h2>
+            <section class="simulator-section reveal" id="simulator" aria-labelledby="simulator-title">
+                <h2 id="simulator-title"><span data-icon="gamepad"></span> Simulador de Partidos</h2>
                 <p class="section-desc">Selecciona el ganador de cada partido para ver cómo afecta a la clasificación</p>
                 
                 <div class="simulator-controls">
-                    <button id="reset-btn" class="btn btn-secondary">🔄 Reiniciar Simulación</button>
-                    <button id="random-btn" class="btn btn-secondary">🎲 Resultados Aleatorios</button>
+                    <button id="reset-btn" class="btn btn-secondary" aria-label="Reiniciar simulación">
+                        <span class="btn-icon" data-icon="refresh"></span> Reiniciar
+                    </button>
+                    <button id="random-btn" class="btn btn-secondary" aria-label="Resultados aleatorios">
+                        <span class="btn-icon" data-icon="dice"></span> Aleatorios
+                    </button>
+                    <div class="share-bar" id="share-bar">
+                        <button class="share-btn share-btn--x" id="share-x" aria-label="Compartir en X" title="Compartir en X">
+                            <span data-icon="twitter"></span>
+                        </button>
+                        <button class="share-btn share-btn--wa" id="share-wa" aria-label="Compartir en WhatsApp" title="Compartir en WhatsApp">
+                            <span data-icon="whatsapp"></span>
+                        </button>
+                        <button class="share-btn share-btn--copy" id="share-copy" aria-label="Copiar al portapapeles" title="Copiar al portapapeles">
+                            <span data-icon="copy"></span>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="matches-container">
                     <div class="match-day">
-                        <h3>📅 Sábado 7 de Febrero</h3>
+                        <h3>
+                            <span class="day-icon" data-icon="calendar"></span>
+                            Sábado 7 de Febrero
+                            <span class="match-count" id="saturday-count">0/6</span>
+                        </h3>
                         <div id="saturday-matches" class="matches-grid">
-                            <!-- Se llena dinámicamente -->
                         </div>
                     </div>
                     <div class="match-day">
-                        <h3>📅 Domingo 8 de Febrero</h3>
+                        <h3>
+                            <span class="day-icon" data-icon="calendar"></span>
+                            Domingo 8 de Febrero
+                            <span class="match-count" id="sunday-count">0/6</span>
+                        </h3>
                         <div id="sunday-matches" class="matches-grid">
-                            <!-- Se llena dinámicamente -->
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Escenarios de Clasificación -->
-            <section class="scenarios-section">
-                <h2>🔮 Escenarios de Clasificación</h2>
+            <!-- Escenarios -->
+            <section class="scenarios-section reveal" id="scenarios" aria-labelledby="scenarios-title">
+                <h2 id="scenarios-title"><span data-icon="sparkles"></span> Escenarios de Clasificación</h2>
                 <p class="section-desc">Selecciona un equipo para ver qué necesita para clasificar a playoffs</p>
                 
                 <div class="team-selector">
                     <label for="team-select">Equipo:</label>
-                    <select id="team-select">
-                        <!-- Se llena dinámicamente -->
-                    </select>
+                    <div class="select-wrapper">
+                        <select id="team-select" aria-label="Seleccionar equipo">
+                        </select>
+                    </div>
                 </div>
 
-                <div id="scenarios-content" class="scenarios-content">
-                    <!-- Se llena dinámicamente -->
+                <div id="scenarios-content" class="scenarios-content" role="region" aria-live="polite">
                 </div>
             </section>
 
-            <!-- Probabilidades Detalladas -->
-            <section class="probability-section">
-                <h2>📈 Análisis de Probabilidades</h2>
-                <p class="section-desc">Basado en las 4,096 combinaciones posibles de resultados</p>
+            <!-- Probabilidades -->
+            <section class="probability-section reveal" id="probability" aria-labelledby="probability-title">
+                <h2 id="probability-title"><span data-icon="trendingUp"></span> Análisis de Probabilidades</h2>
+                <p class="section-desc">Basado en todas las combinaciones posibles de resultados restantes</p>
                 
                 <div class="probability-stats">
                     <div class="stat-card">
+                        <span class="stat-icon" data-icon="gamepad"></span>
                         <span class="stat-label">Partidos Restantes</span>
                         <span class="stat-value" id="remaining-matches">12</span>
                     </div>
                     <div class="stat-card">
+                        <span class="stat-icon" data-icon="globe"></span>
                         <span class="stat-label">Escenarios Totales</span>
                         <span class="stat-value">4,096</span>
                     </div>
                     <div class="stat-card">
+                        <span class="stat-icon" data-icon="checkCircle"></span>
                         <span class="stat-label">Seleccionados</span>
                         <span class="stat-value" id="selected-matches">0</span>
                     </div>
                     <div class="stat-card">
+                        <span class="stat-icon" data-icon="chartBar"></span>
                         <span class="stat-label">Escenarios Posibles</span>
                         <span class="stat-value" id="possible-scenarios">4,096</span>
                     </div>
                 </div>
 
-                <div id="probability-bars" class="probability-bars">
-                    <!-- Se llena dinámicamente -->
+                <div id="probability-bars" class="probability-bars" role="list" aria-label="Probabilidades por equipo">
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>LEC Versus 2026 Playoff Calculator | ©️ BrunoB </p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="img/logos/lec.webp" alt="" class="footer-logo" width="40" height="40">
+                    <span>LEC Versus 2026</span>
+                </div>
+                <p class="footer-text">Todos los datos son calculados en tiempo real en tu navegador</p>
+                <p class="footer-credits">Hecho con <span class="heart-icon" data-icon="heart"></span> por <strong>BrunoB</strong></p>
+                <div class="footer-badges">
+                    <span class="footer-badge">v2.1</span>
+                    <span class="footer-badge">12 equipos</span>
+                    <span class="footer-badge">4,096 escenarios</span>
+                </div>
+            </div>
         </footer>
     </div>
 
-    <script src="js/data.js"></script>
-    <script src="js/standings.js"></script>
-    <script src="js/probability.js"></script>
-    <script src="js/scenarios.js"></script>
-    <script src="js/simulator.js"></script>
-    <script src="js/app.js"></script>
+    <!-- Scroll to Top -->
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3L3 10h4v7h6v-7h4L10 3z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- Keyboard Shortcuts Modal -->
+    <div id="shortcuts-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="shortcuts-title" hidden>
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <h3 id="shortcuts-title"><span data-icon="keyboard"></span> Atajos de Teclado</h3>
+            <div class="shortcuts-list">
+                <div class="shortcut-item"><kbd>1</kbd>-<kbd>4</kbd><span>Navegar a sección</span></div>
+                <div class="shortcut-item"><kbd>R</kbd><span>Reiniciar simulación</span></div>
+                <div class="shortcut-item"><kbd>D</kbd><span>Resultados aleatorios</span></div>
+                <div class="shortcut-item"><kbd>T</kbd><span>Cambiar tema</span></div>
+                <div class="shortcut-item"><kbd>?</kbd><span>Mostrar atajos</span></div>
+            </div>
+            <button class="btn btn-secondary modal-close" id="close-shortcuts">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="js/icons.js?v=2.1"></script>
+    <script src="js/data.js?v=2.1"></script>
+    <script src="js/standings.js?v=2.1"></script>
+    <script src="js/probability.js?v=2.1"></script>
+    <script src="js/scenarios.js?v=2.1"></script>
+    <script src="js/simulator.js?v=2.1"></script>
+    <script src="js/app.js?v=2.1"></script>
 </body>
 </html>

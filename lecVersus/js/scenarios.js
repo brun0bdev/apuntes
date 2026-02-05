@@ -227,9 +227,9 @@ function generateScenarioDescription(scenario) {
     const lines = [];
     
     if (scenario.status === 'qualified') {
-        lines.push(`✅ ${team.name} ya está matemáticamente clasificado a playoffs.`);
+        lines.push(`${ICONS.checkCircle} ${team.name} ya está matemáticamente clasificado a playoffs.`);
     } else if (scenario.status === 'eliminated') {
-        lines.push(`❌ ${team.name} está matemáticamente eliminado de playoffs.`);
+        lines.push(`${ICONS.xCircle} ${team.name} está matemáticamente eliminado de playoffs.`);
     } else {
         lines.push(`${team.name} tiene ${formatProbability(scenario.currentProbability)} de probabilidad de clasificar.`);
         
@@ -243,7 +243,7 @@ function generateScenarioDescription(scenario) {
             }
             
             if (scenario.worstCase.probability <= 0.1) {
-                lines.push(`💀 Si pierde todos sus partidos: Eliminado`);
+                lines.push(`${ICONS.skull} Si pierde todos sus partidos: Eliminado`);
             } else if (scenario.worstCase.probability < 100) {
                 lines.push(`Peor caso (pierde todo): ${formatProbability(scenario.worstCase.probability)} de clasificar`);
             }
