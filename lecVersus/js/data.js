@@ -2,11 +2,11 @@ const TEAMS = {
     KC: { id: 'KC', name: 'Karmine Corp', abbr: 'KC', wins: 7, losses: 2, logo: 'img/logos/kc.webp' },
     GX: { id: 'GX', name: 'GIANTX', abbr: 'GX', wins: 6, losses: 3, logo: 'img/logos/giantx.webp' },
     NAVI: { id: 'NAVI', name: 'Natus Vincere', abbr: 'NAVI', wins: 6, losses: 3, logo: 'img/logos/navi.webp' },
-    FNC: { id: 'FNC', name: 'Fnatic', abbr: 'FNC', wins: 5, losses: 5, logo: 'img/logos/fnatic.webp' },
+    FNC: { id: 'FNC', name: 'Fnatic', abbr: 'FNC', wins: 5, losses: 4, logo: 'img/logos/fnatic.webp' },
     G2: { id: 'G2', name: 'G2 Esports', abbr: 'G2', wins: 5, losses: 4, logo: 'img/logos/g2.webp' },
     MKOI: { id: 'MKOI', name: 'Movistar KOI', abbr: 'MKOI', wins: 5, losses: 4, logo: 'img/logos/mkoi.webp' },
     VIT: { id: 'VIT', name: 'Team Vitality', abbr: 'VIT', wins: 5, losses: 4, logo: 'img/logos/vitality.webp' },
-    TH: { id: 'TH', name: 'Team Heretics', abbr: 'TH', wins: 5, losses: 5, logo: 'img/logos/th.webp' },
+    TH: { id: 'TH', name: 'Team Heretics', abbr: 'TH', wins: 4, losses: 5, logo: 'img/logos/th.webp' },
     LR: { id: 'LR', name: 'Los Ratones', abbr: 'LR', wins: 4, losses: 5, logo: 'img/logos/lr.png' },
     SHFT: { id: 'SHFT', name: 'Shifters', abbr: 'SHFT', wins: 3, losses: 6, logo: 'img/logos/shifters.webp' },
     SK: { id: 'SK', name: 'SK Gaming', abbr: 'SK', wins: 3, losses: 6, logo: 'img/logos/sk.webp' },
@@ -28,7 +28,7 @@ const H2H = {
         NAVI: { wins: 1, losses: 0 },
         SHFT: { wins: 0, losses: 1 },
         SK: { wins: 0, losses: 1 },
-        TH: { wins: 0, losses: 1 },
+        TH: { wins: 0, losses: 0 },
         VIT: { wins: 1, losses: 0 }
     },
     G2: {
@@ -158,7 +158,7 @@ const H2H = {
         VIT: { wins: 0, losses: 1 }
     },
     TH: {
-        FNC: { wins: 1, losses: 0 },
+        FNC: { wins: 0, losses: 0 },
         G2: { wins: 0, losses: 1 },
         GX: { wins: 1, losses: 0 },
         KC: { wins: 0, losses: 0 },
