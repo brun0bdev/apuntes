@@ -62,6 +62,11 @@ function saveSimulatorState() {
 function renderMatches() {
     const sundayContainer = document.getElementById('sunday-matches');
 
+    if (!sundayContainer) {
+        console.log('[Simulator] #sunday-matches element not found');
+        return;
+    }
+
     sundayContainer.innerHTML = '';
 
     for (const match of simulatorState.matches) {
