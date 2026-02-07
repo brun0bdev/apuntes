@@ -40,7 +40,7 @@
     --radius: 12px;
     --radius-lg: 20px;
     --radius-xl: 28px;
-    --nav-height: 64px;
+    --nav-height: 54px;
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -80,7 +80,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--nav-height) + 24px);
+    scroll-padding-top: calc(var(--nav-height) + 16px);
 }
 
 body {
@@ -274,22 +274,22 @@ body::before {
 .nav-inner {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 16px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 12px;
 }
 
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     text-decoration: none;
     color: var(--text-primary);
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     flex-shrink: 0;
 }
 
@@ -306,13 +306,13 @@ body::before {
 .nav-link {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    border-radius: 10px;
+    gap: 5px;
+    padding: 6px 11px;
+    border-radius: 8px;
     text-decoration: none;
     color: var(--text-secondary);
     font-weight: 500;
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     transition: all 0.25s ease;
     position: relative;
     white-space: nowrap;
@@ -347,20 +347,20 @@ body::before {
 }
 
 .nav-icon .icon {
-    width: 1.1rem;
-    height: 1.1rem;
+    width: 0.95rem;
+    height: 0.95rem;
 }
 
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .nav-btn {
-    width: 38px;
-    height: 38px;
-    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
     border: 1px solid var(--border-light);
     background: var(--bg-elevated);
     color: var(--text-primary);
@@ -368,7 +368,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: all 0.25s ease;
 }
 
@@ -386,7 +386,7 @@ body::before {
 /* Language button */
 .lang-btn {
     font-weight: 700;
-    font-size: 0.75rem;
+    font-size: 0.68rem;
     letter-spacing: 0.5px;
 }
 
@@ -435,23 +435,23 @@ body::before {
 
 /* === Layout === */
 .container {
-    max-width: 1280px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 24px;
-    padding-top: calc(var(--nav-height) + 24px);
+    padding: 12px;
+    padding-top: calc(var(--nav-height) + 12px);
 }
 
 /* === Header === */
 header {
     text-align: center;
-    padding: 60px 40px;
+    padding: 18px 20px;
     background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
-    border-radius: var(--radius-xl);
-    margin-bottom: 28px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 12px;
     border: 1px solid var(--border-light);
     position: relative;
     overflow: hidden;
-    box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .header-glow {
@@ -483,28 +483,28 @@ header::before {
 }
 
 .header-logo {
-    width: 120px;
+    width: 50px;
     height: auto;
-    margin-bottom: 16px;
+    margin-bottom: 6px;
     position: relative;
     z-index: 1;
-    filter: drop-shadow(0 0 30px var(--accent-glow));
-    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px var(--accent-glow));
+    animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    50% { transform: translateY(-4px); }
 }
 
 header h1 {
-    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-weight: 900;
     background: linear-gradient(135deg, #fff 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     position: relative;
     z-index: 1;
     letter-spacing: -0.03em;
@@ -519,7 +519,7 @@ header h1 {
 
 .subtitle {
     color: var(--text-secondary);
-    font-size: 1.15rem;
+    font-size: 0.82rem;
     font-weight: 500;
     position: relative;
     z-index: 1;
@@ -527,16 +527,16 @@ header h1 {
 
 /* === Countdown === */
 .countdown-wrapper {
-    margin-top: 28px;
+    margin-top: 10px;
     position: relative;
     z-index: 1;
 }
 
 .countdown-label {
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.72rem;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -545,7 +545,7 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .countdown-item {
@@ -554,13 +554,13 @@ header h1 {
     align-items: center;
     background: var(--bg-primary);
     border: 1px solid var(--border-light);
-    border-radius: var(--radius);
-    padding: 12px 16px;
-    min-width: 64px;
+    border-radius: 8px;
+    padding: 5px 10px;
+    min-width: 42px;
 }
 
 .countdown-value {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 800;
     font-variant-numeric: tabular-nums;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
@@ -570,7 +570,7 @@ header h1 {
 }
 
 .countdown-unit {
-    font-size: 0.7rem;
+    font-size: 0.52rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -578,7 +578,7 @@ header h1 {
 }
 
 .countdown-sep {
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     font-weight: 800;
     color: var(--text-muted);
 }
@@ -587,20 +587,20 @@ header h1 {
 .live-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.5rem;
+    gap: 0.4rem;
+    padding: 0.5rem 1.2rem;
     background: rgba(239, 68, 68, 0.15);
     border: 1px solid rgba(239, 68, 68, 0.4);
     border-radius: 2rem;
     color: #ef4444;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     animation: liveBadgePulse 2s ease-in-out infinite;
 }
 
 .live-dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background: #ef4444;
     border-radius: 50%;
     animation: liveDotBlink 1s infinite;
@@ -618,46 +618,51 @@ header h1 {
 
 /* === Simulation Progress === */
 .sim-progress {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
+    background: linear-gradient(90deg, var(--bg-secondary), var(--bg-tertiary));
+    border: 1px solid var(--accent-primary);
     border-radius: var(--radius);
-    padding: 16px 20px;
-    margin-bottom: 24px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 15px var(--accent-glow);
 }
 
 .sim-progress-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .sim-progress-label {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: var(--accent-primary);
 }
 
 .sim-progress-count {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    font-weight: 500;
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    font-weight: 700;
     font-variant-numeric: tabular-nums;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .sim-progress-bar {
-    height: 8px;
+    height: 6px;
     background: var(--bg-primary);
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .sim-progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-    border-radius: 8px;
-    transition: width 0.5s var(--ease-out);
+    background: linear-gradient(90deg, var(--accent-primary), var(--success));
+    border-radius: 6px;
+    transition: width 0.4s var(--ease-out);
     position: relative;
 }
 
@@ -678,8 +683,8 @@ header h1 {
 section {
     background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
     border-radius: var(--radius-lg);
-    padding: 28px;
-    margin-bottom: 28px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
     border: 1px solid var(--border);
     position: relative;
     box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.03);
@@ -697,13 +702,13 @@ section::before {
 }
 
 section h2 {
-    font-size: 1.6rem;
+    font-size: 1.05rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     color: var(--text-primary);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
 }
 
 section h2::after {
@@ -711,14 +716,14 @@ section h2::after {
     flex: 1;
     height: 1px;
     background: linear-gradient(90deg, var(--border-light), transparent);
-    margin-left: 12px;
+    margin-left: 10px;
 }
 
 .section-desc {
     color: var(--text-secondary);
-    margin-bottom: 24px;
-    font-size: 0.95rem;
-    line-height: 1.7;
+    margin-bottom: 12px;
+    font-size: 0.78rem;
+    line-height: 1.5;
 }
 
 /* === Scroll Reveal Animation === */
@@ -753,25 +758,25 @@ section h2::after {
 /* === Standings Table === */
 .standings-info {
     display: flex;
-    gap: 12px;
-    margin-bottom: 20px;
+    gap: 8px;
+    margin-bottom: 10px;
     flex-wrap: wrap;
 }
 
 .info-badge {
-    padding: 8px 16px;
+    padding: 4px 10px;
     border-radius: 50px;
-    font-size: 0.83rem;
+    font-size: 0.68rem;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     transition: all 0.3s ease;
 }
 
 .badge-dot {
-    width: 8px;
-    height: 8px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     flex-shrink: 0;
 }
@@ -807,8 +812,9 @@ section h2::after {
 .standings-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 5px;
-    font-size: 0.95rem;
+    border-spacing: 0 3px;
+    font-size: 0.8rem;
+    table-layout: fixed;
 }
 
 .standings-table thead tr {
@@ -816,42 +822,55 @@ section h2::after {
 }
 
 .standings-table th {
-    padding: 12px 16px;
+    padding: 5px 6px;
     text-align: left;
     color: var(--text-muted);
     font-weight: 600;
-    font-size: 0.73rem;
+    font-size: 0.62rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     border: none;
     white-space: nowrap;
 }
 
+/* Column widths */
+.standings-table th:nth-child(1) { width: 28px; text-align: center; }
+.standings-table th:nth-child(2) { width: auto; }
+.standings-table th:nth-child(3) { width: 36px; text-align: center; }
+.standings-table th:nth-child(4) { width: 36px; text-align: center; }
+.standings-table th:nth-child(5) { width: 42px; text-align: center; }
+.standings-table th:nth-child(6) { width: 140px; }
+
 .standings-table tbody tr {
     background: var(--bg-elevated);
-    transition: all 0.3s var(--ease-out);
+    transition: all 0.25s var(--ease-out);
     border-radius: var(--radius);
 }
 
 .standings-table tbody tr:hover {
-    transform: translateX(4px);
-    box-shadow: var(--shadow-md), -4px 0 0 var(--accent-primary);
+    transform: translateX(3px);
+    box-shadow: var(--shadow-md), -3px 0 0 var(--accent-primary);
 }
 
 .standings-table tbody tr td {
-    padding: 14px 16px;
+    padding: 6px;
     border: none;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     white-space: nowrap;
 }
 
+.standings-table tbody tr td:nth-child(1) { text-align: center; }
+.standings-table tbody tr td:nth-child(3),
+.standings-table tbody tr td:nth-child(4),
+.standings-table tbody tr td:nth-child(5) { text-align: center; }
+
 .standings-table tbody tr td:first-child {
     border-left: 1px solid var(--border);
     border-radius: var(--radius) 0 0 var(--radius);
     font-weight: 700;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 }
 
 .standings-table tbody tr td:last-child {
@@ -893,39 +912,40 @@ section h2::after {
 .team-info {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
 }
 
 .team-logo-sm {
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    min-height: 32px;
-    max-width: 32px;
-    max-height: 32px;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 20px;
+    max-height: 20px;
     object-fit: contain;
-    border-radius: 6px;
+    border-radius: 4px;
     background: var(--bg-tertiary);
-    padding: 3px;
-    transition: all 0.3s ease;
+    padding: 2px;
+    transition: all 0.25s ease;
     flex-shrink: 0;
 }
 
 .team-logo-sm:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 8px var(--accent-glow));
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 6px var(--accent-glow));
 }
 
 .team-name {
     font-weight: 600;
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 0px;
+    font-size: 0.78rem;
 }
 
 .team-abbr {
     color: var(--text-muted);
-    font-size: 0.68rem;
+    font-size: 0.56rem;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
@@ -934,23 +954,23 @@ section h2::after {
 .prob-bar {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
 }
 
 .prob-bar-bg {
     flex: 1;
-    height: 10px;
+    height: 7px;
     background: var(--bg-primary);
-    border-radius: 10px;
+    border-radius: 7px;
     overflow: hidden;
-    min-width: 70px;
+    min-width: 50px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .prob-bar-fill {
     height: 100%;
-    border-radius: 10px;
-    transition: width 0.6s var(--ease-out);
+    border-radius: 8px;
+    transition: width 0.4s var(--ease-out);
     position: relative;
 }
 
@@ -981,33 +1001,33 @@ section h2::after {
 }
 
 .prob-value {
-    min-width: 52px;
+    min-width: 42px;
     text-align: right;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.82rem;
     font-variant-numeric: tabular-nums;
 }
 
 /* === Simulator === */
 .simulator-controls {
     display: flex;
-    gap: 12px;
-    margin-bottom: 24px;
+    gap: 8px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
 }
 
 .btn {
-    padding: 11px 22px;
+    padding: 6px 14px;
     border: none;
-    border-radius: var(--radius);
+    border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s var(--ease-out);
-    font-size: 0.92rem;
+    transition: all 0.25s var(--ease-out);
+    font-size: 0.78rem;
     font-family: inherit;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     position: relative;
     overflow: hidden;
     user-select: none;
@@ -1045,13 +1065,13 @@ section h2::after {
 /* Share Bar — Twitter-style social buttons */
 .share-bar {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     margin-left: auto;
 }
 
 .share-btn {
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     border: none;
     display: flex;
@@ -1064,8 +1084,8 @@ section h2::after {
 }
 
 .share-btn .icon {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
 }
 
 .share-btn:hover {
@@ -1145,7 +1165,7 @@ section h2::after {
 
 /* Match days */
 .match-day {
-    margin-bottom: 28px;
+    margin-bottom: 14px;
 }
 
 .match-day:last-child {
@@ -1153,14 +1173,14 @@ section h2::after {
 }
 
 .match-day h3 {
-    font-size: 1.05rem;
+    font-size: 0.82rem;
     color: var(--text-secondary);
-    margin-bottom: 16px;
-    padding-bottom: 12px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     font-weight: 600;
 }
 
@@ -1170,34 +1190,34 @@ section h2::after {
 }
 
 .day-icon .icon {
-    width: 1.1rem;
-    height: 1.1rem;
+    width: 0.95rem;
+    height: 0.95rem;
 }
 
 .match-count {
     margin-left: auto;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: var(--text-muted);
     background: var(--bg-primary);
-    padding: 3px 10px;
+    padding: 2px 8px;
     border-radius: 50px;
     font-variant-numeric: tabular-nums;
 }
 
 .matches-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
 }
 
 /* Match card */
 .match-card {
     background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
-    border-radius: var(--radius);
-    padding: 18px;
+    border-radius: 10px;
+    padding: 10px;
     border: 1px solid var(--border);
-    transition: all 0.3s var(--ease-out);
+    transition: all 0.25s var(--ease-out);
     position: relative;
     overflow: hidden;
 }
@@ -1254,31 +1274,31 @@ section h2::after {
 
 .match-time {
     color: var(--text-muted);
-    font-size: 0.78rem;
-    margin-bottom: 12px;
+    font-size: 0.62rem;
+    margin-bottom: 6px;
     text-align: center;
     font-weight: 600;
     letter-spacing: 0.5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 4px;
 }
 
 .match-teams {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 6px;
 }
 
 .match-team {
     flex: 1;
-    padding: 14px 10px;
-    border-radius: var(--radius);
+    padding: 8px 6px;
+    border-radius: 10px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s var(--ease-out);
+    transition: all 0.25s var(--ease-out);
     border: 2px solid transparent;
     background: var(--bg-tertiary);
     font-weight: 600;
@@ -1287,7 +1307,7 @@ section h2::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .match-team::before {
@@ -1341,26 +1361,26 @@ section h2::after {
 }
 
 .team-logo {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    min-height: 44px;
-    max-width: 44px;
-    max-height: 44px;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+    max-height: 30px;
     object-fit: contain;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
     flex-shrink: 0;
 }
 
 .match-team .team-full {
     display: block;
-    font-size: 0.82rem;
+    font-size: 0.68rem;
     line-height: 1.2;
 }
 
 .team-record {
-    font-size: 0.7rem;
+    font-size: 0.58rem;
     color: var(--text-muted);
     font-weight: 500;
 }
@@ -1368,10 +1388,10 @@ section h2::after {
 .match-vs {
     color: var(--text-muted);
     font-weight: 800;
-    font-size: 0.8rem;
+    font-size: 0.62rem;
     background: var(--bg-primary);
-    width: 34px;
-    height: 34px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1384,14 +1404,14 @@ section h2::after {
 .team-selector {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-bottom: 24px;
+    gap: 10px;
+    margin-bottom: 14px;
 }
 
 .team-selector label {
     font-weight: 600;
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.82rem;
 }
 
 .select-wrapper {
@@ -1402,15 +1422,15 @@ section h2::after {
 
 .team-selector select {
     width: 100%;
-    padding: 12px 40px 12px 16px;
-    border-radius: var(--radius);
+    padding: 8px 32px 8px 12px;
+    border-radius: 8px;
     background: var(--bg-elevated);
     color: var(--text-primary);
     border: 1px solid var(--border-light);
-    font-size: 0.95rem;
+    font-size: 0.84rem;
     font-family: inherit;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     box-shadow: var(--shadow-sm);
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1441,8 +1461,8 @@ section h2::after {
 /* === Scenarios === */
 .scenarios-content {
     background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
-    border-radius: var(--radius);
-    padding: 24px;
+    border-radius: 10px;
+    padding: 14px;
     border: 1px solid var(--border);
     box-shadow: var(--shadow-sm);
 }
@@ -1450,12 +1470,12 @@ section h2::after {
 .scenario-status {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 18px 22px;
-    border-radius: var(--radius);
-    margin-bottom: 20px;
+    gap: 8px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-bottom: 14px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 0.92rem;
     position: relative;
     overflow: hidden;
 }
@@ -1495,14 +1515,14 @@ section h2::after {
 
 .scenario-details h4 {
     color: var(--text-secondary);
-    font-size: 0.88rem;
-    margin-bottom: 12px;
-    margin-top: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    margin-top: 16px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .scenario-details ul {
@@ -1511,14 +1531,14 @@ section h2::after {
 }
 
 .scenario-details li {
-    padding: 12px 16px;
+    padding: 8px 12px;
     background: var(--bg-tertiary);
-    border-radius: var(--radius);
-    margin-bottom: 8px;
-    font-size: 0.93rem;
-    border-left: 4px solid var(--accent-primary);
-    transition: all 0.3s ease;
-    line-height: 1.5;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    font-size: 0.82rem;
+    border-left: 3px solid var(--accent-primary);
+    transition: all 0.25s ease;
+    line-height: 1.4;
 }
 
 .scenario-details li:hover {
@@ -1539,18 +1559,18 @@ section h2::after {
 /* === Probability Stats === */
 .probability-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 14px;
-    margin-bottom: 28px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
 }
 
 .stat-card {
     background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
-    border-radius: var(--radius);
-    padding: 20px;
+    border-radius: 10px;
+    padding: 8px 6px;
     text-align: center;
     border: 1px solid var(--border);
-    transition: all 0.3s var(--ease-out);
+    transition: all 0.25s var(--ease-out);
     position: relative;
     overflow: hidden;
 }
@@ -1574,12 +1594,12 @@ section h2::after {
 
 .stat-icon {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .stat-icon .icon {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 /* Heart icon color */
@@ -1612,8 +1632,8 @@ h2 > .icon, h3 > .icon {
 .stat-label {
     display: block;
     color: var(--text-muted);
-    font-size: 0.75rem;
-    margin-bottom: 8px;
+    font-size: 0.6rem;
+    margin-bottom: 4px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
@@ -1621,7 +1641,7 @@ h2 > .icon, h3 > .icon {
 
 .stat-value {
     display: block;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     font-weight: 800;
     font-variant-numeric: tabular-nums;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
@@ -1634,58 +1654,58 @@ h2 > .icon, h3 > .icon {
 .probability-bars {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .prob-row {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 12px 16px;
+    gap: 8px;
+    padding: 5px 8px;
     background: linear-gradient(90deg, var(--bg-card), var(--bg-elevated));
-    border-radius: var(--radius);
+    border-radius: 8px;
     border: 1px solid var(--border);
-    transition: all 0.3s var(--ease-out);
+    transition: all 0.25s var(--ease-out);
 }
 
 .prob-row:hover {
-    transform: translateX(4px);
+    transform: translateX(3px);
     border-color: var(--border-light);
     box-shadow: var(--shadow-md);
 }
 
 .prob-row:hover .team-logo-sm {
-    transform: scale(1.12);
-    filter: drop-shadow(0 0 8px var(--accent-glow));
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 6px var(--accent-glow));
 }
 
 .prob-row .team-info {
-    min-width: 170px;
+    min-width: 120px;
 }
 
 .prob-row .team-name {
     flex-direction: row;
-    gap: 8px;
+    gap: 5px;
 }
 
 .prob-row .prob-bar-bg {
     flex: 1;
-    height: 22px;
-    border-radius: 11px;
+    height: 14px;
+    border-radius: 7px;
 }
 
 .prob-row .prob-value {
-    min-width: 60px;
-    font-size: 1.05rem;
+    min-width: 48px;
+    font-size: 0.88rem;
     font-weight: 700;
 }
 
 /* === Footer === */
 footer {
     text-align: center;
-    padding: 48px 24px 32px;
+    padding: 20px 12px 16px;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.72rem;
     position: relative;
 }
 
@@ -1704,30 +1724,32 @@ footer::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
 }
 
 .footer-brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 0.8rem;
     color: var(--text-primary);
 }
 
 .footer-logo {
-    border-radius: 8px;
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
     opacity: 0.8;
 }
 
 .footer-text {
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.68rem;
 }
 
 .footer-credits {
-    font-size: 0.85rem;
+    font-size: 0.68rem;
     color: var(--text-secondary);
 }
 
@@ -1739,10 +1761,10 @@ footer::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    font-size: 0.85rem;
+    gap: 4px;
+    font-size: 0.68rem;
     color: var(--text-secondary);
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .footer-discord svg {
@@ -1751,18 +1773,18 @@ footer::before {
 
 .footer-badges {
     display: flex;
-    gap: 8px;
+    gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 4px;
+    margin-top: 3px;
 }
 
 .footer-badge {
-    padding: 4px 12px;
+    padding: 2px 8px;
     background: var(--bg-secondary);
     border: 1px solid var(--border);
     border-radius: 50px;
-    font-size: 0.73rem;
+    font-size: 0.62rem;
     font-weight: 600;
     color: var(--text-muted);
 }
@@ -1770,10 +1792,10 @@ footer::before {
 /* === Scroll to Top === */
 .scroll-top-btn {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 44px;
-    height: 44px;
+    bottom: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
@@ -1784,9 +1806,9 @@ footer::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     opacity: 0;
     transform: translateY(20px);
     pointer-events: none;
@@ -1970,32 +1992,32 @@ kbd {
     }
     
     .nav-icon {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 768px) {
     :root {
-        --nav-height: 56px;
+        --nav-height: 52px;
     }
     
     .container {
-        padding: 16px;
-        padding-top: calc(var(--nav-height) + 16px);
+        padding: 10px;
+        padding-top: calc(var(--nav-height) + 10px);
     }
 
     header {
-        padding: 40px 24px;
+        padding: 16px 18px;
         border-radius: var(--radius-lg);
     }
 
     section {
-        padding: 20px;
+        padding: 12px 14px;
         border-radius: var(--radius);
     }
 
     section h2 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .nav-links {
@@ -2012,7 +2034,7 @@ kbd {
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border-bottom: 1px solid var(--glass-border);
-        padding: 12px 16px;
+        padding: 10px 14px;
         flex-direction: column;
         gap: 4px;
         animation: slide-down 0.3s var(--ease-out);
@@ -2020,8 +2042,8 @@ kbd {
     }
 
     .nav-links.mobile-open .nav-link {
-        padding: 12px 16px;
-        font-size: 0.95rem;
+        padding: 10px 14px;
+        font-size: 0.9rem;
     }
 
     .nav-links.mobile-open .nav-text {
@@ -2033,13 +2055,17 @@ kbd {
     }
 
     .standings-table {
-        font-size: 0.85rem;
+        font-size: 0.76rem;
+        table-layout: auto;
     }
 
     .standings-table th,
     .standings-table tbody tr td {
-        padding: 10px 8px;
+        padding: 5px 4px;
     }
+    
+    .standings-table th:nth-child(1) { width: 24px; }
+    .standings-table th:nth-child(6) { width: 100px; }
 
     .matches-grid {
         grid-template-columns: 1fr;
@@ -2050,36 +2076,36 @@ kbd {
     }
 
     .prob-row {
-        padding: 10px 12px;
-        gap: 10px;
+        padding: 5px 8px;
+        gap: 6px;
     }
 
     .prob-row .team-info {
-        min-width: 110px;
+        min-width: 90px;
     }
 
     .prob-row .prob-bar-bg {
-        height: 16px;
+        height: 12px;
     }
 
     .prob-row .prob-value {
-        min-width: 52px;
-        font-size: 0.95rem;
+        min-width: 44px;
+        font-size: 0.84rem;
     }
 
     .countdown-item {
-        padding: 8px 10px;
-        min-width: 50px;
+        padding: 5px 8px;
+        min-width: 38px;
     }
 
     .countdown-value {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     .toast-container {
-        bottom: 16px;
-        right: 16px;
-        left: 16px;
+        bottom: 12px;
+        right: 12px;
+        left: 12px;
     }
 
     .toast {
@@ -2094,12 +2120,12 @@ kbd {
 
 @media (max-width: 480px) {
     .container {
-        padding: 12px;
-        padding-top: calc(var(--nav-height) + 12px);
+        padding: 8px;
+        padding-top: calc(var(--nav-height) + 8px);
     }
 
     section {
-        padding: 16px;
+        padding: 12px;
     }
 
     .simulator-controls {
@@ -2131,16 +2157,16 @@ kbd {
     }
 
     .match-team .team-full {
-        font-size: 0.78rem;
+        font-size: 0.65rem;
     }
 
     .team-logo {
-        width: 36px;
-        height: 36px;
-        min-width: 36px;
-        min-height: 36px;
-        max-width: 36px;
-        max-height: 36px;
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        min-height: 28px;
+        max-width: 28px;
+        max-height: 28px;
     }
 
     .standings-table tbody tr td:first-child,
@@ -2149,19 +2175,19 @@ kbd {
     }
 
     .prob-row .team-name {
-        font-size: 0.85rem;
+        font-size: 0.78rem;
     }
 
     .countdown {
-        gap: 4px;
+        gap: 3px;
     }
 
     .countdown-sep {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     .footer-badges {
-        gap: 6px;
+        gap: 4px;
     }
 }
 
