@@ -60,19 +60,13 @@ function saveSimulatorState() {
 
 // ========== Match Rendering ==========
 function renderMatches() {
-    const saturdayContainer = document.getElementById('saturday-matches');
     const sundayContainer = document.getElementById('sunday-matches');
 
-    saturdayContainer.innerHTML = '';
     sundayContainer.innerHTML = '';
 
     for (const match of simulatorState.matches) {
         const card = createMatchCard(match);
-        if (match.day === 'saturday') {
-            saturdayContainer.appendChild(card);
-        } else {
-            sundayContainer.appendChild(card);
-        }
+        sundayContainer.appendChild(card);
     }
 
     // Update match counts
@@ -279,13 +273,9 @@ function updateProgress() {
 
 // ========== Match Counts ==========
 function updateMatchCounts() {
-    const satCount = simulatorState.matches.filter(m => m.day === 'saturday' && m.winner).length;
-    const sunCount = simulatorState.matches.filter(m => m.day === 'sunday' && m.winner).length;
-
-    const satEl = document.getElementById('saturday-count');
+    const sunCount = simulatorState.matches.filter(m => m.winner).length;
     const sunEl = document.getElementById('sunday-count');
 
-    if (satEl) satEl.textContent = `${satCount}/6`;
     if (sunEl) sunEl.textContent = `${sunCount}/6`;
 }
 

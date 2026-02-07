@@ -75,7 +75,7 @@ const TRANSLATIONS = {
         footerCredits: 'Hecho con',
         footerBy: 'por',
         footerTeams: '12 equipos',
-        footerScenarios: '4,096 escenarios',
+        footerScenarios: '64 escenarios',
         
         // Scroll
         scrollTop: 'Volver arriba',
@@ -195,7 +195,7 @@ const TRANSLATIONS = {
         footerCredits: 'Made with',
         footerBy: 'by',
         footerTeams: '12 teams',
-        footerScenarios: '4,096 scenarios',
+        footerScenarios: '64 scenarios',
         
         // Scroll
         scrollTop: 'Back to top',
