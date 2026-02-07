@@ -135,74 +135,74 @@
                 </div>
             </div>
 
-            <!-- Tabla de Clasificación -->
-            <section class="standings-section reveal" id="standings" aria-labelledby="standings-title">
-                <h2 id="standings-title"><span data-icon="chartBar"></span> <span data-i18n="standingsTitle">Clasificación Actual</span></h2>
-                <div class="standings-info">
-                    <span class="info-badge qualified">
-                        <span class="badge-dot"></span>
-                        <span data-i18n="top8Playoffs">Top 8 → Playoffs</span>
-                    </span>
-                    <span class="info-badge eliminated">
-                        <span class="badge-dot"></span>
-                        <span data-i18n="eliminated">9-12 → Eliminados</span>
-                    </span>
-                </div>
-                <div class="table-wrapper">
-                    <table class="standings-table" role="table" aria-label="Tabla de clasificación">
-                        <thead>
-                            <tr>
-                                <th scope="col" data-i18n="thPosition">#</th>
-                                <th scope="col" data-i18n="thTeam">Equipo</th>
-                                <th scope="col" data-i18n="thWins">V</th>
-                                <th scope="col" data-i18n="thLosses">D</th>
-                                <th scope="col" data-i18n="thWinrate">%</th>
-                                <th scope="col" data-i18n="thPlayoffProb">Prob. Playoffs</th>
-                            </tr>
-                        </thead>
-                        <tbody id="standings-body">
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Simulador de Partidos -->
-            <section class="simulator-section reveal" id="simulator" aria-labelledby="simulator-title">
-                <h2 id="simulator-title"><span data-icon="gamepad"></span> <span data-i18n="simulatorTitle">Simulador de Partidos</span></h2>
-                <p class="section-desc" data-i18n="simulatorDesc">Selecciona el ganador de cada partido para ver cómo afecta a la clasificación</p>
-                
-                <div class="simulator-controls">
-                    <button id="reset-btn" class="btn btn-secondary" aria-label="Reiniciar simulación">
-                        <span class="btn-icon" data-icon="refresh"></span> <span data-i18n="btnReset">Reiniciar</span>
-                    </button>
-                    <button id="random-btn" class="btn btn-secondary" aria-label="Resultados aleatorios">
-                        <span class="btn-icon" data-icon="dice"></span> <span data-i18n="btnRandom">Aleatorios</span>
-                    </button>
-                    <div class="share-bar" id="share-bar">
-                        <button class="share-btn share-btn--x" id="share-x" aria-label="Compartir en X" title="Compartir en X" data-i18n-aria="shareX" data-i18n-title="shareX">
-                            <span data-icon="twitter"></span>
-                        </button>
-                        <button class="share-btn share-btn--wa" id="share-wa" aria-label="Compartir en WhatsApp" title="Compartir en WhatsApp" data-i18n-aria="shareWA" data-i18n-title="shareWA">
-                            <span data-icon="whatsapp"></span>
-                        </button>
-                        <button class="share-btn share-btn--copy" id="share-copy" aria-label="Copiar al portapapeles" title="Copiar al portapapeles" data-i18n-aria="shareCopy" data-i18n-title="shareCopy">
-                            <span data-icon="copy"></span>
-                        </button>
+            <!-- Main Content: Standings + Simulator side by side -->
+            <div class="main-content-grid">
+                <!-- Tabla de Clasificación -->
+                <section class="standings-section reveal" id="standings" aria-labelledby="standings-title">
+                    <h2 id="standings-title"><span data-icon="chartBar"></span> <span data-i18n="standingsTitle">Clasificación</span></h2>
+                    <div class="standings-info">
+                        <span class="info-badge qualified">
+                            <span class="badge-dot"></span>
+                            <span data-i18n="top8Playoffs">Top 8 → Playoffs</span>
+                        </span>
+                        <span class="info-badge eliminated">
+                            <span class="badge-dot"></span>
+                            <span data-i18n="eliminated">9-12 → Eliminados</span>
+                        </span>
                     </div>
-                </div>
+                    <div class="table-wrapper">
+                        <table class="standings-table" role="table" aria-label="Tabla de clasificación">
+                            <thead>
+                                <tr>
+                                    <th scope="col" data-i18n="thPosition">#</th>
+                                    <th scope="col" data-i18n="thTeam">Equipo</th>
+                                    <th scope="col" data-i18n="thWins">V</th>
+                                    <th scope="col" data-i18n="thLosses">D</th>
+                                </tr>
+                            </thead>
+                            <tbody id="standings-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
 
-                <div class="matches-container">
-                    <div class="match-day">
-                        <h3>
-                            <span class="day-icon" data-icon="calendar"></span>
-                            <span data-i18n="sunday">Domingo 8 de Febrero</span>
-                            <span class="match-count" id="sunday-count">0/6</span>
-                        </h3>
-                        <div id="sunday-matches" class="matches-grid">
+                <!-- Simulador de Partidos -->
+                <section class="simulator-section reveal" id="simulator" aria-labelledby="simulator-title">
+                    <h2 id="simulator-title"><span data-icon="gamepad"></span> <span data-i18n="simulatorTitle">Simulador</span></h2>
+                    
+                    <div class="simulator-controls">
+                        <button id="reset-btn" class="btn btn-secondary" aria-label="Reiniciar simulación">
+                            <span class="btn-icon" data-icon="refresh"></span> <span data-i18n="btnReset">Reiniciar</span>
+                        </button>
+                        <button id="random-btn" class="btn btn-secondary" aria-label="Resultados aleatorios">
+                            <span class="btn-icon" data-icon="dice"></span> <span data-i18n="btnRandom">Aleatorios</span>
+                        </button>
+                        <div class="share-bar" id="share-bar">
+                            <button class="share-btn share-btn--x" id="share-x" aria-label="Compartir en X" title="Compartir en X" data-i18n-aria="shareX" data-i18n-title="shareX">
+                                <span data-icon="twitter"></span>
+                            </button>
+                            <button class="share-btn share-btn--wa" id="share-wa" aria-label="Compartir en WhatsApp" title="Compartir en WhatsApp" data-i18n-aria="shareWA" data-i18n-title="shareWA">
+                                <span data-icon="whatsapp"></span>
+                            </button>
+                            <button class="share-btn share-btn--copy" id="share-copy" aria-label="Copiar al portapapeles" title="Copiar al portapapeles" data-i18n-aria="shareCopy" data-i18n-title="shareCopy">
+                                <span data-icon="copy"></span>
+                            </button>
                         </div>
                     </div>
-                </div>
-            </section>
+
+                    <div class="matches-container">
+                        <div class="match-day">
+                            <h3>
+                                <span class="day-icon" data-icon="calendar"></span>
+                                <span data-i18n="sunday">Domingo 8 de Febrero</span>
+                                <span class="match-count" id="sunday-count">0/6</span>
+                            </h3>
+                            <div id="sunday-matches" class="matches-grid">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
             <!-- Escenarios -->
             <section class="scenarios-section reveal" id="scenarios" aria-labelledby="scenarios-title">

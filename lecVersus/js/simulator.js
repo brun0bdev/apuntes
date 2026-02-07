@@ -176,9 +176,6 @@ function renderStandings(standings, probabilities) {
     tbody.innerHTML = '';
 
     for (const team of standings) {
-        const prob = probabilities[team.id];
-        const probClass = getProbabilityClass(prob.probability);
-
         let rowClass = '';
         if (team.position <= 6) rowClass = 'qualified';
         else if (team.position <= 8) rowClass = 'bubble';
@@ -200,15 +197,6 @@ function renderStandings(standings, probabilities) {
             </td>
             <td>${team.wins}</td>
             <td>${team.losses}</td>
-            <td>${(team.winPct * 100).toFixed(0)}%</td>
-            <td>
-                <div class="prob-bar">
-                    <div class="prob-bar-bg">
-                        <div class="prob-bar-fill ${probClass}" style="width: ${prob.probability}%"></div>
-                    </div>
-                    <span class="prob-value">${formatProbability(prob.probability)}</span>
-                </div>
-            </td>
         `;
 
         tbody.appendChild(row);

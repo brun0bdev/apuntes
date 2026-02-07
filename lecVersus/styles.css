@@ -435,10 +435,19 @@ body::before {
 
 /* === Layout === */
 .container {
-    max-width: 900px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 12px;
-    padding-top: calc(var(--nav-height) + 12px);
+    padding: 16px;
+    padding-top: calc(var(--nav-height) + 16px);
+}
+
+/* Main content grid */
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 16px;
+    align-items: stretch;
+    margin-bottom: 16px;
 }
 
 /* === Header === */
@@ -483,9 +492,9 @@ header::before {
 }
 
 .header-logo {
-    width: 50px;
+    width: 60px;
     height: auto;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     position: relative;
     z-index: 1;
     filter: drop-shadow(0 0 20px var(--accent-glow));
@@ -498,13 +507,13 @@ header::before {
 }
 
 header h1 {
-    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
     font-weight: 900;
     background: linear-gradient(135deg, #fff 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     position: relative;
     z-index: 1;
     letter-spacing: -0.03em;
@@ -691,6 +700,28 @@ section {
     transition: border-color 0.3s ease;
 }
 
+/* Sections inside main grid don't need bottom margin */
+.main-content-grid section {
+    margin-bottom: 0;
+}
+
+.main-content-grid .standings-section {
+    padding: 10px 12px;
+}
+
+.main-content-grid .standings-section h2 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.main-content-grid .standings-section h2::after {
+    display: none;
+}
+
+.main-content-grid .simulator-section h2::after {
+    display: none;
+}
+
 section::before {
     content: '';
     position: absolute;
@@ -702,9 +733,9 @@ section::before {
 }
 
 section h2 {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     color: var(--text-primary);
     display: flex;
     align-items: center;
@@ -721,8 +752,8 @@ section h2::after {
 
 .section-desc {
     color: var(--text-secondary);
-    margin-bottom: 12px;
-    font-size: 0.78rem;
+    margin-bottom: 14px;
+    font-size: 0.88rem;
     line-height: 1.5;
 }
 
@@ -758,25 +789,25 @@ section h2::after {
 /* === Standings Table === */
 .standings-info {
     display: flex;
-    gap: 8px;
-    margin-bottom: 10px;
+    gap: 6px;
+    margin-bottom: 8px;
     flex-wrap: wrap;
 }
 
 .info-badge {
-    padding: 4px 10px;
+    padding: 3px 8px;
     border-radius: 50px;
-    font-size: 0.68rem;
+    font-size: 0.62rem;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
     transition: all 0.3s ease;
 }
 
 .badge-dot {
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     flex-shrink: 0;
 }
@@ -812,8 +843,8 @@ section h2::after {
 .standings-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 3px;
-    font-size: 0.8rem;
+    border-spacing: 0 4px;
+    font-size: 0.9rem;
     table-layout: fixed;
 }
 
@@ -826,20 +857,18 @@ section h2::after {
     text-align: left;
     color: var(--text-muted);
     font-weight: 600;
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border: none;
     white-space: nowrap;
 }
 
-/* Column widths */
+/* Column widths - simplified table */
 .standings-table th:nth-child(1) { width: 28px; text-align: center; }
 .standings-table th:nth-child(2) { width: auto; }
-.standings-table th:nth-child(3) { width: 36px; text-align: center; }
-.standings-table th:nth-child(4) { width: 36px; text-align: center; }
-.standings-table th:nth-child(5) { width: 42px; text-align: center; }
-.standings-table th:nth-child(6) { width: 140px; }
+.standings-table th:nth-child(3) { width: 32px; text-align: center; }
+.standings-table th:nth-child(4) { width: 32px; text-align: center; }
 
 .standings-table tbody tr {
     background: var(--bg-elevated);
@@ -848,8 +877,8 @@ section h2::after {
 }
 
 .standings-table tbody tr:hover {
-    transform: translateX(3px);
-    box-shadow: var(--shadow-md), -3px 0 0 var(--accent-primary);
+    transform: translateX(2px);
+    box-shadow: var(--shadow-md), -2px 0 0 var(--accent-primary);
 }
 
 .standings-table tbody tr td {
@@ -862,15 +891,14 @@ section h2::after {
 
 .standings-table tbody tr td:nth-child(1) { text-align: center; }
 .standings-table tbody tr td:nth-child(3),
-.standings-table tbody tr td:nth-child(4),
-.standings-table tbody tr td:nth-child(5) { text-align: center; }
+.standings-table tbody tr td:nth-child(4) { text-align: center; }
 
 .standings-table tbody tr td:first-child {
     border-left: 1px solid var(--border);
     border-radius: var(--radius) 0 0 var(--radius);
     font-weight: 700;
     color: var(--text-muted);
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .standings-table tbody tr td:last-child {
@@ -912,20 +940,20 @@ section h2::after {
 .team-info {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
 }
 
 .team-logo-sm {
-    width: 20px;
-    height: 20px;
-    min-width: 20px;
-    min-height: 20px;
-    max-width: 20px;
-    max-height: 20px;
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    min-height: 22px;
+    max-width: 22px;
+    max-height: 22px;
     object-fit: contain;
-    border-radius: 4px;
+    border-radius: 3px;
     background: var(--bg-tertiary);
-    padding: 2px;
+    padding: 1px;
     transition: all 0.25s ease;
     flex-shrink: 0;
 }
@@ -940,12 +968,13 @@ section h2::after {
     display: flex;
     flex-direction: column;
     gap: 0px;
-    font-size: 0.78rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
 }
 
 .team-abbr {
     color: var(--text-muted);
-    font-size: 0.56rem;
+    font-size: 0.65rem;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
@@ -1011,19 +1040,19 @@ section h2::after {
 /* === Simulator === */
 .simulator-controls {
     display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
+    gap: 6px;
+    margin-bottom: 10px;
     flex-wrap: wrap;
 }
 
 .btn {
-    padding: 6px 14px;
+    padding: 7px 14px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.25s var(--ease-out);
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     font-family: inherit;
     display: inline-flex;
     align-items: center;
@@ -1084,8 +1113,8 @@ section h2::after {
 }
 
 .share-btn .icon {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
 }
 
 .share-btn:hover {
@@ -1165,7 +1194,7 @@ section h2::after {
 
 /* Match days */
 .match-day {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .match-day:last-child {
@@ -1173,14 +1202,14 @@ section h2::after {
 }
 
 .match-day h3 {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     color: var(--text-secondary);
-    margin-bottom: 10px;
-    padding-bottom: 6px;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     font-weight: 600;
 }
 
@@ -1207,15 +1236,15 @@ section h2::after {
 
 .matches-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 6px;
 }
 
 /* Match card */
 .match-card {
     background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 12px;
+    padding: 14px;
     border: 1px solid var(--border);
     transition: all 0.25s var(--ease-out);
     position: relative;
@@ -1274,8 +1303,8 @@ section h2::after {
 
 .match-time {
     color: var(--text-muted);
-    font-size: 0.62rem;
-    margin-bottom: 6px;
+    font-size: 0.72rem;
+    margin-bottom: 8px;
     text-align: center;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -1294,7 +1323,7 @@ section h2::after {
 
 .match-team {
     flex: 1;
-    padding: 8px 6px;
+    padding: 10px 8px;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
@@ -1307,7 +1336,7 @@ section h2::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
 }
 
 .match-team::before {
@@ -1361,12 +1390,12 @@ section h2::after {
 }
 
 .team-logo {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    min-height: 30px;
-    max-width: 30px;
-    max-height: 30px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
     object-fit: contain;
     transition: all 0.25s ease;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
@@ -1375,12 +1404,12 @@ section h2::after {
 
 .match-team .team-full {
     display: block;
-    font-size: 0.68rem;
+    font-size: 0.88rem;
     line-height: 1.2;
 }
 
 .team-record {
-    font-size: 0.58rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
     font-weight: 500;
 }
@@ -1388,10 +1417,10 @@ section h2::after {
 .match-vs {
     color: var(--text-muted);
     font-weight: 800;
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     background: var(--bg-primary);
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2005,6 +2034,10 @@ kbd {
         padding: 10px;
         padding-top: calc(var(--nav-height) + 10px);
     }
+    
+    .main-content-grid {
+        grid-template-columns: 1fr;
+    }
 
     header {
         padding: 16px 18px;
@@ -2065,10 +2098,11 @@ kbd {
     }
     
     .standings-table th:nth-child(1) { width: 24px; }
-    .standings-table th:nth-child(6) { width: 100px; }
+    .standings-table th:nth-child(3),
+    .standings-table th:nth-child(4) { width: 30px; }
 
     .matches-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .probability-stats {
@@ -2125,7 +2159,11 @@ kbd {
     }
 
     section {
-        padding: 12px;
+        padding: 10px;
+    }
+    
+    .matches-grid {
+        grid-template-columns: 1fr;
     }
 
     .simulator-controls {
