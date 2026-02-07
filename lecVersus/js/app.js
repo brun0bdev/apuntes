@@ -236,17 +236,24 @@ function initCountdown() {
     const targetDate = new Date('2026-02-07T16:45:00+01:00');
     const wrapper = document.getElementById('countdown-wrapper');
 
+    let intervalId = null;
+
     function update() {
         const now = new Date();
         const diff = targetDate - now;
 
         if (diff <= 0) {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
             if (wrapper) {
-                wrapper.querySelector('.countdown-label').innerHTML = ICONS.liveDot + ' \u00a1Jornada en curso!';
-                document.getElementById('countdown-days').textContent = '0';
-                document.getElementById('countdown-hours').textContent = '0';
-                document.getElementById('countdown-minutes').textContent = '0';
-                document.getElementById('countdown-seconds').textContent = '0';
+                wrapper.innerHTML = `
+                    <div class="live-badge">
+                        <span class="live-dot"></span>
+                        <span>\u00a1Jornada en curso!</span>
+                    </div>
+                `;
             }
             return;
         }
@@ -268,7 +275,7 @@ function initCountdown() {
     }
 
     update();
-    setInterval(update, 1000);
+    intervalId = setInterval(update, 1000);
 }
 
 // ========== Scroll to Top ==========
