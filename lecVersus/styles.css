@@ -1226,6 +1226,25 @@ section h2::after {
     opacity: 1;
 }
 
+.match-card.locked {
+    border-color: rgba(234, 179, 8, 0.3);
+    position: relative;
+}
+
+.match-card.locked::after {
+    content: '🔒';
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.match-card.locked .match-team {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 .match-time {
     color: var(--text-muted);
     font-size: 0.78rem;

@@ -29,6 +29,15 @@ function loadSimulatorState() {
             // Validate saved matches still match current data structure
             if (parsed.matches && parsed.matches.length === REMAINING_MATCHES.length) {
                 simulatorState.matches = parsed.matches;
+                // Forzar valores de partidos bloqueados (resultados oficiales)
+                for (const originalMatch of REMAINING_MATCHES) {
+                    if (originalMatch.locked) {
+                        const savedMatch = simulatorState.matches.find(m => m.id === originalMatch.id);
+                        if (savedMatch) {
+                            savedMatch.winner = originalMatch.winner;
+                        }
+                    }
+                }
             } else {
                 simulatorState.matches = cloneMatches();
             }
@@ -71,8 +80,11 @@ function renderMatches() {
 }
 
 function createMatchCard(match) {
+    const originalMatch = REMAINING_MATCHES.find(m => m.id === match.id);
+    const isLocked = originalMatch && originalMatch.locked;
+    
     const card = document.createElement('div');
-    card.className = 'match-card' + (match.winner ? ' decided' : '');
+    card.className = 'match-card' + (match.winner ? ' decided' : '') + (isLocked ? ' locked' : '');
     card.dataset.matchId = match.id;
 
     const team1 = TEAMS[match.team1];
@@ -118,6 +130,10 @@ function createMatchCard(match) {
 function selectWinner(matchId, winnerId) {
     const match = simulatorState.matches.find(m => m.id === matchId);
     if (!match) return;
+
+    // No permitir cambios en partidos bloqueados (resultados oficiales)
+    const originalMatch = REMAINING_MATCHES.find(m => m.id === matchId);
+    if (originalMatch && originalMatch.locked) return;
 
     // Toggle selection
     if (match.winner === winnerId) {
@@ -285,6 +301,10 @@ function resetSimulation() {
 // ========== Randomize ==========
 function randomizeResults() {
     for (const match of simulatorState.matches) {
+        // No cambiar partidos bloqueados (resultados oficiales)
+        const originalMatch = REMAINING_MATCHES.find(m => m.id === match.id);
+        if (originalMatch && originalMatch.locked) continue;
+        
         match.winner = Math.random() < 0.5 ? match.team1 : match.team2;
     }
 
