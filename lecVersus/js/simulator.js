@@ -189,6 +189,7 @@ function renderStandings(standings, probabilities) {
         const teamData = TEAMS[team.id];
         const row = document.createElement('tr');
         row.className = rowClass;
+        row.dataset.team = team.id;
         row.innerHTML = `
             <td><strong>${team.position}</strong></td>
             <td>

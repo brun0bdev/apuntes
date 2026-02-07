@@ -2229,6 +2229,58 @@ kbd {
     }
 }
 
+/* === Cookie Animation === */
+.cookie-rain {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 100;
+    display: flex;
+    gap: 4px;
+}
+
+.cookie-item {
+    font-size: 1.2rem;
+    animation: cookieFall 1.8s ease-in forwards;
+    opacity: 0;
+}
+
+.cookie-item:nth-child(1) { animation-delay: 0s; }
+.cookie-item:nth-child(2) { animation-delay: 0.15s; }
+.cookie-item:nth-child(3) { animation-delay: 0.3s; }
+.cookie-item:nth-child(4) { animation-delay: 0.1s; }
+.cookie-item:nth-child(5) { animation-delay: 0.25s; }
+
+@keyframes cookieFall {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg) scale(0.5);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(10px) rotate(15deg) scale(1.1);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(35px) rotate(-10deg) scale(1);
+    }
+    80% {
+        opacity: 0.8;
+        transform: translateY(55px) rotate(20deg) scale(0.9);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(80px) rotate(30deg) scale(0.7);
+    }
+}
+
+.match-team,
+.standings-table tbody tr {
+    position: relative;
+}
+
 /* === Print === */
 @media print {
     .main-nav,
@@ -2239,7 +2291,8 @@ kbd {
     .sim-progress,
     .toast-container,
     .confetti-canvas,
-    .loading-screen {
+    .loading-screen,
+    .cookie-rain {
         display: none !important;
     }
 

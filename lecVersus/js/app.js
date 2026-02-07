@@ -482,6 +482,7 @@ function initApp() {
     initSimulator();
     initShareButton();
     initLangToggle();
+    initCookieAnimation();
 
     // Select default team
     const teamSelect = document.getElementById('team-select');
@@ -502,6 +503,40 @@ function initLangToggle() {
     if (btn) {
         btn.addEventListener('click', toggleLanguage);
     }
+}
+
+// ========== Cookie Animation ==========
+const COOKIE_TEAMS = ['NAVI', 'LR', 'G2', 'GX', 'SK', 'TH'];
+
+function initCookieAnimation() {
+    scheduleCookieRain();
+}
+
+function scheduleCookieRain() {
+    const delay = Math.floor(Math.random() * (55000 - 15000 + 1)) + 15000; // 15-55 segundos
+    setTimeout(() => {
+        spawnCookieRain();
+        scheduleCookieRain();
+    }, delay);
+}
+
+function spawnCookieRain() {
+    const teamId = COOKIE_TEAMS[Math.floor(Math.random() * COOKIE_TEAMS.length)];
+    
+    // Buscar solo en simulador (match-team)
+    const matchTeam = document.querySelector(`.match-team[data-team="${teamId}"]`);
+    if (!matchTeam) return;
+    
+    // Crear contenedor de galletas (usando código Unicode para evitar problemas de codificación)
+    const cookieEmoji = String.fromCodePoint(0x1F36A);
+    const rain = document.createElement('div');
+    rain.className = 'cookie-rain';
+    rain.innerHTML = Array(5).fill(`<span class="cookie-item">${cookieEmoji}</span>`).join('');
+    
+    matchTeam.appendChild(rain);
+    
+    // Eliminar después de la animación
+    setTimeout(() => rain.remove(), 2200);
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
