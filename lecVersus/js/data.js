@@ -191,7 +191,7 @@ const REMAINING_MATCHES = [
     // Sábado 7 de Febrero
     { id: 1, team1: 'TH', team2: 'FNC', date: '2026-02-07', time: '16:45', day: 'saturday', winner: 'TH', locked: true },
     { id: 2, team1: 'SHFT', team2: 'KCB', date: '2026-02-07', time: '17:30', day: 'saturday', winner: 'SHFT', locked: true },
-    { id: 3, team1: 'SK', team2: 'LR', date: '2026-02-07', time: '18:15', day: 'saturday', winner: null },
+    { id: 3, team1: 'SK', team2: 'LR', date: '2026-02-07', time: '18:15', day: 'saturday', winner: 'LR', locked: true },
     { id: 4, team1: 'NAVI', team2: 'G2', date: '2026-02-07', time: '19:00', day: 'saturday', winner: null },
     { id: 5, team1: 'VIT', team2: 'MKOI', date: '2026-02-07', time: '19:45', day: 'saturday', winner: null },
     { id: 6, team1: 'KC', team2: 'GX', date: '2026-02-07', time: '20:30', day: 'saturday', winner: null },
