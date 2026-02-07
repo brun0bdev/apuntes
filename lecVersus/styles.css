@@ -383,6 +383,13 @@ body::before {
 [data-theme="light"] .theme-btn .theme-icon-dark { display: none; }
 [data-theme="light"] .theme-btn .theme-icon-light { display: inline; }
 
+/* Language button */
+.lang-btn {
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
 /* Mobile Nav Toggle */
 .mobile-nav-toggle {
     display: none;

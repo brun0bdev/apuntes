@@ -9,11 +9,13 @@ const APP_VERSION = '2.1';
 (function purgeStaleCache() {
     const storedVersion = localStorage.getItem('lecVersus_version');
     if (storedVersion !== APP_VERSION) {
-        // Preserve theme preference, wipe everything else
+        // Preserve theme and language preference, wipe everything else
         const theme = localStorage.getItem('lecVersus_theme');
+        const lang = localStorage.getItem('lecVersus_lang');
         const keys = Object.keys(localStorage).filter(k => k.startsWith('lecVersus'));
         keys.forEach(k => localStorage.removeItem(k));
         if (theme) localStorage.setItem('lecVersus_theme', theme);
+        if (lang) localStorage.setItem('lecVersus_lang', lang);
         localStorage.setItem('lecVersus_version', APP_VERSION);
         console.log(`[CACHE] Purged stale data (${storedVersion || 'none'} → ${APP_VERSION})`);
     }
@@ -464,6 +466,9 @@ function initApp() {
     // Populate SVG icons from data-icon attributes
     initIcons();
 
+    // Initialize internationalization
+    initI18n();
+
     // Core initialization
     initTheme();
     initNavigation();
@@ -476,6 +481,7 @@ function initApp() {
     initTeamSelector();
     initSimulator();
     initShareButton();
+    initLangToggle();
 
     // Select default team
     const teamSelect = document.getElementById('team-select');
@@ -489,6 +495,13 @@ function initApp() {
 
     console.log('[OK] App initialized');
     console.log(`[INFO] ${Object.keys(TEAMS).length} teams | ${REMAINING_MATCHES.length} matches | ${Math.pow(2, REMAINING_MATCHES.length).toLocaleString()} scenarios`);
+}
+
+function initLangToggle() {
+    const btn = document.getElementById('lang-toggle');
+    if (btn) {
+        btn.addEventListener('click', toggleLanguage);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', initApp);

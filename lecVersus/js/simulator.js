@@ -295,7 +295,7 @@ function resetSimulation() {
     saveSimulatorState();
     renderMatches();
     updateSimulation();
-    showToast('Simulación reiniciada', 'info', 2000);
+    showToast(t('toastReset'), 'info', 2000);
 }
 
 // ========== Randomize ==========
@@ -311,13 +311,15 @@ function randomizeResults() {
     saveSimulatorState();
     renderMatches();
     updateSimulation();
-    showToast('Resultados aleatorios generados', 'info', 2000);
+    showToast(t('toastRandom'), 'info', 2000);
 }
 
 // ========== Team Selector ==========
 function initTeamSelector() {
     const select = document.getElementById('team-select');
-    select.innerHTML = '<option value="">Selecciona un equipo...</option>';
+    const currentValue = select.value; // Preserve current selection
+    
+    select.innerHTML = `<option value="">${t('teamSelectPlaceholder')}</option>`;
 
     const sortedTeams = Object.values(TEAMS).sort((a, b) => a.name.localeCompare(b.name));
 
@@ -328,11 +330,20 @@ function initTeamSelector() {
         select.appendChild(option);
     }
 
-    select.addEventListener('change', (e) => {
-        if (e.target.value) {
-            renderScenarios(e.target.value);
-        }
-    });
+    // Restore previous selection
+    if (currentValue) {
+        select.value = currentValue;
+    }
+
+    // Only add event listener once
+    if (!select.dataset.initialized) {
+        select.addEventListener('change', (e) => {
+            if (e.target.value) {
+                renderScenarios(e.target.value);
+            }
+        });
+        select.dataset.initialized = 'true';
+    }
 }
 
 // ========== Scenarios Rendering ==========
@@ -344,15 +355,15 @@ function renderScenarios(teamId) {
     if (scenario.status === 'qualified') {
         statusClass = 'qualified';
         statusIcon = ICONS.checkCircle;
-        statusText = 'Clasificado a Playoffs';
+        statusText = t('scenarioQualified');
     } else if (scenario.status === 'eliminated') {
         statusClass = 'eliminated';
         statusIcon = ICONS.xCircle;
-        statusText = 'Eliminado de Playoffs';
+        statusText = t('scenarioEliminated');
     } else {
         statusClass = 'contending';
         statusIcon = ICONS.zap;
-        statusText = `${formatProbability(scenario.currentProbability)} de clasificar`;
+        statusText = t('scenarioChanceToQualify', formatProbability(scenario.currentProbability));
     }
 
     let html = `
@@ -365,7 +376,7 @@ function renderScenarios(teamId) {
     // Description
     const description = generateScenarioDescription(scenario);
     if (description.length > 0) {
-        html += `<h4>${ICONS.clipboard} Situación actual</h4><ul>`;
+        html += `<h4>${ICONS.clipboard} ${t('scenarioCurrentSituation')}</h4><ul>`;
         for (const line of description) {
             html += `<li>${line}</li>`;
         }
@@ -374,31 +385,34 @@ function renderScenarios(teamId) {
 
     // Team matches
     if (scenario.teamMatches.length > 0) {
-        html += `<h4>${ICONS.gamepad} Sus partidos restantes</h4><ul>`;
+        html += `<h4>${ICONS.gamepad} ${t('scenarioRemainingMatches')}</h4><ul>`;
         for (const match of scenario.teamMatches) {
             const opponent = match.team1 === teamId ? match.team2 : match.team1;
             const opponentTeam = TEAMS[opponent];
+            const winLabel = getCurrentLang() === 'en' ? 'W' : 'V';
+            const lossLabel = getCurrentLang() === 'en' ? 'L' : 'D';
             const status = match.winner
-                ? (match.winner === teamId ? `${ICONS.checkCircle} Victoria` : `${ICONS.xCircle} Derrota`)
-                : `${ICONS.hourglass} Por jugar`;
+                ? (match.winner === teamId ? `${ICONS.checkCircle} ${t('scenarioVictory')}` : `${ICONS.xCircle} ${t('scenarioDefeat')}`)
+                : `${ICONS.hourglass} ${t('scenarioToBePlayed')}`;
             const liClass = match.winner === teamId ? 'good' : (match.winner && match.winner !== teamId ? 'bad' : '');
-            html += `<li class="${liClass}">vs ${opponentTeam.name} (${opponentTeam.wins}V-${opponentTeam.losses}D) — ${status}</li>`;
+            html += `<li class="${liClass}">vs ${opponentTeam.name} (${opponentTeam.wins}${winLabel}-${opponentTeam.losses}${lossLabel}) — ${status}</li>`;
         }
         html += `</ul>`;
     }
 
     // Key matches
     if (scenario.impactfulMatches.length > 0 && scenario.status === 'contending') {
-        html += `<h4>${ICONS.fire} Partidos clave para ${TEAMS[teamId].name}</h4><ul>`;
+        html += `<h4>${ICONS.fire} ${t('scenarioKeyMatches', TEAMS[teamId].name)}</h4><ul>`;
         for (const imp of scenario.impactfulMatches.slice(0, 5)) {
             const favorable = TEAMS[imp.favorable];
             const unfavorable = TEAMS[imp.unfavorable];
             const impactPct = imp.impact.toFixed(1);
 
             if (imp.match.team1 === teamId || imp.match.team2 === teamId) {
-                html += `<li class="good">${ICONS.target} Ganar vs ${imp.match.team1 === teamId ? TEAMS[imp.match.team2].name : TEAMS[imp.match.team1].name} (+${impactPct}% prob.)</li>`;
+                const vsTeam = imp.match.team1 === teamId ? TEAMS[imp.match.team2].name : TEAMS[imp.match.team1].name;
+                html += `<li class="good">${ICONS.target} ${t('scenarioWinVs', vsTeam)} (+${impactPct}% prob.)</li>`;
             } else {
-                html += `<li class="good">${ICONS.thumbsUp} Necesita que ${favorable.name} gane vs ${unfavorable.name} (+${impactPct}%)</li>`;
+                html += `<li class="good">${ICONS.thumbsUp} ${t('scenarioNeedsWin', favorable.name, unfavorable.name)} (+${impactPct}%)</li>`;
             }
         }
         html += `</ul>`;

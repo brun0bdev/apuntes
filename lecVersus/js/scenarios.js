@@ -227,25 +227,25 @@ function generateScenarioDescription(scenario) {
     const lines = [];
     
     if (scenario.status === 'qualified') {
-        lines.push(`${ICONS.checkCircle} ${team.name} ya está matemáticamente clasificado a playoffs.`);
+        lines.push(`${ICONS.checkCircle} ${t('scenarioDescQualified', team.name)}`);
     } else if (scenario.status === 'eliminated') {
-        lines.push(`${ICONS.xCircle} ${team.name} está matemáticamente eliminado de playoffs.`);
+        lines.push(`${ICONS.xCircle} ${t('scenarioDescEliminated', team.name)}`);
     } else {
-        lines.push(`${team.name} tiene ${formatProbability(scenario.currentProbability)} de probabilidad de clasificar.`);
+        lines.push(t('scenarioDescProbability', team.name, formatProbability(scenario.currentProbability)));
         
         if (scenario.teamMatches.length > 0) {
-            lines.push(`Juega ${scenario.teamMatches.length} partido(s) restante(s).`);
+            lines.push(t('scenarioDescRemainingMatches', scenario.teamMatches.length));
             
             if (scenario.bestCase.probability >= 99.9) {
-                lines.push(`Si gana todos sus partidos: Clasificado`);
+                lines.push(t('scenarioDescWinAll'));
             } else if (scenario.bestCase.probability > 0) {
-                lines.push(`Mejor caso (gana todo): ${formatProbability(scenario.bestCase.probability)} de clasificar`);
+                lines.push(t('scenarioDescBestCase', formatProbability(scenario.bestCase.probability)));
             }
             
             if (scenario.worstCase.probability <= 0.1) {
-                lines.push(`${ICONS.skull} Si pierde todos sus partidos: Eliminado`);
+                lines.push(`${ICONS.skull} ${t('scenarioDescLoseAll')}`);
             } else if (scenario.worstCase.probability < 100) {
-                lines.push(`Peor caso (pierde todo): ${formatProbability(scenario.worstCase.probability)} de clasificar`);
+                lines.push(t('scenarioDescWorstCase', formatProbability(scenario.worstCase.probability)));
             }
         }
     }

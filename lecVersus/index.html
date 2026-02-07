@@ -39,7 +39,7 @@
         <div class="loading-content">
             <img src="img/logos/lec.webp" alt="" class="loading-logo">
             <div class="loading-spinner"></div>
-            <p>Calculando escenarios...</p>
+            <p data-i18n="loadingText">Calculando escenarios...</p>
         </div>
     </div>
 
@@ -59,23 +59,24 @@
             <div class="nav-links" id="nav-links">
                 <a href="#standings" class="nav-link active" data-section="standings">
                     <span class="nav-icon" data-icon="chartBar"></span>
-                    <span class="nav-text">Clasificación</span>
+                    <span class="nav-text" data-i18n="navStandings">Clasificación</span>
                 </a>
                 <a href="#simulator" class="nav-link" data-section="simulator">
                     <span class="nav-icon" data-icon="gamepad"></span>
-                    <span class="nav-text">Simulador</span>
+                    <span class="nav-text" data-i18n="navSimulator">Simulador</span>
                 </a>
                 <a href="#scenarios" class="nav-link" data-section="scenarios">
                     <span class="nav-icon" data-icon="sparkles"></span>
-                    <span class="nav-text">Escenarios</span>
+                    <span class="nav-text" data-i18n="navScenarios">Escenarios</span>
                 </a>
                 <a href="#probability" class="nav-link" data-section="probability">
                     <span class="nav-icon" data-icon="trendingUp"></span>
-                    <span class="nav-text">Probabilidades</span>
+                    <span class="nav-text" data-i18n="navProbability">Probabilidades</span>
                 </a>
             </div>
             <div class="nav-actions">
-                <button id="theme-toggle" class="nav-btn theme-btn" aria-label="Cambiar tema" title="Cambiar tema">
+                <button id="lang-toggle" class="nav-btn lang-btn" aria-label="Switch to English">EN</button>
+                <button id="theme-toggle" class="nav-btn theme-btn" aria-label="Cambiar tema" title="Cambiar tema" data-i18n-aria="navTheme" data-i18n-title="navTheme">
                     <span class="theme-icon-dark" data-icon="moon"></span>
                     <span class="theme-icon-light" data-icon="sun"></span>
                 </button>
@@ -92,31 +93,31 @@
         <header class="reveal">
             <div class="header-glow" aria-hidden="true"></div>
             <img src="img/logos/lec.webp" alt="LEC Logo" class="header-logo" width="120" height="120">
-            <h1>LEC Versus 2026</h1>
-            <p class="subtitle">Calculadora de Probabilidades de Playoffs</p>
+            <h1 data-i18n="headerTitle">LEC Versus 2026</h1>
+            <p class="subtitle" data-i18n="headerSubtitle">Calculadora de Probabilidades de Playoffs</p>
             
             <!-- Countdown -->
             <div class="countdown-wrapper" id="countdown-wrapper">
-                <p class="countdown-label"><span data-icon="timer"></span> Próxima jornada en</p>
+                <p class="countdown-label"><span data-icon="timer"></span> <span data-i18n="countdownLabel">Próxima jornada en</span></p>
                 <div class="countdown" id="countdown" aria-label="Cuenta atrás">
                     <div class="countdown-item">
                         <span class="countdown-value" id="countdown-days">0</span>
-                        <span class="countdown-unit">días</span>
+                        <span class="countdown-unit" data-i18n="days">días</span>
                     </div>
                     <div class="countdown-sep">:</div>
                     <div class="countdown-item">
                         <span class="countdown-value" id="countdown-hours">0</span>
-                        <span class="countdown-unit">horas</span>
+                        <span class="countdown-unit" data-i18n="hours">horas</span>
                     </div>
                     <div class="countdown-sep">:</div>
                     <div class="countdown-item">
                         <span class="countdown-value" id="countdown-minutes">0</span>
-                        <span class="countdown-unit">min</span>
+                        <span class="countdown-unit" data-i18n="min">min</span>
                     </div>
                     <div class="countdown-sep">:</div>
                     <div class="countdown-item">
                         <span class="countdown-value" id="countdown-seconds">0</span>
-                        <span class="countdown-unit">seg</span>
+                        <span class="countdown-unit" data-i18n="sec">seg</span>
                     </div>
                 </div>
             </div>
@@ -126,7 +127,7 @@
             <!-- Simulation Progress -->
             <div class="sim-progress reveal" id="sim-progress">
                 <div class="sim-progress-header">
-                    <span class="sim-progress-label"><span data-icon="target"></span> Progreso de Simulación</span>
+                    <span class="sim-progress-label"><span data-icon="target"></span> <span data-i18n="simProgressLabel">Progreso de Simulación</span></span>
                     <span class="sim-progress-count" id="sim-progress-count">0 / 12 partidos</span>
                 </div>
                 <div class="sim-progress-bar">
@@ -136,27 +137,27 @@
 
             <!-- Tabla de Clasificación -->
             <section class="standings-section reveal" id="standings" aria-labelledby="standings-title">
-                <h2 id="standings-title"><span data-icon="chartBar"></span> Clasificación Actual</h2>
+                <h2 id="standings-title"><span data-icon="chartBar"></span> <span data-i18n="standingsTitle">Clasificación Actual</span></h2>
                 <div class="standings-info">
                     <span class="info-badge qualified">
                         <span class="badge-dot"></span>
-                        Top 8 → Playoffs
+                        <span data-i18n="top8Playoffs">Top 8 → Playoffs</span>
                     </span>
                     <span class="info-badge eliminated">
                         <span class="badge-dot"></span>
-                        9-12 → Eliminados
+                        <span data-i18n="eliminated">9-12 → Eliminados</span>
                     </span>
                 </div>
                 <div class="table-wrapper">
                     <table class="standings-table" role="table" aria-label="Tabla de clasificación">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Equipo</th>
-                                <th scope="col">V</th>
-                                <th scope="col">D</th>
-                                <th scope="col">%</th>
-                                <th scope="col">Prob. Playoffs</th>
+                                <th scope="col" data-i18n="thPosition">#</th>
+                                <th scope="col" data-i18n="thTeam">Equipo</th>
+                                <th scope="col" data-i18n="thWins">V</th>
+                                <th scope="col" data-i18n="thLosses">D</th>
+                                <th scope="col" data-i18n="thWinrate">%</th>
+                                <th scope="col" data-i18n="thPlayoffProb">Prob. Playoffs</th>
                             </tr>
                         </thead>
                         <tbody id="standings-body">
@@ -167,24 +168,24 @@
 
             <!-- Simulador de Partidos -->
             <section class="simulator-section reveal" id="simulator" aria-labelledby="simulator-title">
-                <h2 id="simulator-title"><span data-icon="gamepad"></span> Simulador de Partidos</h2>
-                <p class="section-desc">Selecciona el ganador de cada partido para ver cómo afecta a la clasificación</p>
+                <h2 id="simulator-title"><span data-icon="gamepad"></span> <span data-i18n="simulatorTitle">Simulador de Partidos</span></h2>
+                <p class="section-desc" data-i18n="simulatorDesc">Selecciona el ganador de cada partido para ver cómo afecta a la clasificación</p>
                 
                 <div class="simulator-controls">
                     <button id="reset-btn" class="btn btn-secondary" aria-label="Reiniciar simulación">
-                        <span class="btn-icon" data-icon="refresh"></span> Reiniciar
+                        <span class="btn-icon" data-icon="refresh"></span> <span data-i18n="btnReset">Reiniciar</span>
                     </button>
                     <button id="random-btn" class="btn btn-secondary" aria-label="Resultados aleatorios">
-                        <span class="btn-icon" data-icon="dice"></span> Aleatorios
+                        <span class="btn-icon" data-icon="dice"></span> <span data-i18n="btnRandom">Aleatorios</span>
                     </button>
                     <div class="share-bar" id="share-bar">
-                        <button class="share-btn share-btn--x" id="share-x" aria-label="Compartir en X" title="Compartir en X">
+                        <button class="share-btn share-btn--x" id="share-x" aria-label="Compartir en X" title="Compartir en X" data-i18n-aria="shareX" data-i18n-title="shareX">
                             <span data-icon="twitter"></span>
                         </button>
-                        <button class="share-btn share-btn--wa" id="share-wa" aria-label="Compartir en WhatsApp" title="Compartir en WhatsApp">
+                        <button class="share-btn share-btn--wa" id="share-wa" aria-label="Compartir en WhatsApp" title="Compartir en WhatsApp" data-i18n-aria="shareWA" data-i18n-title="shareWA">
                             <span data-icon="whatsapp"></span>
                         </button>
-                        <button class="share-btn share-btn--copy" id="share-copy" aria-label="Copiar al portapapeles" title="Copiar al portapapeles">
+                        <button class="share-btn share-btn--copy" id="share-copy" aria-label="Copiar al portapapeles" title="Copiar al portapapeles" data-i18n-aria="shareCopy" data-i18n-title="shareCopy">
                             <span data-icon="copy"></span>
                         </button>
                     </div>
@@ -194,7 +195,7 @@
                     <div class="match-day">
                         <h3>
                             <span class="day-icon" data-icon="calendar"></span>
-                            Sábado 7 de Febrero
+                            <span data-i18n="saturday">Sábado 7 de Febrero</span>
                             <span class="match-count" id="saturday-count">0/6</span>
                         </h3>
                         <div id="saturday-matches" class="matches-grid">
@@ -203,7 +204,7 @@
                     <div class="match-day">
                         <h3>
                             <span class="day-icon" data-icon="calendar"></span>
-                            Domingo 8 de Febrero
+                            <span data-i18n="sunday">Domingo 8 de Febrero</span>
                             <span class="match-count" id="sunday-count">0/6</span>
                         </h3>
                         <div id="sunday-matches" class="matches-grid">
@@ -214,11 +215,11 @@
 
             <!-- Escenarios -->
             <section class="scenarios-section reveal" id="scenarios" aria-labelledby="scenarios-title">
-                <h2 id="scenarios-title"><span data-icon="sparkles"></span> Escenarios de Clasificación</h2>
-                <p class="section-desc">Selecciona un equipo para ver qué necesita para clasificar a playoffs</p>
+                <h2 id="scenarios-title"><span data-icon="sparkles"></span> <span data-i18n="scenariosTitle">Escenarios de Clasificación</span></h2>
+                <p class="section-desc" data-i18n="scenariosDesc">Selecciona un equipo para ver qué necesita para clasificar a playoffs</p>
                 
                 <div class="team-selector">
-                    <label for="team-select">Equipo:</label>
+                    <label for="team-select" data-i18n="teamLabel">Equipo:</label>
                     <div class="select-wrapper">
                         <select id="team-select" aria-label="Seleccionar equipo">
                         </select>
@@ -231,28 +232,28 @@
 
             <!-- Probabilidades -->
             <section class="probability-section reveal" id="probability" aria-labelledby="probability-title">
-                <h2 id="probability-title"><span data-icon="trendingUp"></span> Análisis de Probabilidades</h2>
-                <p class="section-desc">Basado en todas las combinaciones posibles de resultados restantes</p>
+                <h2 id="probability-title"><span data-icon="trendingUp"></span> <span data-i18n="probabilityTitle">Análisis de Probabilidades</span></h2>
+                <p class="section-desc" data-i18n="probabilityDesc">Basado en todas las combinaciones posibles de resultados restantes</p>
                 
                 <div class="probability-stats">
                     <div class="stat-card">
                         <span class="stat-icon" data-icon="gamepad"></span>
-                        <span class="stat-label">Partidos Restantes</span>
+                        <span class="stat-label" data-i18n="statRemainingMatches">Partidos Restantes</span>
                         <span class="stat-value" id="remaining-matches">12</span>
                     </div>
                     <div class="stat-card">
                         <span class="stat-icon" data-icon="globe"></span>
-                        <span class="stat-label">Escenarios Totales</span>
+                        <span class="stat-label" data-i18n="statTotalScenarios">Escenarios Totales</span>
                         <span class="stat-value">4,096</span>
                     </div>
                     <div class="stat-card">
                         <span class="stat-icon" data-icon="checkCircle"></span>
-                        <span class="stat-label">Seleccionados</span>
+                        <span class="stat-label" data-i18n="statSelected">Seleccionados</span>
                         <span class="stat-value" id="selected-matches">0</span>
                     </div>
                     <div class="stat-card">
                         <span class="stat-icon" data-icon="chartBar"></span>
-                        <span class="stat-label">Escenarios Posibles</span>
+                        <span class="stat-label" data-i18n="statPossibleScenarios">Escenarios Posibles</span>
                         <span class="stat-value" id="possible-scenarios">4,096</span>
                     </div>
                 </div>
@@ -268,23 +269,23 @@
                     <img src="img/logos/lec.webp" alt="" class="footer-logo" width="40" height="40">
                     <span>LEC Versus 2026</span>
                 </div>
-                <p class="footer-text">Todos los datos son calculados en tiempo real en tu navegador</p>
-                <p class="footer-credits">Hecho con <span class="heart-icon" data-icon="heart"></span> por <strong>BrunoB</strong></p>
+                <p class="footer-text" data-i18n="footerCalc">Todos los datos son calculados en tiempo real en tu navegador</p>
+                <p class="footer-credits"><span data-i18n="footerCredits">Hecho con</span> <span class="heart-icon" data-icon="heart"></span> <span data-i18n="footerBy">por</span> <strong>BrunoB</strong></p>
                 <div class="footer-discord">
                     <span data-icon="discord"></span>
                     <strong>iBrunoB</strong>
                 </div>
                 <div class="footer-badges">
                     <span class="footer-badge">v2.1</span>
-                    <span class="footer-badge">12 equipos</span>
-                    <span class="footer-badge">4,096 escenarios</span>
+                    <span class="footer-badge" data-i18n="footerTeams">12 equipos</span>
+                    <span class="footer-badge" data-i18n="footerScenarios">4,096 escenarios</span>
                 </div>
             </div>
         </footer>
     </div>
 
     <!-- Scroll to Top -->
-    <button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba">
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba" data-i18n-aria="scrollTop" data-i18n-title="scrollTop">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3L3 10h4v7h6v-7h4L10 3z" fill="currentColor"/></svg>
     </button>
 
@@ -292,19 +293,20 @@
     <div id="shortcuts-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="shortcuts-title" hidden>
         <div class="modal-overlay"></div>
         <div class="modal-content">
-            <h3 id="shortcuts-title"><span data-icon="keyboard"></span> Atajos de Teclado</h3>
+            <h3 id="shortcuts-title"><span data-icon="keyboard"></span> <span data-i18n="shortcutsTitle">Atajos de Teclado</span></h3>
             <div class="shortcuts-list">
-                <div class="shortcut-item"><kbd>1</kbd>-<kbd>4</kbd><span>Navegar a sección</span></div>
-                <div class="shortcut-item"><kbd>R</kbd><span>Reiniciar simulación</span></div>
-                <div class="shortcut-item"><kbd>D</kbd><span>Resultados aleatorios</span></div>
-                <div class="shortcut-item"><kbd>T</kbd><span>Cambiar tema</span></div>
-                <div class="shortcut-item"><kbd>?</kbd><span>Mostrar atajos</span></div>
+                <div class="shortcut-item"><kbd>1</kbd>-<kbd>4</kbd><span data-i18n="shortcutNav">Navegar a sección</span></div>
+                <div class="shortcut-item"><kbd>R</kbd><span data-i18n="shortcutReset">Reiniciar simulación</span></div>
+                <div class="shortcut-item"><kbd>D</kbd><span data-i18n="shortcutRandom">Resultados aleatorios</span></div>
+                <div class="shortcut-item"><kbd>T</kbd><span data-i18n="shortcutTheme">Cambiar tema</span></div>
+                <div class="shortcut-item"><kbd>?</kbd><span data-i18n="shortcutShow">Mostrar atajos</span></div>
             </div>
-            <button class="btn btn-secondary modal-close" id="close-shortcuts">Cerrar</button>
+            <button class="btn btn-secondary modal-close" id="close-shortcuts" data-i18n="btnClose">Cerrar</button>
         </div>
     </div>
 
     <script src="js/icons.js?v=2.1"></script>
+    <script src="js/i18n.js?v=2.1"></script>
     <script src="js/data.js?v=2.1"></script>
     <script src="js/standings.js?v=2.1"></script>
     <script src="js/probability.js?v=2.1"></script>
