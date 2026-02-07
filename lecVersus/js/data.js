@@ -194,7 +194,7 @@ const REMAINING_MATCHES = [
     { id: 3, team1: 'SK', team2: 'LR', date: '2026-02-07', time: '18:15', day: 'saturday', winner: 'LR', locked: true },
     { id: 4, team1: 'NAVI', team2: 'G2', date: '2026-02-07', time: '19:00', day: 'saturday', winner: 'NAVI', locked: true },
     { id: 5, team1: 'VIT', team2: 'MKOI', date: '2026-02-07', time: '19:45', day: 'saturday', winner: 'VIT', locked: true },
-    { id: 6, team1: 'KC', team2: 'GX', date: '2026-02-07', time: '20:30', day: 'saturday', winner: null },
+    { id: 6, team1: 'KC', team2: 'GX', date: '2026-02-07', time: '20:30', day: 'saturday', winner: 'KC', locked: true },
     // Domingo 8 de Febrero
     { id: 7, team1: 'VIT', team2: 'LR', date: '2026-02-08', time: '16:45', day: 'sunday', winner: null },
     { id: 8, team1: 'KCB', team2: 'GX', date: '2026-02-08', time: '17:30', day: 'sunday', winner: null },
