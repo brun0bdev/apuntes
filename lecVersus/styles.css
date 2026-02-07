@@ -1709,6 +1709,20 @@ footer::before {
     color: var(--accent-primary);
 }
 
+.footer-discord {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.footer-discord svg {
+    color: #5865F2;
+}
+
 .footer-badges {
     display: flex;
     gap: 8px;
