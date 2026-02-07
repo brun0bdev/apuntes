@@ -234,8 +234,8 @@ function initScrollReveal() {
 
 // ========== Countdown ==========
 function initCountdown() {
-    // Next match day: Saturday Feb 7, 2026 at 16:45 CET
-    const targetDate = new Date('2026-02-07T16:45:00+01:00');
+    // Next match day: Sunday Feb 8, 2026 at 16:45 CET
+    const targetDate = new Date('2026-02-08T16:45:00+01:00');
     const wrapper = document.getElementById('countdown-wrapper');
 
     let intervalId = null;

@@ -1,16 +1,16 @@
 const TEAMS = {
-    KC: { id: 'KC', name: 'Karmine Corp', abbr: 'KC', wins: 7, losses: 2, logo: 'img/logos/kc.webp' },
-    GX: { id: 'GX', name: 'GIANTX', abbr: 'GX', wins: 6, losses: 3, logo: 'img/logos/giantx.webp' },
-    NAVI: { id: 'NAVI', name: 'Natus Vincere', abbr: 'NAVI', wins: 6, losses: 3, logo: 'img/logos/navi.webp' },
-    FNC: { id: 'FNC', name: 'Fnatic', abbr: 'FNC', wins: 5, losses: 4, logo: 'img/logos/fnatic.webp' },
-    G2: { id: 'G2', name: 'G2 Esports', abbr: 'G2', wins: 5, losses: 4, logo: 'img/logos/g2.webp' },
-    MKOI: { id: 'MKOI', name: 'Movistar KOI', abbr: 'MKOI', wins: 5, losses: 4, logo: 'img/logos/mkoi.webp' },
-    VIT: { id: 'VIT', name: 'Team Vitality', abbr: 'VIT', wins: 5, losses: 4, logo: 'img/logos/vitality.webp' },
-    TH: { id: 'TH', name: 'Team Heretics', abbr: 'TH', wins: 4, losses: 5, logo: 'img/logos/th.webp' },
-    LR: { id: 'LR', name: 'Los Ratones', abbr: 'LR', wins: 4, losses: 5, logo: 'img/logos/lr.png' },
-    SHFT: { id: 'SHFT', name: 'Shifters', abbr: 'SHFT', wins: 3, losses: 6, logo: 'img/logos/shifters.webp' },
-    SK: { id: 'SK', name: 'SK Gaming', abbr: 'SK', wins: 3, losses: 6, logo: 'img/logos/sk.webp' },
-    KCB: { id: 'KCB', name: 'Karmine Corp Blue', abbr: 'KCB', wins: 1, losses: 8, logo: 'img/logos/KC_Blue.webp' }
+    KC: { id: 'KC', name: 'Karmine Corp', abbr: 'KC', wins: 8, losses: 2, logo: 'img/logos/kc.webp' },
+    NAVI: { id: 'NAVI', name: 'Natus Vincere', abbr: 'NAVI', wins: 7, losses: 3, logo: 'img/logos/navi.webp' },
+    GX: { id: 'GX', name: 'GIANTX', abbr: 'GX', wins: 6, losses: 4, logo: 'img/logos/giantx.webp' },
+    VIT: { id: 'VIT', name: 'Team Vitality', abbr: 'VIT', wins: 6, losses: 4, logo: 'img/logos/vitality.webp' },
+    FNC: { id: 'FNC', name: 'Fnatic', abbr: 'FNC', wins: 5, losses: 5, logo: 'img/logos/fnatic.webp' },
+    G2: { id: 'G2', name: 'G2 Esports', abbr: 'G2', wins: 5, losses: 5, logo: 'img/logos/g2.webp' },
+    MKOI: { id: 'MKOI', name: 'Movistar KOI', abbr: 'MKOI', wins: 5, losses: 5, logo: 'img/logos/mkoi.webp' },
+    TH: { id: 'TH', name: 'Team Heretics', abbr: 'TH', wins: 5, losses: 5, logo: 'img/logos/th.webp' },
+    LR: { id: 'LR', name: 'Los Ratones', abbr: 'LR', wins: 5, losses: 5, logo: 'img/logos/lr.png' },
+    SHFT: { id: 'SHFT', name: 'Shifters', abbr: 'SHFT', wins: 4, losses: 6, logo: 'img/logos/shifters.webp' },
+    SK: { id: 'SK', name: 'SK Gaming', abbr: 'SK', wins: 3, losses: 7, logo: 'img/logos/sk.webp' },
+    KCB: { id: 'KCB', name: 'Karmine Corp Blue', abbr: 'KCB', wins: 1, losses: 9, logo: 'img/logos/KC_Blue.webp' }
 };
 
 const TEAM_ORDER = ['FNC', 'G2', 'GX', 'KC', 'KCB', 'LR', 'MKOI', 'NAVI', 'SHFT', 'SK', 'TH', 'VIT'];
@@ -28,7 +28,7 @@ const H2H = {
         NAVI: { wins: 1, losses: 0 },
         SHFT: { wins: 0, losses: 1 },
         SK: { wins: 0, losses: 1 },
-        TH: { wins: 0, losses: 0 },
+        TH: { wins: 0, losses: 1 },
         VIT: { wins: 1, losses: 0 }
     },
     G2: {
@@ -39,7 +39,7 @@ const H2H = {
         KCB: { wins: 1, losses: 0 },
         LR: { wins: 0, losses: 1 },
         MKOI: { wins: 0, losses: 1 },
-        NAVI: { wins: 0, losses: 0 },
+        NAVI: { wins: 0, losses: 1 },
         SHFT: { wins: 1, losses: 0 },
         SK: { wins: 1, losses: 0 },
         TH: { wins: 1, losses: 0 },
@@ -49,7 +49,7 @@ const H2H = {
         FNC: { wins: 0, losses: 1 },
         G2: { wins: 1, losses: 0 },
         GX: { wins: 0, losses: 0 },
-        KC: { wins: 0, losses: 0 },
+        KC: { wins: 0, losses: 1 },
         KCB: { wins: 0, losses: 0 },
         LR: { wins: 1, losses: 0 },
         MKOI: { wins: 1, losses: 0 },
@@ -62,7 +62,7 @@ const H2H = {
     KC: {
         FNC: { wins: 1, losses: 0 },
         G2: { wins: 1, losses: 0 },
-        GX: { wins: 0, losses: 0 },
+        GX: { wins: 1, losses: 0 },
         KC: { wins: 0, losses: 0 },
         KCB: { wins: 1, losses: 0 },
         LR: { wins: 1, losses: 0 },
@@ -82,7 +82,7 @@ const H2H = {
         LR: { wins: 1, losses: 0 },
         MKOI: { wins: 0, losses: 1 },
         NAVI: { wins: 0, losses: 1 },
-        SHFT: { wins: 0, losses: 0 },
+        SHFT: { wins: 0, losses: 1 },
         SK: { wins: 0, losses: 1 },
         TH: { wins: 0, losses: 1 },
         VIT: { wins: 0, losses: 1 }
@@ -97,7 +97,7 @@ const H2H = {
         MKOI: { wins: 1, losses: 0 },
         NAVI: { wins: 0, losses: 1 },
         SHFT: { wins: 1, losses: 0 },
-        SK: { wins: 0, losses: 0 },
+        SK: { wins: 1, losses: 0 },
         TH: { wins: 1, losses: 0 },
         VIT: { wins: 0, losses: 0 }
     },
@@ -113,11 +113,11 @@ const H2H = {
         SHFT: { wins: 0, losses: 1 },
         SK: { wins: 1, losses: 0 },
         TH: { wins: 0, losses: 1 },
-        VIT: { wins: 0, losses: 0 }
+        VIT: { wins: 0, losses: 1 }
     },
     NAVI: {
         FNC: { wins: 0, losses: 1 },
-        G2: { wins: 0, losses: 0 },
+        G2: { wins: 1, losses: 0 },
         GX: { wins: 0, losses: 1 },
         KC: { wins: 0, losses: 1 },
         KCB: { wins: 1, losses: 0 },
@@ -134,7 +134,7 @@ const H2H = {
         G2: { wins: 0, losses: 1 },
         GX: { wins: 0, losses: 1 },
         KC: { wins: 0, losses: 1 },
-        KCB: { wins: 0, losses: 0 },
+        KCB: { wins: 1, losses: 0 },
         LR: { wins: 0, losses: 1 },
         MKOI: { wins: 1, losses: 0 },
         NAVI: { wins: 0, losses: 1 },
@@ -149,7 +149,7 @@ const H2H = {
         GX: { wins: 0, losses: 1 },
         KC: { wins: 0, losses: 1 },
         KCB: { wins: 1, losses: 0 },
-        LR: { wins: 0, losses: 0 },
+        LR: { wins: 0, losses: 1 },
         MKOI: { wins: 0, losses: 1 },
         NAVI: { wins: 0, losses: 1 },
         SHFT: { wins: 0, losses: 0 },
@@ -158,7 +158,7 @@ const H2H = {
         VIT: { wins: 0, losses: 1 }
     },
     TH: {
-        FNC: { wins: 0, losses: 0 },
+        FNC: { wins: 1, losses: 0 },
         G2: { wins: 0, losses: 1 },
         GX: { wins: 1, losses: 0 },
         KC: { wins: 0, losses: 0 },
@@ -178,7 +178,7 @@ const H2H = {
         KC: { wins: 1, losses: 0 },
         KCB: { wins: 1, losses: 0 },
         LR: { wins: 0, losses: 0 },
-        MKOI: { wins: 0, losses: 0 },
+        MKOI: { wins: 1, losses: 0 },
         NAVI: { wins: 0, losses: 1 },
         SHFT: { wins: 1, losses: 0 },
         SK: { wins: 1, losses: 0 },
@@ -188,20 +188,13 @@ const H2H = {
 };
 
 const REMAINING_MATCHES = [
-    // Sábado 7 de Febrero
-    { id: 1, team1: 'TH', team2: 'FNC', date: '2026-02-07', time: '16:45', day: 'saturday', winner: 'TH', locked: true },
-    { id: 2, team1: 'SHFT', team2: 'KCB', date: '2026-02-07', time: '17:30', day: 'saturday', winner: 'SHFT', locked: true },
-    { id: 3, team1: 'SK', team2: 'LR', date: '2026-02-07', time: '18:15', day: 'saturday', winner: 'LR', locked: true },
-    { id: 4, team1: 'NAVI', team2: 'G2', date: '2026-02-07', time: '19:00', day: 'saturday', winner: 'NAVI', locked: true },
-    { id: 5, team1: 'VIT', team2: 'MKOI', date: '2026-02-07', time: '19:45', day: 'saturday', winner: 'VIT', locked: true },
-    { id: 6, team1: 'KC', team2: 'GX', date: '2026-02-07', time: '20:30', day: 'saturday', winner: 'KC', locked: true },
     // Domingo 8 de Febrero
-    { id: 7, team1: 'VIT', team2: 'LR', date: '2026-02-08', time: '16:45', day: 'sunday', winner: null },
-    { id: 8, team1: 'KCB', team2: 'GX', date: '2026-02-08', time: '17:30', day: 'sunday', winner: null },
-    { id: 9, team1: 'SK', team2: 'SHFT', date: '2026-02-08', time: '18:15', day: 'sunday', winner: null },
-    { id: 10, team1: 'NAVI', team2: 'MKOI', date: '2026-02-08', time: '19:00', day: 'sunday', winner: null },
-    { id: 11, team1: 'TH', team2: 'KC', date: '2026-02-08', time: '19:45', day: 'sunday', winner: null },
-    { id: 12, team1: 'FNC', team2: 'G2', date: '2026-02-08', time: '20:30', day: 'sunday', winner: null }
+    { id: 1, team1: 'VIT', team2: 'LR', date: '2026-02-08', time: '16:45', day: 'sunday', winner: null },
+    { id: 2, team1: 'KCB', team2: 'GX', date: '2026-02-08', time: '17:30', day: 'sunday', winner: null },
+    { id: 3, team1: 'SK', team2: 'SHFT', date: '2026-02-08', time: '18:15', day: 'sunday', winner: null },
+    { id: 4, team1: 'NAVI', team2: 'MKOI', date: '2026-02-08', time: '19:00', day: 'sunday', winner: null },
+    { id: 5, team1: 'TH', team2: 'KC', date: '2026-02-08', time: '19:45', day: 'sunday', winner: null },
+    { id: 6, team1: 'FNC', team2: 'G2', date: '2026-02-08', time: '20:30', day: 'sunday', winner: null }
 ];
 
 function cloneTeams() {
