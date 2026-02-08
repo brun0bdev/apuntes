@@ -194,7 +194,7 @@ const REMAINING_MATCHES = [
     { id: 3, team1: 'SK', team2: 'SHFT', date: '2026-02-08', time: '18:15', day: 'sunday', winner: 'SHFT', locked: true },
     { id: 4, team1: 'NAVI', team2: 'MKOI', date: '2026-02-08', time: '19:00', day: 'sunday', winner: 'MKOI', locked: true },
     { id: 5, team1: 'TH', team2: 'KC', date: '2026-02-08', time: '19:45', day: 'sunday', winner: 'TH', locked: true },
-    { id: 6, team1: 'FNC', team2: 'G2', date: '2026-02-08', time: '20:30', day: 'sunday', winner: null }
+    { id: 6, team1: 'FNC', team2: 'G2', date: '2026-02-08', time: '20:30', day: 'sunday', winner: 'G2', locked: true }
 ];
 
 function cloneTeams() {
