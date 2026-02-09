@@ -1223,6 +1223,38 @@ section h2::after {
     box-shadow: var(--shadow-md), 0 0 15px var(--accent-glow);
 }
 
+.btn-playoffs {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    font-size: 1.4rem;
+    padding: 16px 36px;
+    margin: 24px 0;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    animation: pulse-playoffs 2s infinite;
+    text-transform: uppercase;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-playoffs:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.6);
+    filter: brightness(1.2);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes pulse-playoffs {
+    0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+    70% { box-shadow: 0 0 0 20px rgba(245, 158, 11, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
 /* Match days */
 .match-day {
     margin-bottom: 10px;
