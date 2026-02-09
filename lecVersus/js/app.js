@@ -251,11 +251,13 @@ function initCountdown() {
             }
             if (wrapper) {
                 wrapper.innerHTML = `
-                    <div class="live-badge">
+                    <div class="live-badge finished">
                         <span class="live-dot"></span>
-                        <span>\u00a1Jornada en curso!</span>
+                        <span data-i18n="splitFinished">Regular Split Finalizado</span>
                     </div>
                 `;
+                // Re-translate to ensure the localized string is shown
+                if (typeof applyTranslations === 'function') applyTranslations();
             }
             return;
         }

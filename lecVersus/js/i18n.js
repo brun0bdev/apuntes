@@ -24,6 +24,7 @@ const TRANSLATIONS = {
         headerTitle: 'LEC Versus 2026',
         headerSubtitle: 'Calculadora de Probabilidades de Playoffs',
         countdownLabel: 'Próxima jornada en',
+        splitFinished: 'Regular Split Finalizado',
         days: 'días',
         hours: 'horas',
         min: 'min',
@@ -46,7 +47,7 @@ const TRANSLATIONS = {
         
         // Simulator
         simulatorTitle: 'Simulador de Partidos',
-        simulatorDesc: 'Selecciona el ganador de cada partido para ver cómo afecta a la clasificación',
+        simulatorDesc: 'El Regular Split ha finalizado. Los resultados mostrados son oficiales.',
         btnReset: 'Reiniciar',
         btnRandom: 'Aleatorios',
         shareX: 'Compartir en X',
@@ -143,8 +144,7 @@ const TRANSLATIONS = {
         // Header
         headerTitle: 'LEC Versus 2026',
         headerSubtitle: 'Playoffs Probability Calculator',
-        countdownLabel: 'Next matchday in',
-        days: 'days',
+        countdownLabel: 'Next matchday in',        splitFinished: 'Regular Split Finished',        days: 'days',
         hours: 'hours',
         min: 'min',
         sec: 'sec',
@@ -166,7 +166,7 @@ const TRANSLATIONS = {
         
         // Simulator
         simulatorTitle: 'Match Simulator',
-        simulatorDesc: 'Select the winner of each match to see how it affects the standings',
+        simulatorDesc: 'The Regular Split has finished. All results shown are official.',
         btnReset: 'Reset',
         btnRandom: 'Random',
         shareX: 'Share on X',

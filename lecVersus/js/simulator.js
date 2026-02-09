@@ -69,6 +69,14 @@ function renderMatches() {
 
     sundayContainer.innerHTML = '';
 
+    if (simulatorState.matches.length === 0) {
+        const matchDay = sundayContainer.closest('.match-day');
+        if (matchDay) matchDay.style.display = 'none';
+        
+        const controls = document.querySelector('.simulator-controls');
+        if (controls) controls.style.display = 'none';
+    }
+
     for (const match of simulatorState.matches) {
         const card = createMatchCard(match);
         sundayContainer.appendChild(card);
