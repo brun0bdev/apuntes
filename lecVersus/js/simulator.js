@@ -172,6 +172,7 @@ function updateSimulation() {
 
     // Update all UI
     renderStandings(standings, probData.probabilities);
+    renderClassicStandings();
     renderProbabilityBars(probData);
     updateStats(probData);
     updateProgress();
@@ -413,3 +414,78 @@ function renderScenarios(teamId) {
     html += `</div>`;
     container.innerHTML = html;
 }
+
+// ========== Classic Standings (No Guests) ==========
+function renderClassicStandings() {
+    const excluded = ['LR', 'KCB'];
+    const classicTeams = {};
+    const classicH2H = {};
+
+    // 1. Filter teams and init H2H structure
+    for (const teamId of Object.keys(TEAMS)) {
+        if (excluded.includes(teamId)) continue;
+        
+        // Reset record for recalculation
+        classicTeams[teamId] = { ...TEAMS[teamId], wins: 0, losses: 0 };
+        classicH2H[teamId] = {};
+    }
+
+    // 2. Recalculate wins/losses based on H2H (excluding guests)
+    for (const teamId of Object.keys(classicTeams)) {
+        for (const opponentId of Object.keys(classicTeams)) {
+            if (teamId === opponentId) {
+                classicH2H[teamId][opponentId] = { wins: 0, losses: 0 };
+                continue;
+            }
+
+            // Get record from global H2H
+            const record = H2H[teamId][opponentId];
+            
+            // Add to totals
+            classicTeams[teamId].wins += record.wins;
+            classicTeams[teamId].losses += record.losses;
+            
+            // Copy to new H2H matrix
+            classicH2H[teamId][opponentId] = { ...record };
+        }
+    }
+
+    // 3. Calculate Standings
+    const standings = calculateStandings(classicTeams, classicH2H);
+    
+    // 4. Render
+    const tbody = document.getElementById('standings-classic-body');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+
+    for (const team of standings) {
+        let rowClass = '';
+        const position = team.position; // 1-10
+        
+        if (position <= 8) rowClass = 'qualified';
+        else rowClass = 'eliminated';
+
+        const teamData = TEAMS[team.id];
+        const row = document.createElement('tr');
+        row.className = rowClass;
+        row.dataset.team = team.id;
+        
+        row.innerHTML = `
+            <td><strong>${position}</strong></td>
+            <td>
+                <div class="team-info">
+                    <img src="${teamData.logo}" alt="${team.name}" class="team-logo-sm" loading="lazy">
+                    <span class="team-name">
+                        ${team.name}
+                        <span class="team-abbr">${team.abbr}</span>
+                    </span>
+                </div>
+            </td>
+            <td>${team.wins}</td>
+            <td>${team.losses}</td>
+        `;
+
+        tbody.appendChild(row);
+    }
+}
+

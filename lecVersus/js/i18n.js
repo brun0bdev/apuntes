@@ -44,6 +44,8 @@ const TRANSLATIONS = {
         thLosses: 'D',
         thWinrate: '%',
         thPlayoffProb: 'Prob. Playoffs',
+        regularSplitTitle: 'Split Regular',
+        classicSplitTitle: 'Classic LEC',
         
         // Simulator
         simulatorTitle: 'Simulador de Partidos',
@@ -163,6 +165,8 @@ const TRANSLATIONS = {
         thLosses: 'L',
         thWinrate: '%',
         thPlayoffProb: 'Playoff Prob.',
+        regularSplitTitle: 'Regular Split',
+        classicSplitTitle: '"Classic" LEC (No Guests)',
         
         // Simulator
         simulatorTitle: 'Match Simulator',

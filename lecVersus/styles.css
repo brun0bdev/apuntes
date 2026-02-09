@@ -435,7 +435,7 @@ body::before {
 
 /* === Layout === */
 .container {
-    max-width: 1300px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 16px;
     padding-top: calc(var(--nav-height) + 16px);
@@ -444,8 +444,8 @@ body::before {
 /* Main content grid */
 .main-content-grid {
     display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 16px;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
     align-items: stretch;
     margin-bottom: 16px;
 }
@@ -844,6 +844,25 @@ section h2::after {
 .info-badge.eliminated .badge-dot {
     background: var(--danger);
     box-shadow: 0 0 6px var(--danger-glow);
+}
+
+.standings-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 900px) {
+    .standings-grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.standings-column h3 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
 }
 
 .table-wrapper {

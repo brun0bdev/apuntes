@@ -140,29 +140,58 @@
                 <!-- Tabla de Clasificación -->
                 <section class="standings-section reveal" id="standings" aria-labelledby="standings-title">
                     <h2 id="standings-title"><span data-icon="chartBar"></span> <span data-i18n="standingsTitle">Clasificación</span></h2>
-                    <div class="standings-info">
-                        <span class="info-badge qualified">
-                            <span class="badge-dot"></span>
-                            <span data-i18n="top8Playoffs">Top 8 → Playoffs</span>
-                        </span>
-                        <span class="info-badge eliminated">
-                            <span class="badge-dot"></span>
-                            <span data-i18n="eliminated">9-12 → Eliminados</span>
-                        </span>
-                    </div>
-                    <div class="table-wrapper">
-                        <table class="standings-table" role="table" aria-label="Tabla de clasificación">
-                            <thead>
-                                <tr>
-                                    <th scope="col" data-i18n="thPosition">#</th>
-                                    <th scope="col" data-i18n="thTeam">Equipo</th>
-                                    <th scope="col" data-i18n="thWins">V</th>
-                                    <th scope="col" data-i18n="thLosses">D</th>
-                                </tr>
-                            </thead>
-                            <tbody id="standings-body">
-                            </tbody>
-                        </table>
+                    
+                    <div class="standings-grid-container">
+                        <!-- Tabla Regular -->
+                        <div class="standings-column">
+                            <h3 data-i18n="regularSplitTitle">Regular Split</h3>
+                            <div class="standings-info">
+                                <span class="info-badge qualified">
+                                    <span class="badge-dot"></span>
+                                    <span data-i18n="top8Playoffs">Top 8 → Playoffs</span>
+                                </span>
+                                <span class="info-badge eliminated">
+                                    <span class="badge-dot"></span>
+                                    <span data-i18n="eliminated">9-12 → Eliminados</span>
+                                </span>
+                            </div>
+                            <div class="table-wrapper">
+                                <table class="standings-table" role="table" aria-label="Tabla de clasificación">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" data-i18n="thPosition">#</th>
+                                            <th scope="col" data-i18n="thTeam">Equipo</th>
+                                            <th scope="col" data-i18n="thWins">V</th>
+                                            <th scope="col" data-i18n="thLosses">D</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="standings-body">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Tabla Sin Invitados -->
+                        <div class="standings-column">
+                            <h3 data-i18n="classicSplitTitle">"Classic" LEC (No Guests)</h3>
+                             <div class="standings-info">
+                                <br>
+                            </div>
+                            <div class="table-wrapper">
+                                <table class="standings-table" role="table" aria-label="Tabla de clasificación clásica">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" data-i18n="thPosition">#</th>
+                                            <th scope="col" data-i18n="thTeam">Equipo</th>
+                                            <th scope="col" data-i18n="thWins">V</th>
+                                            <th scope="col" data-i18n="thLosses">D</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="standings-classic-body">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
