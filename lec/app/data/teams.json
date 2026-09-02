@@ -1,0 +1,82 @@
+[
+  {
+    "id": "fnc",
+    "name": "Fnatic",
+    "slug": "fnc",
+    "abbreviation": "FNC",
+    "logo": "assets/teams/fnc.webp",
+    "color": "#ff5900"
+  },
+  {
+    "id": "g2",
+    "name": "G2 Esports",
+    "slug": "g2",
+    "abbreviation": "G2",
+    "logo": "assets/teams/g2.webp",
+    "color": "#c0c0c0"
+  },
+  {
+    "id": "gx",
+    "name": "GIANTX",
+    "slug": "gx",
+    "abbreviation": "GX",
+    "logo": "assets/teams/gx.webp",
+    "color": "#e63946"
+  },
+  {
+    "id": "kc",
+    "name": "Karmine Corp",
+    "slug": "kc",
+    "abbreviation": "KC",
+    "logo": "assets/teams/kc.webp",
+    "color": "#29c5f6"
+  },
+  {
+    "id": "koi",
+    "name": "Movistar KOI",
+    "slug": "koi",
+    "abbreviation": "MKOI",
+    "logo": "assets/teams/koi.webp",
+    "color": "#00b8a9"
+  },
+  {
+    "id": "navi",
+    "name": "Natus Vincere",
+    "slug": "navi",
+    "abbreviation": "NAVI",
+    "logo": "assets/teams/navi.webp",
+    "color": "#ffd200"
+  },
+  {
+    "id": "sk",
+    "name": "SK Gaming",
+    "slug": "sk",
+    "abbreviation": "SK",
+    "logo": "assets/teams/sk.webp",
+    "color": "#35a7e0"
+  },
+  {
+    "id": "shf",
+    "name": "Shifters",
+    "slug": "shf",
+    "abbreviation": "SHF",
+    "logo": "assets/teams/shf.webp",
+    "color": "#7a5cff"
+  },
+  {
+    "id": "th",
+    "name": "Team Heretics",
+    "slug": "th",
+    "abbreviation": "TH",
+    "logo": "assets/teams/th.webp",
+    "color": "#9aa4b2"
+  },
+  {
+    "id": "vit",
+    "name": "Team Vitality",
+    "slug": "vit",
+    "abbreviation": "VIT",
+    "logo": "assets/teams/vit.webp",
+    "color": "#ffe500"
+  }
+]

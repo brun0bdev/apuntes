@@ -1,0 +1,539 @@
+{
+  "textDates": {
+    "Day After Worlds 2026": {
+      "display": "Post-Worlds 2026",
+      "contractEnd": "2026-11-16",
+      "note": "fecha estimada (fin de temporada)"
+    },
+    "Day After Worlds 2027": {
+      "display": "Post-Worlds 2027",
+      "contractEnd": "2027-11-16",
+      "note": "fecha estimada (fin de temporada)"
+    },
+    "Day After Worlds 2028": {
+      "display": "Post-Worlds 2028",
+      "contractEnd": "2028-11-16",
+      "note": "fecha estimada (fin de temporada)"
+    }
+  },
+  "players": {
+    "soboro": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "razork": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "vladi": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "upset": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "lospa": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "gaax": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "grabbz": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "brokenblade": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "skewmond": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "caps": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "hans-sama": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "labrov": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "memento": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "perkz": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "rodrigo": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "lot": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "oscarinin": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "isma": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "jackies": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "flakked": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "noah": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Noah (Oh Hyeon-taek)"
+    },
+    "jun": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Jun (Yoon Se-jun)"
+    },
+    "guilhoto": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "maxlore": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "rhuckz": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "canna": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "yike": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "kyeahoo": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "caliste": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "busio": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "reapered": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "zeph": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "myrwn": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "nightslayer": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "elyoya": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "sr-antonio": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "ToniOP"
+    },
+    "jojopyun": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "supa": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "alvaro": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Alvaro (Álvaro Fernández)"
+    },
+    "alphari": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "independent": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "melzhet": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "empyros": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "maynter": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "rhilech": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "larssen": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "poby": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "samd": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "parus": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "fredy122": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "gotoone": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "therock": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "wunder": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "skeanz": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "lider": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "slowq": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "jopa": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "mikyx": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "baguette": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "duffman": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "own3r": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "rooster": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "boukada": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "sheo": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "nuc": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "paduck": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "stend": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "trymbi": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "menq": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "striker": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Striker (Yanis Kella)"
+    },
+    "tracyn": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "daglas": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "serin": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "hype": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Hype (Byeon Jeong-hyeon)"
+    },
+    "way": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Way (Han Gil)"
+    },
+    "hidon": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "mithy": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "nukeduck": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "naak-nako": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "lyncas": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "fiesta": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "FIESTA (An Hyeon-seo)"
+    },
+    "carzzy": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "fleshy": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "arvindir": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "pad": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    }
+  }
+}
