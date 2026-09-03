@@ -46,8 +46,8 @@ export const en: Record<keyof Dict, string> = {
 
   // Cards and badges
   'player.viewProfileAria': 'View profile of {name}',
-  'player.agentKnown': 'Agent — {name}',
-  'player.agentTbd': 'Agent — TBD',
+  'player.agentKnown': '{name}',
+  'player.agentTbd': 'TBD',
   'player.noDate': 'no date',
   'player.estimatedSr': '(estimated date, end of season)',
   'contract.2026': '2026',

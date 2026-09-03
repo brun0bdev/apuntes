@@ -47,8 +47,8 @@ export const es = {
 
   // Tarjetas y badges
   'player.viewProfileAria': 'Ver ficha de {name}',
-  'player.agentKnown': 'Agente — {name}',
-  'player.agentTbd': 'Agente — por definir',
+  'player.agentKnown': '{name}',
+  'player.agentTbd': 'por definir',
   'player.noDate': 'sin fecha',
   'player.estimatedSr': '(fecha estimada, fin de temporada)',
   'contract.2026': '2026',

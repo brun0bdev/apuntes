@@ -328,7 +328,9 @@ async function main() {
       nationality: ov.nationality ?? null,
       contractEnd,
       contractStatus,
-      agentId: ov.agent ? slugify(ov.agent) : null,
+      // El filtro de agente usa este id: prioriza el agente individual y si
+      // solo consta la agencia (como agents.json), usa la agencia.
+      agentId: ov.agent ? slugify(ov.agent) : ov.agency ? slugify(ov.agency) : null,
       // Si aún no hay fichero descargado dejamos la ruta esperada (.png: así
       // guarda las fotos download-assets.mjs); el frontend usa avatar de
       // iniciales como fallback si no existe.
