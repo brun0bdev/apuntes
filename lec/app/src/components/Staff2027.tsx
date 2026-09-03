@@ -1,119 +1,100 @@
-import { useCallback, useMemo, useState, type DragEvent } from 'react';
+import { useMemo, useState, type DragEvent } from 'react';
 import { players, teams } from '../data/players';
 import { ROLE_ORDER } from '../lib/roles';
 import { useI18n } from '../i18n';
-import { searchLeaguepediaPlayer } from '../lib/leaguepedia';
-import type { ImportedPlayer, Player, Role } from '../types/player';
 import { importedToPlayer, useProjections } from '../hooks/useProjections';
+import { searchLeaguepediaPlayer } from '../lib/leaguepedia';
+import type { ImportedPlayer, Player } from '../types/player';
+import { TeamColumn, PoolNode, type DropTargetId } from './shared27';
 import { PlayerPhoto } from './PlayerPhoto';
 import { RoleIcon } from './RoleIcon';
-import { PoolNode, TeamColumn, type DropTargetId } from './shared27';
 
 const norm = (value: string) =>
   value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
 /**
- * Vista "2027" (PLAN.md M4): árbol editable de relaciones equipo → jugador y
- * equipo → staff. Por defecto, cada jugador/coach cuelga de su equipo si su
- * contrato va más allá de 2026 y del pool si expira; cualquiera puede moverse
- * a cualquier equipo arrastrándolo o seleccionándolo (clic) y pulsando luego
- * el equipo destino. Los cambios persisten en localStorage y se exportan como
- * data/projections.json. El pool se puede filtrar y admite añadir jugadores de
- * otras ligas buscándolos en Leaguepedia.
+ * Vista "Staff 2027": el mismo árbol editable que los jugadores pero para el
+ * cuerpo técnico de los equipos (coaches). Por defecto cada coach cuelga de su
+ * equipo si su contrato va más allá de 2026; del resto se ocupa el pool. Se
+ * puede añadir staff de otras ligas buscándolo en Leaguepedia.
  */
-export function Roster2027() {
-  const { resolve, move, revert, imports, addImport, removeImport, reset, movementCount, exportJson } =
+export function Staff2027() {
+  const { resolve, move, revert, imports, addImport, removeImport, reset, exportJson } =
     useProjections();
-  const { t, roleLabel } = useI18n();
+  const { t } = useI18n();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [dropTarget, setDropTarget] = useState<DropTargetId>(null);
   const [poolQuery, setPoolQuery] = useState('');
-  const [poolRole, setPoolRole] = useState<Role | ''>('');
 
-  const players27 = useMemo<Player[]>(
-    () => [...players.filter((p) => !p.isCoach), ...imports.map(importedToPlayer).filter((p) => p.role !== 'coach')],
+  const staff = useMemo<Player[]>(
+    () => [...players.filter((p) => p.isCoach), ...imports.map(importedToPlayer).filter((p) => p.role === 'coach')],
     [imports],
   );
-  const allIds = useMemo(() => new Set(players27.map((p) => p.id)), [players27]);
+  const allIds = useMemo(() => new Set(staff.map((p) => p.id)), [staff]);
 
-  const groupTree = useCallback(
-    (list: Player[]) => {
-      const map = new Map<string, Player[]>(teams.map((team) => [team.id, [] as Player[]]));
-      const free: Player[] = [];
-      for (const p of list) {
-        const target = resolve(p).teamId;
-        if (target) map.get(target)?.push(p);
-        else free.push(p);
+  const { byTeam, pool } = useMemo(() => {
+    const byRole = (a: Player, b: Player) =>
+      ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(b.role) || a.name.localeCompare(b.name, 'es');
+    const map = new Map<string, Player[]>();
+    const free: Player[] = [];
+    for (const p of staff) {
+      const target = resolve(p).teamId;
+      if (target) {
+        if (!map.has(target)) map.set(target, []);
+        map.get(target)!.push(p);
+      } else {
+        free.push(p);
       }
-      const byRole = (a: Player, b: Player) =>
-        ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(b.role) || a.name.localeCompare(b.name, 'es');
-      for (const l of map.values()) l.sort(byRole);
-      free.sort(byRole);
-      return { map, pool: free };
-    },
-    [resolve],
-  );
-
-  const { map: byTeam, pool } = useMemo(() => groupTree(players27), [groupTree, players27]);
+    }
+    for (const list of map.values()) list.sort(byRole);
+    free.sort(byRole);
+    return { byTeam: map, pool: free };
+  }, [resolve, staff]);
 
   const filteredPool = useMemo(() => {
     const query = norm(poolQuery.trim());
-    return pool.filter(
-      (p) =>
-        (poolRole === '' || p.role === poolRole) &&
-        (query === '' || norm(p.name).includes(query) || norm(p.realName).includes(query)),
-    );
-  }, [pool, poolQuery, poolRole]);
+    return pool.filter((p) => query === '' || norm(p.name).includes(query));
+  }, [pool, poolQuery]);
 
   const toggleSelect = (playerId: string) =>
     setSelectedId((current) => (current === playerId ? null : playerId));
 
-  /** El target "{scope}:{teamId|pool}" se traduce a teamId (null = pool). */
-  const teamIdOfKey = (key: string): string | null => {
-    const rest = key.split(':')[1];
-    return rest === 'pool' ? null : rest;
-  };
-
-  const onDrop = (key: string) => (event: DragEvent) => {
+  const onDrop = (target: string | null) => (event: DragEvent) => {
     event.preventDefault();
     const id = event.dataTransfer.getData('text/plain');
-    if (id && allIds.has(id)) move(id, teamIdOfKey(key));
+    if (id && allIds.has(id)) move(id, target);
     setDropTarget(null);
   };
 
-  const dragOver = (key: string) => (event: DragEvent) => {
+  const dragOver = (target: string | null) => (event: DragEvent) => {
     event.preventDefault();
     event.dataTransfer.dropEffect = 'move';
-    if (dropTarget !== key) setDropTarget(key);
+    if (dropTarget !== target) setDropTarget(target);
   };
 
-  const dragLeave = (key: string) => (event: DragEvent) => {
-    // Solo limpiar si de verdad salimos del contenedor (no al cruzar hijos).
+  const dragLeave = (target: string | null) => (event: DragEvent) => {
     const node = event.currentTarget as Element;
     if (!(event.relatedTarget instanceof Node) || !node.contains(event.relatedTarget)) {
-      if (dropTarget === key) setDropTarget(null);
+      if (dropTarget === target) setDropTarget(null);
     }
   };
 
-  const headerClick = (key: string) => {
+  const headerClick = (target: string | null) => {
     if (selectedId) {
-      move(selectedId, teamIdOfKey(key));
+      move(selectedId, target);
       setSelectedId(null);
     }
   };
 
   return (
-    <section aria-label="Roster proyectado 2027">
-      {/* Barra propia de la vista (sustituye a la de filtros) */}
+    <section aria-label="Staff proyectado 2027">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-hairline pb-3">
         <div className="min-w-0">
-          <h2 className="text-title-md font-bold uppercase text-ink">{t('r27.title')}</h2>
-          <p className="text-caption text-muted">
-            {t('r27.hint')}
-          </p>
+          <h2 className="text-title-md font-bold uppercase text-ink">{t('staff.title')}</h2>
+          <p className="text-caption text-muted">{t('staff.hint')}</p>
         </div>
         <p className="ml-auto whitespace-nowrap text-body-sm text-muted" aria-live="polite">
-          {t('r27.count', { moves: movementCount, pool: pool.length })}
+          {t('staff.count', { total: staff.length, pool: pool.length })}
         </p>
         <div className="flex items-center gap-2">
           <button
@@ -126,7 +107,7 @@ export function Roster2027() {
           <button
             type="button"
             onClick={() => {
-              if (movementCount > 0 && window.confirm(t('r27.resetConfirm'))) reset();
+              if (window.confirm(t('r27.resetConfirm'))) reset();
             }}
             className="h-9 border border-hairline bg-card px-3 text-caption font-bold uppercase text-muted hover:bg-elevated hover:text-ink focus-visible:outline-2 focus-visible:outline-accent"
           >
@@ -135,18 +116,15 @@ export function Roster2027() {
         </div>
       </div>
 
-      {/* Panel de búsqueda en Leaguepedia (jugadores y staff de otras ligas) */}
-      <LeaguepediaSearch
+      {/* Staff de otras ligas vía Leaguepedia */}
+      <LeaguepediaStaffSearch
         knownIds={allIds}
         onAdd={(imported) => {
           addImport(imported);
-          setPoolQuery(''); // que el nuevo jugador sea visible en su pool
-          setPoolRole('');
-
+          setPoolQuery('');
         }}
       />
 
-      {/* Árbol de equipos (misma retícula 2×5 que la parrilla) */}
       <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {teams.map((team) => (
           <TeamColumn
@@ -169,50 +147,33 @@ export function Roster2027() {
         ))}
       </div>
 
-      {/* Pool de agentes libres / sin equipo */}
+      {/* Pool de staff sin equipo */}
       <div
-        onDragOver={dragOver('players:pool')}
-        onDragLeave={dragLeave('players:pool')}
-        onDrop={onDrop('players:pool')}
+        onDragOver={dragOver('pool')}
+        onDragLeave={dragLeave('pool')}
+        onDrop={onDrop('pool')}
         className={`mt-6 border border-dashed border-hairline bg-soft p-3 ${
-          dropTarget === 'players:pool' ? 'ring-2 ring-accent ring-offset-2 ring-offset-canvas' : ''
+          dropTarget === 'pool' ? 'ring-2 ring-accent ring-offset-2 ring-offset-canvas' : ''
         }`}
       >
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           <button
             type="button"
-            onClick={() => headerClick('players:pool')}
-            aria-label={selectedId ? t('r27.poolMoveAria') : t('r27.poolAria')}
+            onClick={() => headerClick('pool')}
+            aria-label={selectedId ? t('r27.poolMoveAria') : t('staff.poolAria')}
             className="block text-left"
           >
-            <span className="text-body-sm font-bold uppercase text-ink">{t('r27.pool')}</span>
-            <span className="ml-3 text-caption text-muted">
-              {t('r27.poolHint')}
-            </span>
+            <span className="text-body-sm font-bold uppercase text-ink">{t('staff.pool')}</span>
+            <span className="ml-3 text-caption text-muted">{t('staff.poolHint')}</span>
           </button>
-          <div className="ml-auto flex items-center gap-2">
-            <input
-              type="search"
-              value={poolQuery}
-              onChange={(event) => setPoolQuery(event.target.value)}
-              placeholder={t('r27.poolFilterPlaceholder')}
-              aria-label={t('r27.poolFilterAria')}
-              className="h-8 w-44 border border-hairline bg-card px-2.5 text-caption text-ink placeholder:text-muted focus-visible:outline-2 focus-visible:outline-accent"
-            />
-            <select
-              value={poolRole}
-              onChange={(event) => setPoolRole(event.target.value as Role | '')}
-              aria-label={t('r27.poolRoleAria')}
-              className="h-8 border border-hairline bg-card px-2 text-caption text-ink focus-visible:outline-2 focus-visible:outline-accent"
-            >
-              <option value="">{t('r27.poolRoleAll')}</option>
-              {ROLE_ORDER.map((role) => (
-                <option key={role} value={role}>
-                  {roleLabel(role)}
-                </option>
-              ))}
-            </select>
-          </div>
+          <input
+            type="search"
+            value={poolQuery}
+            onChange={(event) => setPoolQuery(event.target.value)}
+            placeholder={t('staff.filterPlaceholder')}
+            aria-label={t('staff.filterAria')}
+            className="ml-auto h-8 w-44 border border-hairline bg-card px-2.5 text-caption text-ink placeholder:text-muted focus-visible:outline-2 focus-visible:outline-accent"
+          />
         </div>
         <ul className="mt-3 flex flex-wrap gap-2">
           {filteredPool.map((player) => (
@@ -233,27 +194,23 @@ export function Roster2027() {
           )}
         </ul>
       </div>
-
     </section>
   );
 }
 
-interface LeaguepediaSearchProps {
+interface LeaguepediaStaffSearchProps {
   knownIds: Set<string>;
   onAdd: (imported: ImportedPlayer) => void;
 }
 
-type SearchState = 'idle' | 'loading' | 'done' | 'error';
-
 /**
- * Buscador en vivo contra Leaguepedia (api.php, CORS anónimo). Resuelve hasta
- * 6 candidatos que sean páginas de jugador y permite añadirlos al pool; los
- * fallos de un candidato individual no abortan la búsqueda.
+ * Buscador en vivo de staff (coaches) contra Leaguepedia: los candidatos con
+ * rol coach se pueden añadir al pool de staff de 2027.
  */
-function LeaguepediaSearch({ knownIds, onAdd }: LeaguepediaSearchProps) {
+function LeaguepediaStaffSearch({ knownIds, onAdd }: LeaguepediaStaffSearchProps) {
   const { t } = useI18n();
   const [term, setTerm] = useState('');
-  const [state, setState] = useState<SearchState>('idle');
+  const [state, setState] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
   const [results, setResults] = useState<ImportedPlayer[]>([]);
   const [addedIds, setAddedIds] = useState<string[]>([]);
   const [error, setError] = useState('');
@@ -264,7 +221,8 @@ function LeaguepediaSearch({ knownIds, onAdd }: LeaguepediaSearchProps) {
     setError('');
     try {
       const found = await searchLeaguepediaPlayer(term);
-      setResults(found);
+      // En esta vista solo interesan los coaches.
+      setResults(found.filter((c) => c.role === 'coach'));
       setState('done');
       setError('');
     } catch (err) {
@@ -282,8 +240,8 @@ function LeaguepediaSearch({ knownIds, onAdd }: LeaguepediaSearchProps) {
   return (
     <div className="mt-4 border border-hairline bg-soft p-3">
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-body-sm font-bold uppercase text-ink">{t('r27.addOther')}</span>
-        <span className="text-caption text-muted">{t('r27.addHint')}</span>
+        <span className="text-body-sm font-bold uppercase text-ink">{t('staff.addOther')}</span>
+        <span className="text-caption text-muted">{t('staff.addHint')}</span>
         <form
           className="ml-auto flex items-center gap-2"
           onSubmit={(event) => {
@@ -296,7 +254,7 @@ function LeaguepediaSearch({ knownIds, onAdd }: LeaguepediaSearchProps) {
             value={term}
             onChange={(event) => setTerm(event.target.value)}
             placeholder={t('r27.searchPlaceholder')}
-            aria-label={t('r27.searchAria')}
+            aria-label={t('staff.searchAria')}
             className="h-8 w-52 border border-hairline bg-card px-2.5 text-caption text-ink placeholder:text-muted focus-visible:outline-2 focus-visible:outline-accent"
           />
           <button
@@ -310,22 +268,15 @@ function LeaguepediaSearch({ knownIds, onAdd }: LeaguepediaSearchProps) {
       </div>
       {state === 'error' && <p className="mt-2 text-caption text-danger">{error}</p>}
       {state === 'done' && results.length === 0 && !error && (
-        <p className="mt-2 text-caption text-muted">{t('r27.noResults')}</p>
+        <p className="mt-2 text-caption text-muted">{t('staff.noCoaches')}</p>
       )}
       {results.length > 0 && (
         <ul className="mt-3 flex flex-wrap gap-2">
           {results.map((candidate) => {
             const added = addedIds.includes(candidate.id) || knownIds.has(candidate.id);
             return (
-              <li
-                key={candidate.id}
-                className="flex items-center gap-2 border border-hairline bg-card p-1.5"
-              >
-                <PlayerPhoto
-                  player={{ ...importedToPlayer(candidate) }}
-                  size={32}
-                  className="shrink-0"
-                />
+              <li key={candidate.id} className="flex items-center gap-2 border border-hairline bg-card p-1.5">
+                <PlayerPhoto player={{ ...importedToPlayer(candidate) }} size={32} className="shrink-0" />
                 <div className="min-w-0">
                   <div className="flex min-w-0 items-center gap-1.5">
                     <span className="min-w-0 truncate text-caption font-bold uppercase text-ink">
@@ -351,7 +302,7 @@ function LeaguepediaSearch({ knownIds, onAdd }: LeaguepediaSearchProps) {
                   type="button"
                   disabled={added}
                   onClick={() => add(candidate)}
-                  aria-label={t('r27.addAria', { name: candidate.name })}
+                  aria-label={t('staff.addAria', { name: candidate.name })}
                   className={`h-8 border px-2 text-caption font-bold uppercase focus-visible:outline-2 focus-visible:outline-accent ${
                     added
                       ? 'border-hairline text-muted'
@@ -368,5 +319,3 @@ function LeaguepediaSearch({ knownIds, onAdd }: LeaguepediaSearchProps) {
     </div>
   );
 }
-
-/** Baldosa del logo reutilizando el patrón de la cabecera de la parrilla. */

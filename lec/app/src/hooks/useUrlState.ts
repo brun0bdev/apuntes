@@ -4,7 +4,7 @@ import { ROLE_ORDER } from '../lib/roles';
 import { DEFAULT_SORT_KEY, SORT_KEYS, type SortDir, type SortKey } from '../lib/sort';
 import type { Role } from '../types/player';
 
-export type ViewKind = 'grid' | 'table' | 'roster2027' | 'tracking';
+export type ViewKind = 'grid' | 'table' | 'roster2027' | 'staff2027' | 'tracking';
 
 /** Estado completo de la app sincronizado con la URL (filtros + vista + orden). */
 export interface UrlState extends FilterValues {
@@ -30,7 +30,7 @@ function parseSort(raw: string | null): { sortKey: SortKey; sortDir: SortDir } {
 }
 
 function parseView(raw: string | null): ViewKind {
-  return raw === 'table' || raw === 'roster2027' || raw === 'tracking' ? raw : 'grid';
+  return raw === 'table' || raw === 'roster2027' || raw === 'staff2027' || raw === 'tracking' ? raw : 'grid';
 }
 
 /** Lee los filtros de la URL al montar; los valores inválidos caen al por defecto. */

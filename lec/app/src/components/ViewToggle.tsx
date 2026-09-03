@@ -13,6 +13,7 @@ export function ViewToggle({ view, onChange }: ViewToggleProps) {
     { value: 'grid', label: t('view.grid') },
     { value: 'table', label: t('view.table') },
     { value: 'roster2027', label: t('view.2027') },
+    { value: 'staff2027', label: t('view.staff2027') },
     { value: 'tracking', label: t('view.tracking') },
   ];
 

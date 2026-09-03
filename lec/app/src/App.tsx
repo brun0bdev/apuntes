@@ -6,6 +6,7 @@ import { Header } from './components/Header';
 import { PlayerDrawer } from './components/PlayerDrawer';
 import { PlayerTable } from './components/PlayerTable';
 import { Roster2027 } from './components/Roster2027';
+import { Staff2027 } from './components/Staff2027';
 import { TeamGrid } from './components/TeamGrid';
 import { Tracking } from './components/Tracking';
 import { players, teams } from './data/players';
@@ -68,6 +69,8 @@ export default function App() {
       <main className="mx-auto w-full max-w-content flex-1 px-4 py-6 md:py-8">
         {view === 'roster2027' ? (
           <Roster2027 />
+        ) : view === 'staff2027' ? (
+          <Staff2027 />
         ) : view === 'tracking' ? (
           <Tracking />
         ) : (
