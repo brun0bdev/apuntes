@@ -84,6 +84,14 @@ function renderMatches() {
 
     // Update match counts
     updateMatchCounts();
+
+    // Fallback: colapsar el grid a 1 columna cuando solo hay una tarjeta
+    // (:has() puede no estar disponible en navegadores antiguos)
+    const gridContainer = sundayContainer.closest('.standings-grid-container');
+    if (gridContainer) {
+        const single = document.querySelectorAll('.standings-column').length === 1;
+        gridContainer.classList.toggle('single-column', single);
+    }
 }
 
 function createMatchCard(match) {

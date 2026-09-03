@@ -437,17 +437,17 @@ body::before {
 .container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 16px;
-    padding-top: calc(var(--nav-height) + 16px);
+    padding: 32px;
+    padding-top: calc(var(--nav-height) + 24px);
 }
 
 /* Main content grid */
 .main-content-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 24px;
+    gap: 32px;
     align-items: stretch;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
 }
 
 /* === Header === */
@@ -849,12 +849,18 @@ section h2::after {
 .standings-grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
 }
 
 @media (min-width: 900px) {
     .standings-grid-container {
         grid-template-columns: 1fr 1fr;
+    }
+
+    /* Con una sola columna de clasificación, ocupa todo el ancho */
+    .standings-grid-container:has(> .standings-column:only-child),
+    .standings-grid-container.single-column {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -2094,8 +2100,8 @@ kbd {
     }
     
     .container {
-        padding: 10px;
-        padding-top: calc(var(--nav-height) + 10px);
+        padding: 16px;
+        padding-top: calc(var(--nav-height) + 12px);
     }
     
     .main-content-grid {
