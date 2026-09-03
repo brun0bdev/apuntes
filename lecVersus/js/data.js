@@ -189,12 +189,12 @@ const H2H = {
 
 // Jornada demo (1 jornada): 6 partidos, todos los equipos juegan una vez.
 const REMAINING_MATCHES = [
-    { id: 'j1-m1', team1: 'G2',  team2: 'VIT', time: '18:00' },
-    { id: 'j1-m2', team1: 'FNC', team2: 'KC',  time: '18:00' },
-    { id: 'j1-m3', team1: 'MKOI', team2: 'NAVI', time: '18:00' },
-    { id: 'j1-m4', team1: 'TH',  team2: 'GX',  time: '18:00' },
-    { id: 'j1-m5', team1: 'LR',  team2: 'SK',  time: '18:00' },
-    { id: 'j1-m6', team1: 'SHFT', team2: 'KCB', time: '18:00' }
+    { id: 'j1-m1', team1: 'G2',  team2: 'VIT', time: '18:00', winner: null },
+    { id: 'j1-m2', team1: 'FNC', team2: 'KC',  time: '18:00', winner: null },
+    { id: 'j1-m3', team1: 'MKOI', team2: 'NAVI', time: '18:00', winner: null },
+    { id: 'j1-m4', team1: 'TH',  team2: 'GX',  time: '18:00', winner: null },
+    { id: 'j1-m5', team1: 'LR',  team2: 'SK',  time: '18:00', winner: null },
+    { id: 'j1-m6', team1: 'SHFT', team2: 'KCB', time: '18:00', winner: null }
 ];
 
 function cloneTeams() {
