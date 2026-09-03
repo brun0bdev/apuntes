@@ -57,7 +57,13 @@ export default function App() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header theme={theme} onToggleTheme={toggleTheme} view={view} onViewChange={(v) => update({ view: v })} />
+      <Header
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        view={view}
+        onViewChange={(v) => update({ view: v })}
+        onGoHome={() => update({ view: 'grid', q: '', team: '', role: '', agent: '', expiring2026: false })}
+      />
 
       <main className="mx-auto w-full max-w-content flex-1 px-4 py-6 md:py-8">
         {view === 'roster2027' ? (

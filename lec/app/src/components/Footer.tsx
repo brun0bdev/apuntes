@@ -1,18 +1,22 @@
 import { useI18n } from '../i18n';
 
-/**
- * Pie con la atribución de fuentes (texto estático) y la nota de los datos
- * manuales (agentes, agencias, nacionalidad, histórico) que viven en
- * data/overrides.json, que los scripts generadores nunca escriben.
- */
+/** Pie minimalista: firma con hipervínculo a brunob.dev. */
 export function Footer() {
   const { t } = useI18n();
 
   return (
     <footer className="border-t border-hairline bg-soft">
-      <div className="mx-auto w-full max-w-content px-4 py-8">
-        <p className="text-caption text-muted">{t('footer.sources')}</p>
-        <p className="mt-2 text-caption text-muted-soft">{t('footer.manual')}</p>
+      <div className="mx-auto w-full max-w-content px-4 py-6">
+        <p className="text-caption text-muted">
+          <a
+            href="https://brunob.dev"
+            target="_blank"
+            rel="noreferrer"
+            className="font-bold text-body hover:text-ink hover:underline hover:decoration-accent hover:underline-offset-4 focus-visible:outline-2 focus-visible:outline-accent"
+          >
+            {t('footer.madeBy', { name: 'BrunoB' })}
+          </a>
+        </p>
       </div>
     </footer>
   );

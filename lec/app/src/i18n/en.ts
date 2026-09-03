@@ -8,6 +8,7 @@ export const en: Record<keyof Dict, string> = {
 
   // Header and views
   'header.subtitle': 'LEC · EMEA · Offseason',
+  'header.goHomeAria': 'Go to home view',
   'view.grid': 'Grid',
   'view.table': 'Table',
   'view.2027': '2027',
@@ -183,8 +184,5 @@ export const en: Record<keyof Dict, string> = {
   'tr.kind.other': 'Other',
 
   // Footer
-  'footer.sources':
-    'Data: League-Recognized Contract Database (Google Sheet) · Verified against GCD (Leaguepedia) · Assets: lol.fandom.com',
-  'footer.manual':
-    'Agents, agencies, nationalities and team history are filled manually in data/overrides.json. Internal project, not affiliated with Riot Games.',
+  'footer.madeBy': 'Made by {name}',
 };

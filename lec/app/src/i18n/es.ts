@@ -9,7 +9,8 @@ export const es = {
 
   // Cabecera y vistas
   'header.subtitle': 'LEC · EMEA · Offseason',
-  'view.grid': 'Parrilla',
+  'header.goHomeAria': 'Ir al inicio',
+  'view.grid': 'Inicio',
   'view.table': 'Tabla',
   'view.2027': '2027',
   'view.tracking': 'Tracking',
@@ -184,10 +185,7 @@ export const es = {
   'tr.kind.other': 'Otro',
 
   // Footer
-  'footer.sources':
-    'Datos: League-Recognized Contract Database (Google Sheet) · Verificado contra GCD (Leaguepedia) · Assets: lol.fandom.com',
-  'footer.manual':
-    'Agentes, agencias, nacionalidades e histórico de equipos se rellenan a mano en data/overrides.json. Proyecto interno sin afiliación con Riot Games.',
+  'footer.madeBy': 'Made by {name}',
 } as const;
 
 export type Dict = Record<keyof typeof es, string>;
