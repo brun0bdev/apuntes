@@ -3,210 +3,83 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>BrunoB — Proyectos</title>
-		<meta name="description" content="Selector de proyectos de BrunoB: Scouting LEC, LEC Versus, apuntes de programación y más." />
+		<title>BrunoB</title>
+		<meta name="description" content="Selector de proyectos de BrunoB." />
 		<meta name="author" content="Bruno B." />
 		<meta name="theme-color" content="#313338" media="(prefers-color-scheme: dark)">
 		<meta name="theme-color" content="#f2f3f5" media="(prefers-color-scheme: light)">
 
-		<!-- Open Graph / Social -->
-		<meta property="og:title" content="BrunoB — Proyectos" />
-		<meta property="og:description" content="Selector de proyectos: Scouting LEC, LEC Versus, Apuntes y más." />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://brunob.me" />
-		<meta name="twitter:card" content="summary" />
-
 		<style>
-					:root {
-						--bg: #f2f3f5;
-						--fg: #1e1f22;
-						--muted: #4e5058;
-						--card: #ffffff;
-						--accent: #5865F2;
-						--accent-contrast: #ffffff;
-						--border: #e3e5e8;
-						--shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-					}
-							:root.dark {
-								--bg: #313338;
-								--fg: #dbdee1;
-								--muted: #b5bac1;
-								--card: #2b2d31;
-								--accent: #5865F2;
-								--accent-contrast: #ffffff;
-								--border: #3f4147;
-								--shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-							}
-					@media (prefers-color-scheme: dark) {
-						:root {
-							--bg: #313338;
-							--fg: #dbdee1;
-							--muted: #b5bac1;
-							--card: #2b2d31;
-							--accent: #5865F2;
-							--accent-contrast: #ffffff;
-							--border: #3f4147;
-							--shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-						}
-					}
+			:root {
+				--bg: #f2f3f5;
+				--fg: #1e1f22;
+				--card: #ffffff;
+				--muted: #4e5058;
+				--border: #e3e5e8;
+				--shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+			}
+			:root.dark {
+				--bg: #313338;
+				--fg: #dbdee1;
+				--card: #2b2d31;
+				--muted: #b5bac1;
+				--border: #3f4147;
+				--shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--bg: #313338;
+					--fg: #dbdee1;
+					--card: #2b2d31;
+					--muted: #b5bac1;
+					--border: #3f4147;
+					--shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+				}
+			}
 
 			* { box-sizing: border-box; }
 			html, body { height: 100%; }
-					body {
-						margin: 0;
-						font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-						background: var(--bg);
-						color: var(--fg);
-						display: flex;
-					}
+			body {
+				margin: 0;
+				font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial;
+				background: var(--bg);
+				color: var(--fg);
+				display: flex;
+			}
 			.container {
 				width: 100%;
-				max-width: 1080px;
+				max-width: 720px;
 				margin: auto;
 				padding: 24px;
 			}
-			header {
-				display: flex; align-items: center; justify-content: space-between; gap: 12px;
-			}
-			.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; font-weight: 700; letter-spacing: -0.01em; }
-			.dot { width: 10px; height: 10px; border-radius: 999px; background: var(--accent); }
-
-			.btn, .link {
-				display: inline-flex; align-items: center; gap: 8px;
-						border-radius: 10px; border: 1px solid var(--border);
-						padding: 10px 14px; text-decoration: none; color: inherit;
-						background: var(--card);
-			}
-			.btn:hover, .link:hover { filter: brightness(0.98); transform: translateY(-1px); transition: 150ms; }
-			.icon { width: 18px; height: 18px; }
-
-			main {
-				padding: 56px 0 48px;
-				display: grid; gap: 24px;
-			}
-			h1 {
-				margin: 0;
-				font-size: clamp(28px, 4vw, 40px);
-				line-height: 1.15;
-				letter-spacing: -0.02em;
-			}
-			p.lead { margin: 6px 0 0; color: var(--muted); font-size: clamp(16px, 2.2vw, 18px); }
-
-			/* Selector de proyectos */
-			.projects {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-				gap: 16px;
-				margin-top: 8px;
-			}
+			.projects { display: grid; gap: 12px; }
 			a.project {
-				display: flex; flex-direction: column; gap: 6px;
+				display: flex; align-items: center; justify-content: space-between; gap: 12px;
 				background: var(--card);
 				border: 1px solid var(--border);
-				border-radius: 14px;
-				padding: 18px;
+				border-radius: 12px;
+				padding: 16px 18px;
 				box-shadow: var(--shadow);
 				text-decoration: none;
 				color: inherit;
 			}
-			a.project:hover {
-				transform: translateY(-2px);
-				transition: 150ms;
-				border-color: var(--accent);
-			}
-			.project .p-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-			.project h3 { margin: 0; font-size: 18px; }
-			.project .arrow { color: var(--accent); font-weight: 700; }
-			.project p { margin: 0; color: var(--muted); font-size: 14px; }
-			.project .tag {
-				display: inline-block;
-				align-self: flex-start;
-				margin-top: 4px;
-				font-size: 11px;
-				font-weight: 700;
-				letter-spacing: 0.08em;
-				text-transform: uppercase;
-				color: var(--accent);
-				background: color-mix(in srgb, var(--accent) 12%, transparent);
-				border-radius: 999px;
-				padding: 3px 10px;
-			}
-			.project.staging { opacity: 0.75; }
-
-			footer { border-top: 1px solid var(--border); margin-top: 20px; padding-top: 16px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-			.small { font-size: 13px; }
-
-			.theme-toggle { cursor: pointer; background: transparent; border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; color: inherit; }
+			a.project:hover { transform: translateY(-2px); transition: 150ms; border-color: var(--muted); }
+			.project h3 { margin: 0; font-size: 16px; }
+			.project .arrow { color: var(--muted); }
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			<header>
-				<a class="brand" href="#" aria-label="Home"><span class="dot"></span> brunob.me</a>
-				<button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">🌗</button>
-			</header>
-
-			<main>
-				<div>
-					<h1>BrunoB — Proyectos</h1>
-					<p class="lead">Selector de proyectos. Elige a dónde quieres ir.</p>
-				</div>
-
-				<div class="projects">
-					<a class="project" href="lec/index.html">
-						<div class="p-head"><h3>Scouting LEC 2026</h3><span class="arrow">→</span></div>
-						<p>Rosters de los 10 equipos LEC con estado de contratos, filtro por agente, roster 2027 editable y tracking de señales en X.</p>
-						<span class="tag">League of Legends</span>
-					</a>
-
-					<a class="project" href="lecVersus/index.html">
-						<div class="p-head"><h3>LEC Versus 2026</h3><span class="arrow">→</span></div>
-						<p>Calculadora interactiva de probabilidades y simulador de partidos para los Playoffs de la LEC 2026.</p>
-						<span class="tag">League of Legends</span>
-					</a>
-
-					
-
-					
-				</div>
-			</main>
-
-			<footer>
-				<span class="small">© <span id="year"></span> BrunoB.me</span>
-				<nav class="small" aria-label="Links">
-					<a class="link" href="mailto:contacto@brunob.me">Email</a>
-					<a class="link" href="https://github.com/ibrunob" target="_blank" rel="noopener noreferrer">GitHub</a>
-				</nav>
-			</footer>
+			<div class="projects">
+				<a class="project" href="lec/index.html">
+					<h3>Scouting LEC 2026</h3>
+					<span class="arrow">→</span>
+				</a>
+				<a class="project" href="lecVersus/index.html">
+					<h3>LEC Versus 2026</h3>
+					<span class="arrow">→</span>
+				</a>
+			</div>
 		</div>
-
-		<script>
-			// Tema: preferencia guardada → prefers-color-scheme
-			const root = document.documentElement;
-			const stored = localStorage.getItem('theme');
-			if (stored === 'dark' || stored === 'light') root.classList.toggle('dark', stored === 'dark');
-			else root.classList.toggle('dark', matchMedia('(prefers-color-scheme: dark)').matches);
-
-			document.getElementById('themeToggle').addEventListener('click', () => {
-				const dark = root.classList.toggle('dark');
-				localStorage.setItem('theme', dark ? 'dark' : 'light');
-			});
-
-			document.getElementById('year').textContent = new Date().getFullYear();
-		</script>
-
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "Person",
-				"name": "Bruno B.",
-				"url": "https://brunob.me",
-				"email": "mailto:contacto@brunob.me",
-				"sameAs": [
-					"https://github.com/ibrunob"
-				]
-			}
-		</script>
-
 	</body>
 	</html>
