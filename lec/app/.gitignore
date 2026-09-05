@@ -1,9 +1,0 @@
-# Dependencias y build
-node_modules/
-dist/
-
-# Snapshots crudos descargados (no van a git)
-data/raw/
-
-# Sistema
-.DS_Store
