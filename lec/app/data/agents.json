@@ -1,0 +1,177 @@
+[
+  {
+    "id": "tailors",
+    "name": "Tailors",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "isma",
+      "jackies",
+      "yike",
+      "empyros",
+      "maynter",
+      "skeanz",
+      "naak-nako",
+      "lyncas",
+      "carzzy"
+    ]
+  },
+  {
+    "id": "prodigy-agency",
+    "name": "Prodigy Agency",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "vladi",
+      "brokenblade",
+      "skewmond",
+      "jojopyun",
+      "rhilech",
+      "jopa",
+      "boukada"
+    ]
+  },
+  {
+    "id": "achieveminds",
+    "name": "Achieveminds",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "lot",
+      "oscarinin",
+      "flakked",
+      "nuc",
+      "trymbi"
+    ]
+  },
+  {
+    "id": "darthyellow-jesus-fernandez-rubio",
+    "name": "DarthYellow (Jesús Fernández Rubio)",
+    "type": "agent",
+    "website": null,
+    "playerIds": [
+      "razork",
+      "myrwn",
+      "elyoya",
+      "supa",
+      "alvaro"
+    ]
+  },
+  {
+    "id": "shadow-corp-shadow-corporation",
+    "name": "Shadow Corp (Shadow Corporation)",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "soboro",
+      "lospa",
+      "kyeahoo",
+      "samd",
+      "fiesta"
+    ]
+  },
+  {
+    "id": "surge-management",
+    "name": "Surge Management",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "upset",
+      "serin",
+      "fleshy"
+    ]
+  },
+  {
+    "id": "nathan-laprade",
+    "name": "Nathan Laprade",
+    "type": "agent",
+    "website": null,
+    "playerIds": [
+      "maynter",
+      "naak-nako"
+    ]
+  },
+  {
+    "id": "proplayers-agency",
+    "name": "ProPlayers Agency",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "tracyn",
+      "daglas"
+    ]
+  },
+  {
+    "id": "proxy-proxy-talent",
+    "name": "Proxy (Proxy Talent)",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "caps",
+      "lider"
+    ]
+  },
+  {
+    "id": "azyt-azyt-korea",
+    "name": "AZYT (AZYT Korea)",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "slowq"
+    ]
+  },
+  {
+    "id": "fabian-broich",
+    "name": "Fabian Broich",
+    "type": "agent",
+    "website": null,
+    "playerIds": [
+      "trymbi"
+    ]
+  },
+  {
+    "id": "flo-theflow1604",
+    "name": "Flo (@theflow1604)",
+    "type": "agent",
+    "website": null,
+    "playerIds": [
+      "mikyx"
+    ]
+  },
+  {
+    "id": "joseph-el-ouassi",
+    "name": "Joseph El Ouassi",
+    "type": "agent",
+    "website": null,
+    "playerIds": [
+      "caps"
+    ]
+  },
+  {
+    "id": "kelby-b-may-kelbymay",
+    "name": "Kelby B. May (@KelbyMay)",
+    "type": "agent",
+    "website": null,
+    "playerIds": [
+      "busio"
+    ]
+  },
+  {
+    "id": "positive-azyt-positive",
+    "name": "Positive (@AZYT_Positive)",
+    "type": "agent",
+    "website": null,
+    "playerIds": [
+      "slowq"
+    ]
+  },
+  {
+    "id": "the-black-lodge",
+    "name": "The Black Lodge",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "labrov"
+    ]
+  }
+]

@@ -1,0 +1,3651 @@
+{
+  "updatedAt": "2026-09-05T06:11:10.016Z",
+  "players": {
+    "razork": [
+      {
+        "team": "Dimegio Club",
+        "years": "2016"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2017"
+      },
+      {
+        "team": "eMonkeyz Storm",
+        "years": "2017"
+      },
+      {
+        "team": "Penguins",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Vodafone Giants",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Giants Gaming",
+        "years": "2018"
+      },
+      {
+        "team": "Misfits Gaming",
+        "years": "2019–2021"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2021–Present"
+      }
+    ],
+    "grabbz": [
+      {
+        "team": "Unicorns of Love",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Giants Gaming",
+        "years": "2016"
+      },
+      {
+        "team": "Team ROCCAT",
+        "years": "2016–2017"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2017–2021"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2024–Present"
+      }
+    ],
+    "caps": [
+      {
+        "team": "Enigma Esports",
+        "years": "2015"
+      },
+      {
+        "team": "Inspire eSports",
+        "years": "2016"
+      },
+      {
+        "team": "E-corp Gaming",
+        "years": "2016"
+      },
+      {
+        "team": "mousesports",
+        "years": "2016"
+      },
+      {
+        "team": "Nerv",
+        "years": "2016"
+      },
+      {
+        "team": "Dark Passage",
+        "years": "2016"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2016–2018"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2018–Present"
+      }
+    ],
+    "myrwn": [
+      {
+        "team": "OKGG White",
+        "years": "2019"
+      },
+      {
+        "team": "FireVoidGaming",
+        "years": "2019"
+      },
+      {
+        "team": "Origen SB",
+        "years": "2020"
+      },
+      {
+        "team": "Astralis SB",
+        "years": "2021"
+      },
+      {
+        "team": "BISONS ECLUB",
+        "years": "2021–2023"
+      },
+      {
+        "team": "Team Heretics Academy",
+        "years": "2023"
+      },
+      {
+        "team": "MAD Lions KOI",
+        "years": "2024"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2024–Present"
+      }
+    ],
+    "own3r": [
+      {
+        "team": "x6tence Academy",
+        "years": "2020"
+      },
+      {
+        "team": "Arctic Academy",
+        "years": "2020"
+      },
+      {
+        "team": "MAD Lions Madrid",
+        "years": "2020–2022"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2022–Present"
+      }
+    ],
+    "soboro": [
+      {
+        "team": "QWER.GG",
+        "years": "2020"
+      },
+      {
+        "team": "HuyaTV",
+        "years": "2020"
+      },
+      {
+        "team": "Shadow Corp",
+        "years": "2021"
+      },
+      {
+        "team": "Gen.G Academy",
+        "years": "2021"
+      },
+      {
+        "team": "Shadow Battlica",
+        "years": "2021"
+      },
+      {
+        "team": "AF Academy",
+        "years": "2021"
+      },
+      {
+        "team": "BRO Challengers",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Fredit BRION",
+        "years": "2022"
+      },
+      {
+        "team": "Galakticos",
+        "years": "2023–2024"
+      },
+      {
+        "team": "BNK FEARX Youth",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Invictus Gaming",
+        "years": "2025–2026"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2026–Present"
+      }
+    ],
+    "vladi": [
+      {
+        "team": "CBI Academy",
+        "years": "2020"
+      },
+      {
+        "team": "CBS Esports",
+        "years": "2021"
+      },
+      {
+        "team": "Hive Athens",
+        "years": "2021"
+      },
+      {
+        "team": "Team Refuse",
+        "years": "2021–2022"
+      },
+      {
+        "team": "WLGaming Esports",
+        "years": "2022"
+      },
+      {
+        "team": "Riddle Esports",
+        "years": "2022"
+      },
+      {
+        "team": "WLGaming Esports",
+        "years": "2023"
+      },
+      {
+        "team": "Nativz",
+        "years": "2023"
+      },
+      {
+        "team": "Karmine Corp Blue",
+        "years": "2024"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2025–Present"
+      }
+    ],
+    "upset": [
+      {
+        "team": "Mysterious Monkeys",
+        "years": "2016"
+      },
+      {
+        "team": "mousesports",
+        "years": "2016"
+      },
+      {
+        "team": "Nerv",
+        "years": "2016"
+      },
+      {
+        "team": "Melty eSport Club",
+        "years": "2016"
+      },
+      {
+        "team": "Giants Gaming",
+        "years": "2016"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2017–2019"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2017"
+      },
+      {
+        "team": "Origen",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Astralis",
+        "years": "2020"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2020–2023"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2023"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2024"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2024–Present"
+      }
+    ],
+    "lospa": [
+      {
+        "team": "Gen.G Academy",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Gen.G Global Academy",
+        "years": "2021–2023"
+      },
+      {
+        "team": "Gen.G",
+        "years": "2022"
+      },
+      {
+        "team": "FUT Esports",
+        "years": "2024"
+      },
+      {
+        "team": "GIANTX PRIDE",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2025–Present"
+      }
+    ],
+    "gaax": [
+      {
+        "team": "Wild Gaming",
+        "years": "2018"
+      },
+      {
+        "team": "Dragons E.C.",
+        "years": "2018"
+      },
+      {
+        "team": "Vikingekrig Esports",
+        "years": "2019"
+      },
+      {
+        "team": "Vikingekrig Esports",
+        "years": "2019"
+      },
+      {
+        "team": "QLASH Forge Academy",
+        "years": "2019"
+      },
+      {
+        "team": "Aethra Esports",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Cream Real Betis",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Arena Quesito",
+        "years": "2021"
+      },
+      {
+        "team": "Team Queso",
+        "years": "2021"
+      },
+      {
+        "team": "INFINITY",
+        "years": "2022"
+      },
+      {
+        "team": "Fnatic TQ",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Fnatic TQ",
+        "years": "2023"
+      },
+      {
+        "team": "Fnatic TQ",
+        "years": "2023"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2024"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2024–Present"
+      }
+    ],
+    "brokenblade": [
+      {
+        "team": "Mysterious Monkeys",
+        "years": "2016"
+      },
+      {
+        "team": "Victorious Ace",
+        "years": "2016"
+      },
+      {
+        "team": "Galatasaray Esports",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Dark Passage",
+        "years": "2017"
+      },
+      {
+        "team": "Galakticos",
+        "years": "2017"
+      },
+      {
+        "team": "Royal Bandits",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Royal Youth",
+        "years": "2018"
+      },
+      {
+        "team": "TSM",
+        "years": "2018–2020"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2020–2021"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2021–Present"
+      }
+    ],
+    "skewmond": [
+      {
+        "team": "Atletec Académie",
+        "years": "2021"
+      },
+      {
+        "team": "Enclave",
+        "years": "2021"
+      },
+      {
+        "team": "ZennIT",
+        "years": "2021"
+      },
+      {
+        "team": "ViV Esport",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Aegis",
+        "years": "2023"
+      },
+      {
+        "team": "Team BDS Academy",
+        "years": "2024"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2024–Present"
+      }
+    ],
+    "hans-sama": [
+      {
+        "team": "The Gentle Team",
+        "years": "2014–2015"
+      },
+      {
+        "team": "E-corp Gentle",
+        "years": "2015"
+      },
+      {
+        "team": "Millenium",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Misfits Gaming",
+        "years": "2016–2019"
+      },
+      {
+        "team": "Misfits Premier",
+        "years": "2019"
+      },
+      {
+        "team": "Rogue",
+        "years": "2019–2021"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2021–2022"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2022–Present"
+      }
+    ],
+    "labrov": [
+      {
+        "team": "GROF",
+        "years": "2016"
+      },
+      {
+        "team": "Void Gaming",
+        "years": "2016"
+      },
+      {
+        "team": "Rising Divinity",
+        "years": "2017"
+      },
+      {
+        "team": "WAR Balkan",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Different Dimension",
+        "years": "2017"
+      },
+      {
+        "team": "Wind and Rain",
+        "years": "2018"
+      },
+      {
+        "team": "Panathinaikos",
+        "years": "2018"
+      },
+      {
+        "team": "KIYF eSports Club",
+        "years": "2018–2019"
+      },
+      {
+        "team": "WLGaming Esports",
+        "years": "2019"
+      },
+      {
+        "team": "WarKidZ E-Sports",
+        "years": "2019"
+      },
+      {
+        "team": "WLGaming Esports",
+        "years": "2019"
+      },
+      {
+        "team": "BIG",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2022–2024"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2024–Present"
+      }
+    ],
+    "memento": [
+      {
+        "team": "CooLife Gaming",
+        "years": "2015"
+      },
+      {
+        "team": "Enigma Esports",
+        "years": "2015"
+      },
+      {
+        "team": "Team Empire",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Low Priority",
+        "years": "2016"
+      },
+      {
+        "team": "Nerv",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Team ROCCAT",
+        "years": "2016"
+      },
+      {
+        "team": "Giants Gaming",
+        "years": "2017"
+      },
+      {
+        "team": "Nerv",
+        "years": "2017"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2017"
+      },
+      {
+        "team": "Team ROCCAT",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Schalke Evolution",
+        "years": "2019"
+      },
+      {
+        "team": "ad hoc gaming",
+        "years": "2020"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2020–2021"
+      },
+      {
+        "team": "GameWard",
+        "years": "2021"
+      },
+      {
+        "team": "Mirage Elyandra",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Guasones",
+        "years": "2023"
+      },
+      {
+        "team": "NORD Esports",
+        "years": "2024"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2024–Present"
+      }
+    ],
+    "perkz": [
+      {
+        "team": "GSI Gaming",
+        "years": "2014"
+      },
+      {
+        "team": "Gamers2",
+        "years": "2015"
+      },
+      {
+        "team": "Millenium",
+        "years": "2015"
+      },
+      {
+        "team": "Gamers2",
+        "years": "2015"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2015–2020"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2021–2023"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2023–2024"
+      },
+      {
+        "team": "The Ruddy Sack",
+        "years": "2025"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2026–Present"
+      }
+    ],
+    "rodrigo": [
+      {
+        "team": "EGN Esports",
+        "years": "2017"
+      },
+      {
+        "team": "For The Win",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Vodafone Giants",
+        "years": "2020"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2021"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2021–2022"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2022–2026"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2026–Present"
+      }
+    ],
+    "lot": [
+      {
+        "team": "RY Academy",
+        "years": "2020"
+      },
+      {
+        "team": "Beşiktaş Academy",
+        "years": "2020"
+      },
+      {
+        "team": "IWC Academy",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Beşiktaş Esports",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Aegis",
+        "years": "2023"
+      },
+      {
+        "team": "Team GO",
+        "years": "2023–2024"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2025–Present"
+      }
+    ],
+    "oscarinin": [
+      {
+        "team": "Giants Academy",
+        "years": "2018"
+      },
+      {
+        "team": "S2V Academy",
+        "years": "2019"
+      },
+      {
+        "team": "S2V Esports",
+        "years": "2019"
+      },
+      {
+        "team": "G2 Arctic",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Fnatic TQ",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2023–2025"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2026–Present"
+      }
+    ],
+    "isma": [
+      {
+        "team": "Epsilon Esports",
+        "years": "2020"
+      },
+      {
+        "team": "FC Nantes",
+        "years": "2021"
+      },
+      {
+        "team": "Vanir",
+        "years": "2021"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Movistar Riders",
+        "years": "2022–2023"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Karmine Corp Blue",
+        "years": "2025"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2025–Present"
+      }
+    ],
+    "jackies": [
+      {
+        "team": "Inaequalis Cor",
+        "years": "2020"
+      },
+      {
+        "team": "NecroRaisers",
+        "years": "2020"
+      },
+      {
+        "team": "Inaequalis",
+        "years": "2020"
+      },
+      {
+        "team": "Vikingekrig Academy",
+        "years": "2021"
+      },
+      {
+        "team": "Vikingekrig Esports",
+        "years": "2021"
+      },
+      {
+        "team": "Dynamo Eclot",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Entropiq",
+        "years": "2023"
+      },
+      {
+        "team": "Excel",
+        "years": "2023"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2023–Present"
+      }
+    ],
+    "flakked": [
+      {
+        "team": "ASUS ROG Academy",
+        "years": "2018–2019"
+      },
+      {
+        "team": "S2V Academy",
+        "years": "2019"
+      },
+      {
+        "team": "S2V Esports",
+        "years": "2019"
+      },
+      {
+        "team": "MAD Lions Madrid",
+        "years": "2020–2021"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Team Heretics Academy",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2023–2025"
+      },
+      {
+        "team": "GIANTX iTero",
+        "years": "2025–2026"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2026"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2026–Present"
+      }
+    ],
+    "noah": [
+      {
+        "team": "Awe Star",
+        "years": "2018–2019"
+      },
+      {
+        "team": "KT Academy",
+        "years": "2020–2021"
+      },
+      {
+        "team": "KT Rolster",
+        "years": "2020–2021"
+      },
+      {
+        "team": "KT Challengers",
+        "years": "2021"
+      },
+      {
+        "team": "KT Rolster",
+        "years": "2021–2022"
+      },
+      {
+        "team": "KT Challengers",
+        "years": "2022"
+      },
+      {
+        "team": "Zero Tenacity",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2023–2024"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2025–Present"
+      }
+    ],
+    "jun": [
+      {
+        "team": "DRX Academy",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Ulsan",
+        "years": "2020"
+      },
+      {
+        "team": "DRX Challengers",
+        "years": "2021"
+      },
+      {
+        "team": "DRX",
+        "years": "2021"
+      },
+      {
+        "team": "DRX Challengers",
+        "years": "2021–2022"
+      },
+      {
+        "team": "DRX",
+        "years": "2022"
+      },
+      {
+        "team": "Kwangdong Freecs",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2023–2024"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2025–Present"
+      }
+    ],
+    "guilhoto": [
+      {
+        "team": "For The Win",
+        "years": "2016"
+      },
+      {
+        "team": "K1CK eSports Club",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Giants Only The Brave",
+        "years": "2017"
+      },
+      {
+        "team": "Giants Gaming",
+        "years": "2017"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Origen",
+        "years": "2018–2020"
+      },
+      {
+        "team": "Astralis",
+        "years": "2020"
+      },
+      {
+        "team": "Immortals",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Giants",
+        "years": "2023"
+      },
+      {
+        "team": "Case Esports",
+        "years": "2024"
+      },
+      {
+        "team": "Team Heretics Academy",
+        "years": "2024"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2024–Present"
+      }
+    ],
+    "maxlore": [
+      {
+        "team": "Perilous Gaming Rift",
+        "years": "2014"
+      },
+      {
+        "team": "Team Infused",
+        "years": "2015"
+      },
+      {
+        "team": "Choke Gaming",
+        "years": "2015"
+      },
+      {
+        "team": "Ex Nihilo",
+        "years": "2015"
+      },
+      {
+        "team": "Atlantis eSports",
+        "years": "2015"
+      },
+      {
+        "team": "Team Popmog",
+        "years": "2015"
+      },
+      {
+        "team": "Gamers2",
+        "years": "2015"
+      },
+      {
+        "team": "To Infinity and Beyond",
+        "years": "2015"
+      },
+      {
+        "team": "Team Infused",
+        "years": "2015"
+      },
+      {
+        "team": "Inspire eSports",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Renegades: Banditos",
+        "years": "2016"
+      },
+      {
+        "team": "Giants Gaming",
+        "years": "2016"
+      },
+      {
+        "team": "Misfits Gaming",
+        "years": "2016"
+      },
+      {
+        "team": "Team ROCCAT",
+        "years": "2017"
+      },
+      {
+        "team": "Misfits Gaming",
+        "years": "2017–2019"
+      },
+      {
+        "team": "Munster Rugby",
+        "years": "2020"
+      },
+      {
+        "team": "Movistar Riders",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Giants",
+        "years": "2022"
+      },
+      {
+        "team": "Barça eSports",
+        "years": "2023"
+      },
+      {
+        "team": "Solary",
+        "years": "2025"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2025–Present"
+      }
+    ],
+    "rhuckz": [
+      {
+        "team": "Why eSports",
+        "years": "2014"
+      },
+      {
+        "team": "K1CK eSports Club",
+        "years": "2015–2016"
+      },
+      {
+        "team": "mousesports",
+        "years": "2016"
+      },
+      {
+        "team": "K1CK eSports Club",
+        "years": "2016–2017"
+      },
+      {
+        "team": "ÇİLEKLER",
+        "years": "2017"
+      },
+      {
+        "team": "AlienTech eSports",
+        "years": "2017"
+      },
+      {
+        "team": "RED Canids",
+        "years": "2017"
+      },
+      {
+        "team": "K1CK eSports Club",
+        "years": "2017–2019"
+      },
+      {
+        "team": "Penguins",
+        "years": "2019"
+      },
+      {
+        "team": "Movistar Riders",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Fnatic Rising",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Fnatic TQ",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2022"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Fnatic TQ",
+        "years": "2023"
+      },
+      {
+        "team": "Case Esports",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Case Esports",
+        "years": "2024"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2024"
+      },
+      {
+        "team": "Ramboot Club",
+        "years": "2025"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2025–Present"
+      }
+    ],
+    "canna": [
+      {
+        "team": "SK Telecom T1",
+        "years": "2019"
+      },
+      {
+        "team": "T1",
+        "years": "2019–2021"
+      },
+      {
+        "team": "NS RedForce",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Dplus Kia",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2024–Present"
+      }
+    ],
+    "yike": [
+      {
+        "team": "Vortex Five",
+        "years": "2019"
+      },
+      {
+        "team": "Hybrid Esports",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Bulldog Esports",
+        "years": "2019"
+      },
+      {
+        "team": "UniQ Esports Club",
+        "years": "2020"
+      },
+      {
+        "team": "Domino esports",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Rich Gang",
+        "years": "2020"
+      },
+      {
+        "team": "Morning Stars",
+        "years": "2021"
+      },
+      {
+        "team": "Team Oplon",
+        "years": "2021"
+      },
+      {
+        "team": "LDLC OL",
+        "years": "2021–2022"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2022–2024"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2024–Present"
+      }
+    ],
+    "kyeahoo": [
+      {
+        "team": "아니 바텀아",
+        "years": "2021"
+      },
+      {
+        "team": "Game Coach Academy",
+        "years": "2021"
+      },
+      {
+        "team": "Shadow New",
+        "years": "2021"
+      },
+      {
+        "team": "KDF Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "DRX Academy",
+        "years": "2022–2023"
+      },
+      {
+        "team": "DRX",
+        "years": "2023"
+      },
+      {
+        "team": "DRX Challengers",
+        "years": "2023–2024"
+      },
+      {
+        "team": "DRX",
+        "years": "2024"
+      },
+      {
+        "team": "DRX Challengers",
+        "years": "2024–2025"
+      },
+      {
+        "team": "DRX",
+        "years": "2025"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2026–Present"
+      }
+    ],
+    "caliste": [
+      {
+        "team": "Otterz Esport",
+        "years": "2021"
+      },
+      {
+        "team": "Omerix",
+        "years": "2022"
+      },
+      {
+        "team": "Mirage Elyandra",
+        "years": "2022"
+      },
+      {
+        "team": "ViV Esport",
+        "years": "2023"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Karmine Corp Blue",
+        "years": "2024"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2024–Present"
+      }
+    ],
+    "busio": [
+      {
+        "team": "Polar Ace",
+        "years": "2020"
+      },
+      {
+        "team": "100 Next",
+        "years": "2020–2021"
+      },
+      {
+        "team": "100 Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2022–2023"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2026–Present"
+      }
+    ],
+    "reapered": [
+      {
+        "team": "Azubu Blaze",
+        "years": "2011–2012"
+      },
+      {
+        "team": "Eat Sleep Game",
+        "years": "2012"
+      },
+      {
+        "team": "SK Telecom T1 1",
+        "years": "2012–2013"
+      },
+      {
+        "team": "Eat Sleep Game",
+        "years": "2013"
+      },
+      {
+        "team": "Jin Air Falcons",
+        "years": "2013–2014"
+      },
+      {
+        "team": "EDward Gaming",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2016–2020"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Sengoku Gaming",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2026–Present"
+      }
+    ],
+    "zeph": [
+      {
+        "team": "ROG Esport",
+        "years": "2017"
+      },
+      {
+        "team": "Made in France",
+        "years": "2018"
+      },
+      {
+        "team": "ad hoc gaming",
+        "years": "2018"
+      },
+      {
+        "team": "Diabolus Esports",
+        "years": "2018"
+      },
+      {
+        "team": "Team Just",
+        "years": "2019"
+      },
+      {
+        "team": "ROG Esport",
+        "years": "2019"
+      },
+      {
+        "team": "ROG Esport",
+        "years": "2019"
+      },
+      {
+        "team": "ROG Esport",
+        "years": "2019"
+      },
+      {
+        "team": "Team MCES",
+        "years": "2020"
+      },
+      {
+        "team": "LDLC OL",
+        "years": "2021–2022"
+      },
+      {
+        "team": "MAD Lions",
+        "years": "2022–2023"
+      },
+      {
+        "team": "MAD Lions KOI",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2026–Present"
+      }
+    ],
+    "nightslayer": [
+      {
+        "team": "Tan'i eSports",
+        "years": "2024"
+      },
+      {
+        "team": "GIANTX PRIDE",
+        "years": "2024"
+      },
+      {
+        "team": "AF willhaben",
+        "years": "2025"
+      },
+      {
+        "team": "Movistar KOI Fénix",
+        "years": "2025–Present"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2026–Present"
+      }
+    ],
+    "elyoya": [
+      {
+        "team": "iNAT Gaming",
+        "years": "2018–2019"
+      },
+      {
+        "team": "GGaming",
+        "years": "2019"
+      },
+      {
+        "team": "Movistar Academy",
+        "years": "2019"
+      },
+      {
+        "team": "Movistar Riders",
+        "years": "2019–2020"
+      },
+      {
+        "team": "MAD Lions KOI",
+        "years": "2020–2024"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2024–Present"
+      }
+    ],
+    "sr-antonio": [
+      {
+        "team": "Movistar KOI",
+        "years": "2021–2024"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2024"
+      },
+      {
+        "team": "MAD Lions KOI",
+        "years": "2024"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2024–2026"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2026–Present"
+      }
+    ],
+    "jojopyun": [
+      {
+        "team": "Noble Esports",
+        "years": "2020"
+      },
+      {
+        "team": "Zenith Esports",
+        "years": "2020"
+      },
+      {
+        "team": "EG Academy",
+        "years": "2021"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2021–2023"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2024–Present"
+      }
+    ],
+    "supa": [
+      {
+        "team": "GGaming",
+        "years": "2019"
+      },
+      {
+        "team": "Team Refuse",
+        "years": "2019"
+      },
+      {
+        "team": "S2V Academy",
+        "years": "2019"
+      },
+      {
+        "team": "G2 Arctic",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Movistar Riders",
+        "years": "2022–2023"
+      },
+      {
+        "team": "MAD Lions KOI",
+        "years": "2024"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2024–Present"
+      }
+    ],
+    "alvaro": [
+      {
+        "team": "Manadrain Esports",
+        "years": "2018–2021"
+      },
+      {
+        "team": "Kawaii Kiwis",
+        "years": "2021"
+      },
+      {
+        "team": "Guasones",
+        "years": "2021–2022"
+      },
+      {
+        "team": "G2 Arctic",
+        "years": "2022"
+      },
+      {
+        "team": "Movistar Riders",
+        "years": "2022–2023"
+      },
+      {
+        "team": "MAD Lions KOI",
+        "years": "2024"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2024–Present"
+      }
+    ],
+    "alphari": [
+      {
+        "team": "Enigma Esports",
+        "years": "2015"
+      },
+      {
+        "team": "Team Infused",
+        "years": "2015"
+      },
+      {
+        "team": "To Infinity and Beyond",
+        "years": "2015"
+      },
+      {
+        "team": "Renegades: Banditos",
+        "years": "2016"
+      },
+      {
+        "team": "Misfits Gaming",
+        "years": "2016–2018"
+      },
+      {
+        "team": "Origen",
+        "years": "2018–2020"
+      },
+      {
+        "team": "Astralis",
+        "years": "2020"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2026–Present"
+      }
+    ],
+    "independent": [
+      {
+        "team": "Dead Rabbits",
+        "years": "2021"
+      },
+      {
+        "team": "Crypto Esports",
+        "years": "2022"
+      },
+      {
+        "team": "Valiants",
+        "years": "2022"
+      },
+      {
+        "team": "Oxygen Valiants",
+        "years": "2022"
+      },
+      {
+        "team": "Herbalife Real Betis",
+        "years": "2022"
+      },
+      {
+        "team": "Ramboot Club",
+        "years": "2022–2024"
+      },
+      {
+        "team": "Team Heretics Academy",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2026–Present"
+      }
+    ],
+    "melzhet": [
+      {
+        "team": "S2V Academy",
+        "years": "2019"
+      },
+      {
+        "team": "S2V Esports",
+        "years": "2019"
+      },
+      {
+        "team": "G2 Arctic",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Movistar Riders",
+        "years": "2022–2023"
+      },
+      {
+        "team": "MAD Lions KOI",
+        "years": "2024"
+      },
+      {
+        "team": "Movistar KOI",
+        "years": "2024–Present"
+      }
+    ],
+    "empyros": [
+      {
+        "team": "VIRUS",
+        "years": "2018"
+      },
+      {
+        "team": "UnderDogs",
+        "years": "2019"
+      },
+      {
+        "team": "Team Genji",
+        "years": "2019"
+      },
+      {
+        "team": "The Spawn",
+        "years": "2019"
+      },
+      {
+        "team": "Team Genji",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Pyrsos Esports",
+        "years": "2020"
+      },
+      {
+        "team": "Void Gaming",
+        "years": "2020"
+      },
+      {
+        "team": "Gamespace MCE",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Anorthosis Famagusta",
+        "years": "2021–2022"
+      },
+      {
+        "team": "WLGaming Esports",
+        "years": "2022"
+      },
+      {
+        "team": "Riddle Esports",
+        "years": "2022"
+      },
+      {
+        "team": "DSYRE",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Gentle Mates",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2025–2026"
+      },
+      {
+        "team": "Natus Vincere",
+        "years": "2026–Present"
+      }
+    ],
+    "maynter": [
+      {
+        "team": "Dragon Army",
+        "years": "2021"
+      },
+      {
+        "team": "One Breath Gaming",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Lille Esport",
+        "years": "2022"
+      },
+      {
+        "team": "Team Du Sud",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Karmine Corp Blue",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Natus Vincere",
+        "years": "2025–Present"
+      }
+    ],
+    "rhilech": [
+      {
+        "team": "AURORA Academy",
+        "years": "2021"
+      },
+      {
+        "team": "SUP Blaze Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "DSYRE",
+        "years": "2022–2024"
+      },
+      {
+        "team": "BK ROG Esports",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Natus Vincere",
+        "years": "2025–Present"
+      }
+    ],
+    "larssen": [
+      {
+        "team": "Team Refuse",
+        "years": "2015"
+      },
+      {
+        "team": "ManaLight",
+        "years": "2016"
+      },
+      {
+        "team": "MNM Gaming",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Team Larssen",
+        "years": "2017"
+      },
+      {
+        "team": "Wind and Rain",
+        "years": "2017"
+      },
+      {
+        "team": "Diabolus Esports",
+        "years": "2018"
+      },
+      {
+        "team": "Ninjas in Pyjamas",
+        "years": "2018"
+      },
+      {
+        "team": "Ninjas in Pyjamas",
+        "years": "2018"
+      },
+      {
+        "team": "H2k-Gaming",
+        "years": "2018"
+      },
+      {
+        "team": "Rogue EC",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Rogue",
+        "years": "2019–2022"
+      },
+      {
+        "team": "KOI",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Rogue",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Natus Vincere",
+        "years": "2025–Present"
+      }
+    ],
+    "poby": [
+      {
+        "team": "T1 Rookies",
+        "years": "2021–2023"
+      },
+      {
+        "team": "T1 Challengers",
+        "years": "2022"
+      },
+      {
+        "team": "Seoul",
+        "years": "2022"
+      },
+      {
+        "team": "PFW (Korean Team)",
+        "years": "2023"
+      },
+      {
+        "team": "T1 Rookies",
+        "years": "2023"
+      },
+      {
+        "team": "T1 Esports Academy",
+        "years": "2023–2025"
+      },
+      {
+        "team": "T1",
+        "years": "2023"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2025"
+      },
+      {
+        "team": "Natus Vincere",
+        "years": "2025–Present"
+      }
+    ],
+    "samd": [
+      {
+        "team": "Awe Empire",
+        "years": "2018"
+      },
+      {
+        "team": "Gyeongbuk",
+        "years": "2018"
+      },
+      {
+        "team": "Affirmation",
+        "years": "2018"
+      },
+      {
+        "team": "OP Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "Gen.G Academy",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Suning-S",
+        "years": "2020"
+      },
+      {
+        "team": "Victory Five",
+        "years": "2020"
+      },
+      {
+        "team": "TT Gaming",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Hanwha Life",
+        "years": "2021–2022"
+      },
+      {
+        "team": "HLE Challengers",
+        "years": "2022"
+      },
+      {
+        "team": "Hanwha Life",
+        "years": "2022"
+      },
+      {
+        "team": "Estral Esports",
+        "years": "2022–2023"
+      },
+      {
+        "team": "BK ROG Esports",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Ici Japon Corp.",
+        "years": "2025"
+      },
+      {
+        "team": "Natus Vincere",
+        "years": "2025–Present"
+      }
+    ],
+    "parus": [
+      {
+        "team": "Galakticos Academy",
+        "years": "2020"
+      },
+      {
+        "team": "Beşiktaş Academy",
+        "years": "2020"
+      },
+      {
+        "team": "SUP Academy",
+        "years": "2020–2021"
+      },
+      {
+        "team": "SUP Blaze Academy",
+        "years": "2021"
+      },
+      {
+        "team": "SuperMassive Blaze",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Beşiktaş Esports",
+        "years": "2022"
+      },
+      {
+        "team": "İstanbul Wildcats",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Team BDS Academy",
+        "years": "2024"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Natus Vincere",
+        "years": "2025–Present"
+      }
+    ],
+    "fredy122": [
+      {
+        "team": "Eclypsia",
+        "years": "2012"
+      },
+      {
+        "team": "Eclypsia.Solaris",
+        "years": "2012"
+      },
+      {
+        "team": "against All authority",
+        "years": "2012–2013"
+      },
+      {
+        "team": "SUPA HOT CREW",
+        "years": "2013"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2013–2015"
+      },
+      {
+        "team": "Team ROCCAT",
+        "years": "2016"
+      },
+      {
+        "team": "Team ROCCAT",
+        "years": "2016–2018"
+      },
+      {
+        "team": "Rogue",
+        "years": "2018–2022"
+      },
+      {
+        "team": "KOI",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Rogue",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Natus Vincere",
+        "years": "2025"
+      }
+    ],
+    "gotoone": [
+      {
+        "team": "Millenium Spirit",
+        "years": "2015"
+      },
+      {
+        "team": "Imaginary Gaming",
+        "years": "2015"
+      },
+      {
+        "team": "Team-LDLC",
+        "years": "2015"
+      },
+      {
+        "team": "Huma",
+        "years": "2016"
+      },
+      {
+        "team": "GG Call Nash",
+        "years": "2016"
+      },
+      {
+        "team": "GrosBill Esport",
+        "years": "2016"
+      },
+      {
+        "team": "DING E-SPORTS",
+        "years": "2018"
+      },
+      {
+        "team": "Bastille Legacy",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Immortals",
+        "years": "2019–2020"
+      },
+      {
+        "team": "GameWard",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Team BDS Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Gentle Mates",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Natus Vincere",
+        "years": "2025–Present"
+      }
+    ],
+    "therock": [
+      {
+        "team": "OvK Esports",
+        "years": "2014"
+      },
+      {
+        "team": "Ad Finem",
+        "years": "2016"
+      },
+      {
+        "team": "PVP Media",
+        "years": "2019–2021"
+      },
+      {
+        "team": "Team Phantasma",
+        "years": "2022"
+      },
+      {
+        "team": "WLGaming Esports",
+        "years": "2022–2023"
+      },
+      {
+        "team": "WLGaming Esports",
+        "years": "2023"
+      },
+      {
+        "team": "Partizan Esports",
+        "years": "2024"
+      },
+      {
+        "team": "Karmine Corp Blue",
+        "years": "2025"
+      },
+      {
+        "team": "Natus Vincere",
+        "years": "2025–Present"
+      }
+    ],
+    "wunder": [
+      {
+        "team": "4everzenzyg",
+        "years": "2014"
+      },
+      {
+        "team": "SK Gaming Prime",
+        "years": "2015"
+      },
+      {
+        "team": "Team Dignitas EU",
+        "years": "2015"
+      },
+      {
+        "team": "Splyce",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Splyce",
+        "years": "2016–2017"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2017–2021"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2021–2023"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2023"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2023–2024"
+      },
+      {
+        "team": "The Ruddy Sack",
+        "years": "2025"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2025–Present"
+      }
+    ],
+    "skeanz": [
+      {
+        "team": "GrosBill Esport",
+        "years": "2016–2017"
+      },
+      {
+        "team": "FEN1X eSports",
+        "years": "2017"
+      },
+      {
+        "team": "Team-LDLC",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Solary",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Vitality Academy",
+        "years": "2019"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2019"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2020"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2023"
+      },
+      {
+        "team": "Papara SuperMassive",
+        "years": "2023–2025"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2025–Present"
+      }
+    ],
+    "lider": [
+      {
+        "team": "Gamermag",
+        "years": "2016"
+      },
+      {
+        "team": "Sprutnoobs",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Riddle Esports",
+        "years": "2017"
+      },
+      {
+        "team": "AeQ E-Sports",
+        "years": "2017"
+      },
+      {
+        "team": "nDurance Gaming",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Fact Revolution",
+        "years": "2018"
+      },
+      {
+        "team": "Riddle Esports",
+        "years": "2018"
+      },
+      {
+        "team": "Misfits Academy",
+        "years": "2018"
+      },
+      {
+        "team": "Fact Revolution",
+        "years": "2018"
+      },
+      {
+        "team": "Misfits Academy",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Misfits Premier",
+        "years": "2019"
+      },
+      {
+        "team": "Misfits Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "mousesports",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2021–2022"
+      },
+      {
+        "team": "GG Academy",
+        "years": "2022"
+      },
+      {
+        "team": "Golden Guardians",
+        "years": "2022"
+      },
+      {
+        "team": "GG Academy",
+        "years": "2022"
+      },
+      {
+        "team": "Astralis",
+        "years": "2023"
+      },
+      {
+        "team": "The Ruddy Sack",
+        "years": "2025"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2025–Present"
+      }
+    ],
+    "slowq": [
+      {
+        "team": "Team GameUp KE",
+        "years": "2020"
+      },
+      {
+        "team": "Riddle Esports",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Axolotl",
+        "years": "2021"
+      },
+      {
+        "team": "X7 Esports",
+        "years": "2022"
+      },
+      {
+        "team": "Zero Tenacity",
+        "years": "2022–2023"
+      },
+      {
+        "team": "DSYRE",
+        "years": "2024"
+      },
+      {
+        "team": "Karmine Corp Blue",
+        "years": "2025"
+      },
+      {
+        "team": "Misa Esports",
+        "years": "2025–2026"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2026–Present"
+      }
+    ],
+    "jopa": [
+      {
+        "team": "The Royal",
+        "years": "2019"
+      },
+      {
+        "team": "Invulnerables Esports",
+        "years": "2020"
+      },
+      {
+        "team": "Split Raiders",
+        "years": "2021"
+      },
+      {
+        "team": "MNM Gaming",
+        "years": "2021"
+      },
+      {
+        "team": "MNM Gaming",
+        "years": "2021"
+      },
+      {
+        "team": "Nativz",
+        "years": "2022"
+      },
+      {
+        "team": "Partizan Esports",
+        "years": "2023"
+      },
+      {
+        "team": "Finetwork KOI",
+        "years": "2023"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2023–2025"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2025–Present"
+      }
+    ],
+    "mikyx": [
+      {
+        "team": "Bottled Water",
+        "years": "2014–2015"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2016"
+      },
+      {
+        "team": "Splyce",
+        "years": "2016"
+      },
+      {
+        "team": "Splyce",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Misfits Gaming",
+        "years": "2017–2018"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2018–2022"
+      },
+      {
+        "team": "Excel",
+        "years": "2022"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2022–2024"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2024–2025"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2025–Present"
+      }
+    ],
+    "baguette": [
+      {
+        "team": "Akroma",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Lionscreed",
+        "years": "2024"
+      },
+      {
+        "team": "GameWard",
+        "years": "2024–2025"
+      },
+      {
+        "team": "GameWard Astrals",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Team Valiant",
+        "years": "2025"
+      },
+      {
+        "team": "BlazziosMix",
+        "years": "2025"
+      },
+      {
+        "team": "Caldya Esport",
+        "years": "2025"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2025–Present"
+      }
+    ],
+    "duffman": [
+      {
+        "team": "Copenhagen Wolves",
+        "years": "2015"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2016–2017"
+      },
+      {
+        "team": "TSM",
+        "years": "2018"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2018–2021"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2023"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2025"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2025–Present"
+      }
+    ],
+    "rooster": [
+      {
+        "team": "HLE Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "HLE Challengers",
+        "years": "2022–2025"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2025"
+      },
+      {
+        "team": "Shifters",
+        "years": "2025–Present"
+      }
+    ],
+    "boukada": [
+      {
+        "team": "Team E2G",
+        "years": "2018"
+      },
+      {
+        "team": "Projet NEO",
+        "years": "2018"
+      },
+      {
+        "team": "Occitan Esport Club",
+        "years": "2018"
+      },
+      {
+        "team": "ORION Team",
+        "years": "2018"
+      },
+      {
+        "team": "Konix eSport",
+        "years": "2019"
+      },
+      {
+        "team": "M'AZING",
+        "years": "2020"
+      },
+      {
+        "team": "Team MCES",
+        "years": "2021"
+      },
+      {
+        "team": "UCAM Tokiers",
+        "years": "2022"
+      },
+      {
+        "team": "Fnatic TQ",
+        "years": "2022"
+      },
+      {
+        "team": "Atletec",
+        "years": "2022"
+      },
+      {
+        "team": "Team Du Sud",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Team GO",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Karmine Corp Blue",
+        "years": "2024–2025"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2025"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2025"
+      },
+      {
+        "team": "Shifters",
+        "years": "2025–Present"
+      }
+    ],
+    "sheo": [
+      {
+        "team": "TUEURS",
+        "years": "2020"
+      },
+      {
+        "team": "LDLC OL",
+        "years": "2020"
+      },
+      {
+        "team": "TP Adéquat Academy",
+        "years": "2020–2021"
+      },
+      {
+        "team": "SK Gaming Prime",
+        "years": "2021"
+      },
+      {
+        "team": "Team BDS Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2022–2024"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2024–2026"
+      },
+      {
+        "team": "Shifters",
+        "years": "2026–Present"
+      }
+    ],
+    "nuc": [
+      {
+        "team": "BlackMICE",
+        "years": "2019"
+      },
+      {
+        "team": "Oserv Esport",
+        "years": "2020"
+      },
+      {
+        "team": "Unfazed Esport",
+        "years": "2020"
+      },
+      {
+        "team": "Kameto Corp",
+        "years": "2020"
+      },
+      {
+        "team": "Flayn eSports",
+        "years": "2020"
+      },
+      {
+        "team": "Schalke Evolution",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2021"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2021–2025"
+      },
+      {
+        "team": "Shifters",
+        "years": "2025–Present"
+      }
+    ],
+    "paduck": [
+      {
+        "team": "DRX Academy",
+        "years": "2021"
+      },
+      {
+        "team": "DRX Challengers",
+        "years": "2021–2022"
+      },
+      {
+        "team": "DRX Academy",
+        "years": "2022–2023"
+      },
+      {
+        "team": "DRX Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "DRX",
+        "years": "2023"
+      },
+      {
+        "team": "DRX Challengers",
+        "years": "2023–2024"
+      },
+      {
+        "team": "KT Challengers",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Shifters",
+        "years": "2025–Present"
+      }
+    ],
+    "stend": [
+      {
+        "team": "GamersOrigin Academy",
+        "years": "2020"
+      },
+      {
+        "team": "TP Adéquat Academy",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Team Oplon",
+        "years": "2021"
+      },
+      {
+        "team": "Giants",
+        "years": "2022"
+      },
+      {
+        "team": "Dusty",
+        "years": "2022"
+      },
+      {
+        "team": "Giants",
+        "years": "2023"
+      },
+      {
+        "team": "Finetwork KOI",
+        "years": "2023"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2024–2026"
+      },
+      {
+        "team": "Misa Esports",
+        "years": "2026"
+      },
+      {
+        "team": "Shifters",
+        "years": "2026–Present"
+      }
+    ],
+    "trymbi": [
+      {
+        "team": "Pierwsze Słowa",
+        "years": "2017"
+      },
+      {
+        "team": "NRAX Esports",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Outplayed",
+        "years": "2018"
+      },
+      {
+        "team": "Digital Paradox",
+        "years": "2018"
+      },
+      {
+        "team": "Team One Shot",
+        "years": "2018"
+      },
+      {
+        "team": "QLASH Academy",
+        "years": "2018"
+      },
+      {
+        "team": "PRIDE",
+        "years": "2019"
+      },
+      {
+        "team": "G2 Heretics",
+        "years": "2019"
+      },
+      {
+        "team": "SK Gaming Prime",
+        "years": "2020"
+      },
+      {
+        "team": "AGO ROGUE",
+        "years": "2020"
+      },
+      {
+        "team": "Rogue",
+        "years": "2020–2022"
+      },
+      {
+        "team": "KOI",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2023"
+      },
+      {
+        "team": "LEC",
+        "years": "2024"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2024"
+      },
+      {
+        "team": "Vivo Keyd Stars",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Shifters",
+        "years": "2025–Present"
+      }
+    ],
+    "menq": [
+      {
+        "team": "Eternity Gaming",
+        "years": "2012"
+      },
+      {
+        "team": "Bajona Robimy w 15",
+        "years": "2013"
+      },
+      {
+        "team": "Team Mistral",
+        "years": "2013"
+      },
+      {
+        "team": "Pulse Esports",
+        "years": "2013–2014"
+      },
+      {
+        "team": "Pompa Team",
+        "years": "2017"
+      },
+      {
+        "team": "Szata Maga",
+        "years": "2018"
+      },
+      {
+        "team": "Młodzi",
+        "years": "2018"
+      },
+      {
+        "team": "mousesports",
+        "years": "2019"
+      },
+      {
+        "team": "EURONICS Gaming",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Pompa Team Acad.",
+        "years": "2020"
+      },
+      {
+        "team": "7more7 White",
+        "years": "2020"
+      },
+      {
+        "team": "7more7 Pompa",
+        "years": "2020–2021"
+      },
+      {
+        "team": "PDW",
+        "years": "2021"
+      },
+      {
+        "team": "Team BDS Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2022–2025"
+      },
+      {
+        "team": "Shifters",
+        "years": "2025–Present"
+      }
+    ],
+    "striker": [
+      {
+        "team": "Kameto Corp",
+        "years": "2020"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Team BDS",
+        "years": "2022–2025"
+      },
+      {
+        "team": "Shifters",
+        "years": "2025–Present"
+      }
+    ],
+    "tracyn": [
+      {
+        "team": "NRAX Esports",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Komil&Friends",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Illuminar Gaming",
+        "years": "2022"
+      },
+      {
+        "team": "GamerLegion",
+        "years": "2022–2023"
+      },
+      {
+        "team": "AF willhaben",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Team Heretics Academy",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2025–Present"
+      }
+    ],
+    "daglas": [
+      {
+        "team": "Lodis by Illuminar",
+        "years": "2021"
+      },
+      {
+        "team": "NRAX Esports U17",
+        "years": "2021"
+      },
+      {
+        "team": "LDN UTD",
+        "years": "2021"
+      },
+      {
+        "team": "Anorthosis Famagusta",
+        "years": "2022"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2023"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2024"
+      },
+      {
+        "team": "Team Heretics Academy",
+        "years": "2024–2026"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2026–Present"
+      }
+    ],
+    "serin": [
+      {
+        "team": "AURORA Academy",
+        "years": "2019–2020"
+      },
+      {
+        "team": "İstanbul Wildcats",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Papara SuperMassive",
+        "years": "2022–2023"
+      },
+      {
+        "team": "NNO Prime",
+        "years": "2024"
+      },
+      {
+        "team": "Galions",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2025–Present"
+      }
+    ],
+    "hype": [
+      {
+        "team": "Liiv SANDBOX Academy",
+        "years": "2020"
+      },
+      {
+        "team": "LSB Challengers",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Liiv SANDBOX",
+        "years": "2021"
+      },
+      {
+        "team": "LSB Challengers",
+        "years": "2021–2022"
+      },
+      {
+        "team": "KT Challengers",
+        "years": "2023–2025"
+      },
+      {
+        "team": "OK BRION",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Misa Esports",
+        "years": "2025–2026"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2026–Present"
+      }
+    ],
+    "way": [
+      {
+        "team": "KT Academy",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Sejong",
+        "years": "2021"
+      },
+      {
+        "team": "KT Challengers",
+        "years": "2021–2024"
+      },
+      {
+        "team": "KT Rolster",
+        "years": "2024–2025"
+      },
+      {
+        "team": "KT Challengers",
+        "years": "2025"
+      },
+      {
+        "team": "Misa Esports",
+        "years": "2025–2026"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2026–Present"
+      }
+    ],
+    "hidon": [
+      {
+        "team": "Hydras Esport",
+        "years": "2019"
+      },
+      {
+        "team": "Demise",
+        "years": "2019"
+      },
+      {
+        "team": "Bucks Vipers",
+        "years": "2019"
+      },
+      {
+        "team": "Vipers Inc",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Howling eSports",
+        "years": "2020"
+      },
+      {
+        "team": "Howling eSports",
+        "years": "2020"
+      },
+      {
+        "team": "Guarp Gaming",
+        "years": "2020"
+      },
+      {
+        "team": "Black Lion",
+        "years": "2020"
+      },
+      {
+        "team": "Dusty",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Tricked Esport",
+        "years": "2021"
+      },
+      {
+        "team": "Ruddy Esports",
+        "years": "2023"
+      },
+      {
+        "team": "Excel",
+        "years": "2023"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2025–Present"
+      }
+    ],
+    "mithy": [
+      {
+        "team": "Giants Gaming",
+        "years": "2012"
+      },
+      {
+        "team": "Wizards e-Sports Club",
+        "years": "2013"
+      },
+      {
+        "team": "Heimerdinger's Colossi",
+        "years": "2013"
+      },
+      {
+        "team": "against All authority",
+        "years": "2013"
+      },
+      {
+        "team": "Lemondogs",
+        "years": "2013"
+      },
+      {
+        "team": "Ninjas in Pyjamas",
+        "years": "2013–2014"
+      },
+      {
+        "team": "Ninjas in Pyjamas",
+        "years": "2014"
+      },
+      {
+        "team": "Origen",
+        "years": "2014–2016"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2016–2017"
+      },
+      {
+        "team": "TSM",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Origen",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2020–2021"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2022–2024"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2026–Present"
+      }
+    ],
+    "nukeduck": [
+      {
+        "team": "3DMAX",
+        "years": "2011–2012"
+      },
+      {
+        "team": "Tt Dragons",
+        "years": "2012"
+      },
+      {
+        "team": "Team Solo Mebdi",
+        "years": "2012"
+      },
+      {
+        "team": "H2k-Gaming",
+        "years": "2012"
+      },
+      {
+        "team": "Sinners Never Sleep",
+        "years": "2013"
+      },
+      {
+        "team": "Lemondogs",
+        "years": "2013"
+      },
+      {
+        "team": "Ninjas in Pyjamas",
+        "years": "2013–2014"
+      },
+      {
+        "team": "Gambit Gaming",
+        "years": "2014"
+      },
+      {
+        "team": "Ninjas in Pyjamas",
+        "years": "2014"
+      },
+      {
+        "team": "Aria eSports",
+        "years": "2014"
+      },
+      {
+        "team": "Team ROCCAT",
+        "years": "2015"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2015–2017"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Origen",
+        "years": "2018–2020"
+      },
+      {
+        "team": "Astralis",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Excel",
+        "years": "2021–2022"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2022–2023"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2023"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2023"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2023"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Team Heretics",
+        "years": "2026–Present"
+      }
+    ],
+    "naak-nako": [
+      {
+        "team": "Fenerbahçe Academy",
+        "years": "2022"
+      },
+      {
+        "team": "Fenerbahçe",
+        "years": "2022"
+      },
+      {
+        "team": "Chasing Haze 07",
+        "years": "2023"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2024–Present"
+      }
+    ],
+    "lyncas": [
+      {
+        "team": "Void Blue",
+        "years": "2019"
+      },
+      {
+        "team": "Flayn eSports",
+        "years": "2019"
+      },
+      {
+        "team": "iNAT Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "Zeta Team",
+        "years": "2019"
+      },
+      {
+        "team": "PENTA 1860",
+        "years": "2020"
+      },
+      {
+        "team": "Resolve",
+        "years": "2020"
+      },
+      {
+        "team": "ad hoc gaming",
+        "years": "2020–2021"
+      },
+      {
+        "team": "WAVE Esports",
+        "years": "2021"
+      },
+      {
+        "team": "Atleta Esport",
+        "years": "2021"
+      },
+      {
+        "team": "MOUZ",
+        "years": "2022"
+      },
+      {
+        "team": "Dusty",
+        "years": "2022"
+      },
+      {
+        "team": "Team GO",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Karmine Corp Blue",
+        "years": "2024"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2024–Present"
+      }
+    ],
+    "fiesta": [
+      {
+        "team": "Dynamics Academy",
+        "years": "2020"
+      },
+      {
+        "team": "Chungbuk",
+        "years": "2020"
+      },
+      {
+        "team": "Nongshim Academy",
+        "years": "2020–2021"
+      },
+      {
+        "team": "NS Challengers",
+        "years": "2021–2022"
+      },
+      {
+        "team": "NS RedForce",
+        "years": "2022"
+      },
+      {
+        "team": "NS RedForce",
+        "years": "2022–2024"
+      },
+      {
+        "team": "NS Esports Academy",
+        "years": "2024"
+      },
+      {
+        "team": "Papara SuperMassive",
+        "years": "2024–2025"
+      },
+      {
+        "team": "BNK FEARX Youth",
+        "years": "2025–2026"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2026–Present"
+      }
+    ],
+    "carzzy": [
+      {
+        "team": "REViTAL Gaming",
+        "years": "2016"
+      },
+      {
+        "team": "eXtatus",
+        "years": "2016"
+      },
+      {
+        "team": "Inside Games",
+        "years": "2017"
+      },
+      {
+        "team": "eXtatus",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Mysterious Monkeys",
+        "years": "2018"
+      },
+      {
+        "team": "ad hoc gaming",
+        "years": "2018"
+      },
+      {
+        "team": "KIYF eSports Club",
+        "years": "2018"
+      },
+      {
+        "team": "Majestic Lions",
+        "years": "2018"
+      },
+      {
+        "team": "Czeska Husaria",
+        "years": "2018"
+      },
+      {
+        "team": "LanCraft",
+        "years": "2018"
+      },
+      {
+        "team": "BIG",
+        "years": "2019"
+      },
+      {
+        "team": "WarKidZ E-Sports",
+        "years": "2019"
+      },
+      {
+        "team": "Srdce nehasnou",
+        "years": "2019"
+      },
+      {
+        "team": "MAD Lions",
+        "years": "2019–2021"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2021–2022"
+      },
+      {
+        "team": "MAD Lions",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2023–Present"
+      }
+    ],
+    "fleshy": [
+      {
+        "team": "NASR Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "NASR Turkey",
+        "years": "2022"
+      },
+      {
+        "team": "Immortals",
+        "years": "2022–2023"
+      },
+      {
+        "team": "IMT Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "Cyberground",
+        "years": "2023"
+      },
+      {
+        "team": "Papara SuperMassive",
+        "years": "2023"
+      },
+      {
+        "team": "FUT Esports",
+        "years": "2023"
+      },
+      {
+        "team": "Karmine Corp Blue",
+        "years": "2024"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2025–Present"
+      }
+    ],
+    "arvindir": [
+      {
+        "team": "SK Gaming",
+        "years": "2014–2016"
+      },
+      {
+        "team": "Splyce",
+        "years": "2016"
+      },
+      {
+        "team": "Huma",
+        "years": "2016"
+      },
+      {
+        "team": "Iguana eSports",
+        "years": "2016–2017"
+      },
+      {
+        "team": "ALTERNATE aTTaX",
+        "years": "2017–2018"
+      },
+      {
+        "team": "EURONICS Gaming",
+        "years": "2018"
+      },
+      {
+        "team": "BIG",
+        "years": "2018–2022"
+      },
+      {
+        "team": "KOI",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Team BDS Academy",
+        "years": "2024"
+      },
+      {
+        "team": "Vitality.Bee",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2025–Present"
+      }
+    ],
+    "pad": [
+      {
+        "team": "Eastern Vikings",
+        "years": "2017"
+      },
+      {
+        "team": "Eastern Vikings",
+        "years": "2017"
+      },
+      {
+        "team": "Solidarity eSports",
+        "years": "2018"
+      },
+      {
+        "team": "GG Esport",
+        "years": "2018–2019"
+      },
+      {
+        "team": "MNM Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "x6tence",
+        "years": "2019"
+      },
+      {
+        "team": "Phelan Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "K1CK Neosurf",
+        "years": "2019–2020"
+      },
+      {
+        "team": "MNM Gaming",
+        "years": "2020"
+      },
+      {
+        "team": "Tricked Esport",
+        "years": "2020"
+      },
+      {
+        "team": "MAD Lions",
+        "years": "2020–2023"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2023–Present"
+      }
+    ]
+  }
+}

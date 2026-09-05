@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dashboard de rosters y contratos de los 10 equipos LEC · foco offseason 2026" />
+    <title>Scouting LEC 2026</title>
+    <script>
+      // Anti-FOUC: fija el tema antes de que se cargue el bundle.
+      // Prioridad: localStorage('theme') → prefers-color-scheme → light.
+      (function () {
+        var stored = null;
+        try {
+          stored = localStorage.getItem('theme');
+        } catch (e) {
+          /* localStorage bloqueado: se cae a prefers-color-scheme */
+        }
+        var theme =
+          stored === 'dark' || stored === 'light'
+            ? stored
+            : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <style>
+      /* Pinta el canvas del tema oscuro antes de que llegue el CSS del bundle
+         para evitar el destello blanco (mismo valor que --canvas en tokens.css). */
+      html[data-theme='dark'] {
+        background: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

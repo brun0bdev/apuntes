@@ -1,0 +1,539 @@
+{
+  "updatedAt": "2026-09-05T06:11:09.926Z",
+  "players": {
+    "soboro": {
+      "rating": 5.93,
+      "games": 46,
+      "winRate": 0.41,
+      "score": 4.58,
+      "adj": 5.8,
+      "fetchedAt": "2026-09-05T06:08:48.368Z",
+      "slug": "soboro"
+    },
+    "razork": {
+      "rating": 6.06,
+      "games": 60,
+      "winRate": 0.42,
+      "score": 5.09,
+      "adj": 5.93,
+      "fetchedAt": "2026-09-05T06:08:50.881Z",
+      "slug": "razork"
+    },
+    "vladi": {
+      "rating": 6.05,
+      "games": 60,
+      "winRate": 0.42,
+      "score": 5.05,
+      "adj": 5.92,
+      "fetchedAt": "2026-09-05T06:08:53.784Z",
+      "slug": "vladi"
+    },
+    "upset": {
+      "rating": 6.41,
+      "games": 60,
+      "winRate": 0.42,
+      "score": 6.33,
+      "adj": 6.25,
+      "fetchedAt": "2026-09-05T06:08:56.666Z",
+      "slug": "upset"
+    },
+    "lospa": {
+      "rating": 5.65,
+      "games": 60,
+      "winRate": 0.42,
+      "score": 3.64,
+      "adj": 5.56,
+      "fetchedAt": "2026-09-05T06:08:59.527Z",
+      "slug": "lospa"
+    },
+    "brokenblade": {
+      "rating": 6.07,
+      "games": 79,
+      "winRate": 0.68,
+      "score": 6.65,
+      "adj": 6.33,
+      "fetchedAt": "2026-09-05T06:09:01.660Z",
+      "slug": "brokenblade"
+    },
+    "skewmond": {
+      "rating": 6.48,
+      "games": 79,
+      "winRate": 0.68,
+      "score": 8.13,
+      "adj": 6.71,
+      "fetchedAt": "2026-09-05T06:09:04.066Z",
+      "slug": "skewmond"
+    },
+    "caps": {
+      "rating": 6.29,
+      "games": 79,
+      "winRate": 0.68,
+      "score": 7.47,
+      "adj": 6.54,
+      "fetchedAt": "2026-09-05T06:09:06.505Z",
+      "slug": "caps"
+    },
+    "hans-sama": {
+      "rating": 6.19,
+      "games": 79,
+      "winRate": 0.68,
+      "score": 7.08,
+      "adj": 6.44,
+      "fetchedAt": "2026-09-05T06:09:08.666Z",
+      "slug": "hans-sama"
+    },
+    "labrov": {
+      "rating": 5.95,
+      "games": 79,
+      "winRate": 0.68,
+      "score": 6.22,
+      "adj": 6.22,
+      "fetchedAt": "2026-09-05T06:09:11.260Z",
+      "slug": "labrov"
+    },
+    "lot": {
+      "rating": 5.85,
+      "games": 50,
+      "winRate": 0.48,
+      "score": 4.7,
+      "adj": 5.83,
+      "fetchedAt": "2026-09-05T06:09:13.706Z",
+      "slug": "lot"
+    },
+    "oscarinin": {
+      "rating": 5.83,
+      "games": 24,
+      "winRate": 0.54,
+      "score": 5.01,
+      "adj": 5.91,
+      "fetchedAt": "2026-09-05T06:09:16.102Z",
+      "slug": "oscarinin"
+    },
+    "isma": {
+      "rating": 5.94,
+      "games": 74,
+      "winRate": 0.5,
+      "score": 5.12,
+      "adj": 5.94,
+      "fetchedAt": "2026-09-05T06:09:18.565Z",
+      "slug": "isma"
+    },
+    "jackies": {
+      "rating": 6.13,
+      "games": 74,
+      "winRate": 0.5,
+      "score": 5.83,
+      "adj": 6.12,
+      "fetchedAt": "2026-09-05T06:09:21.117Z",
+      "slug": "jackies"
+    },
+    "flakked": {
+      "rating": 6.02,
+      "games": 24,
+      "winRate": 0.54,
+      "score": 5.63,
+      "adj": 6.07,
+      "fetchedAt": "2026-09-05T06:09:23.719Z",
+      "slug": "flakked"
+    },
+    "noah": {
+      "rating": 5.73,
+      "games": 50,
+      "winRate": 0.48,
+      "score": 4.27,
+      "adj": 5.72,
+      "fetchedAt": "2026-09-05T06:09:26.753Z",
+      "slug": "noah"
+    },
+    "jun": {
+      "rating": 5.99,
+      "games": 74,
+      "winRate": 0.5,
+      "score": 5.32,
+      "adj": 5.99,
+      "fetchedAt": "2026-09-05T06:09:29.527Z",
+      "slug": "jun"
+    },
+    "canna": {
+      "rating": 6.18,
+      "games": 93,
+      "winRate": 0.7,
+      "score": 7.19,
+      "adj": 6.47,
+      "fetchedAt": "2026-09-05T06:09:31.755Z",
+      "slug": "canna"
+    },
+    "yike": {
+      "rating": 6.17,
+      "games": 93,
+      "winRate": 0.7,
+      "score": 7.15,
+      "adj": 6.46,
+      "fetchedAt": "2026-09-05T06:09:33.846Z",
+      "slug": "yike"
+    },
+    "kyeahoo": {
+      "rating": 6.05,
+      "games": 93,
+      "winRate": 0.7,
+      "score": 6.69,
+      "adj": 6.34,
+      "fetchedAt": "2026-09-05T06:09:36.389Z",
+      "slug": "kyeahoo"
+    },
+    "caliste": {
+      "rating": 6.42,
+      "games": 93,
+      "winRate": 0.7,
+      "score": 8.05,
+      "adj": 6.69,
+      "fetchedAt": "2026-09-05T06:09:39.448Z",
+      "slug": "caliste"
+    },
+    "busio": {
+      "rating": 6.05,
+      "games": 93,
+      "winRate": 0.7,
+      "score": 6.69,
+      "adj": 6.34,
+      "fetchedAt": "2026-09-05T06:09:42.187Z",
+      "slug": "busio"
+    },
+    "myrwn": {
+      "rating": 5.87,
+      "games": 79,
+      "winRate": 0.53,
+      "score": 5.05,
+      "adj": 5.92,
+      "fetchedAt": "2026-09-05T06:09:44.398Z",
+      "slug": "myrwn"
+    },
+    "nightslayer": {
+      "rating": null,
+      "fetchedAt": "2026-09-04T21:14:56.473Z",
+      "slug": "nightslayer",
+      "reason": "404 en esportstransfer.com",
+      "games": null,
+      "winRate": null,
+      "adj": null,
+      "score": null
+    },
+    "elyoya": {
+      "rating": 6.21,
+      "games": 79,
+      "winRate": 0.53,
+      "score": 6.3,
+      "adj": 6.24,
+      "fetchedAt": "2026-09-05T06:09:47.417Z",
+      "slug": "elyoya"
+    },
+    "sr-antonio": {
+      "rating": null,
+      "fetchedAt": "2026-09-04T21:15:01.821Z",
+      "slug": "sr-antonio",
+      "reason": "404 en esportstransfer.com",
+      "games": null,
+      "winRate": null,
+      "adj": null,
+      "score": null
+    },
+    "jojopyun": {
+      "rating": 6.12,
+      "games": 79,
+      "winRate": 0.53,
+      "score": 5.94,
+      "adj": 6.15,
+      "fetchedAt": "2026-09-05T06:09:50.052Z",
+      "slug": "jojopyun"
+    },
+    "supa": {
+      "rating": 6.23,
+      "games": 79,
+      "winRate": 0.53,
+      "score": 6.33,
+      "adj": 6.25,
+      "fetchedAt": "2026-09-05T06:09:52.655Z",
+      "slug": "supa"
+    },
+    "alvaro": {
+      "rating": 6.08,
+      "games": 79,
+      "winRate": 0.53,
+      "score": 5.83,
+      "adj": 6.12,
+      "fetchedAt": "2026-09-05T06:09:54.896Z",
+      "slug": "alvaro"
+    },
+    "empyros": {
+      "rating": 5.69,
+      "games": 38,
+      "winRate": 0.39,
+      "score": 3.64,
+      "adj": 5.56,
+      "fetchedAt": "2026-09-05T06:09:57.069Z",
+      "slug": "empyros"
+    },
+    "maynter": {
+      "rating": 5.81,
+      "games": 66,
+      "winRate": 0.52,
+      "score": 4.77,
+      "adj": 5.85,
+      "fetchedAt": "2026-09-05T06:09:59.373Z",
+      "slug": "maynter"
+    },
+    "rhilech": {
+      "rating": 6.38,
+      "games": 66,
+      "winRate": 0.52,
+      "score": 6.8,
+      "adj": 6.37,
+      "fetchedAt": "2026-09-05T06:10:01.536Z",
+      "slug": "rhilech"
+    },
+    "larssen": {
+      "rating": null,
+      "fetchedAt": "2026-09-04T21:15:21.067Z",
+      "slug": "larssen",
+      "reason": "404 en esportstransfer.com",
+      "games": null,
+      "winRate": null,
+      "adj": null,
+      "score": null
+    },
+    "poby": {
+      "rating": 5.94,
+      "games": 66,
+      "winRate": 0.52,
+      "score": 5.24,
+      "adj": 5.97,
+      "fetchedAt": "2026-09-05T06:10:03.918Z",
+      "slug": "poby"
+    },
+    "samd": {
+      "rating": 6.17,
+      "games": 66,
+      "winRate": 0.52,
+      "score": 6.06,
+      "adj": 6.18,
+      "fetchedAt": "2026-09-05T06:10:06.597Z",
+      "slug": "samd"
+    },
+    "parus": {
+      "rating": 6.06,
+      "games": 66,
+      "winRate": 0.52,
+      "score": 5.67,
+      "adj": 6.08,
+      "fetchedAt": "2026-09-05T06:10:08.765Z",
+      "slug": "parus"
+    },
+    "wunder": {
+      "rating": 5.83,
+      "games": 52,
+      "winRate": 0.33,
+      "score": 3.76,
+      "adj": 5.59,
+      "fetchedAt": "2026-09-05T06:10:11.539Z",
+      "slug": "wunder"
+    },
+    "skeanz": {
+      "rating": 5.67,
+      "games": 52,
+      "winRate": 0.33,
+      "score": 3.17,
+      "adj": 5.44,
+      "fetchedAt": "2026-09-05T06:10:14.097Z",
+      "slug": "skeanz"
+    },
+    "lider": {
+      "rating": 5.6,
+      "games": 32,
+      "winRate": 0.31,
+      "score": 2.9,
+      "adj": 5.37,
+      "fetchedAt": "2026-09-05T06:10:16.383Z",
+      "slug": "lider"
+    },
+    "slowq": {
+      "rating": 5.63,
+      "games": 20,
+      "winRate": 0.35,
+      "score": 3.33,
+      "adj": 5.48,
+      "fetchedAt": "2026-09-05T06:10:18.647Z",
+      "slug": "slowq"
+    },
+    "jopa": {
+      "rating": 6.07,
+      "games": 52,
+      "winRate": 0.33,
+      "score": 4.58,
+      "adj": 5.8,
+      "fetchedAt": "2026-09-05T06:10:21.027Z",
+      "slug": "jopa"
+    },
+    "mikyx": {
+      "rating": 5.87,
+      "games": 52,
+      "winRate": 0.33,
+      "score": 3.88,
+      "adj": 5.62,
+      "fetchedAt": "2026-09-05T06:10:24.000Z",
+      "slug": "mikyx"
+    },
+    "rooster": {
+      "rating": 6,
+      "games": 54,
+      "winRate": 0.3,
+      "score": 4.15,
+      "adj": 5.69,
+      "fetchedAt": "2026-09-05T06:10:26.830Z",
+      "slug": "rooster"
+    },
+    "boukada": {
+      "rating": 5.24,
+      "games": 28,
+      "winRate": 0.29,
+      "score": 1.65,
+      "adj": 5.05,
+      "fetchedAt": "2026-09-05T06:10:29.840Z",
+      "slug": "boukada"
+    },
+    "sheo": {
+      "rating": 5.92,
+      "games": 56,
+      "winRate": 0.32,
+      "score": 3.99,
+      "adj": 5.65,
+      "fetchedAt": "2026-09-05T06:10:31.997Z",
+      "slug": "sheo"
+    },
+    "nuc": {
+      "rating": 5.81,
+      "games": 54,
+      "winRate": 0.3,
+      "score": 3.49,
+      "adj": 5.52,
+      "fetchedAt": "2026-09-05T06:10:34.351Z",
+      "slug": "nuc"
+    },
+    "paduck": {
+      "rating": 5.57,
+      "games": 54,
+      "winRate": 0.3,
+      "score": 2.67,
+      "adj": 5.31,
+      "fetchedAt": "2026-09-05T06:10:36.442Z",
+      "slug": "paduck"
+    },
+    "stend": {
+      "rating": 5.73,
+      "games": 37,
+      "winRate": 0.32,
+      "score": 3.37,
+      "adj": 5.49,
+      "fetchedAt": "2026-09-05T06:10:38.919Z",
+      "slug": "stend"
+    },
+    "trymbi": {
+      "rating": 5.92,
+      "games": 33,
+      "winRate": 0.33,
+      "score": 4.07,
+      "adj": 5.67,
+      "fetchedAt": "2026-09-05T06:10:41.425Z",
+      "slug": "trymbi"
+    },
+    "tracyn": {
+      "rating": 5.7,
+      "games": 55,
+      "winRate": 0.25,
+      "score": 2.82,
+      "adj": 5.35,
+      "fetchedAt": "2026-09-05T06:10:44.452Z",
+      "slug": "tracyn"
+    },
+    "daglas": {
+      "rating": 5.56,
+      "games": 25,
+      "winRate": 0.16,
+      "score": 1.92,
+      "adj": 5.12,
+      "fetchedAt": "2026-09-05T06:10:46.994Z",
+      "slug": "daglas"
+    },
+    "serin": {
+      "rating": 5.66,
+      "games": 55,
+      "winRate": 0.25,
+      "score": 2.67,
+      "adj": 5.31,
+      "fetchedAt": "2026-09-05T06:10:49.840Z",
+      "slug": "serin"
+    },
+    "hype": {
+      "rating": 5.78,
+      "games": 19,
+      "winRate": 0.21,
+      "score": 2.94,
+      "adj": 5.38,
+      "fetchedAt": "2026-09-05T06:10:52.772Z",
+      "slug": "hype"
+    },
+    "way": {
+      "rating": 5.58,
+      "games": 39,
+      "winRate": 0.18,
+      "score": 2.04,
+      "adj": 5.15,
+      "fetchedAt": "2026-09-05T06:10:54.971Z",
+      "slug": "way"
+    },
+    "naak-nako": {
+      "rating": 6.14,
+      "games": 70,
+      "winRate": 0.59,
+      "score": 6.37,
+      "adj": 6.26,
+      "fetchedAt": "2026-09-05T06:10:57.666Z",
+      "slug": "naak-nako"
+    },
+    "lyncas": {
+      "rating": 5.55,
+      "games": 70,
+      "winRate": 0.59,
+      "score": 4.27,
+      "adj": 5.72,
+      "fetchedAt": "2026-09-05T06:10:59.919Z",
+      "slug": "lyncas"
+    },
+    "fiesta": {
+      "rating": 5.95,
+      "games": 22,
+      "winRate": 0.64,
+      "score": 5.98,
+      "adj": 6.16,
+      "fetchedAt": "2026-09-05T06:11:02.016Z",
+      "slug": "fiesta"
+    },
+    "fleshy": {
+      "rating": 6.18,
+      "games": 70,
+      "winRate": 0.59,
+      "score": 6.53,
+      "adj": 6.3,
+      "fetchedAt": "2026-09-05T06:11:06.983Z",
+      "slug": "fleshy"
+    },
+    "carzzy": {
+      "rating": 6.02,
+      "games": 70,
+      "winRate": 0.59,
+      "score": 5.94,
+      "adj": 6.15,
+      "fetchedAt": "2026-09-05T06:11:04.778Z",
+      "slug": "carzzy"
+    }
+  }
+}

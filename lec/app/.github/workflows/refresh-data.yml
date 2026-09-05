@@ -1,0 +1,109 @@
+# refresh-data.yml — Auto-refresh diario de datos + deploy a webBrunoB
+#
+# Se ejecuta a diario a las 06:00 UTC (cron "0 6 * * *") o manualmente desde la
+# pestaña Actions (workflow_dispatch). Refresca el Sheet, regenera los JSON,
+# reconstruye la SPA estática y:
+#   1. Commitea los cambios en data/ a este repo (ibrunob/scouting2026).
+#   2. Despliega el build a ibrunob/webBrunoB (rama main, carpeta lec/).
+#
+# ── INSTRUCCIONES: crear el secreto WEBBRUNOB_TOKEN (solo la primera vez) ─────
+#
+# 1. Ir a https://github.com/settings/personal-access-tokens/new (PAT fine-grained):
+#    - Resource owner: ibrunob
+#    - Repository access: "Only select repositories" → seleccionar SOLO ibrunob/webBrunoB
+#    - Repository permissions → Contents: Read and write
+#    - Generar el token y copiarlo (se muestra una sola vez).
+#
+# 2. Añadirlo como secreto del repo de trabajo:
+#    ibrunob/scouting2026 → Settings → Secrets and variables → Actions →
+#    New repository secret → Name: WEBBRUNOB_TOKEN, Secret: <el token del paso 1>.
+#
+# NOTA: si el secreto no existe, el paso de deploy se salta y los datos solo se
+# actualizan en scouting2026 (el commit a data/ sigue funcionando).
+# ──────────────────────────────────────────────────────────────────────────────
+
+name: refresh-data
+
+on:
+  schedule:
+    # Diario a las 06:00 UTC (07:00 en España peninsular en verano)
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+# Necesario para poder pushear el commit de data/ a este repo
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      # Token fine-grained con Contents: RW sobre ibrunob/webBrunoB (ver arriba).
+      # Solo se usa en el paso de deploy; si falta, ese paso se salta.
+      DEPLOY_TOKEN: ${{ secrets.WEBBRUNOB_TOKEN }}
+    steps:
+      # 1. Código del repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Node 22 con caché de dependencias npm
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # 3. Instalar dependencias exactas según package-lock.json
+      - name: Instalar dependencias
+        run: npm ci
+
+      # 4. Bajar el CSV de la pestaña EMEA del Sheet a data/raw/
+      - name: Fetch Sheet
+        run: npm run fetch
+
+      # 5. CSV + overrides → JSON generados en data/
+      - name: Build data
+        run: npm run build-data
+
+      # 6. Verificación contra el GCD de Leaguepedia (solo avisa, nunca falla el job)
+      - name: Verificar contra GCD
+        run: npm run verify-gcd
+        continue-on-error: true
+
+      # 7. Ratings (opcional): solo si el script existe; fallo no bloquea el job
+      - name: Fetch ratings
+        run: node scripts/fetch-ratings.mjs --force
+        if: hashFiles('scripts/fetch-ratings.mjs') != ''
+        continue-on-error: true
+
+      # 8. Historial de equipos (opcional): solo si el script existe; fallo no bloquea
+      - name: Fetch teamhistory
+        run: node scripts/fetch-teamhistory.mjs
+        if: hashFiles('scripts/fetch-teamhistory.mjs') != ''
+        continue-on-error: true
+
+      # 9. Segunda pasada de build-data para fusionar ratings/teamhistory en los JSON
+      - name: Build data (2ª pasada)
+        run: npm run build-data
+        continue-on-error: true
+
+      # 10. Build estático de la SPA con rutas relativas (base ./)
+      - name: Build SPA
+        run: npm run build -- --base=./
+
+      # 11. Si los JSON de data/ cambiaron, commitear y pushear a este repo
+      - name: Commit y push si hay cambios en data/
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [[ -n "$(git status --porcelain data)" ]]; then
+            git add data
+            git commit -m "refresh: datos $(date +%F)"
+            git push
+          fi
+
+      # 12. Deploy del build a ibrunob/webBrunoB (se salta si no hay secreto)
+      - name: Deploy a webBrunoB
+        if: env.DEPLOY_TOKEN != ''
+        run: node scripts/deploy-web.mjs

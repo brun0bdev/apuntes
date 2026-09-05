@@ -1,0 +1,920 @@
+{
+  "textDates": {
+    "Day After Worlds 2026": {
+      "display": "Post-Worlds 2026",
+      "contractEnd": "2026-11-16",
+      "note": "fecha estimada (fin de temporada)"
+    },
+    "Day After Worlds 2027": {
+      "display": "Post-Worlds 2027",
+      "contractEnd": "2027-11-16",
+      "note": "fecha estimada (fin de temporada)"
+    },
+    "Day After Worlds 2028": {
+      "display": "Post-Worlds 2028",
+      "contractEnd": "2028-11-16",
+      "note": "fecha estimada (fin de temporada)"
+    },
+    "Day After Worlds 2029": {
+      "display": "Post-Worlds 2029",
+      "contractEnd": "2029-11-16",
+      "note": "fecha estimada (fin de temporada)"
+    }
+  },
+  "players": {
+    "soboro": {
+      "agent": null,
+      "agency": "Shadow Corp (Shadow Corporation)",
+      "nationality": "KR",
+      "notes": "Fuente: Liquipedia Shadow_Corp (tabla management) + X @ShadowCorpAgent (alta 2022-11)"
+    },
+    "razork": {
+      "agent": "DarthYellow (Jesús Fernández Rubio)",
+      "agency": null,
+      "nationality": "ES",
+      "notes": "Bio X de Razork: 'contact @darthyellow_lol'"
+    },
+    "vladi": {
+      "agent": null,
+      "agency": "Prodigy Agency",
+      "nationality": "GR",
+      "notes": "Fuente: API oficial de Prodigy (sep-2026)"
+    },
+    "upset": {
+      "agent": null,
+      "agency": "Surge Management",
+      "nationality": "DE",
+      "notes": "CONFIRMADO: bio X actual 'Business Inquiries: @SurgeManagement' + bienvenida oficial de Surge (19-sep-2024)"
+    },
+    "lospa": {
+      "agent": null,
+      "agency": "Shadow Corp (Shadow Corporation)",
+      "nationality": "KR",
+      "notes": "Fuente: Liquipedia Shadow_Corp + X @ShadowCorpAgent"
+    },
+    "gaax": {
+      "agent": null,
+      "agency": null,
+      "nationality": "ES",
+      "notes": ""
+    },
+    "grabbz": {
+      "agent": null,
+      "agency": null,
+      "nationality": "DE",
+      "notes": ""
+    },
+    "brokenblade": {
+      "agent": null,
+      "agency": "Prodigy Agency",
+      "nationality": "DE",
+      "notes": "Fuente: API oficial de Prodigy (api.v2.prodigy-agency.gg, sep-2026)"
+    },
+    "skewmond": {
+      "agent": null,
+      "agency": "Prodigy Agency",
+      "nationality": "FR",
+      "notes": "Fuente: API oficial de Prodigy (sep-2026)"
+    },
+    "caps": {
+      "agent": "Joseph El Ouassi",
+      "agency": "Proxy (Proxy Talent)",
+      "nationality": "DK",
+      "notes": "Entrevista exclusiva Sheep Esports (abr-2025): 'Lead Agent EMEA at Proxy' + LinkedIn"
+    },
+    "hans-sama": {
+      "agent": null,
+      "agency": null,
+      "nationality": "FR",
+      "notes": "Bang Bang Management hasta el pleito de dic-2022; sin agencia pública desde entonces (3-sep-2026)"
+    },
+    "labrov": {
+      "agent": null,
+      "agency": "The Black Lodge",
+      "nationality": "GR",
+      "notes": "CONFIRMADO vía X: su post LFT (21-sep-2022) cita 'Contact via DM or email Rich@theblacklodge.uk'; agencia londinense theblacklodge.uk (vigencia no reconfirmada en 2026)"
+    },
+    "memento": {
+      "agent": null,
+      "agency": null,
+      "nationality": "SE",
+      "notes": ""
+    },
+    "perkz": {
+      "agent": null,
+      "agency": null,
+      "nationality": "HR",
+      "notes": ""
+    },
+    "rodrigo": {
+      "agent": null,
+      "agency": null,
+      "nationality": "PT",
+      "notes": ""
+    },
+    "lot": {
+      "agent": null,
+      "agency": "Achieveminds",
+      "nationality": "TR",
+      "notes": "Bio X: 'Business Inquiries: @SportsPsycFaBro' (Fabian Broich, fundador de Achieveminds)"
+    },
+    "oscarinin": {
+      "agent": null,
+      "agency": "Achieveminds",
+      "nationality": "ES",
+      "notes": "Anuncio del propio jugador en X (feb-2023)"
+    },
+    "isma": {
+      "agent": null,
+      "agency": "Tailors",
+      "nationality": "FR",
+      "notes": "Fuente: tailors.gg (etiqueta de equipo antigua: KC)"
+    },
+    "jackies": {
+      "agent": null,
+      "agency": "Tailors",
+      "nationality": "CZ",
+      "notes": "Fuente: tailors.gg + bio X propia ('business contact: @n8laprade @bloomiyuuuu')"
+    },
+    "flakked": {
+      "agent": null,
+      "agency": "Achieveminds",
+      "nationality": "ES",
+      "notes": "PROBABLE: interacciones con @achieveminds en 2022-2023; sin confirmación explícita de representación"
+    },
+    "noah": {
+      "agent": null,
+      "agency": null,
+      "nationality": "KR",
+      "notes": "Sin agencia pública (X con sesión, 3-sep-2026)",
+      "wikiPage": "Noah (Oh Hyeon-taek)"
+    },
+    "jun": {
+      "agent": null,
+      "agency": null,
+      "nationality": "KR",
+      "notes": "Sin agencia pública (X con sesión, 3-sep-2026)",
+      "wikiPage": "Jun (Yoon Se-jun)"
+    },
+    "guilhoto": {
+      "agent": null,
+      "agency": null,
+      "nationality": "PT",
+      "notes": ""
+    },
+    "maxlore": {
+      "agent": null,
+      "agency": null,
+      "nationality": "GB",
+      "notes": ""
+    },
+    "rhuckz": {
+      "agent": null,
+      "agency": null,
+      "nationality": "PT",
+      "notes": ""
+    },
+    "canna": {
+      "agent": null,
+      "agency": null,
+      "nationality": "KR",
+      "notes": "TopSeed Agency lo representó en 2021 (disputa con T1); sin agencia pública en su X (3-sep-2026)"
+    },
+    "yike": {
+      "agent": null,
+      "agency": "Tailors",
+      "nationality": "SE",
+      "notes": "Fuente: tailors.gg + bio X propia ('Contact: @n8laprade')"
+    },
+    "kyeahoo": {
+      "agent": null,
+      "agency": "Shadow Corp (Shadow Corporation)",
+      "nationality": "KR",
+      "notes": "Fuente: prensa jun-2026 (Reddit/Esports News UK: agencia de Viper, Zeka, Delight y kyeahoo)"
+    },
+    "caliste": {
+      "agent": null,
+      "agency": null,
+      "nationality": "FR",
+      "notes": "Sin agencia pública (X con sesión: búsquedas y bio sin contacto; Red Bull no cita agencia, 3-sep-2026)"
+    },
+    "busio": {
+      "agent": "Kelby B. May (@KelbyMay)",
+      "agency": null,
+      "nationality": "US",
+      "notes": "Bio X: 'Agent @KelbyMay | Manager @Crocccccc'. Kelby May: agente individual (CRO MogulMoves, ex-OFFBRAND)"
+    },
+    "reapered": {
+      "agent": null,
+      "agency": null,
+      "nationality": "KR",
+      "notes": ""
+    },
+    "zeph": {
+      "agent": null,
+      "agency": null,
+      "nationality": "FR",
+      "notes": ""
+    },
+    "myrwn": {
+      "agent": "DarthYellow (Jesús Fernández Rubio)",
+      "agency": null,
+      "nationality": "ES",
+      "notes": "MARCA (sep-2025): 'agente de Supa, Álvaro, Myrwn y Melzhet'"
+    },
+    "nightslayer": {
+      "agent": "DarthYellow (Jesús Fernández Rubio)",
+      "agency": null,
+      "nationality": "UA",
+      "notes": "CONFIRMADO vía X: 3 posts suyos (2024) agradeciendo a su agente @DarthYellow_lol; DY interviene por él en nov-2024 ('El de Slayer es fácil')",
+      "hidden": true
+    },
+    "elyoya": {
+      "agent": "DarthYellow (Jesús Fernández Rubio)",
+      "agency": null,
+      "nationality": "ES",
+      "notes": "MARCA (nov-2023): agente de Elyoya"
+    },
+    "sr-antonio": {
+      "agent": null,
+      "agency": null,
+      "nationality": "ES",
+      "notes": "Sin agencia pública (X con sesión, 3-sep-2026)",
+      "wikiPage": "ToniOP",
+      "hidden": true
+    },
+    "jojopyun": {
+      "agent": null,
+      "agency": "Prodigy Agency",
+      "nationality": "CA",
+      "notes": "Fuente: API oficial de Prodigy (sep-2026)"
+    },
+    "supa": {
+      "agent": "DarthYellow (Jesús Fernández Rubio)",
+      "agency": null,
+      "nationality": "ES",
+      "notes": "MARCA (sep-2025): agente de Supa"
+    },
+    "alvaro": {
+      "agent": "DarthYellow (Jesús Fernández Rubio)",
+      "agency": null,
+      "nationality": "ES",
+      "notes": "MARCA (sep-2025): agente de Álvaro",
+      "wikiPage": "Alvaro (Álvaro Fernández)"
+    },
+    "alphari": {
+      "agent": null,
+      "agency": null,
+      "nationality": "GB",
+      "notes": ""
+    },
+    "independent": {
+      "agent": null,
+      "agency": null,
+      "nationality": "ES",
+      "notes": ""
+    },
+    "melzhet": {
+      "agent": null,
+      "agency": null,
+      "nationality": "ES",
+      "notes": ""
+    },
+    "empyros": {
+      "agent": null,
+      "agency": "Tailors",
+      "nationality": "GR",
+      "notes": "Bio X: business Panos@tailors.gg"
+    },
+    "maynter": {
+      "agent": "Nathan Laprade",
+      "agency": "Tailors",
+      "nationality": "UA",
+      "notes": "Bio X: 'agent - @n8laprade'"
+    },
+    "rhilech": {
+      "agent": null,
+      "agency": "Prodigy Agency",
+      "nationality": "TR",
+      "notes": "Fuente: API oficial de Prodigy (sep-2026)"
+    },
+    "larssen": {
+      "agent": null,
+      "agency": null,
+      "nationality": "SE",
+      "notes": "Sin agencia pública a fecha 3-sep-2026 (fuentes agotadas: bios X/Instagram/Twitch, linktree, webs de agencias, 709 artículos de Sheep Esports, Google/Bing/DDG en 6 idiomas, NamuWiki, LoLPros, Reddit)",
+      "hidden": true
+    },
+    "poby": {
+      "agent": null,
+      "agency": null,
+      "nationality": "KR",
+      "notes": "Sin agencia pública (X con sesión: bio sin contacto, ShadowCorpAgent sin altas, 3-sep-2026)"
+    },
+    "samd": {
+      "agent": null,
+      "agency": "Shadow Corp (Shadow Corporation)",
+      "nationality": "KR",
+      "notes": "Fuente: bio/contexto X @shadowcorpagent"
+    },
+    "parus": {
+      "agent": null,
+      "agency": null,
+      "nationality": "TR",
+      "notes": "Sin agencia pública (X con sesión, 3-sep-2026)"
+    },
+    "fredy122": {
+      "agent": null,
+      "agency": null,
+      "nationality": "GB",
+      "notes": ""
+    },
+    "gotoone": {
+      "agent": null,
+      "agency": null,
+      "nationality": "FR",
+      "notes": ""
+    },
+    "therock": {
+      "agent": null,
+      "agency": null,
+      "nationality": "GR",
+      "notes": ""
+    },
+    "wunder": {
+      "agent": null,
+      "agency": null,
+      "nationality": "DK",
+      "notes": "Sin agencia pública (X con sesión: bio 'Top for SK', contactos históricos por email personal, 3-sep-2026)"
+    },
+    "skeanz": {
+      "agent": null,
+      "agency": "Tailors",
+      "nationality": "FR",
+      "notes": "Fuente: tailors.gg (etiqueta de equipo antigua: Supermassive)"
+    },
+    "lider": {
+      "agent": null,
+      "agency": "Proxy (Proxy Talent)",
+      "nationality": "RU",
+      "notes": "PROBABLE: su post LFT (nov-2022) cita contacto 'joe@proxy.gg' (agencia de Caps); también citó a InnerFlame (2019); bio actual no menciona agencia"
+    },
+    "slowq": {
+      "agent": "Positive (@AZYT_Positive)",
+      "agency": "AZYT (AZYT Korea)",
+      "nationality": "KR",
+      "notes": "CONFIRMADO: su post LFT (18-abr-2026) cita 'Agent: positive@azyt.com'; agencia coreana AZYT, agente certificado LCK"
+    },
+    "jopa": {
+      "agent": null,
+      "agency": "Prodigy Agency",
+      "nationality": "HR",
+      "notes": "Fuente: API oficial de Prodigy (sep-2026)"
+    },
+    "mikyx": {
+      "agent": "Flo (@theflow1604)",
+      "agency": null,
+      "nationality": "SI",
+      "notes": "Bio X: 'Business inquiries: @theflow1604'. Contacto individual (marketing deportivo, Alemania), sin agencia pública"
+    },
+    "baguette": {
+      "agent": null,
+      "agency": null,
+      "nationality": "FR",
+      "notes": ""
+    },
+    "duffman": {
+      "agent": null,
+      "agency": null,
+      "nationality": "GB",
+      "notes": ""
+    },
+    "own3r": {
+      "agent": null,
+      "agency": null,
+      "nationality": "PT",
+      "notes": "",
+      "displayName": "Own3r_",
+      "wikiPage": "OWN3R (David Rodriguez de la Torre)"
+    },
+    "rooster": {
+      "agent": null,
+      "agency": null,
+      "nationality": "KR",
+      "notes": "Sin agencia pública (X con sesión, 3-sep-2026)"
+    },
+    "boukada": {
+      "agent": null,
+      "agency": "Prodigy Agency",
+      "nationality": "FR",
+      "notes": "Fuente: API oficial de Prodigy (sep-2026; la web aún lo lista como SK Gaming)"
+    },
+    "sheo": {
+      "agent": null,
+      "agency": null,
+      "nationality": "FR",
+      "notes": "Sin agencia pública a fecha 3-sep-2026 (fuentes agotadas: bios X/Instagram/Twitch, linktree, webs de agencias, 709 artículos de Sheep Esports, Google/Bing/DDG en 6 idiomas, NamuWiki, LoLPros, Reddit)"
+    },
+    "nuc": {
+      "agent": null,
+      "agency": "Achieveminds",
+      "nationality": "MA",
+      "notes": "Fuente: achieveminds.com/talents (etiqueta antigua: Team BDS)"
+    },
+    "paduck": {
+      "agent": null,
+      "agency": null,
+      "nationality": "KR",
+      "notes": "Sin agencia pública (X con sesión, 3-sep-2026); pista antigua no verificada de 'Prime Player Agency'"
+    },
+    "stend": {
+      "agent": null,
+      "agency": null,
+      "nationality": "FR",
+      "notes": "Sin agencia pública a fecha 3-sep-2026 (fuentes agotadas: bios X/Instagram/Twitch, linktree, webs de agencias, 709 artículos de Sheep Esports, Google/Bing/DDG en 6 idiomas, NamuWiki, LoLPros, Reddit)"
+    },
+    "trymbi": {
+      "agent": "Fabian Broich",
+      "agency": "Achieveminds",
+      "nationality": "ES",
+      "notes": "Fuente: achieveminds.com/talents + news de la agencia"
+    },
+    "menq": {
+      "agent": null,
+      "agency": null,
+      "nationality": "PL",
+      "notes": ""
+    },
+    "striker": {
+      "agent": null,
+      "agency": null,
+      "nationality": "FR",
+      "notes": "",
+      "wikiPage": "Striker (Yanis Kella)"
+    },
+    "tracyn": {
+      "agent": null,
+      "agency": "ProPlayers Agency",
+      "nationality": "PL",
+      "notes": "Fuente: proplayers.gg (lista oficial LOL) + Instagram del CEO cita a sebastian_wojton; cuenta X suspendida"
+    },
+    "daglas": {
+      "agent": null,
+      "agency": "ProPlayers Agency",
+      "nationality": "PL",
+      "notes": "Fuente: proplayers.gg (lista oficial LOL)"
+    },
+    "serin": {
+      "agent": null,
+      "agency": "Surge Management",
+      "nationality": "TR",
+      "notes": "CONFIRMADO: posts LFT (oct-2023 y sep-2024) citan '@Surgemanagement' como contacto; bio actual ya no lo menciona (vigencia posible)"
+    },
+    "hype": {
+      "agent": null,
+      "agency": null,
+      "nationality": "KR",
+      "notes": "Sin agencia pública (X con sesión, 3-sep-2026)",
+      "wikiPage": "Hype (Byeon Jeong-hyeon)"
+    },
+    "way": {
+      "agent": null,
+      "agency": null,
+      "nationality": "KR",
+      "notes": "Sin agencia pública (X con sesión, 3-sep-2026)",
+      "wikiPage": "Way (Han Gil)"
+    },
+    "hidon": {
+      "agent": null,
+      "agency": null,
+      "nationality": "DK",
+      "notes": ""
+    },
+    "mithy": {
+      "agent": null,
+      "agency": null,
+      "nationality": "ES",
+      "notes": ""
+    },
+    "nukeduck": {
+      "agent": null,
+      "agency": null,
+      "nationality": "NO",
+      "notes": ""
+    },
+    "naak-nako": {
+      "agent": "Nathan Laprade",
+      "agency": "Tailors",
+      "nationality": "TR",
+      "notes": "Bio X: business @n8laprade (co-fundador de Tailors)"
+    },
+    "lyncas": {
+      "agent": null,
+      "agency": "Tailors",
+      "nationality": "LT",
+      "notes": "Fuente: tailors.gg"
+    },
+    "fiesta": {
+      "agent": null,
+      "agency": "Shadow Corp (Shadow Corporation)",
+      "nationality": "KR",
+      "notes": "Fuente: Liquipedia Shadow_Corp (alta 2024-02, X @ShadowCorpAgent)",
+      "wikiPage": "FIESTA (An Hyeon-seo)"
+    },
+    "carzzy": {
+      "agent": null,
+      "agency": "Tailors",
+      "nationality": "CZ",
+      "notes": "Fuente: tailors.gg (lista oficial de clientes)"
+    },
+    "fleshy": {
+      "agent": null,
+      "agency": "Surge Management",
+      "nationality": "TR",
+      "notes": "CONFIRMADO vía X: su post LFT (2-oct-2024) cita 'You can contact through @SurgeManagement'"
+    },
+    "arvindir": {
+      "agent": null,
+      "agency": null,
+      "nationality": "DE",
+      "notes": ""
+    },
+    "pad": {
+      "agent": null,
+      "agency": null,
+      "nationality": "DK",
+      "notes": ""
+    },
+    "thanatos": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Thanatos (Park Seung-gyu)"
+    },
+    "blaber": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "apa": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "APA (Eain Stearns)"
+    },
+    "loki": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Loki (Lee Sang-min)"
+    },
+    "tactical": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "zven": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "vulcan": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Vulcan (Philippe Laflamme)"
+    },
+    "arrow": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "iwdominate": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "yamatocannon": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "denathor": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "dardoch": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "exyu": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "palafox": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "fbi": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "ignar": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "emi": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "swiffer": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "srtty": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "kryra": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "KryRa"
+    },
+    "callme": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "sajed": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "lyonz": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "ido": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "gakgos": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "gryffinn": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "quad": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "massu": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "cryogen": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "apollo": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Apollo (Apollo Price)"
+    },
+    "thinkcard": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "dhokla": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "armao": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "inspired": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "saint": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Saint (Kang Sung-in)"
+    },
+    "berserker": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Berserker (Kim Min-cheol)"
+    },
+    "isles": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "reignover": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "rigby": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "impact": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "hambak": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "darkwings": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "rahel": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "huhi": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "dayos": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "goldenglue": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "fudge": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "contractz": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "zinie": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "bvoy": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "zeyzal": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "damonte": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "reven": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Reven (Seong Sang-hyeon)"
+    },
+    "morgan": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "josedeodo": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "quid": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "yeon": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Yeon (Sean Sung)"
+    },
+    "corejj": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    },
+    "spawn": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": "",
+      "wikiPage": "Spawn (Jake Tiberi)"
+    },
+    "spookz": {
+      "agent": null,
+      "agency": null,
+      "nationality": null,
+      "notes": ""
+    }
+  }
+}
