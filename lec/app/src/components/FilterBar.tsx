@@ -93,11 +93,17 @@ export function FilterBar({ state, update, matchCount, total }: FilterBarProps) 
 
   // Título de la imagen exportada SOLO con filtros activos: el rol va en
   // plural ("Junglers") y el resto de filtros tal cual ("Fnatic", "Tailors"…).
+  // En LCS se antepone la liga ("LCS · Junglers") para que la imagen se
+  // explique sola compartida fuera del dashboard.
   const exportTitle =
     chips.length === 0
-      ? undefined
-      : chips
-          .map((chip) => (chip.key === 'role' ? ROLE_PLURAL[state.role] : chip.label))
+      ? state.league === 'lcs'
+        ? 'LCS'
+        : undefined
+      : (state.league === 'lcs' ? ['LCS'] : [])
+          .concat(
+            chips.map((chip) => (chip.key === 'role' ? ROLE_PLURAL[state.role] : chip.label)),
+          )
           .join(' · ');
 
   return (
@@ -122,7 +128,7 @@ export function FilterBar({ state, update, matchCount, total }: FilterBarProps) 
           {t('filter.count', { shown: matchCount, total })}
         </p>
         <ExportPngButton
-          filename={`scouting-lec-2026-${state.view === 'table' ? 'tabla' : 'inicio'}.png`}
+          filename={`scouting-${state.league}-${state.view === 'table' ? 'tabla' : 'inicio'}.png`}
           config={{ title: exportTitle }}
         />
       </div>

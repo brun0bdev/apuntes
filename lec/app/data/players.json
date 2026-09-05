@@ -4863,14 +4863,35 @@
     "teamId": "c9",
     "role": "top",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2028-11-20",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "shadow-corp-shadow-corporation",
     "photo": "assets/players/lcs/thanatos.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Son of Conus",
+        "years": "2020"
+      },
+      {
+        "team": "DAMWON Academy",
+        "years": "2020"
+      },
+      {
+        "team": "DWG KIA Challengers",
+        "years": "2020–2021"
+      },
+      {
+        "team": "DK Challengers",
+        "years": "2021–2024"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2024–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Thanatos_(Park_Seung-gyu)",
-    "notes": ""
+    "notes": "CONFIRMADO: bio X @Thanatos0501 'TOP for @C9LoL | @Cloud9 Kia @shadowcorpagent' (sep-2026)"
   },
   {
     "id": "blaber",
@@ -4880,14 +4901,31 @@
     "teamId": "c9",
     "role": "jungle",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2028-11-20",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/blaber.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Team Sky",
+        "years": "2017"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2017–2018"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2018–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Blaber",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "apa",
@@ -4897,14 +4935,71 @@
     "teamId": "c9",
     "role": "mid",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2028-11-21",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/apa.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "F3 Visuals",
+        "years": "2019"
+      },
+      {
+        "team": "Lotus Esports",
+        "years": "2019"
+      },
+      {
+        "team": "Fruition Esports",
+        "years": "2019"
+      },
+      {
+        "team": "C H I N A",
+        "years": "2019"
+      },
+      {
+        "team": "Lucky Esports",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Aqualix Esports",
+        "years": "2020"
+      },
+      {
+        "team": "Supernova",
+        "years": "2020"
+      },
+      {
+        "team": "Barrage.NA",
+        "years": "2021"
+      },
+      {
+        "team": "Resolve NA",
+        "years": "2021"
+      },
+      {
+        "team": "Maryville",
+        "years": "2021–2022"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2022–2023"
+      },
+      {
+        "team": "TL Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/APA_(Eain_Stearns)",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (api.v2.prodigy-agency.gg, sep-2026); ficha con team Cloud9"
   },
   {
     "id": "loki",
@@ -4914,14 +5009,35 @@
     "teamId": "c9",
     "role": "mid",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/loki.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "HLE Academy",
+        "years": "2022"
+      },
+      {
+        "team": "HLE Challengers",
+        "years": "2022–2024"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2024–2025"
+      },
+      {
+        "team": "HANJIN BRION",
+        "years": "2026"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2026–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Loki_(Lee_Sang-min)",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "tactical",
@@ -4931,14 +5047,71 @@
     "teamId": "c9",
     "role": "adc",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2028-11-20",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/tactical.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Team Exile Surge",
+        "years": "2016"
+      },
+      {
+        "team": "Relentless Gaming",
+        "years": "2017"
+      },
+      {
+        "team": "Supernova",
+        "years": "2017"
+      },
+      {
+        "team": "Supernova",
+        "years": "2018"
+      },
+      {
+        "team": "TSM Academy",
+        "years": "2018–2019"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2020–2021"
+      },
+      {
+        "team": "TSM",
+        "years": "2021–2022"
+      },
+      {
+        "team": "TSM Academy",
+        "years": "2022"
+      },
+      {
+        "team": "TSM",
+        "years": "2022"
+      },
+      {
+        "team": "Immortals",
+        "years": "2022–2024"
+      },
+      {
+        "team": "Luminosity Gaming",
+        "years": "2024–2026"
+      },
+      {
+        "team": "Conviction",
+        "years": "2026"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2026–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Tactical",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (sep-2026; ficha con team 'Free Agent' antiguo)"
   },
   {
     "id": "zven",
@@ -4948,14 +5121,75 @@
     "teamId": "c9",
     "role": "adc",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "DK",
     "contractEnd": "2028-11-20",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/zven.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Hoang5",
+        "years": "2013"
+      },
+      {
+        "team": "Tricked Esport",
+        "years": "2013"
+      },
+      {
+        "team": "CJ Gaming",
+        "years": "2013"
+      },
+      {
+        "team": "Intellectual Playground",
+        "years": "2013–2014"
+      },
+      {
+        "team": "Team Kappa Prime",
+        "years": "2013–2014"
+      },
+      {
+        "team": "SK Gaming Prime",
+        "years": "2014"
+      },
+      {
+        "team": "Origen",
+        "years": "2014–2016"
+      },
+      {
+        "team": "G2 Esports",
+        "years": "2016–2017"
+      },
+      {
+        "team": "TSM",
+        "years": "2017–2019"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2019–2021"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2021"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2021–2023"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2024"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2024–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Zven",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "vulcan",
@@ -4965,14 +5199,55 @@
     "teamId": "c9",
     "role": "support",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "CA",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "achieveminds",
     "photo": "assets/players/lcs/vulcan.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "DatZit Gaming Fire",
+        "years": "2015–2016"
+      },
+      {
+        "team": "CLG Black",
+        "years": "2016–2017"
+      },
+      {
+        "team": "CLG Academy",
+        "years": "2017"
+      },
+      {
+        "team": "Clutch Academy",
+        "years": "2018"
+      },
+      {
+        "team": "Clutch Gaming",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2019"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2019–2021"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2021–2023"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2023"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2023–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Vulcan_(Philippe_Laflamme)",
-    "notes": ""
+    "notes": "CONFIRMADO: bio X @VulcanLoL 'Agent: @AchieveMinds' + listado en achieveminds.com/talents (sep-2026)"
   },
   {
     "id": "arrow",
@@ -4982,12 +5257,85 @@
     "teamId": "c9",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2028-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/arrow.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Xenics Storm",
+        "years": "2013–2014"
+      },
+      {
+        "team": "KT Rolster Arrows",
+        "years": "2014"
+      },
+      {
+        "team": "KT Rolster",
+        "years": "2014–2016"
+      },
+      {
+        "team": "Phoenix1",
+        "years": "2016–2017"
+      },
+      {
+        "team": "OpTic Gaming",
+        "years": "2017–2019"
+      },
+      {
+        "team": "OpTic Academy",
+        "years": "2019"
+      },
+      {
+        "team": "Immortals",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Wildcard Gaming",
+        "years": "2021"
+      },
+      {
+        "team": "Wildcard Red",
+        "years": "2021"
+      },
+      {
+        "team": "Wildcard Black",
+        "years": "2021"
+      },
+      {
+        "team": "IMT Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Immortals",
+        "years": "2022"
+      },
+      {
+        "team": "IMT Academy",
+        "years": "2022"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2022–2023"
+      },
+      {
+        "team": "TL Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2023–2024"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2026–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Arrow",
     "notes": "Post-Worlds 2028 — fecha estimada (fin de temporada)"
   },
@@ -4999,12 +5347,65 @@
     "teamId": "c9",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2028-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/iwdominate.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Haters Make Us Famous",
+        "years": "2010"
+      },
+      {
+        "team": "compLexity Gaming",
+        "years": "2011–2012"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2012"
+      },
+      {
+        "team": "Curse Academy",
+        "years": "2013"
+      },
+      {
+        "team": "Curse Academy",
+        "years": "2013"
+      },
+      {
+        "team": "Team Curse",
+        "years": "2013–2015"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2015–2016"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2016"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2016"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2016–2020"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2020–2022"
+      },
+      {
+        "team": "The Ruddy Sack",
+        "years": "2025"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/IWDominate",
     "notes": "Post-Worlds 2028 — fecha estimada (fin de temporada)"
   },
@@ -5016,12 +5417,125 @@
     "teamId": "c9",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "SE",
     "contractEnd": "2029-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/yamatocannon.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Team Mistral",
+        "years": "2011"
+      },
+      {
+        "team": "High Sea Tigers",
+        "years": "2011–2012"
+      },
+      {
+        "team": "Western Wolves",
+        "years": "2012"
+      },
+      {
+        "team": "4Kings",
+        "years": "2012"
+      },
+      {
+        "team": "Mebdi's Minions",
+        "years": "2012"
+      },
+      {
+        "team": "Absolute Legends.Alpha",
+        "years": "2012"
+      },
+      {
+        "team": "Tt Dragons",
+        "years": "2012"
+      },
+      {
+        "team": "Team Solo Mebdi",
+        "years": "2012–2013"
+      },
+      {
+        "team": "H2k-Gaming",
+        "years": "2012"
+      },
+      {
+        "team": "DragonBorns",
+        "years": "2013"
+      },
+      {
+        "team": "Heimerdinger's Colossi",
+        "years": "2013"
+      },
+      {
+        "team": "against All authority",
+        "years": "2013"
+      },
+      {
+        "team": "Lemondogs",
+        "years": "2013"
+      },
+      {
+        "team": "MeetYourMakers",
+        "years": "2015"
+      },
+      {
+        "team": "Glacial Phoenix",
+        "years": "2015"
+      },
+      {
+        "team": "Team ROCCAT",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Splyce",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Team Vitality",
+        "years": "2017–2019"
+      },
+      {
+        "team": "SANDBOX Gaming",
+        "years": "2020"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Liiv SANDBOX",
+        "years": "2023"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2023"
+      },
+      {
+        "team": "Karmine Corp",
+        "years": "2024"
+      },
+      {
+        "team": "The Ruddy Sack",
+        "years": "2025"
+      },
+      {
+        "team": "Los Ratones",
+        "years": "2025–2026"
+      },
+      {
+        "team": "Witchcraft",
+        "years": "2026"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2026–Present"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2026–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/YamatoCannon",
     "notes": "Post-Worlds 2029 — fecha estimada (fin de temporada)"
   },
@@ -5033,14 +5547,31 @@
     "teamId": "dig",
     "role": "top",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/denathor.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Tempest Gaming",
+        "years": "2022"
+      },
+      {
+        "team": "Winthrop",
+        "years": "2022–2026"
+      },
+      {
+        "team": "Mirage Alliance",
+        "years": "2023"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2026–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Denathor",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "dardoch",
@@ -5050,14 +5581,151 @@
     "teamId": "dig",
     "role": "jungle",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2026-11-14",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/dardoch.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Noble Truth",
+        "years": "2014"
+      },
+      {
+        "team": "affNity",
+        "years": "2014–2015"
+      },
+      {
+        "team": "Escalate Legion",
+        "years": "2015"
+      },
+      {
+        "team": "Storm",
+        "years": "2015"
+      },
+      {
+        "team": "Team Imagine",
+        "years": "2015"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2016"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2016"
+      },
+      {
+        "team": "Immortals",
+        "years": "2016–2017"
+      },
+      {
+        "team": "CLG",
+        "years": "2017"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2017"
+      },
+      {
+        "team": "Echo Fox",
+        "years": "2017–2018"
+      },
+      {
+        "team": "OpTic Gaming",
+        "years": "2018–2019"
+      },
+      {
+        "team": "OpTic Academy",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Immortals",
+        "years": "2019"
+      },
+      {
+        "team": "IMT Academy",
+        "years": "2019"
+      },
+      {
+        "team": "TSM",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Dignitas Academy",
+        "years": "2020"
+      },
+      {
+        "team": "Immortals",
+        "years": "2021"
+      },
+      {
+        "team": "Immortals",
+        "years": "2021–2022"
+      },
+      {
+        "team": "IMT Academy",
+        "years": "2022"
+      },
+      {
+        "team": "St. Thomas",
+        "years": "2022"
+      },
+      {
+        "team": "Team Fish Taco",
+        "years": "2023"
+      },
+      {
+        "team": "St. Thomas",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Mirage Alliance",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Chaotic Solar",
+        "years": "2024"
+      },
+      {
+        "team": "Lotus",
+        "years": "2024"
+      },
+      {
+        "team": "Peak Performers",
+        "years": "2024"
+      },
+      {
+        "team": "CCG Esports",
+        "years": "2025"
+      },
+      {
+        "team": "Supernova",
+        "years": "2025"
+      },
+      {
+        "team": "St. Cloud State",
+        "years": "2026"
+      },
+      {
+        "team": "CCG Esports",
+        "years": "2026"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2026–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Dardoch",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "exyu",
@@ -5067,14 +5735,71 @@
     "teamId": "dig",
     "role": "jungle",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/exyu.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "UC Berkeley",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Fruition Esports",
+        "years": "2019"
+      },
+      {
+        "team": "Team Front",
+        "years": "2019"
+      },
+      {
+        "team": "Conviction",
+        "years": "2020"
+      },
+      {
+        "team": "C9 Amateur",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Dignitas Academy",
+        "years": "2022"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2022"
+      },
+      {
+        "team": "Dignitas Academy",
+        "years": "2022–2023"
+      },
+      {
+        "team": "DIG Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Fear x Starforge",
+        "years": "2024"
+      },
+      {
+        "team": "Pulse Gooners",
+        "years": "2024"
+      },
+      {
+        "team": "Disguised",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2025–2026"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/eXyu",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (sep-2026; ficha con team 'Free Agent' antiguo)"
   },
   {
     "id": "palafox",
@@ -5084,14 +5809,59 @@
     "teamId": "dig",
     "role": "mid",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/palafox.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Team Blaze",
+        "years": "2016"
+      },
+      {
+        "team": "OpTic Academy",
+        "years": "2018"
+      },
+      {
+        "team": "GG Academy",
+        "years": "2018–2019"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2019–2020"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2020–2021"
+      },
+      {
+        "team": "FlyQuest Academy",
+        "years": "2021"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2021"
+      },
+      {
+        "team": "CLG",
+        "years": "2021–2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Shopify Rebellion",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Palafox",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (sep-2026; ficha con team Dignitas)"
   },
   {
     "id": "fbi",
@@ -5101,14 +5871,55 @@
     "teamId": "dig",
     "role": "adc",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "AU",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/fbi.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Sin Gaming",
+        "years": "2017"
+      },
+      {
+        "team": "ORDER",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Bombers",
+        "years": "2018–2019"
+      },
+      {
+        "team": "GG Academy",
+        "years": "2019"
+      },
+      {
+        "team": "Golden Guardians",
+        "years": "2019–2020"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2022–2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023–2024"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/FBI",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "ignar",
@@ -5118,14 +5929,67 @@
     "teamId": "dig",
     "role": "support",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/ignar.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Winterfox",
+        "years": "2015"
+      },
+      {
+        "team": "Incredible Miracle",
+        "years": "2015"
+      },
+      {
+        "team": "KT Rolster",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Misfits Gaming",
+        "years": "2016–2017"
+      },
+      {
+        "team": "bbq Olivers",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Schalke 04",
+        "years": "2018–2019"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Immortals",
+        "years": "2022"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2022–2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Ignar",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (sep-2026; ficha con team Dignitas)"
   },
   {
     "id": "emi",
@@ -5135,12 +5999,77 @@
     "teamId": "dig",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "RO",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/emi.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Nexus Gaming",
+        "years": "2016"
+      },
+      {
+        "team": "Nexus Gaming",
+        "years": "2017"
+      },
+      {
+        "team": "WLGaming Esports",
+        "years": "2017"
+      },
+      {
+        "team": "Hyperion Esports",
+        "years": "2018"
+      },
+      {
+        "team": "Neronity",
+        "years": "2018"
+      },
+      {
+        "team": "Beşiktaş Esports",
+        "years": "2018"
+      },
+      {
+        "team": "Crvena zvezda",
+        "years": "2018"
+      },
+      {
+        "team": "eMonkeyz",
+        "years": "2019"
+      },
+      {
+        "team": "Vodafone Giants",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Z10 ESHARK",
+        "years": "2020–2021"
+      },
+      {
+        "team": "K1CK",
+        "years": "2021"
+      },
+      {
+        "team": "MOUZ",
+        "years": "2022"
+      },
+      {
+        "team": "GameWard",
+        "years": "2023"
+      },
+      {
+        "team": "Twisted Minds",
+        "years": "2024"
+      },
+      {
+        "team": "GIANTX",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Emi",
     "notes": "Post-Worlds 2026 — fecha estimada (fin de temporada)"
   },
@@ -5152,12 +6081,61 @@
     "teamId": "dig",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "AU",
     "contractEnd": "2027-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/swiffer.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Frenetic Array",
+        "years": "2012"
+      },
+      {
+        "team": "myRevenge Australia",
+        "years": "2012"
+      },
+      {
+        "team": "Team Exile5 Eclipse",
+        "years": "2013"
+      },
+      {
+        "team": "Team Immunity",
+        "years": "2013–2014"
+      },
+      {
+        "team": "Chiefs Esports Club",
+        "years": "2014–2016"
+      },
+      {
+        "team": "Chiefs Esports Club",
+        "years": "2017"
+      },
+      {
+        "team": "ORDER",
+        "years": "2017–2019"
+      },
+      {
+        "team": "BT Excel",
+        "years": "2019–2020"
+      },
+      {
+        "team": "BT Excel",
+        "years": "2020–2021"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2021–2024"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Swiffer",
     "notes": "Post-Worlds 2027 — fecha estimada (fin de temporada)"
   },
@@ -5169,14 +6147,87 @@
     "teamId": "dsg",
     "role": "top",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/srtty.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Lotus Esports",
+        "years": "2019"
+      },
+      {
+        "team": "Hyper Nova",
+        "years": "2019"
+      },
+      {
+        "team": "SN Sentinels",
+        "years": "2019"
+      },
+      {
+        "team": "Supernova",
+        "years": "2020"
+      },
+      {
+        "team": "Team Fish Taco",
+        "years": "2020"
+      },
+      {
+        "team": "Zenith Esports",
+        "years": "2020"
+      },
+      {
+        "team": "EG Prodigies",
+        "years": "2020–2021"
+      },
+      {
+        "team": "EG Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "TL First",
+        "years": "2022–2023"
+      },
+      {
+        "team": "EG Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "Converse",
+        "years": "2023"
+      },
+      {
+        "team": "Team Fish Taco",
+        "years": "2023"
+      },
+      {
+        "team": "FlyQuest NZXT",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Saint Louis",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2025"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2025"
+      },
+      {
+        "team": "LYON",
+        "years": "2025"
+      },
+      {
+        "team": "Disguised",
+        "years": "2026–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Srtty",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (sep-2026; ficha con team Disguised)"
   },
   {
     "id": "kryra",
@@ -5186,14 +6237,51 @@
     "teamId": "dsg",
     "role": "jungle",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "CA",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/kryra.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Team Fish Taco",
+        "years": "2023"
+      },
+      {
+        "team": "The Cheese Chasers",
+        "years": "2023"
+      },
+      {
+        "team": "Gentle Hearts",
+        "years": "2023"
+      },
+      {
+        "team": "Pulse Star",
+        "years": "2023–2024"
+      },
+      {
+        "team": "CCG Esports",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Pulse Star",
+        "years": "2025"
+      },
+      {
+        "team": "DarkZero Dragonsteel",
+        "years": "2025"
+      },
+      {
+        "team": "Blue Otter",
+        "years": "2025"
+      },
+      {
+        "team": "Disguised",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/KryRa",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "callme",
@@ -5203,14 +6291,59 @@
     "teamId": "dsg",
     "role": "mid",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/callme.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "KT Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Sejong",
+        "years": "2021"
+      },
+      {
+        "team": "KDF Academy",
+        "years": "2022"
+      },
+      {
+        "team": "Gyeongnam",
+        "years": "2022"
+      },
+      {
+        "team": "NS Esports Academy",
+        "years": "2023"
+      },
+      {
+        "team": "NS RedForce",
+        "years": "2023"
+      },
+      {
+        "team": "NS Esports Academy",
+        "years": "2023"
+      },
+      {
+        "team": "NS RedForce",
+        "years": "2023–2024"
+      },
+      {
+        "team": "NS Esports Academy",
+        "years": "2024"
+      },
+      {
+        "team": "Misa Esports",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Disguised",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Callme",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "sajed",
@@ -5220,14 +6353,67 @@
     "teamId": "dsg",
     "role": "adc",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "LB",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/sajed.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Bay State College",
+        "years": "2021"
+      },
+      {
+        "team": "Trance's Tyrants",
+        "years": "2021"
+      },
+      {
+        "team": "Nameless Randoms",
+        "years": "2022"
+      },
+      {
+        "team": "Nameless Thieves",
+        "years": "2022"
+      },
+      {
+        "team": "LiT Esports",
+        "years": "2023"
+      },
+      {
+        "team": "Keep Pathing Bot",
+        "years": "2023"
+      },
+      {
+        "team": "FlyQuest NZXT",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Pulse Star",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Maryville",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Dragonsteel",
+        "years": "2024–2025"
+      },
+      {
+        "team": "DarkZero Dragonsteel",
+        "years": "2025"
+      },
+      {
+        "team": "Milk Esports",
+        "years": "2025"
+      },
+      {
+        "team": "Disguised",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Sajed",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (sep-2026; ficha con team Disguised)"
   },
   {
     "id": "lyonz",
@@ -5237,14 +6423,59 @@
     "teamId": "dsg",
     "role": "support",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "AR",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/lyonz.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Archelon",
+        "years": "2018"
+      },
+      {
+        "team": "Piantaos Gaming",
+        "years": "2020"
+      },
+      {
+        "team": "Piantaos Gaming",
+        "years": "2020"
+      },
+      {
+        "team": "Intel New Indians",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Undead Gaming",
+        "years": "2021"
+      },
+      {
+        "team": "Movistar Optix",
+        "years": "2021–2022"
+      },
+      {
+        "team": "River Plate",
+        "years": "2022"
+      },
+      {
+        "team": "Leviatan",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Movistar R7",
+        "years": "2023–2024"
+      },
+      {
+        "team": "LYON",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Disguised",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Lyonz",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "ido",
@@ -5254,12 +6485,73 @@
     "teamId": "dsg",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/ido.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "USG",
+        "years": "2016"
+      },
+      {
+        "team": "UC Irvine",
+        "years": "2017–2018"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2017"
+      },
+      {
+        "team": "Illinois",
+        "years": "2019"
+      },
+      {
+        "team": "AVIXD",
+        "years": "2019"
+      },
+      {
+        "team": "Illinois",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Slaughter House",
+        "years": "2020"
+      },
+      {
+        "team": "Zenith Esports",
+        "years": "2020"
+      },
+      {
+        "team": "EG Prodigies",
+        "years": "2020–2022"
+      },
+      {
+        "team": "EG Academy",
+        "years": "2023"
+      },
+      {
+        "team": "EG Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "Fear x Starforge",
+        "years": "2024"
+      },
+      {
+        "team": "Northwood",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Pulse Star",
+        "years": "2025"
+      },
+      {
+        "team": "Disguised",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/ido",
     "notes": "Post-Worlds 2026 — fecha estimada (fin de temporada)"
   },
@@ -5271,14 +6563,31 @@
     "teamId": "fly",
     "role": "top",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "TR",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/gakgos.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "mCon esports",
+        "years": "2024"
+      },
+      {
+        "team": "NASR Turkey",
+        "years": "2024"
+      },
+      {
+        "team": "Project Conquerors",
+        "years": "2025"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Gakgos",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "gryffinn",
@@ -5288,14 +6597,43 @@
     "teamId": "fly",
     "role": "jungle",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/gryffinn.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "No Team",
+        "years": "2022"
+      },
+      {
+        "team": "No Org",
+        "years": "2022"
+      },
+      {
+        "team": "Horizon Gaming",
+        "years": "2023"
+      },
+      {
+        "team": "CCG Esports",
+        "years": "2023"
+      },
+      {
+        "team": "T1 E.A. Rookies",
+        "years": "2023–2025"
+      },
+      {
+        "team": "LOUD",
+        "years": "2025"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Gryffinn",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (sep-2026; ficha con team 'FlyQuest - LCS')"
   },
   {
     "id": "quad",
@@ -5305,14 +6643,51 @@
     "teamId": "fly",
     "role": "mid",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-17",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "shadow-corp-shadow-corporation",
     "photo": "assets/players/lcs/quad.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Kingzone DragonX",
+        "years": "2018–2019"
+      },
+      {
+        "team": "DragonX Academy",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Ulsan",
+        "years": "2019"
+      },
+      {
+        "team": "DRX",
+        "years": "2020–2021"
+      },
+      {
+        "team": "DRX Challengers",
+        "years": "2021"
+      },
+      {
+        "team": "Gen.G",
+        "years": "2022–2023"
+      },
+      {
+        "team": "NS RedForce",
+        "years": "2023"
+      },
+      {
+        "team": "FLY Challengers",
+        "years": "2023–2024"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2024–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Quad",
-    "notes": ""
+    "notes": "CONFIRMADO: bio X @midQuad 'flyquest Quad @shadowcorpagent' (sep-2026)"
   },
   {
     "id": "massu",
@@ -5322,14 +6697,31 @@
     "teamId": "fly",
     "role": "adc",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "IQ",
     "contractEnd": "2026-11-17",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/massu.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Team Pending",
+        "years": "2022"
+      },
+      {
+        "team": "FlyQuest Academy",
+        "years": "2022–2023"
+      },
+      {
+        "team": "FLY Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2023–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Massu",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "cryogen",
@@ -5339,14 +6731,55 @@
     "teamId": "fly",
     "role": "support",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "VN",
     "contractEnd": "2028-11-20",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/cryogen.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Lotus Exiles",
+        "years": "2023"
+      },
+      {
+        "team": "Aporia",
+        "years": "2023"
+      },
+      {
+        "team": "Clown Gaming",
+        "years": "2023"
+      },
+      {
+        "team": "Clown Gaming",
+        "years": "2024"
+      },
+      {
+        "team": "FlyQuest NZXT",
+        "years": "2024"
+      },
+      {
+        "team": "Pulse Star",
+        "years": "2024–2025"
+      },
+      {
+        "team": "DarkZero Dragonsteel",
+        "years": "2025"
+      },
+      {
+        "team": "Whole Milk",
+        "years": "2025"
+      },
+      {
+        "team": "Maryville",
+        "years": "2025"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Cryogen",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "apollo",
@@ -5356,12 +6789,113 @@
     "teamId": "fly",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/apollo.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Team Summon",
+        "years": "2013"
+      },
+      {
+        "team": "Team Summon",
+        "years": "2013"
+      },
+      {
+        "team": "Team Coast",
+        "years": "2013–2014"
+      },
+      {
+        "team": "GamesterGear",
+        "years": "2014"
+      },
+      {
+        "team": "Team LoLPro",
+        "years": "2014"
+      },
+      {
+        "team": "Team Impulse",
+        "years": "2014–2015"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Apex Gaming",
+        "years": "2016"
+      },
+      {
+        "team": "Apex Pride",
+        "years": "2016"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2016"
+      },
+      {
+        "team": "Team EnVyUs",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Clutch Gaming",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Echo Fox",
+        "years": "2018–2019"
+      },
+      {
+        "team": "FOX Academy",
+        "years": "2019"
+      },
+      {
+        "team": "IMT Academy",
+        "years": "2020"
+      },
+      {
+        "team": "Immortals",
+        "years": "2020"
+      },
+      {
+        "team": "Not Academy Team",
+        "years": "2021"
+      },
+      {
+        "team": "SolaFide Esports",
+        "years": "2021"
+      },
+      {
+        "team": "Golden Guardians",
+        "years": "2021"
+      },
+      {
+        "team": "CLG",
+        "years": "2021–2022"
+      },
+      {
+        "team": "CLG",
+        "years": "2022–2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023–2024"
+      },
+      {
+        "team": "NRG",
+        "years": "2024"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Apollo_(Apollo_Price)",
     "notes": "Post-Worlds 2026 — fecha estimada (fin de temporada)"
   },
@@ -5373,12 +6907,93 @@
     "teamId": "fly",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2027-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/thinkcard.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "GamesterGear",
+        "years": "2014"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2014"
+      },
+      {
+        "team": "CLG",
+        "years": "2014"
+      },
+      {
+        "team": "Team LoLPro",
+        "years": "2014"
+      },
+      {
+        "team": "CLG",
+        "years": "2014"
+      },
+      {
+        "team": "CLG Black",
+        "years": "2015–2016"
+      },
+      {
+        "team": "CLG",
+        "years": "2015"
+      },
+      {
+        "team": "Enemy",
+        "years": "2016"
+      },
+      {
+        "team": "Cloud9 Challenger",
+        "years": "2016"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Cloud9 Challenger",
+        "years": "2016–2017"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2017"
+      },
+      {
+        "team": "Echo Fox",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Clutch Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2019–2020"
+      },
+      {
+        "team": "GG Academy",
+        "years": "2021"
+      },
+      {
+        "team": "CLG",
+        "years": "2021–2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023–2024"
+      },
+      {
+        "team": "FURIA",
+        "years": "2024–2025"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Thinkcard",
     "notes": "Post-Worlds 2027 — fecha estimada (fin de temporada)"
   },
@@ -5390,14 +7005,91 @@
     "teamId": "lyon",
     "role": "top",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "IN",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/dhokla.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Arsenal",
+        "years": "2016"
+      },
+      {
+        "team": "Flexqueued",
+        "years": "2016"
+      },
+      {
+        "team": "Sin Gaming",
+        "years": "2017"
+      },
+      {
+        "team": "OpTic Academy",
+        "years": "2018"
+      },
+      {
+        "team": "OpTic Gaming",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Immortals",
+        "years": "2019"
+      },
+      {
+        "team": "TSM Academy",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Not Academy Team",
+        "years": "2021"
+      },
+      {
+        "team": "SolaFide Esports",
+        "years": "2021"
+      },
+      {
+        "team": "Wildcard Red",
+        "years": "2021"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2021"
+      },
+      {
+        "team": "CLG Academy",
+        "years": "2021–2022"
+      },
+      {
+        "team": "CLG",
+        "years": "2022–2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023–2024"
+      },
+      {
+        "team": "NTMR",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Near Airport",
+        "years": "2025"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2025"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2025"
+      },
+      {
+        "team": "LYON",
+        "years": "2026–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Dhokla",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "armao",
@@ -5407,14 +7099,119 @@
     "teamId": "lyon",
     "role": "jungle",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2026-08-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/armao.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Cloud9 Tempest",
+        "years": "2014"
+      },
+      {
+        "team": "COGnitive Gaming",
+        "years": "2014"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2015"
+      },
+      {
+        "team": "Also Known As",
+        "years": "2015"
+      },
+      {
+        "team": "Echo Fox",
+        "years": "2016–2017"
+      },
+      {
+        "team": "the monkeys",
+        "years": "2016"
+      },
+      {
+        "team": "Destined For Glory",
+        "years": "2016"
+      },
+      {
+        "team": "Delta Fox",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Arsenal",
+        "years": "2016"
+      },
+      {
+        "team": "TSM Academy",
+        "years": "2017–2018"
+      },
+      {
+        "team": "TSM",
+        "years": "2018–2019"
+      },
+      {
+        "team": "TSM Academy",
+        "years": "2019"
+      },
+      {
+        "team": "TSM Academy",
+        "years": "2019"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Dignitas Academy",
+        "years": "2020"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2021"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2021"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2023"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2023"
+      },
+      {
+        "team": "Immortals",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Citadel Gaming",
+        "years": "2025"
+      },
+      {
+        "team": "UC Irvine",
+        "years": "2025–Present"
+      },
+      {
+        "team": "Team Apex",
+        "years": "2026"
+      },
+      {
+        "team": "Cupid Esports",
+        "years": "2026"
+      },
+      {
+        "team": "LYON",
+        "years": "2026"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Armao",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "inspired",
@@ -5424,14 +7221,71 @@
     "teamId": "lyon",
     "role": "jungle",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "PL",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/inspired.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Raz Dwa Trzy",
+        "years": "2017"
+      },
+      {
+        "team": "Szef+6",
+        "years": "2017"
+      },
+      {
+        "team": "Katastrofa Awionetki",
+        "years": "2017"
+      },
+      {
+        "team": "KIYF eSports Club",
+        "years": "2018"
+      },
+      {
+        "team": "Szata Maga",
+        "years": "2018"
+      },
+      {
+        "team": "Młodzi",
+        "years": "2018"
+      },
+      {
+        "team": "mousesports",
+        "years": "2018"
+      },
+      {
+        "team": "Pompa Team",
+        "years": "2018"
+      },
+      {
+        "team": "Rogue EC",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Rogue",
+        "years": "2019–2021"
+      },
+      {
+        "team": "AGO ROGUE",
+        "years": "2020"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2021–2023"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2023–2025"
+      },
+      {
+        "team": "LYON",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Inspired",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (sep-2026; ficha con team LYON)"
   },
   {
     "id": "saint",
@@ -5441,14 +7295,31 @@
     "teamId": "lyon",
     "role": "mid",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-17",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/saint.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "DWG KIA Challengers",
+        "years": "2021–2022"
+      },
+      {
+        "team": "DWG KIA Academy",
+        "years": "2022"
+      },
+      {
+        "team": "DK Challengers",
+        "years": "2022–2024"
+      },
+      {
+        "team": "LYON",
+        "years": "2024–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Saint_(Kang_Sung-in)",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "berserker",
@@ -5458,14 +7329,35 @@
     "teamId": "lyon",
     "role": "adc",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/berserker.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "T1 Rookies",
+        "years": "2020"
+      },
+      {
+        "team": "T1 Challengers",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2021–2024"
+      },
+      {
+        "team": "DN Freecs",
+        "years": "2024–2025"
+      },
+      {
+        "team": "LYON",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Berserker_(Kim_Min-cheol)",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "isles",
@@ -5475,14 +7367,51 @@
     "teamId": "lyon",
     "role": "support",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "AU",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/isles.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Mammoth Academy",
+        "years": "2019"
+      },
+      {
+        "team": "Avant Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "Legacy Esports",
+        "years": "2020"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Wildcard Gaming",
+        "years": "2023"
+      },
+      {
+        "team": "Peach Cats",
+        "years": "2023"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2023–2025"
+      },
+      {
+        "team": "LYON",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Isles",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "reignover",
@@ -5492,12 +7421,61 @@
     "teamId": "lyon",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/reignover.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Incredible Miracle 2",
+        "years": "2013"
+      },
+      {
+        "team": "Incredible Miracle 1",
+        "years": "2013"
+      },
+      {
+        "team": "Incredible Miracle 2",
+        "years": "2013–2014"
+      },
+      {
+        "team": "Fnatic",
+        "years": "2015"
+      },
+      {
+        "team": "Immortals",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2016–2017"
+      },
+      {
+        "team": "CLG",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2019–2021"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2020"
+      },
+      {
+        "team": "MAD Lions",
+        "years": "2022"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2022–2025"
+      },
+      {
+        "team": "LYON",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Reignover",
     "notes": "Post-Worlds 2026 — fecha estimada (fin de temporada)"
   },
@@ -5509,12 +7487,49 @@
     "teamId": "lyon",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/rigby.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Kongdoo Monster",
+        "years": "2018"
+      },
+      {
+        "team": "Clutch Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "Clutch Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2019"
+      },
+      {
+        "team": "Afreeca Freecs",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2022"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2023"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2025"
+      },
+      {
+        "team": "LYON",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Rigby",
     "notes": "Post-Worlds 2026 — fecha estimada (fin de temporada)"
   },
@@ -5526,14 +7541,67 @@
     "teamId": "sen",
     "role": "top",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "vvs-management",
     "photo": "assets/players/lcs/impact.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Xenics Storm",
+        "years": "2012"
+      },
+      {
+        "team": "Tempest",
+        "years": "2012"
+      },
+      {
+        "team": "Xenics Storm",
+        "years": "2012–2013"
+      },
+      {
+        "team": "SK Telecom T1 K",
+        "years": "2013–2014"
+      },
+      {
+        "team": "SK Telecom T1",
+        "years": "2014"
+      },
+      {
+        "team": "Team Impulse",
+        "years": "2015"
+      },
+      {
+        "team": "NRG Esports",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2017–2020"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2020–2022"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Sentinels",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Impact",
-    "notes": ""
+    "notes": "CONFIRMADO: bio X @Impact 'Contact: impact@vvsmgmt.com · Sentinel Top laner' (sep-2026)"
   },
   {
     "id": "hambak",
@@ -5543,14 +7611,55 @@
     "teamId": "sen",
     "role": "jungle",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-17",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/hambak.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "AF Academy",
+        "years": "2020"
+      },
+      {
+        "team": "Shadow Corp",
+        "years": "2021"
+      },
+      {
+        "team": "Shadow Battlica",
+        "years": "2021"
+      },
+      {
+        "team": "LSB Challengers",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Liiv SANDBOX",
+        "years": "2022"
+      },
+      {
+        "team": "KT Challengers",
+        "years": "2023–2024"
+      },
+      {
+        "team": "OK BRION",
+        "years": "2024–2025"
+      },
+      {
+        "team": "OK BRION Challengers",
+        "years": "2025"
+      },
+      {
+        "team": "OK BRION",
+        "years": "2025"
+      },
+      {
+        "team": "Sentinels",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Hambak",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "darkwings",
@@ -5565,9 +7674,102 @@
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/darkwings.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Stony Brook",
+        "years": "2018–2021"
+      },
+      {
+        "team": "Emissary Esports",
+        "years": "2019"
+      },
+      {
+        "team": "Dawn Blaze",
+        "years": "2019"
+      },
+      {
+        "team": "Bark Bark",
+        "years": "2020"
+      },
+      {
+        "team": "ANEW Blaze",
+        "years": "2021"
+      },
+      {
+        "team": "Zoos Gaming",
+        "years": "2021"
+      },
+      {
+        "team": "AOE Will's Kittens",
+        "years": "2021"
+      },
+      {
+        "team": "AOE Esports",
+        "years": "2021"
+      },
+      {
+        "team": "AOE Dinka LFGF",
+        "years": "2021"
+      },
+      {
+        "team": "AOE Dream",
+        "years": "2021"
+      },
+      {
+        "team": "Dignitas Academy",
+        "years": "2022"
+      },
+      {
+        "team": "100 Next",
+        "years": "2022"
+      },
+      {
+        "team": "AOE Esports",
+        "years": "2022"
+      },
+      {
+        "team": "AOE Gold",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Saint Louis",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Lotus Exiles",
+        "years": "2023"
+      },
+      {
+        "team": "Wildcard Gaming",
+        "years": "2024"
+      },
+      {
+        "team": "Winthrop",
+        "years": "2024"
+      },
+      {
+        "team": "Pulse Gooners",
+        "years": "2024"
+      },
+      {
+        "team": "Tempest Gaming",
+        "years": "2025"
+      },
+      {
+        "team": "Conviction",
+        "years": "2025"
+      },
+      {
+        "team": "Disguised",
+        "years": "2025"
+      },
+      {
+        "team": "Sentinels",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/DARKWINGS",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "rahel",
@@ -5577,14 +7779,51 @@
     "teamId": "sen",
     "role": "adc",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "shadow-corp-shadow-corporation",
     "photo": "assets/players/lcs/rahel.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "DAMWON Academy",
+        "years": "2020"
+      },
+      {
+        "team": "DGA",
+        "years": "2021"
+      },
+      {
+        "team": "DWG KIA Challengers",
+        "years": "2021"
+      },
+      {
+        "team": "DWG KIA",
+        "years": "2021"
+      },
+      {
+        "team": "DK Challengers",
+        "years": "2021–2024"
+      },
+      {
+        "team": "Dplus Kia",
+        "years": "2023"
+      },
+      {
+        "team": "SK Gaming",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Disguised",
+        "years": "2025"
+      },
+      {
+        "team": "Sentinels",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Rahel",
-    "notes": ""
+    "notes": "CONFIRMADO: bio X @Rahel__213 'Agency: @shadowCorpAgent' (sep-2026)"
   },
   {
     "id": "huhi",
@@ -5594,14 +7833,71 @@
     "teamId": "sen",
     "role": "support",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "FR",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/huhi.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Bigfile Miracle",
+        "years": "2014"
+      },
+      {
+        "team": "Quvic E-Sports",
+        "years": "2014"
+      },
+      {
+        "team": "Team Fusion",
+        "years": "2014–2015"
+      },
+      {
+        "team": "CLG",
+        "years": "2015–2018"
+      },
+      {
+        "team": "CLG Black",
+        "years": "2015"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2018–2019"
+      },
+      {
+        "team": "100 Academy",
+        "years": "2019"
+      },
+      {
+        "team": "GG Academy",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Golden Guardians",
+        "years": "2019–2020"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Golden Guardians",
+        "years": "2022–2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Disguised",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Sentinels",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Huhi",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "dayos",
@@ -5611,12 +7907,93 @@
     "teamId": "sen",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "CA",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/dayos.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Toronto",
+        "years": "2017–2019"
+      },
+      {
+        "team": "Zenith Esports",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Mirage Esports",
+        "years": "2019"
+      },
+      {
+        "team": "Mirage Esports",
+        "years": "2019"
+      },
+      {
+        "team": "Mirage Esports",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Winthrop",
+        "years": "2020–2021"
+      },
+      {
+        "team": "First Blood Crusade",
+        "years": "2020"
+      },
+      {
+        "team": "Radiance",
+        "years": "2020"
+      },
+      {
+        "team": "Barrage",
+        "years": "2020"
+      },
+      {
+        "team": "Mirage Esports",
+        "years": "2020"
+      },
+      {
+        "team": "Mirage Esports",
+        "years": "2021"
+      },
+      {
+        "team": "Dignitas Mirage",
+        "years": "2021"
+      },
+      {
+        "team": "Dignitas Academy",
+        "years": "2022"
+      },
+      {
+        "team": "Immortals",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Mirage Alliance Dev.",
+        "years": "2023"
+      },
+      {
+        "team": "Saint Louis",
+        "years": "2023–2026"
+      },
+      {
+        "team": "Wildcard Gaming",
+        "years": "2024"
+      },
+      {
+        "team": "Winthrop",
+        "years": "2024"
+      },
+      {
+        "team": "Luminosity Gaming",
+        "years": "2024–2026"
+      },
+      {
+        "team": "Sentinels",
+        "years": "2026–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Dayos",
     "notes": "Post-Worlds 2026 — fecha estimada (fin de temporada)"
   },
@@ -5628,12 +8005,121 @@
     "teamId": "sen",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2028-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/goldenglue.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Skyline",
+        "years": "2013–2014"
+      },
+      {
+        "team": "compLexity.Red",
+        "years": "2014"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2014"
+      },
+      {
+        "team": "Team Coast",
+        "years": "2014"
+      },
+      {
+        "team": "compLexity Gaming",
+        "years": "2014"
+      },
+      {
+        "team": "compLexity.White",
+        "years": "2014"
+      },
+      {
+        "team": "compLexity Gaming",
+        "years": "2014–2015"
+      },
+      {
+        "team": "Frank Fang Gaming",
+        "years": "2015"
+      },
+      {
+        "team": "Team 8",
+        "years": "2015"
+      },
+      {
+        "team": "Immortals",
+        "years": "2015"
+      },
+      {
+        "team": "Cloud9 Challenger",
+        "years": "2015"
+      },
+      {
+        "team": "Ember",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Echo Fox",
+        "years": "2016"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2016"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2016"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2016–2017"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2017–2019"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Golden Guardians",
+        "years": "2019–2020"
+      },
+      {
+        "team": "GG Academy",
+        "years": "2020"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2020"
+      },
+      {
+        "team": "100 Academy",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Disguised",
+        "years": "2023"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2023–2024"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2024"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Sentinels",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Goldenglue",
     "notes": "Post-Worlds 2028 — fecha estimada (fin de temporada)"
   },
@@ -5645,14 +8131,39 @@
     "teamId": "sr",
     "role": "top",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "AU",
     "contractEnd": "2026-11-17",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/fudge.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Intuition",
+        "years": "2018"
+      },
+      {
+        "team": "Mammoth Academy",
+        "years": "2019"
+      },
+      {
+        "team": "MAMMOTH",
+        "years": "2019"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2020–2024"
+      },
+      {
+        "team": "Shopify Rebellion",
+        "years": "2024–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Fudge",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (sep-2026; ficha con team Shopify Rebellion)"
   },
   {
     "id": "contractz",
@@ -5662,14 +8173,63 @@
     "teamId": "sr",
     "role": "jungle",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2026-11-17",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "prodigy-agency",
     "photo": "assets/players/lcs/contractz.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Noble Truth",
+        "years": "2014"
+      },
+      {
+        "team": "Zenith Esports",
+        "years": "2015"
+      },
+      {
+        "team": "Ember",
+        "years": "2015–2016"
+      },
+      {
+        "team": "Cloud9 Challenger",
+        "years": "2016"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Golden Guardians",
+        "years": "2017–2019"
+      },
+      {
+        "team": "100 Academy",
+        "years": "2019–2020"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2020"
+      },
+      {
+        "team": "EG Academy",
+        "years": "2021"
+      },
+      {
+        "team": "CLG",
+        "years": "2021–2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Shopify Rebellion",
+        "years": "2024–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Contractz",
-    "notes": ""
+    "notes": "Fuente: API oficial de Prodigy (sep-2026; ficha con team Shopify Rebellion)"
   },
   {
     "id": "zinie",
@@ -5679,14 +8239,27 @@
     "teamId": "sr",
     "role": "mid",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-17",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/zinie.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "KT Academy",
+        "years": "2022–2024"
+      },
+      {
+        "team": "KT Challengers",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Shopify Rebellion",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Zinie",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "bvoy",
@@ -5696,14 +8269,59 @@
     "teamId": "sr",
     "role": "adc",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-17",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/bvoy.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "WaY",
+        "years": "2016"
+      },
+      {
+        "team": "Royal Club",
+        "years": "2016"
+      },
+      {
+        "team": "Young Miracles",
+        "years": "2017–2018"
+      },
+      {
+        "team": "JD Gaming",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Furious Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "Misfits Gaming",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Flamengo Esports",
+        "years": "2020"
+      },
+      {
+        "team": "Estral Esports",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Estral Esports",
+        "years": "2021–2022"
+      },
+      {
+        "team": "paiN Gaming",
+        "years": "2022–2023"
+      },
+      {
+        "team": "Shopify Rebellion",
+        "years": "2023–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Bvoy",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "zeyzal",
@@ -5713,14 +8331,87 @@
     "teamId": "sr",
     "role": "support",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2026-11-14",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/zeyzal.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Noble Truth",
+        "years": "2014"
+      },
+      {
+        "team": "Serpentis eSports",
+        "years": "2015"
+      },
+      {
+        "team": "Zenith Esports",
+        "years": "2016"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2016"
+      },
+      {
+        "team": "eUnited",
+        "years": "2016–2017"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Evil Geniuses",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Not Academy Team",
+        "years": "2021"
+      },
+      {
+        "team": "SolaFide Esports",
+        "years": "2021"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2022"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2022–2023"
+      },
+      {
+        "team": "C9 Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "Disguised",
+        "years": "2023"
+      },
+      {
+        "team": "Shopify Rebellion",
+        "years": "2023–2024"
+      },
+      {
+        "team": "Luminosity Gaming",
+        "years": "2024–2026"
+      },
+      {
+        "team": "Shopify Rebellion",
+        "years": "2025"
+      },
+      {
+        "team": "Shopify Rebellion",
+        "years": "2026–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Zeyzal",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "damonte",
@@ -5730,12 +8421,133 @@
     "teamId": "sr",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/damonte.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Infinity Esports",
+        "years": "2015"
+      },
+      {
+        "team": "Cerberus eSports",
+        "years": "2015"
+      },
+      {
+        "team": "Noble Esports",
+        "years": "2015"
+      },
+      {
+        "team": "affNity",
+        "years": "2015"
+      },
+      {
+        "team": "Serpentis eSports",
+        "years": "2015"
+      },
+      {
+        "team": "Enemy",
+        "years": "2016"
+      },
+      {
+        "team": "Echo Fox",
+        "years": "2016–2017"
+      },
+      {
+        "team": "the monkeys",
+        "years": "2016"
+      },
+      {
+        "team": "Destined For Glory",
+        "years": "2016"
+      },
+      {
+        "team": "Nova eSports",
+        "years": "2016"
+      },
+      {
+        "team": "Delta Fox",
+        "years": "2016–2017"
+      },
+      {
+        "team": "Echo Fox",
+        "years": "2017"
+      },
+      {
+        "team": "FOX Academy",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Echo Fox",
+        "years": "2018"
+      },
+      {
+        "team": "Clutch Gaming",
+        "years": "2018–2019"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2019"
+      },
+      {
+        "team": "Dignitas Academy",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Golden Guardians",
+        "years": "2020"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2020–2021"
+      },
+      {
+        "team": "100 Academy",
+        "years": "2021"
+      },
+      {
+        "team": "CLG",
+        "years": "2021"
+      },
+      {
+        "team": "CLG",
+        "years": "2021–2023"
+      },
+      {
+        "team": "CLG Academy",
+        "years": "2022–2023"
+      },
+      {
+        "team": "CLG Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023"
+      },
+      {
+        "team": "NRG Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "NRG",
+        "years": "2023"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2023–2025"
+      },
+      {
+        "team": "FLY Challengers",
+        "years": "2024"
+      },
+      {
+        "team": "Shopify Rebellion",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Damonte",
     "notes": "Post-Worlds 2026 — fecha estimada (fin de temporada)"
   },
@@ -5747,12 +8559,65 @@
     "teamId": "sr",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/reven.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Masters 3",
+        "years": "2016"
+      },
+      {
+        "team": "Tempo Storm",
+        "years": "2017"
+      },
+      {
+        "team": "Flamengo Esports",
+        "years": "2018"
+      },
+      {
+        "team": "Flamengo Esports",
+        "years": "2018–2019"
+      },
+      {
+        "team": "XYZ",
+        "years": "2019"
+      },
+      {
+        "team": "Flamengo Esports",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Flamengo Esports",
+        "years": "2020"
+      },
+      {
+        "team": "Estral Esports",
+        "years": "2021"
+      },
+      {
+        "team": "Cloud9",
+        "years": "2022"
+      },
+      {
+        "team": "C9 Academy",
+        "years": "2022–2023"
+      },
+      {
+        "team": "C9 Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "TSM",
+        "years": "2023"
+      },
+      {
+        "team": "Shopify Rebellion",
+        "years": "2023–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Reven_(Seong_Sang-hyeon)",
     "notes": "Post-Worlds 2026 — fecha estimada (fin de temporada)"
   },
@@ -5764,14 +8629,51 @@
     "teamId": "tl",
     "role": "top",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2028-11-20",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/morgan.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Joy Dream",
+        "years": "2019"
+      },
+      {
+        "team": "JD Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "JD Gaming",
+        "years": "2019"
+      },
+      {
+        "team": "Team WE",
+        "years": "2019–2020"
+      },
+      {
+        "team": "Hanwha Life",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Fredit BRION",
+        "years": "2021–2022"
+      },
+      {
+        "team": "OK BRION",
+        "years": "2022–2023"
+      },
+      {
+        "team": "OK BRION",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Morgan",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "josedeodo",
@@ -5781,14 +8683,59 @@
     "teamId": "tl",
     "role": "jungle",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "AR",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/josedeodo.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "PL Gaming",
+        "years": "2017"
+      },
+      {
+        "team": "Furious Gaming Red",
+        "years": "2017"
+      },
+      {
+        "team": "Furious Gaming",
+        "years": "2017–2019"
+      },
+      {
+        "team": "Rainbow7",
+        "years": "2019–2020"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2020–2021"
+      },
+      {
+        "team": "FlyQuest Academy",
+        "years": "2021"
+      },
+      {
+        "team": "FlyQuest",
+        "years": "2021–2022"
+      },
+      {
+        "team": "Estral Esports",
+        "years": "2022–2024"
+      },
+      {
+        "team": "Isurus Estral",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Isurus",
+        "years": "2025"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Josedeodo",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "quid",
@@ -5798,14 +8745,39 @@
     "teamId": "tl",
     "role": "mid",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2027-11-15",
     "contractStatus": "active",
-    "agentId": null,
+    "agentId": "shadow-corp-shadow-corporation",
     "photo": "assets/players/lcs/quid.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Gen.G Academy",
+        "years": "2020–2021"
+      },
+      {
+        "team": "Gen.G Global Academy",
+        "years": "2021–2023"
+      },
+      {
+        "team": "Gen.G",
+        "years": "2022"
+      },
+      {
+        "team": "Gen.G",
+        "years": "2022"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2023–2025"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Quid",
-    "notes": ""
+    "notes": "CONFIRMADO: bio X @quidlolkr 'Agency: @Shadowcorpagent' (sep-2026)"
   },
   {
     "id": "yeon",
@@ -5815,14 +8787,35 @@
     "teamId": "tl",
     "role": "adc",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "US",
     "contractEnd": "2026-11-17",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/yeon.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Orgless",
+        "years": "2020"
+      },
+      {
+        "team": "100 Next",
+        "years": "2020"
+      },
+      {
+        "team": "CLG",
+        "years": "2020"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2020–2022"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2022–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Yeon_(Sean_Sung)",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "corejj",
@@ -5832,14 +8825,47 @@
     "teamId": "tl",
     "role": "support",
     "isCoach": false,
-    "nationality": null,
+    "nationality": "KR",
     "contractEnd": "2026-11-17",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/corejj.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Beggars",
+        "years": "2013"
+      },
+      {
+        "team": "Bigfile Miracle",
+        "years": "2014"
+      },
+      {
+        "team": "Quvic E-Sports",
+        "years": "2014"
+      },
+      {
+        "team": "Dignitas",
+        "years": "2014–2015"
+      },
+      {
+        "team": "Samsung Galaxy",
+        "years": "2015–2017"
+      },
+      {
+        "team": "KSV eSports",
+        "years": "2017–2018"
+      },
+      {
+        "team": "Gen.G",
+        "years": "2018"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2018–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/CoreJJ",
-    "notes": ""
+    "notes": "Sin agencia pública (investigación 5-sep-2026: bio X, API Prodigy, webs de agencias, prensa)."
   },
   {
     "id": "spawn",
@@ -5849,12 +8875,29 @@
     "teamId": "tl",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "AU",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/spawn.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "ORDER",
+        "years": "2017–2020"
+      },
+      {
+        "team": "TL Academy",
+        "years": "2020–2023"
+      },
+      {
+        "team": "TL Challengers",
+        "years": "2023"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2023–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Spawn_(Jake_Tiberi)",
     "notes": "Post-Worlds 2026 — fecha estimada (fin de temporada)"
   },
@@ -5866,12 +8909,57 @@
     "teamId": "tl",
     "role": "coach",
     "isCoach": true,
-    "nationality": null,
+    "nationality": "AU",
     "contractEnd": "2026-11-16",
     "contractStatus": "active",
     "agentId": null,
     "photo": "assets/players/lcs/spookz.png",
-    "teamHistory": [],
+    "teamHistory": [
+      {
+        "team": "Mindfreak eSports",
+        "years": "2012"
+      },
+      {
+        "team": "Team Exile5 Eclipse",
+        "years": "2013"
+      },
+      {
+        "team": "Team Immunity",
+        "years": "2013–2014"
+      },
+      {
+        "team": "Chiefs Esports Club",
+        "years": "2014–2016"
+      },
+      {
+        "team": "Chiefs Esports Club",
+        "years": "2017"
+      },
+      {
+        "team": "ORDER",
+        "years": "2017–2019"
+      },
+      {
+        "team": "Golden Guardians",
+        "years": "2019–2023"
+      },
+      {
+        "team": "GG Academy",
+        "years": "2019–2021"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2023–2024"
+      },
+      {
+        "team": "100 Thieves",
+        "years": "2024–2025"
+      },
+      {
+        "team": "Team Liquid",
+        "years": "2025–Present"
+      }
+    ],
     "sourceUrl": "https://lol.fandom.com/wiki/Spookz",
     "notes": "Post-Worlds 2026 — fecha estimada (fin de temporada)"
   }

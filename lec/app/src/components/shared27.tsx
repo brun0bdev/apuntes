@@ -14,6 +14,8 @@ export type Scope = 'players' | 'staff';
 export type DropTargetId = string | null;
 
 export interface TeamColumnProps {
+  /** Roles jugables que faltan en la proyección (solo scope players): se pintan en rojo. */
+  missingRoles?: import('../types/player').Role[];
   scope: Scope;
   team: Team;
   members: Player[];
@@ -33,6 +35,7 @@ export interface TeamColumnProps {
 /** Columna de equipo del árbol (jugadores o staff, según scope). */
 export function TeamColumn({
   scope,
+  missingRoles,
   team,
   members,
   dropTarget,
@@ -73,7 +76,20 @@ export function TeamColumn({
           <span className="min-w-0 flex-1 truncate text-body-sm font-bold uppercase text-ink">
             {team.name}
           </span>
-          <span className="text-caption font-semibold text-muted">{members.length}</span>
+          {scope === 'players' && missingRoles && missingRoles.length > 0 && (
+            <span
+              className="flex shrink-0 items-center gap-1"
+              aria-label={t('r27.missingRolesAria')}
+              title={t('r27.missingRolesAria')}
+            >
+              {missingRoles.map((role) => (
+                <RoleIcon key={role} role={role} size={14} className="role-icon--missing" />
+              ))}
+            </span>
+          )}
+          {scope === 'players' && missingRoles && missingRoles.length === 0 && (
+            <span className="shrink-0 text-caption font-semibold text-success" title={t('r27.rosterComplete')}>✓</span>
+          )}
         </span>
         <span className="block h-1" style={{ background: team.color }} aria-hidden="true" />
       </button>

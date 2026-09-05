@@ -13,10 +13,13 @@ Diseño propio (no clon de Sheepesports), modo oscuro + claro, responsive.
 
 **M1–M3 implementados y verificados** (build y tsc en verde). Stack real: React 19 + Vite 8 +
 Tailwind CSS 4.3 + TypeScript 5.9, fuente Inter self-hosted (@fontsource). Queda pendiente:
-rellenar agentes/agencias/nacionalidades en `data/overrides.json` (todo a null), `teamHistory`
-de los jugadores (M3, manual desde GCD), despliegue y M4 (movimientos/rumores).
-Dato 2026 del Sheet: 85 personas LEC (59 jugadores + 26 coaches), 55 contratos terminan en
-2026, 25 en 2027, 5 en 2028.
+rellenar agentes/agencias LCS en `data/overrides.json` (a null; nacionalidades LCS ya se
+extraen de Leaguepedia vía `fetch-nationalities`, fila "Country of Birth" — darkwings sin
+dato en la wiki), despliegue y M4 (movimientos/rumores).
+Datos 2026 del Sheet: LEC 82 personas (56 jugadores + 26 coaches) y LCS 60 personas
+(44 jugadores + 16 coaches) — 142 en total, todas con contrato "active". Exportar PNG
+disponible en Inicio/Tabla/2027/Staff (marco tricolor + pie con URL, `data-no-export`
+excluye controles, nombre con sello de tiempo).
 
 ## Documentación — leer antes de tocar nada
 
@@ -31,7 +34,13 @@ Dato 2026 del Sheet: 85 personas LEC (59 jugadores + 26 coaches), 55 contratos t
 
 - **Fuente primaria = Google Sheet**, descargable como CSV sin auth por pestaña:
   `https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?gid=148326031&single=true&output=csv`
-  (gid `148326031` = pestaña EMEA; el `pubhtml` no es parseable).
+  (gid `148326031` = pestaña EMEA; gid `0` = pestaña **Americas** con LCS + NACL/CBLOL/CD;
+  otros gids: LPL `594163931`, LCK `905624073`, LCP `1177719586`; el `pubhtml` no es parseable
+  y el `htmlview` exige login).
+- **Selector de liga LEC/LCS** (`?league=`, por defecto LEC) en Inicio/Tabla/2027/Staff 2027;
+  Mercado y Tracking son vistas LEC-only. Sin colisiones de slug entre ligas (ids planos);
+  fotos/logos en subcarpetas `players/lec|lcs/` y `teams/lec|lcs/` (logos LCS = PNG de Fandom,
+  LEC = WebP del repo). `fetch-ratings` solo LEC: la estandarización z asume población única.
 - **El GCD de Leaguepedia NO es fuente independiente**: es un espejo wikitext del mismo Sheet
   (backup automático cada 1–3 días). Solo sirve para verificación/histórico vía
   `https://lol.fandom.com/rest.php/v1/page/Archive%3AGlobal_Contract_Database%2FEMEA%2FCurrent`.

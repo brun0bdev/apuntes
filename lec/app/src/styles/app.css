@@ -143,6 +143,15 @@
   }
 
   /*
+   * Rol que falta en la proyección 2027 (cabecera de columna de equipo):
+   * los SVG son blancos, así que se tiñen de rojo firma con un filtro
+   * compuesto (el color no afecta a los <img>).
+   */
+  .role-icon--missing {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(96%) saturate(4941%) hue-rotate(2deg) brightness(87%) contrast(107%);
+  }
+
+  /*
    * Logos de equipo monocromáticos: GX y KC son negros (se pierden en dark →
    * invertir a blanco) y SK es blanco (se pierde en light → invertir a negro).
    */

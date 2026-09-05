@@ -69,6 +69,20 @@ export function Roster2027({ league, onLeagueChange }: Roster2027Props) {
 
   const { map: byTeam, pool } = useMemo(() => groupTree(players27), [groupTree, players27]);
 
+  // Roles jugables que faltan por equipo en la proyección (coach no cuenta:
+  // su tramo es Staff 2027). FlyQuest hoy: quedan adc y mid en rojo.
+  const missingRolesByTeam = useMemo(() => {
+    const map = new Map<string, Role[]>();
+    for (const team of leagueTeams) {
+      const present = new Set((byTeam.get(team.id) ?? []).map((p) => p.role));
+      map.set(
+        team.id,
+        (['top', 'jungle', 'mid', 'adc', 'support'] as const).filter((r) => !present.has(r)),
+      );
+    }
+    return map;
+  }, [leagueTeams, byTeam]);
+
   const filteredPool = useMemo(() => {
     const query = norm(poolQuery.trim());
     return pool.filter(
@@ -175,6 +189,7 @@ export function Roster2027({ league, onLeagueChange }: Roster2027Props) {
           <TeamColumn
             key={team.id}
             scope="players"
+            missingRoles={missingRolesByTeam.get(team.id) ?? []}
             team={team}
             members={byTeam.get(team.id) ?? []}
             dropTarget={dropTarget}

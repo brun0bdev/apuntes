@@ -63,45 +63,21 @@ const TEAM_LOGOS = [
 ];
 
 /**
- * Logos LCS: NO están en el repo del usuario → se bajan de Leaguepedia
- * ("<Equipo>logo std.png"). URLs estáticas de static.wikia verificadas (200)
- * a mano; con format=png el CDN sirve PNG y se guardan como .png (build-data
- * apunta a assets/teams/<id>.png para estos equipos). LYON usa fichero
- * desambiguado y en FlyQuest NO vale el de FlyQuest RED (equipo femenino).
+ * Logos LCS: NO están en el repo del usuario → se bajan de Leaguepedia.
+ * El "logo std" (60×25) es demasiado pequeño frente a los WebP ~48px del repo
+ * LEC, así que se usa la variante "logo_square" pedida a 240px
+ * (scale-to-width-down/240 + format=png). El square de LYON usa su fichero
+ * desambiguado; en FlyQuest NO vale el de FlyQuest RED (equipo femenino).
  */
 const TEAM_LOGOS_FANDOM = [
-  {
-    id: "c9",
-    url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/0/09/Cloud9logo_std.png",
-  },
-  {
-    id: "dig",
-    url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/fb/Dignitaslogo_std.png",
-  },
-  {
-    id: "dsg",
-    url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/d/d1/Disguisedlogo_std.png",
-  },
-  {
-    id: "fly",
-    url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/7d/FlyQuestlogo_std.png",
-  },
-  {
-    id: "lyon",
-    url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/78/LYON_%282024_American_Team%29logo_std.png",
-  },
-  {
-    id: "sen",
-    url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a5/Sentinelslogo_std.png",
-  },
-  {
-    id: "sr",
-    url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/17/Shopify_Rebellionlogo_std.png",
-  },
-  {
-    id: "tl",
-    url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/b/bf/Team_Liquidlogo_std.png",
-  },
+  { id: "c9", url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/8/88/Cloud9logo_square.png/revision/latest/scale-to-width-down/240?format=png" },
+  { id: "dig", url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f3/Dignitaslogo_square.png/revision/latest/scale-to-width-down/240?format=png" },
+  { id: "dsg", url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/73/Disguisedlogo_square.png/revision/latest/scale-to-width-down/240?format=png" },
+  { id: "fly", url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e5/FlyQuestlogo_square.png/revision/latest/scale-to-width-down/240?format=png" },
+  { id: "lyon", url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/5/54/LYON_%282024_American_Team%29logo_square.png/revision/latest/scale-to-width-down/240?format=png" },
+  { id: "sen", url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/5/59/Sentinelslogo_square.png/revision/latest/scale-to-width-down/240?format=png" },
+  { id: "sr", url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e9/Shopify_Rebellionlogo_square.png/revision/latest/scale-to-width-down/240?format=png" },
+  { id: "tl", url: "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f4/Team_Liquidlogo_square.png/revision/latest/scale-to-width-down/240?format=png" },
 ];
 
 const manifest = { generatedAt: null, assets: {} };
@@ -194,8 +170,8 @@ async function doLogos() {
     }
   }
 
-  // Logos LCS desde Fandom (PNG; format=png fuerza el formato en el CDN).
-  // Van a teams/lcs/ para separarlos de los LEC (teams/lec/).
+  // Logos LCS desde Fandom: variante "logo_square" a 240px (misma geometría
+  // cuadrada que los WebP del repo LEC).
   for (const { id, url } of TEAM_LOGOS_FANDOM) {
     const dest = path.join(ASSETS_DIR, "teams", "lcs", `${id}.png`);
     if (skipReason(dest)) {
@@ -206,8 +182,9 @@ async function doLogos() {
     try {
       await pause();
       const bytes = await downloadTo(url, dest);
-      manifestSet(`teams/lcs/${id}.png`, { source: "fandom:lolesports_gamepedia_en (logo std)", url, bytes });
-      console.log(`teams/lcs/${id}.png: OK desde Fandom (${bytes} bytes)`);
+      if (bytes < 2000) throw new Error(`imagen sospechosamente pequeña (${bytes} B)`);
+      manifestSet(`teams/lcs/${id}.png`, { source: "fandom:logo_square (240px)", url, bytes });
+      console.log(`teams/lcs/${id}.png: OK (${bytes} bytes)`);
       results.ok.push(id);
     } catch (err) {
       results.failed.push(id);

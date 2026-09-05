@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  * fetch-ratings.mjs — Descarga la nota media de la temporada 2026 de cada
- * jugador LEC desde esportstransfer.com (ficha `/lol/player/<id>`; el slug es
- * el id de players.json) y escribe data/ratings.json.
+ * jugador LEC y LCS desde esportstransfer.com (ficha `/lol/player/<id>`; el
+ * slug es el id de players.json) y escribe data/ratings.json.
  *
  * Uso: node scripts/fetch-ratings.mjs [--force]
  * Reanudable: salta los ids con fetchedAt de menos de 24 h salvo --force.
@@ -35,13 +35,18 @@
  *
  * Tercera pasada (estandarización z): la nota cruda de esportstransfer ocupa
  * solo ~5.2-6.5 de la escala 0-10, así que `adj` se re-escala a la escala
- * completa para que la nota final diferencie de verdad:
- *   muAdj = media de los `adj` (todos los jugadores con rating no null)
+ * completa para que la nota final diferencie de verdad. SE HACE POR LIGA
+ * (p.league: 'lec' | 'lcs') — 5.00 = media DE SU LIGA, nunca mezclada:
+ *   muAdj = media de los `adj` (jugadores de la liga con rating no null)
  *   sdAdj = desviación típica POBLACIONAL de esos mismos `adj`
  *   score = clamp(round2(5 + Z_SPREAD * ((adj - muAdj) / sdAdj)), 0, 10)
  *           con Z_SPREAD = 1.6 → por construcción 5.00 = media de la liga y
  *           ±1.6σ llega a ~0/10. Si sdAdj < 0.05 o hay menos de 2 jugadores
  *           con adj → score = 5 para todos (evita la división por cero).
+ *
+ * Todas las pasadas (mu del shrinkage, muAdj y sdAdj) son por liga: así los
+ * `adj` y scores de LEC coinciden con los de la era solo-LEC y las entradas
+ * reanudadas de la cache (<24 h) siguen siendo válidas.
  */
 import { writeFile, readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
@@ -59,6 +64,13 @@ const BROWSER_UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 
 const BASE_URL = "https://esportstransfer.com/es/lol/player/";
+
+// RFT.GG — segunda fuente de nota: "AVG RFT 1.0" del evento lec-2026 (0-100,
+// se divide entre 10). El slug NO coincide con players.json: se resuelve con
+// el mapa nombre→slug de la página del evento (/event/lec-2026) comparando
+// nombres normalizados; los jugadores sin página en RFT quedan sin rftRating.
+const RFT_EVENT_URL = "https://rft.gg/event/lec-2026";
+const RFT_PLAYER_URL = "https://rft.gg/player/";
 
 /** Caducidad de la cache: las notas casi no cambian en un día. */
 const MAX_AGE_MS = 24 * 60 * 60 * 1000;
@@ -138,15 +150,16 @@ const Z_SPREAD = 1.6; // estandarización z: ±1.6σ ≈ 0/10 en la escala final
 
 /**
  * Segunda + tercera pasada: recalcula adj y score para TODAS las entradas del
- * dataset (también las reanudadas de la cache). La estandarización es de toda
- * la liga, así que se hace una sola vez al terminar la descarga.
+ * dataset (también las reanudadas de la cache). TODAS las estadísticas son POR
+ * LIGA (mu del shrinkage, muAdj y sdAdj): la estandarización z nunca mezcla
+ * poblaciones, y con los mismos jugadores de LEC los valores coinciden con la
+ * era solo-LEC.
  *
- *   1) adj = nota ajustada (shrinkage + WR), con mu = media de rating entre
- *      jugadores con games >= 10. Sin games/winRate → adj = rating.
- *   2) score = estandarización z de adj sobre toda la liga (ver cabecera).
+ *   1) adj = nota ajustada (shrinkage + WR), con mu = media de rating de SU
+ *      liga entre jugadores con games >= 10. Sin games/winRate → adj = rating.
+ *   2) score = estandarización z de adj dentro de su liga (ver cabecera).
  */
-function applyScores(output) {
-  const entries = Object.values(output.players);
+function scoreLeague(lg, entries) {
   const withSample = entries.filter((e) => e.rating != null && e.games != null && e.games >= 10);
   const mu =
     withSample.length > 0
@@ -171,7 +184,7 @@ function applyScores(output) {
     }
   }
 
-  // Pasada 2: estandarización z sobre la escala completa (5.00 = media de liga).
+  // Pasada 2: estandarización z dentro de la liga (5.00 = media de la liga).
   const withAdj = entries.filter((e) => e.adj != null);
   const n = withAdj.length;
   const muAdj = n > 0 ? withAdj.reduce((sum, e) => sum + e.adj, 0) / n : null;
@@ -186,7 +199,65 @@ function applyScores(output) {
       : Math.round(Math.min(10, Math.max(0, 5 + Z_SPREAD * ((e.adj - muAdj) / sdAdj))) * 100) / 100;
   }
 
-  return { mu, sampleSize: withSample.length, muAdj, sdAdj, degenerate };
+  return { league: lg, n, mu, sampleSize: withSample.length, muAdj, sdAdj, degenerate };
+}
+
+/**
+ * Mapa nombre→slug de RFT desde la página del evento. Nombre normalizado
+ * (sin acentos, espacios ni puntuación) contra el sufijo del slug y el
+ * "truncate font-semibold">Nombre" del HTML; fallback al propio sufijo.
+ */
+async function fetchRftNameMap() {
+  const res = await fetch(RFT_EVENT_URL, { headers: { "User-Agent": BROWSER_UA } });
+  if (!res.ok) throw new Error(`HTTP ${res.status} en ${RFT_EVENT_URL}`);
+  const html = await res.text();
+  const pairs = [
+    ...html.matchAll(
+      /href="\/player\/([a-z0-9-]+)"[^>]*>.{0,1200}?class="truncate font-semibold">([^<]+)<\/span>/g,
+    ),
+  ];
+  // Todos los slugs referenciados en la página (no solo los 10 de la tabla
+  // que además muestran el nombre junto al enlace).
+  const bySlug = new Map();
+  for (const m of html.matchAll(/href="\/player\/([a-z0-9-]+)"/g)) {
+    if (!bySlug.has(m[1])) bySlug.set(m[1], m[1].split("-").slice(1).join(" "));
+  }
+  for (const [, slug, name] of pairs) {
+    if (!bySlug.has(slug)) bySlug.set(slug, name.trim());
+  }
+  const norm = (v) =>
+    v.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
+  const map = new Map();
+  // Todos los slugs del evento (el sufijo "123-nombre" es el nombre del
+  // jugador); los que además tienen nombre visible en la tabla ganan.
+  for (const slug of bySlug.keys()) {
+    const suffix = slug.split("-").slice(1).join("");
+    map.set(norm(suffix), slug);
+  }
+  for (const [slug, name] of bySlug.entries()) {
+    map.set(norm(name), slug);
+  }
+  return { bySlug, map, norm };
+}
+
+/** Extrae el "AVG RFT 1.0" (0-100) de la página de un jugador. */
+function extractRftRating(html) {
+  const big = html.match(
+    /text-3xl font-extrabold[^>]*>([0-9]{1,3})(?:<span[^>]*>\s*\.?(?:<!-- -->)?\s*([0-9]{1,2}))?<\/span>/,
+  );
+  if (!big) return null;
+  const value = Number.parseFloat(`${big[1]}.${big[2] ?? 0}`);
+  return value >= 0 && value <= 100 ? value : null;
+}
+
+function applyScores(output) {
+  const byLeague = new Map();
+  for (const e of Object.values(output.players)) {
+    const lg = e.league ?? "lec";
+    if (!byLeague.has(lg)) byLeague.set(lg, []);
+    byLeague.get(lg).push(e);
+  }
+  return [...byLeague.keys()].map((lg) => scoreLeague(lg, byLeague.get(lg)));
 }
 
 // ---------------------------------------------------------------------------
@@ -197,30 +268,90 @@ async function main() {
     process.exit(1);
   }
   const players = JSON.parse(await readFile(PLAYERS_PATH, "utf8"));
-  // Solo LEC: la estandarización z (score = 5 + 1.6·z) asume una única población
-  // ("5.00 = media de la liga"); mezclar LCS contaminaría ambas distribuciones.
-  const targets = players.filter((p) => p.isCoach === false && (p.league ?? "lec") === "lec");
-  console.log(`Jugadores (sin coaches, solo LEC): ${targets.length}`);
+  // Ambas ligas: la estandarización z (score = 5 + 1.6·z) se calcula por liga
+  // en applyScores() (5.00 = media DE SU liga), nunca sobre la mezcla.
+  const leagueOf = (p) => p.league ?? "lec";
+  const targets = players.filter((p) => p.isCoach === false);
+  console.log(`Jugadores (sin coaches): ${targets.length}`);
+  for (const lg of [...new Set(targets.map(leagueOf))]) {
+    console.log(`  - ${lg}: ${targets.filter((p) => leagueOf(p) === lg).length}`);
+  }
 
   // Salida previa reanudable: respetamos fetchedAt < 24 h salvo --force.
   const output = { updatedAt: null, players: {} };
   if (existsSync(OUTPUT_PATH)) {
     try {
       const prev = JSON.parse(await readFile(OUTPUT_PATH, "utf8"));
-      output.players = prev.players ?? {};
+      // Poda de huérfanas: entradas cuyo slug ya no existe en players.json.
+      const targetIds = new Set(targets.map((p) => p.id));
+      for (const [id, e] of Object.entries(prev.players ?? {})) {
+        if (!targetIds.has(id)) {
+          console.log(`poda: ${id} ya no está en players.json — entrada eliminada`);
+          continue;
+        }
+        output.players[id] = e;
+      }
     } catch {
       console.warn("AVISO: ratings.json previo ilegible; se regenera.");
     }
   }
+
+  // ---------- Pasada RFT.GG (AVG RFT 1.0, 0-100 → /10) ----------
+  // Reanudable por separado: solo pide jugadores sin rftRating (o --force).
+  let rftFetched = 0;
+  let rftNameMap = null;
+  for (const p of targets) {
+    const prevEntry = output.players[p.id];
+    if (!FORCE && prevEntry?.rftRating != null) continue;
+    try {
+      if (!rftNameMap) rftNameMap = await fetchRftNameMap();
+      const normName = rftNameMap.norm(p.name);
+      const slug = rftNameMap.map.get(normName);
+      if (!slug) {
+        if (prevEntry) prevEntry.rftRating = null;
+        continue;
+      }
+      await pause();
+      const res = await fetch(`${RFT_PLAYER_URL}${slug}`, {
+        headers: { "User-Agent": BROWSER_UA },
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const rftRating = extractRftRating(await res.text());
+      rftFetched++;
+      if (prevEntry) {
+        prevEntry.rftSlug = slug;
+        prevEntry.rftRating = rftRating;
+      } else {
+        output.players[p.id] = {
+          league: leagueOf(p),
+          rating: null,
+          rftSlug: slug,
+          rftRating,
+          fetchedAt: new Date().toISOString(),
+          slug: p.id,
+        };
+      }
+      console.log(`rft/${p.id}: ${rftRating != null ? rftRating.toFixed(1) : "sin nota"} (${slug})`);
+    } catch (err) {
+      console.warn(`rft/${p.id}: FALLO — ${err.message}`);
+      if (prevEntry) prevEntry.rftRating = null;
+    }
+    await pause();
+  }
+  console.log(`[RFT] ${rftFetched} notas descargadas`);
 
   let ok = 0;
   let nulls = 0;
   let skipped = 0;
   const failDetail = [];
 
+
+
   for (const p of targets) {
+    const lg = leagueOf(p);
     const prevEntry = output.players[p.id];
     if (!FORCE && prevEntry?.fetchedAt && Date.now() - Date.parse(prevEntry.fetchedAt) < MAX_AGE_MS) {
+      prevEntry.league = prevEntry.league ?? lg; // auditoría: liga en toda entrada
       if (prevEntry.rating != null) ok++;
       else nulls++;
       skipped++;
@@ -233,10 +364,10 @@ async function main() {
         redirect: "follow",
       });
       if (res.status === 404) {
-        output.players[p.id] = { rating: null, fetchedAt: new Date().toISOString(), slug: p.id, reason: "404 en esportstransfer.com" };
+        output.players[p.id] = { league: lg, rating: null, fetchedAt: new Date().toISOString(), slug: p.id, reason: "404 en esportstransfer.com" };
         nulls++;
-        failDetail.push(`${p.id}: 404`);
-        console.warn(`ratings/${p.id}: sin dato — 404`);
+        failDetail.push(`${lg}/${p.id}: 404`);
+        console.warn(`ratings/${lg}/${p.id}: sin dato — 404`);
         await pause();
         continue;
       }
@@ -252,8 +383,13 @@ async function main() {
       const html = await res.text();
       const result = extractPlayerStats(html);
       if (result.rating != null) {
+        // Nota combinada: media de esportstransfer y RFT1.0/10 si ambas existen.
+        const rft = output.players[p.id]?.rftRating;
+        const combined =
+          rft != null ? (result.rating + rft / 10) / 2 : result.rating;
         output.players[p.id] = {
-          rating: result.rating,
+          league: lg,
+          rating: Math.round(combined * 100) / 100,
           games: result.games,
           winRate: result.winRate,
           score: null, // se calcula en applyScores() tras la pasada completa
@@ -263,22 +399,22 @@ async function main() {
         };
         ok++;
         console.log(
-          `ratings/${p.id}: ${result.rating.toFixed(2)} · ${result.games ?? "?"} part. · ${
+          `ratings/${lg}/${p.id}: ${result.rating.toFixed(2)} · ${result.games ?? "?"} part. · ${
             result.winRate != null ? `${Math.round(result.winRate * 100)}% V` : "sin WR"
           }`,
         );
       } else {
-        output.players[p.id] = { rating: null, fetchedAt: new Date().toISOString(), slug: p.id, reason: result.reason };
+        output.players[p.id] = { league: lg, rating: null, fetchedAt: new Date().toISOString(), slug: p.id, reason: result.reason };
         nulls++;
-        failDetail.push(`${p.id}: ${result.reason}`);
-        console.warn(`ratings/${p.id}: sin dato — ${result.reason}`);
+        failDetail.push(`${lg}/${p.id}: ${result.reason}`);
+        console.warn(`ratings/${lg}/${p.id}: sin dato — ${result.reason}`);
       }
     } catch (err) {
       // Fallo de red/parseo: se registra con reason y se sigue (reanudable).
-      output.players[p.id] = { rating: null, fetchedAt: new Date().toISOString(), slug: p.id, reason: err.message };
+      output.players[p.id] = { league: lg, rating: null, fetchedAt: new Date().toISOString(), slug: p.id, reason: err.message };
       nulls++;
-      failDetail.push(`${p.id}: ${err.message}`);
-      console.warn(`ratings/${p.id}: FALLO — ${err.message}`);
+      failDetail.push(`${lg}/${p.id}: ${err.message}`);
+      console.warn(`ratings/${lg}/${p.id}: FALLO — ${err.message}`);
     }
     await pause();
   }
@@ -286,28 +422,30 @@ async function main() {
   output.updatedAt = new Date().toISOString();
 
   // Segunda + tercera pasada: adj y score sobre el dataset completo (incluye
-  // entradas reanudadas). La estandarización z es de toda la liga.
-  const { mu, sampleSize, muAdj, sdAdj, degenerate } = applyScores(output);
-  const finalScores = Object.values(output.players)
-    .map((e) => e.score)
-    .filter((s) => s != null);
-  const fMin = finalScores.length > 0 ? Math.min(...finalScores) : null;
-  const fMax = finalScores.length > 0 ? Math.max(...finalScores) : null;
-  const fMean =
-    finalScores.length > 0 ? finalScores.reduce((sum, s) => sum + s, 0) / finalScores.length : null;
-  const fSd =
-    finalScores.length > 0
-      ? Math.sqrt(finalScores.reduce((sum, s) => sum + (s - fMean) ** 2, 0) / finalScores.length)
-      : null;
-  console.log(
-    `\nScore ajustado (adj): mu (media con games >= 10) = ${mu != null ? mu.toFixed(3) : "n/d"} sobre ${sampleSize} jugadores · PRIOR_GAMES=${PRIOR_GAMES} · WINRATE_WEIGHT=${WINRATE_WEIGHT}`,
-  );
-  console.log(
-    `Estandarización z: muAdj=${muAdj != null ? muAdj.toFixed(3) : "n/d"} · sdAdj=${sdAdj != null ? sdAdj.toFixed(3) : "n/d"} · Z_SPREAD=${Z_SPREAD}${degenerate ? " · DEGENERADO: score = 5 para todos" : ""}`,
-  );
-  console.log(
-    `Score final: min=${fMin != null ? fMin.toFixed(2) : "n/d"} · max=${fMax != null ? fMax.toFixed(2) : "n/d"} · media=${fMean != null ? fMean.toFixed(3) : "n/d"} · stdev=${fSd != null ? fSd.toFixed(3) : "n/d"} (${finalScores.length} jugadores)`,
-  );
+  // entradas reanudadas). La estandarización z es POR LIGA.
+  const leagueStats = applyScores(output);
+  for (const st of leagueStats) {
+    console.log(
+      `\n[${st.league}] Score ajustado (adj): mu (media con games >= 10) = ${st.mu != null ? st.mu.toFixed(3) : "n/d"} sobre ${st.sampleSize} jugadores · PRIOR_GAMES=${PRIOR_GAMES} · WINRATE_WEIGHT=${WINRATE_WEIGHT}`,
+    );
+    console.log(
+      `[${st.league}] Estandarización z: muAdj=${st.muAdj != null ? st.muAdj.toFixed(3) : "n/d"} · sdAdj=${st.sdAdj != null ? st.sdAdj.toFixed(3) : "n/d"} · Z_SPREAD=${Z_SPREAD} · ${st.n} jugadores con adj${st.degenerate ? " · DEGENERADO: score = 5 para todos" : ""}`,
+    );
+    const lgScores = Object.values(output.players)
+      .filter((e) => (e.league ?? "lec") === st.league && e.score != null)
+      .map((e) => e.score);
+    const fMin = lgScores.length > 0 ? Math.min(...lgScores) : null;
+    const fMax = lgScores.length > 0 ? Math.max(...lgScores) : null;
+    const fMean =
+      lgScores.length > 0 ? lgScores.reduce((sum, s) => sum + s, 0) / lgScores.length : null;
+    const fSd =
+      lgScores.length > 0
+        ? Math.sqrt(lgScores.reduce((sum, s) => sum + (s - fMean) ** 2, 0) / lgScores.length)
+        : null;
+    console.log(
+      `[${st.league}] Score final: min=${fMin != null ? fMin.toFixed(2) : "n/d"} · max=${fMax != null ? fMax.toFixed(2) : "n/d"} · media=${fMean != null ? fMean.toFixed(3) : "n/d"} · stdev=${fSd != null ? fSd.toFixed(3) : "n/d"} (${lgScores.length} jugadores)`,
+    );
+  }
 
   await writeFile(OUTPUT_PATH, JSON.stringify(output, null, 2) + "\n");
   console.log(

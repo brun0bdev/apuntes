@@ -163,6 +163,8 @@ export const es = {
   'r27.removeImportTitle': 'Eliminar importado',
   'r27.dragHint': 'Arrastra para mover, o haz clic para seleccionar',
   'r27.dragHintPool': 'Arrastra a un equipo para ficharlo, o haz clic para seleccionar',
+  'r27.missingRolesAria': 'Roles que faltan en el roster 2027',
+  'r27.rosterComplete': 'Roster 2027 completo',
 
   // Mercado (Feature D: gráficos de contratos y nacionalidades)
   'market.title': 'Mercado',

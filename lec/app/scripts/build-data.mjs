@@ -43,16 +43,18 @@ const CANONICAL_TEAMS = [
 
 // LCS (pestaña Americas; quadCode del Sheet como abreviatura, Dignitas sin
 // quadCode en el Sheet → DIG). Ojo: "Disguised " llega con espacio final (trim).
-// logoExt "png": estos logos bajan de Fandom (ver downloads-assets), no del repo.
+// logoExt "png": estos logos bajan de Fandom (ver download-assets), no del repo.
+// Colores = acento de tarjeta (legible en ambos temas); mono medido por
+// luminancia (dsg 24, sr 0 → negros, invertir en dark; el resto coloridos).
 const CANONICAL_TEAMS_LCS = [
-  { id: "c9", sheetName: "Cloud9", abbreviation: "C9", color: "#0f1928", logoExt: "png" },
-  { id: "dig", sheetName: "Dignitas", abbreviation: "DIG", color: "#004b87", logoExt: "png" },
-  { id: "dsg", sheetName: "Disguised", abbreviation: "DSG", color: "#27b5b0", logoExt: "png" },
-  { id: "fly", sheetName: "FlyQuest", abbreviation: "FLY", color: "#0a1e34", logoExt: "png" },
+  { id: "c9", sheetName: "Cloud9", abbreviation: "C9", color: "#00aeef", logoExt: "png" },
+  { id: "dig", sheetName: "Dignitas", abbreviation: "DIG", color: "#2f7bd9", logoExt: "png" },
+  { id: "dsg", sheetName: "Disguised", abbreviation: "DSG", color: "#e5e7eb", monoLogo: "dark", logoExt: "png" },
+  { id: "fly", sheetName: "FlyQuest", abbreviation: "FLY", color: "#0a6e3c", logoExt: "png" },
   { id: "lyon", sheetName: "LYON", abbreviation: "LYON", color: "#1d4ed8", logoExt: "png" },
   { id: "sen", sheetName: "Sentinels", abbreviation: "SEN", color: "#ff4655", logoExt: "png" },
-  { id: "sr", sheetName: "Shopify Rebellion", abbreviation: "SR", color: "#041e2e", logoExt: "png" },
-  { id: "tl", sheetName: "Team Liquid", abbreviation: "TL", color: "#0a1428", logoExt: "png" },
+  { id: "sr", sheetName: "Shopify Rebellion", abbreviation: "SR", color: "#00b04a", monoLogo: "dark", logoExt: "png" },
+  { id: "tl", sheetName: "Team Liquid", abbreviation: "TL", color: "#2e6bd6", logoExt: "png" },
 ];
 
 // Resolución por defecto de fechas textuales (seeden en overrides.json si no existe).
@@ -235,6 +237,17 @@ async function main() {
     warnings.push("No existe data/teamhistory.json (o no es válido): teamHistory quedará vacío. Ejecuta: node scripts/fetch-teamhistory.mjs");
   }
 
+  // Nacionalidades automáticas (opcional): data/nationalities.json lo genera
+  // scripts/fetch-nationalities.mjs (infobox de Leaguepedia). Manda la
+  // nacionalidad manual de overrides.json si existe.
+  let nationalityById = {};
+  try {
+    const natFile = JSON.parse(await readFile(path.join(DATA_DIR, "nationalities.json"), "utf8"));
+    nationalityById = natFile.players ?? {};
+  } catch {
+    warnings.push("No existe data/nationalities.json (o no es válido): faltará la nacionalidad automática. Ejecuta: node scripts/fetch-nationalities.mjs");
+  }
+
   // ------------------------------------------------------------------
   // Procesado de filas (las dos pestañas: EMEA → league "lec", Americas → "lcs")
   // ------------------------------------------------------------------
@@ -387,7 +400,7 @@ async function main() {
         teamId: canonical.id,
         role,
         isCoach,
-        nationality: ov.nationality ?? null,
+        nationality: ov.nationality ?? nationalityById[id] ?? null,
         contractEnd,
         contractStatus,
         // El filtro de agente usa este id: prioriza el agente individual y si

@@ -1,5 +1,48 @@
 [
   {
+    "id": "prodigy-agency",
+    "name": "Prodigy Agency",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "vladi",
+      "brokenblade",
+      "skewmond",
+      "jojopyun",
+      "rhilech",
+      "jopa",
+      "boukada",
+      "apa",
+      "tactical",
+      "exyu",
+      "palafox",
+      "ignar",
+      "srtty",
+      "sajed",
+      "gryffinn",
+      "inspired",
+      "fudge",
+      "contractz"
+    ]
+  },
+  {
+    "id": "shadow-corp-shadow-corporation",
+    "name": "Shadow Corp (Shadow Corporation)",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "soboro",
+      "lospa",
+      "kyeahoo",
+      "samd",
+      "fiesta",
+      "thanatos",
+      "quad",
+      "rahel",
+      "quid"
+    ]
+  },
+  {
     "id": "tailors",
     "name": "Tailors",
     "type": "agency",
@@ -17,21 +60,6 @@
     ]
   },
   {
-    "id": "prodigy-agency",
-    "name": "Prodigy Agency",
-    "type": "agency",
-    "website": null,
-    "playerIds": [
-      "vladi",
-      "brokenblade",
-      "skewmond",
-      "jojopyun",
-      "rhilech",
-      "jopa",
-      "boukada"
-    ]
-  },
-  {
     "id": "achieveminds",
     "name": "Achieveminds",
     "type": "agency",
@@ -41,7 +69,8 @@
       "oscarinin",
       "flakked",
       "nuc",
-      "trymbi"
+      "trymbi",
+      "vulcan"
     ]
   },
   {
@@ -55,19 +84,6 @@
       "elyoya",
       "supa",
       "alvaro"
-    ]
-  },
-  {
-    "id": "shadow-corp-shadow-corporation",
-    "name": "Shadow Corp (Shadow Corporation)",
-    "type": "agency",
-    "website": null,
-    "playerIds": [
-      "soboro",
-      "lospa",
-      "kyeahoo",
-      "samd",
-      "fiesta"
     ]
   },
   {
@@ -172,6 +188,15 @@
     "website": null,
     "playerIds": [
       "labrov"
+    ]
+  },
+  {
+    "id": "vvs-management",
+    "name": "VVS Management",
+    "type": "agency",
+    "website": null,
+    "playerIds": [
+      "impact"
     ]
   }
 ]

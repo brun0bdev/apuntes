@@ -106,7 +106,7 @@
     "abbreviation": "C9",
     "league": "lcs",
     "logo": "assets/teams/lcs/c9.png",
-    "color": "#0f1928",
+    "color": "#00aeef",
     "mono": null
   },
   {
@@ -116,7 +116,7 @@
     "abbreviation": "DIG",
     "league": "lcs",
     "logo": "assets/teams/lcs/dig.png",
-    "color": "#004b87",
+    "color": "#2f7bd9",
     "mono": null
   },
   {
@@ -126,8 +126,8 @@
     "abbreviation": "DSG",
     "league": "lcs",
     "logo": "assets/teams/lcs/dsg.png",
-    "color": "#27b5b0",
-    "mono": null
+    "color": "#e5e7eb",
+    "mono": "dark"
   },
   {
     "id": "fly",
@@ -136,7 +136,7 @@
     "abbreviation": "FLY",
     "league": "lcs",
     "logo": "assets/teams/lcs/fly.png",
-    "color": "#0a1e34",
+    "color": "#0a6e3c",
     "mono": null
   },
   {
@@ -166,8 +166,8 @@
     "abbreviation": "SR",
     "league": "lcs",
     "logo": "assets/teams/lcs/sr.png",
-    "color": "#041e2e",
-    "mono": null
+    "color": "#00b04a",
+    "mono": "dark"
   },
   {
     "id": "tl",
@@ -176,7 +176,7 @@
     "abbreviation": "TL",
     "league": "lcs",
     "logo": "assets/teams/lcs/tl.png",
-    "color": "#0a1428",
+    "color": "#2e6bd6",
     "mono": null
   }
 ]

@@ -162,6 +162,8 @@ export const en: Record<keyof Dict, string> = {
   'r27.removeImportTitle': 'Remove import',
   'r27.dragHint': 'Drag to move, or click to select',
   'r27.dragHintPool': 'Drag to a team to sign them, or click to select',
+  'r27.missingRolesAria': 'Roles missing from the 2027 roster',
+  'r27.rosterComplete': '2027 roster complete',
 
   // Market (Feature D: contract and nationality charts)
   'market.title': 'Market',

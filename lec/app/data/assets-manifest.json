@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T10:48:42.522Z",
+  "generatedAt": "2026-09-05T11:26:13.021Z",
   "assets": {
     "players/lec/soboro.png": {
       "source": "fandom:Soboro (infoboxPlayer)",
@@ -708,52 +708,388 @@
       "bytes": 41579
     },
     "teams/lcs/c9.png": {
-      "source": "github:webBrunoB (lecVersus/img/logos/c9.png)",
-      "url": "https://raw.githubusercontent.com/ibrunob/webBrunoB/main/lecVersus/img/logos/c9.png",
-      "fetchedAt": "2026-09-05T00:00:00.000Z",
-      "bytes": null
+      "source": "fandom:logo_square (240px)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/8/88/Cloud9logo_square.png/revision/latest/scale-to-width-down/240?format=png",
+      "bytes": 14383,
+      "fetchedAt": "2026-09-05T11:25:36.978Z"
     },
     "teams/lcs/dig.png": {
-      "source": "github:webBrunoB (lecVersus/img/logos/dig.png)",
-      "url": "https://raw.githubusercontent.com/ibrunob/webBrunoB/main/lecVersus/img/logos/dig.png",
-      "fetchedAt": "2026-09-05T00:00:00.000Z",
-      "bytes": null
+      "source": "fandom:logo_square (240px)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f3/Dignitaslogo_square.png/revision/latest/scale-to-width-down/240?format=png",
+      "bytes": 23631,
+      "fetchedAt": "2026-09-05T11:25:40.504Z"
     },
     "teams/lcs/dsg.png": {
-      "source": "github:webBrunoB (lecVersus/img/logos/dsg.png)",
-      "url": "https://raw.githubusercontent.com/ibrunob/webBrunoB/main/lecVersus/img/logos/dsg.png",
-      "fetchedAt": "2026-09-05T00:00:00.000Z",
-      "bytes": null
+      "source": "fandom:logo_square (240px)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/73/Disguisedlogo_square.png/revision/latest/scale-to-width-down/240?format=png",
+      "bytes": 12105,
+      "fetchedAt": "2026-09-05T11:25:43.780Z"
     },
     "teams/lcs/fly.png": {
-      "source": "github:webBrunoB (lecVersus/img/logos/fly.png)",
-      "url": "https://raw.githubusercontent.com/ibrunob/webBrunoB/main/lecVersus/img/logos/fly.png",
-      "fetchedAt": "2026-09-05T00:00:00.000Z",
-      "bytes": null
+      "source": "fandom:logo_square (240px)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e5/FlyQuestlogo_square.png/revision/latest/scale-to-width-down/240?format=png",
+      "bytes": 18007,
+      "fetchedAt": "2026-09-05T11:25:47.671Z"
     },
     "teams/lcs/lyon.png": {
-      "source": "github:webBrunoB (lecVersus/img/logos/lyon.png)",
-      "url": "https://raw.githubusercontent.com/ibrunob/webBrunoB/main/lecVersus/img/logos/lyon.png",
-      "fetchedAt": "2026-09-05T00:00:00.000Z",
-      "bytes": null
+      "source": "fandom:logo_square (240px)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/5/54/LYON_%282024_American_Team%29logo_square.png/revision/latest/scale-to-width-down/240?format=png",
+      "bytes": 38611,
+      "fetchedAt": "2026-09-05T11:25:51.243Z"
     },
     "teams/lcs/sen.png": {
-      "source": "github:webBrunoB (lecVersus/img/logos/sen.png)",
-      "url": "https://raw.githubusercontent.com/ibrunob/webBrunoB/main/lecVersus/img/logos/sen.png",
-      "fetchedAt": "2026-09-05T00:00:00.000Z",
-      "bytes": null
+      "source": "fandom:logo_square (240px)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/5/59/Sentinelslogo_square.png/revision/latest/scale-to-width-down/240?format=png",
+      "bytes": 8654,
+      "fetchedAt": "2026-09-05T11:26:05.541Z"
     },
     "teams/lcs/sr.png": {
-      "source": "github:webBrunoB (lecVersus/img/logos/sr.png)",
-      "url": "https://raw.githubusercontent.com/ibrunob/webBrunoB/main/lecVersus/img/logos/sr.png",
-      "fetchedAt": "2026-09-05T00:00:00.000Z",
-      "bytes": null
+      "source": "fandom:logo_square (240px)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e9/Shopify_Rebellionlogo_square.png/revision/latest/scale-to-width-down/240?format=png",
+      "bytes": 4322,
+      "fetchedAt": "2026-09-05T11:26:09.250Z"
     },
     "teams/lcs/tl.png": {
-      "source": "github:webBrunoB (lecVersus/img/logos/tl.png)",
-      "url": "https://raw.githubusercontent.com/ibrunob/webBrunoB/main/lecVersus/img/logos/tl.png",
-      "fetchedAt": "2026-09-05T00:00:00.000Z",
-      "bytes": null
+      "source": "fandom:logo_square (240px)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f4/Team_Liquidlogo_square.png/revision/latest/scale-to-width-down/240?format=png",
+      "bytes": 28427,
+      "fetchedAt": "2026-09-05T11:26:13.021Z"
+    },
+    "players/lcs/thanatos.png": {
+      "source": "fandom:Thanatos_(Park_Seung-gyu) (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/65/C9_Thanatos_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041902",
+      "fetchedAt": "2026-09-05T10:59:15.270Z",
+      "bytes": 45763
+    },
+    "players/lcs/apa.png": {
+      "source": "fandom:APA_(Eain_Stearns) (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/37/C9_APA_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041904",
+      "fetchedAt": "2026-09-05T10:59:21.953Z",
+      "bytes": 42949
+    },
+    "players/lcs/loki.png": {
+      "source": "fandom:Loki_(Lee_Sang-min) (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/98/C9_Loki_2025_Split_1.png/revision/latest/scale-to-width-down/220?cb=20250121144457",
+      "fetchedAt": "2026-09-05T10:59:32.087Z",
+      "bytes": 61255
+    },
+    "players/lcs/vulcan.png": {
+      "source": "fandom:Vulcan_(Philippe_Laflamme) (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a1/C9_Vulcan_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041905",
+      "fetchedAt": "2026-09-05T10:59:37.694Z",
+      "bytes": 39370
+    },
+    "players/lcs/iwdominate.png": {
+      "source": "fandom:IWDominate (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e2/C9_Dom.png/revision/latest/scale-to-width-down/220?cb=20201215013401",
+      "fetchedAt": "2026-09-05T10:59:43.345Z",
+      "bytes": 68404
+    },
+    "players/lcs/yamatocannon.png": {
+      "source": "fandom:YamatoCannon (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/ad/LR_YamatoCannon_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260117101252",
+      "fetchedAt": "2026-09-05T10:59:49.960Z",
+      "bytes": 54577
+    },
+    "players/lcs/denathor.png": {
+      "source": "fandom:Denathor (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e3/WU_Denathor_2023.PNG/revision/latest/scale-to-width-down/220?cb=20231207010045",
+      "fetchedAt": "2026-09-05T10:59:57.201Z",
+      "bytes": 109428
+    },
+    "players/lcs/dardoch.png": {
+      "source": "fandom:Dardoch (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/2/2a/IMT.A_Dardoch_2022_Split_2.png/revision/latest/scale-to-width-down/220?cb=20221202172300",
+      "fetchedAt": "2026-09-05T11:00:03.240Z",
+      "bytes": 78133
+    },
+    "players/lcs/exyu.png": {
+      "source": "fandom:eXyu (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/4e/DIG_eXyu_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041836",
+      "fetchedAt": "2026-09-05T11:00:09.862Z",
+      "bytes": 42350
+    },
+    "players/lcs/palafox.png": {
+      "source": "fandom:Palafox (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/c8/DIG_Palafox_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041839",
+      "fetchedAt": "2026-09-05T11:00:16.474Z",
+      "bytes": 55369
+    },
+    "players/lcs/fbi.png": {
+      "source": "fandom:FBI (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e7/100T_FBI_2025_Split_3.png/revision/latest/scale-to-width-down/220?cb=20250810164514",
+      "fetchedAt": "2026-09-05T11:00:22.346Z",
+      "bytes": 34848
+    },
+    "players/lcs/ignar.png": {
+      "source": "fandom:Ignar (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/9c/GX_IgNar_2024_Split_1.png/revision/latest/scale-to-width-down/220?cb=20240112204902",
+      "fetchedAt": "2026-09-05T11:00:28.831Z",
+      "bytes": 45037
+    },
+    "players/lcs/emi.png": {
+      "source": "fandom:Emi (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/b/bb/GX_Emi_2025_Split_3.png/revision/latest/scale-to-width-down/220?cb=20251122195050",
+      "fetchedAt": "2026-09-05T11:00:34.972Z",
+      "bytes": 63589
+    },
+    "players/lcs/swiffer.png": {
+      "source": "fandom:Swiffer (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/2/29/SK_Swiffer_2023_Split_3.png/revision/latest/scale-to-width-down/220?cb=20231123140109",
+      "fetchedAt": "2026-09-05T11:00:41.848Z",
+      "bytes": 52076
+    },
+    "players/lcs/srtty.png": {
+      "source": "fandom:Srtty (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/91/DIG_Srtty_2025_Split_1.png/revision/latest/scale-to-width-down/220?cb=20250221144311",
+      "fetchedAt": "2026-09-05T11:00:48.131Z",
+      "bytes": 39381
+    },
+    "players/lcs/kryra.png": {
+      "source": "fandom:KryRa (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/1d/Unknown_Infobox_Image_-_Player.png/revision/latest/scale-to-width-down/220?cb=20210522010719",
+      "fetchedAt": "2026-09-05T11:00:55.637Z",
+      "bytes": 24745
+    },
+    "players/lcs/callme.png": {
+      "source": "fandom:Callme (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/cb/DSG_Callme_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260131091817",
+      "fetchedAt": "2026-09-05T11:01:02.811Z",
+      "bytes": 44930
+    },
+    "players/lcs/sajed.png": {
+      "source": "fandom:Sajed (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/2/2e/DSG_sajed_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041852",
+      "fetchedAt": "2026-09-05T11:01:09.522Z",
+      "bytes": 48121
+    },
+    "players/lcs/lyonz.png": {
+      "source": "fandom:Lyonz (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/90/DSG_Lyonz_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041854",
+      "fetchedAt": "2026-09-05T11:01:15.875Z",
+      "bytes": 48644
+    },
+    "players/lcs/ido.png": {
+      "source": "fandom:ido (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/8/89/UCI_ido_2018.png/revision/latest/scale-to-width-down/220?cb=20210115201853",
+      "fetchedAt": "2026-09-05T11:01:22.674Z",
+      "bytes": 43058
+    },
+    "players/lcs/gakgos.png": {
+      "source": "fandom:Gakgos (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f9/FLY_Gakgos_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041052",
+      "fetchedAt": "2026-09-05T11:01:29.136Z",
+      "bytes": 47739
+    },
+    "players/lcs/gryffinn.png": {
+      "source": "fandom:Gryffinn (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a4/FLY_Gryffinn_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041056",
+      "fetchedAt": "2026-09-05T11:01:36.099Z",
+      "bytes": 56138
+    },
+    "players/lcs/quad.png": {
+      "source": "fandom:Quad (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/b/bb/FLY_Quad_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041100",
+      "fetchedAt": "2026-09-05T11:01:42.193Z",
+      "bytes": 48721
+    },
+    "players/lcs/massu.png": {
+      "source": "fandom:Massu (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/b/bc/FLY_Massu_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041058",
+      "fetchedAt": "2026-09-05T11:01:48.170Z",
+      "bytes": 48366
+    },
+    "players/lcs/cryogen.png": {
+      "source": "fandom:Cryogen (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/9e/FLY_Cryogen_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041054",
+      "fetchedAt": "2026-09-05T11:01:54.728Z",
+      "bytes": 48644
+    },
+    "players/lcs/apollo.png": {
+      "source": "fandom:Apollo_(Apollo_Price) (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/90/CLG_Apollo_2023_Split_1.png/revision/latest/scale-to-width-down/220?cb=20230121032030",
+      "fetchedAt": "2026-09-05T11:02:05.382Z",
+      "bytes": 60968
+    },
+    "players/lcs/thinkcard.png": {
+      "source": "fandom:Thinkcard (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/69/CLG_Thinkcard_2022_Split_1.png/revision/latest/scale-to-width-down/220?cb=20220206220804",
+      "fetchedAt": "2026-09-05T11:02:11.539Z",
+      "bytes": 42707
+    },
+    "players/lcs/dhokla.png": {
+      "source": "fandom:Dhokla (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/47/LYON_Dhokla_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041832",
+      "fetchedAt": "2026-09-05T11:02:18.012Z",
+      "bytes": 52127
+    },
+    "players/lcs/armao.png": {
+      "source": "fandom:Armao (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/c9/EG_Armao_2023_Split_2.png/revision/latest/scale-to-width-down/220?cb=20230624095509",
+      "fetchedAt": "2026-09-05T11:02:23.742Z",
+      "bytes": 46597
+    },
+    "players/lcs/inspired.png": {
+      "source": "fandom:Inspired (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/fa/LYON_Inspired_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041829",
+      "fetchedAt": "2026-09-05T11:02:30.123Z",
+      "bytes": 50483
+    },
+    "players/lcs/saint.png": {
+      "source": "fandom:Saint_(Kang_Sung-in) (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/7b/LYON_Saint_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041831",
+      "fetchedAt": "2026-09-05T11:02:38.269Z",
+      "bytes": 45056
+    },
+    "players/lcs/berserker.png": {
+      "source": "fandom:Berserker_(Kim_Min-cheol) (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/2/2d/LYON_Berserker_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260131091823",
+      "fetchedAt": "2026-09-05T11:02:49.377Z",
+      "bytes": 39495
+    },
+    "players/lcs/isles.png": {
+      "source": "fandom:Isles (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/ce/LYON_Isles_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041834",
+      "fetchedAt": "2026-09-05T11:02:56.861Z",
+      "bytes": 48331
+    },
+    "players/lcs/reignover.png": {
+      "source": "fandom:Reignover (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/b/b6/C9_Reignover_2021_Split_1.png/revision/latest/scale-to-width-down/220?cb=20210330203825",
+      "fetchedAt": "2026-09-05T11:03:02.334Z",
+      "bytes": 59848
+    },
+    "players/lcs/rigby.png": {
+      "source": "fandom:Rigby (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/d/d0/AF_Rigby_2021_Split_1.png/revision/latest/scale-to-width-down/220?cb=20210207000732",
+      "fetchedAt": "2026-09-05T11:03:10.317Z",
+      "bytes": 39210
+    },
+    "players/lcs/impact.png": {
+      "source": "fandom:Impact (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/38/SEN_Impact_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041849",
+      "fetchedAt": "2026-09-05T11:03:17.157Z",
+      "bytes": 50588
+    },
+    "players/lcs/hambak.png": {
+      "source": "fandom:Hambak (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/36/SEN_HamBak_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260131091812",
+      "fetchedAt": "2026-09-05T11:03:23.683Z",
+      "bytes": 45263
+    },
+    "players/lcs/darkwings.png": {
+      "source": "fandom:DARKWINGS (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/68/SEN_DARKWINGS_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041851",
+      "fetchedAt": "2026-09-05T11:03:30.368Z",
+      "bytes": 45043
+    },
+    "players/lcs/rahel.png": {
+      "source": "fandom:Rahel (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/cb/SEN_Rahel_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260131091807",
+      "fetchedAt": "2026-09-05T11:03:36.954Z",
+      "bytes": 56873
+    },
+    "players/lcs/huhi.png": {
+      "source": "fandom:Huhi (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/61/SEN_huhi_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041847",
+      "fetchedAt": "2026-09-05T11:03:43.501Z",
+      "bytes": 46400
+    },
+    "players/lcs/dayos.png": {
+      "source": "fandom:Dayos (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/3c/IMT_Dayos_2023_Split_1.png/revision/latest/scale-to-width-down/220?cb=20230125213734",
+      "fetchedAt": "2026-09-05T11:03:50.311Z",
+      "bytes": 62024
+    },
+    "players/lcs/goldenglue.png": {
+      "source": "fandom:Goldenglue (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a7/100_Goldenglue_2024_Split_2.png/revision/latest/scale-to-width-down/220?cb=20240923220508",
+      "fetchedAt": "2026-09-05T11:03:56.278Z",
+      "bytes": 59288
+    },
+    "players/lcs/fudge.png": {
+      "source": "fandom:Fudge (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/8/8b/SR_Fudge_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041846",
+      "fetchedAt": "2026-09-05T11:04:01.992Z",
+      "bytes": 48620
+    },
+    "players/lcs/contractz.png": {
+      "source": "fandom:Contractz (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/c8/SR_Contractz_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041841",
+      "fetchedAt": "2026-09-05T11:04:09.065Z",
+      "bytes": 45008
+    },
+    "players/lcs/zinie.png": {
+      "source": "fandom:Zinie (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/fa/SR_Zinie_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260131091810",
+      "fetchedAt": "2026-09-05T11:04:15.355Z",
+      "bytes": 47792
+    },
+    "players/lcs/bvoy.png": {
+      "source": "fandom:Bvoy (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/2/27/SR_Bvoy_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041844",
+      "fetchedAt": "2026-09-05T11:04:22.226Z",
+      "bytes": 45710
+    },
+    "players/lcs/zeyzal.png": {
+      "source": "fandom:Zeyzal (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a9/SR_Zeyzal_2026_Split_3.png/revision/latest/scale-to-width-down/220?cb=20260819235054",
+      "fetchedAt": "2026-09-05T11:04:28.236Z",
+      "bytes": 71997
+    },
+    "players/lcs/damonte.png": {
+      "source": "fandom:Damonte (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/8/87/SR_Damonte_2026_Split_2.png/revision/latest/scale-to-width-down/220?cb=20260802045417",
+      "fetchedAt": "2026-09-05T11:04:34.875Z",
+      "bytes": 47149
+    },
+    "players/lcs/reven.png": {
+      "source": "fandom:Reven_(Seong_Sang-hyeon) (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/0/00/SR_Reven_2026_Split_2.png/revision/latest/scale-to-width-down/220?cb=20260802045328",
+      "fetchedAt": "2026-09-05T11:04:40.935Z",
+      "bytes": 58130
+    },
+    "players/lcs/morgan.png": {
+      "source": "fandom:Morgan (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/3a/TL_Morgan_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260131091809",
+      "fetchedAt": "2026-09-05T11:04:46.863Z",
+      "bytes": 47296
+    },
+    "players/lcs/josedeodo.png": {
+      "source": "fandom:Josedeodo (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/fb/TL_Josedeodo_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041857",
+      "fetchedAt": "2026-09-05T11:04:53.724Z",
+      "bytes": 48138
+    },
+    "players/lcs/quid.png": {
+      "source": "fandom:Quid (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/c9/TL_Quid_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041855",
+      "fetchedAt": "2026-09-05T11:04:59.664Z",
+      "bytes": 45940
+    },
+    "players/lcs/yeon.png": {
+      "source": "fandom:Yeon_(Sean_Sung) (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/ef/TL_Yeon_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041900",
+      "fetchedAt": "2026-09-05T11:05:05.231Z",
+      "bytes": 51156
+    },
+    "players/lcs/corejj.png": {
+      "source": "fandom:CoreJJ (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/8/80/TL_CoreJJ_2026_Split_1.png/revision/latest/scale-to-width-down/220?cb=20260124041859",
+      "fetchedAt": "2026-09-05T11:05:11.064Z",
+      "bytes": 42961
+    },
+    "players/lcs/spawn.png": {
+      "source": "fandom:Spawn_(Jake_Tiberi) (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/76/Spawn_new.jpg/revision/latest/scale-to-width-down/220?cb=20190510135208",
+      "fetchedAt": "2026-09-05T11:05:17.347Z",
+      "bytes": 78224
+    },
+    "players/lcs/spookz.png": {
+      "source": "fandom:Spookz (infoboxPlayer)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/6e/ORD_Spookz_2019_Split_1.png/revision/latest/scale-to-width-down/220?cb=20190212070245",
+      "fetchedAt": "2026-09-05T11:05:24.344Z",
+      "bytes": 39440
     }
   }
 }
