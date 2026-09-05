@@ -122,7 +122,9 @@ export function PlayerCard({ player, highlighted, dimmed, onSelect }: PlayerCard
             <span className="min-w-0 truncate text-body-sm font-bold uppercase text-ink">{player.name}</span>
             <RoleIcon role={player.role} size={14} className="self-center shrink-0" />
           </span>
-          <span className="flex items-center gap-1.5">
+          {/* Altura fija: el chip romboidal del badge es más alto que la
+              fecha y engordaría solo esas tarjetas (desalineación 81/77px). */}
+          <span className="flex h-[17px] items-center gap-1.5">
             {date ? (
               <span
                 className={`whitespace-nowrap text-caption font-semibold ${expiring ? 'text-m-red' : 'text-muted'}`}
