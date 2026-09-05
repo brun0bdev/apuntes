@@ -37,10 +37,10 @@ excluye controles, nombre con sello de tiempo).
   (gid `148326031` = pestaña EMEA; gid `0` = pestaña **Americas** con LCS + NACL/CBLOL/CD;
   otros gids: LPL `594163931`, LCK `905624073`, LCP `1177719586`; el `pubhtml` no es parseable
   y el `htmlview` exige login).
-- **Selector de liga LEC/LCS** (`?league=`, por defecto LEC) en Inicio/Tabla/2027/Staff 2027;
-  Mercado y Tracking son vistas LEC-only. Sin colisiones de slug entre ligas (ids planos);
+- **Selector de liga LEC/LCS** (`?league=`, por defecto LEC) en Inicio/Tabla/2027/Staff 2027/Mercado.
+  Sin colisiones de slug entre ligas (ids planos);
   fotos/logos en subcarpetas `players/lec|lcs/` y `teams/lec|lcs/` (logos LCS = PNG de Fandom,
-  LEC = WebP del repo). `fetch-ratings` solo LEC: la estandarización z asume población única.
+  LEC = WebP del repo). `fetch-ratings` cubre LEC y LCS; la estandarización z es por liga.
 - **El GCD de Leaguepedia NO es fuente independiente**: es un espejo wikitext del mismo Sheet
   (backup automático cada 1–3 días). Solo sirve para verificación/histórico vía
   `https://lol.fandom.com/rest.php/v1/page/Archive%3AGlobal_Contract_Database%2FEMEA%2FCurrent`.

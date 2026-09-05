@@ -1,12 +1,14 @@
 import { useMemo } from 'react';
+import type { LeagueKind } from '../hooks/useUrlState';
 import { agents, players, teams } from '../data/players';
 import { useI18n } from '../i18n';
 import { assetUrl } from '../lib/assets';
 import { flagImg } from '../lib/format';
+import { LeagueSelect } from './LeagueSelect';
 
 /**
- * Vista "Mercado": bloques de solo lectura sobre los JUGADORES LEC
- * (isCoach === false, los coaches van aparte en la vista Staff 2027):
+ * Vista "Mercado": bloques de solo lectura sobre los JUGADORES de la liga
+ * activa (isCoach === false, los coaches van aparte en la vista Staff 2027):
  *  a) barras apiladas por equipo según el año de fin de contrato,
  *  b) nº de contratos que terminan en 2026 (agentes libres para 2027),
  *  c) nacionalidades del roster como tarjetas con bandera,
@@ -102,12 +104,17 @@ function durationBucketOf(days: number): keyof Omit<DurationBuckets, 'total'> {
   return 'gt12';
 }
 
-export function MarketView() {
+interface MarketViewProps {
+  league: LeagueKind;
+  onLeagueChange: (league: LeagueKind) => void;
+}
+
+export function MarketView({ league, onLeagueChange }: MarketViewProps) {
   const { t } = useI18n();
 
-  // Mercado es una vista LEC: fija la liga independientemente del selector.
-  const leaguePlayers = useMemo(() => players.filter((p) => p.league === 'lec'), []);
-  const leagueTeams = useMemo(() => teams.filter((team) => team.league === 'lec'), []);
+  // Scopea todos los bloques a la liga del selector (mismo patrón que 2027).
+  const leaguePlayers = useMemo(() => players.filter((p) => p.league === league), [league]);
+  const leagueTeams = useMemo(() => teams.filter((team) => team.league === league), [league]);
   const leaguePlayerIds = useMemo(() => new Set(leaguePlayers.map((p) => p.id)), [leaguePlayers]);
 
   // Bloques a y b: agrupación por equipo en el orden canónico del Sheet (data/teams.json).
@@ -224,11 +231,12 @@ export function MarketView() {
   return (
     <section aria-label={t('market.title')}>
       {/* Cabecera de la vista (mismo patrón que Roster2027) */}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-hairline pb-3">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-hairline pb-3">
         <div className="min-w-0">
           <h2 className="text-title-md font-bold uppercase text-ink">{t('market.title')}</h2>
           <p className="text-caption text-muted">{t('market.hint')}</p>
         </div>
+        <LeagueSelect value={league} onChange={onLeagueChange} />
       </div>
 
       <div className="flex flex-col gap-6 pt-6">

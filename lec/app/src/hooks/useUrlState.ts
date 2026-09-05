@@ -6,7 +6,7 @@ import type { Role } from '../types/player';
 
 export type ViewKind = 'grid' | 'table' | 'roster2027' | 'market' | 'staff2027' | 'tracking';
 
-/** Liga activa del selector LEC/LCS (todas las vistas menos Mercado y Tracking). */
+/** Liga activa del selector LEC/LCS (todas las vistas actuales). */
 export type LeagueKind = 'lec' | 'lcs';
 
 /** Estado completo de la app sincronizado con la URL (filtros + vista + orden + ficha abierta). */

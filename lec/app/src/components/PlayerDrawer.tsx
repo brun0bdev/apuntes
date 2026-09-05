@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { getAgent, getTeam } from '../data/players';
+import { useAgentAssignments } from '../hooks/useAgentAssignments';
 import { assetUrl } from '../lib/assets';
 import { contractState } from '../lib/contract';
 import { flagImg, formatDate, isEstimatedDate } from '../lib/format';
@@ -61,6 +62,18 @@ function TeamMark({ team }: { team: Team | undefined }) {
  */
 export function PlayerDrawer({ player, onClose }: PlayerDrawerProps) {
   const { t, roleLabel } = useI18n();
+  const {
+    assignments: agentAssignments,
+    assign: assignAgent,
+    clear: clearAgent,
+    count: agentCount,
+    exportJson: exportAgentJson,
+  } = useAgentAssignments();
+  const localAgent = agentAssignments[player.id]?.agent ?? '';
+  const localAgency = agentAssignments[player.id]?.agency ?? '';
+  const [editingAgent, setEditingAgent] = useState(false);
+  const [agentInput, setAgentInput] = useState('');
+  const [agencyInput, setAgencyInput] = useState('');
   const panelRef = useRef<HTMLDivElement>(null);
   const team = getTeam(player.teamId);
   const agent = getAgent(player.agentId);
@@ -197,7 +210,9 @@ export function PlayerDrawer({ player, onClose }: PlayerDrawerProps) {
             {player.notes !== '' && <p className="mt-2 text-caption text-muted">{player.notes}</p>}
           </div>
 
-          {/* Agente / agencia (dato manual): "—" mientras no esté rellenado */}
+          {/* Agente / agencia (dato manual de overrides.json). Sin representante:
+              formulario para asignar uno desde la app — las entradas viven en
+              localStorage y se exportan como parche para overrides.json. */}
           <div>
             <FieldLabel>{t('drawer.agent')}</FieldLabel>
             {agent ? (
@@ -214,8 +229,105 @@ export function PlayerDrawer({ player, onClose }: PlayerDrawerProps) {
                   </a>
                 )}
               </p>
+            ) : editingAgent ? (
+              <form
+                className="mt-2 space-y-2"
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  if (!agentInput.trim() && !agencyInput.trim()) return;
+                  assignAgent(player.id, { agent: agentInput, agency: agencyInput });
+                  setEditingAgent(false);
+                }}
+              >
+                <input
+                  type="text"
+                  value={agentInput}
+                  onChange={(event) => setAgentInput(event.target.value)}
+                  placeholder={t('drawer.agentNamePlaceholder')}
+                  aria-label={t('drawer.agentNamePlaceholder')}
+                  className="h-9 w-full border border-hairline bg-card px-2.5 text-body-sm text-ink placeholder:text-muted focus-visible:outline-2 focus-visible:outline-accent"
+                />
+                <input
+                  type="text"
+                  value={agencyInput}
+                  onChange={(event) => setAgencyInput(event.target.value)}
+                  placeholder={t('drawer.agentAgencyPlaceholder')}
+                  aria-label={t('drawer.agentAgencyPlaceholder')}
+                  className="h-9 w-full border border-hairline bg-card px-2.5 text-body-sm text-ink placeholder:text-muted focus-visible:outline-2 focus-visible:outline-accent"
+                />
+                <div className="flex items-center gap-2">
+                  <button
+                    type="submit"
+                    disabled={!agentInput.trim() && !agencyInput.trim()}
+                    className="h-8 border border-accent bg-accent px-3 text-caption font-bold uppercase text-on-dark hover:bg-accent-active focus-visible:outline-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:border-hairline disabled:bg-card disabled:text-muted"
+                  >
+                    {t('drawer.agentSave')}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setEditingAgent(false)}
+                    className="h-8 border border-hairline bg-card px-3 text-caption font-bold uppercase text-muted hover:bg-elevated hover:text-ink focus-visible:outline-2 focus-visible:outline-accent"
+                  >
+                    {t('drawer.agentCancel')}
+                  </button>
+                </div>
+              </form>
+            ) : localAgent || localAgency ? (
+              <div className="mt-1">
+                <p className="text-body-md font-bold text-ink">
+                  {[localAgent, localAgency].filter(Boolean).join(' · ')}
+                </p>
+                <p className="mt-0.5 text-caption text-warning">{t('drawer.agentPending')}</p>
+                <div className="mt-2 flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setAgentInput(localAgent);
+                      setAgencyInput(localAgency);
+                      setEditingAgent(true);
+                    }}
+                    className="h-7 border border-hairline bg-card px-2.5 text-caption font-bold uppercase text-ink hover:bg-elevated focus-visible:outline-2 focus-visible:outline-accent"
+                  >
+                    {t('drawer.agentEdit')}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setAgentInput('');
+                      setAgencyInput('');
+                      clearAgent(player.id);
+                    }}
+                    className="h-7 border border-hairline bg-card px-2.5 text-caption font-bold uppercase text-muted hover:bg-elevated hover:text-ink focus-visible:outline-2 focus-visible:outline-accent"
+                  >
+                    {t('drawer.agentClear')}
+                  </button>
+                </div>
+              </div>
             ) : (
-              <p className="mt-1 text-body-md text-body">—</p>
+              <p className="mt-1 text-body-md text-body">
+                —{' '}
+                <button
+                  type="button"
+                  onClick={() => setEditingAgent(true)}
+                  className="text-label-uppercase uppercase text-accent hover:text-accent-active focus-visible:outline-2 focus-visible:outline-accent"
+                >
+                  {t('drawer.agentAssign')}
+                </button>
+              </p>
+            )}
+            {agentCount > 0 && (
+              <p className="mt-3 flex items-center gap-2 border-t border-hairline pt-2 text-caption text-muted">
+                <span>
+                  {t('drawer.agentPendingCount', { n: agentCount })}
+                </span>
+                <button
+                  type="button"
+                  onClick={exportAgentJson}
+                  className="text-label-uppercase uppercase text-accent hover:text-accent-active focus-visible:outline-2 focus-visible:outline-accent"
+                >
+                  {t('drawer.agentExport')}
+                </button>
+              </p>
             )}
           </div>
 

@@ -87,6 +87,16 @@ export const en: Record<keyof Dict, string> = {
   'drawer.unknownDate': 'unknown date',
   'drawer.viewLeaguepedia': 'View on Leaguepedia',
   'drawer.web': 'site',
+  'drawer.agentAssign': 'assign',
+  'drawer.agentNamePlaceholder': 'Agent name (e.g. Carlos Rodríguez)',
+  'drawer.agentAgencyPlaceholder': 'Agency (optional, e.g. Prodigy Agency)',
+  'drawer.agentSave': 'Save',
+  'drawer.agentCancel': 'Cancel',
+  'drawer.agentPending': 'pending commit to overrides.json',
+  'drawer.agentEdit': 'Edit',
+  'drawer.agentClear': 'Remove',
+  'drawer.agentPendingCount': '{n} assignment(s) pending commit',
+  'drawer.agentExport': 'Export JSON',
 
   // Roster 2027
   'r27.title': 'Roster 2027',
@@ -167,7 +177,7 @@ export const en: Record<keyof Dict, string> = {
 
   // Market (Feature D: contract and nationality charts)
   'market.title': 'Market',
-  'market.hint': 'Data: LEC Sheet · players only (coaches live in Staff 2027)',
+  'market.hint': 'Data: Sheet (by league) · players only (coaches live in Staff 2027)',
   'market.block1Title': 'Contract expirations by team',
   'market.block1Subtitle':
     'Players by contract end year; each segment width is proportional to the team total.',

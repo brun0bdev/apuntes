@@ -13,8 +13,7 @@ const LEAGUES: ReadonlyArray<{ value: LeagueKind; label: string }> = [
 
 /**
  * Selector LEC/LCS (grupo de chips single-select, mismo patrón que RoleChips).
- * Scopea las vistas de rosters y la 2027 a una liga; Mercado y Tracking no lo
- * llevan porque son específicos LEC.
+ * Scopea Inicio, Tabla, 2027, Staff 2027 y Mercado a una liga.
  */
 export function LeagueSelect({ value, onChange }: LeagueSelectProps) {
   const { t } = useI18n();

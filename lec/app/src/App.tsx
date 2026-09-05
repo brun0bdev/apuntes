@@ -40,7 +40,7 @@ export default function App() {
     update({ q: '', team: '', role: '', agent: '', expiring2026: false, player: null });
   }, [update]);
 
-  // Liga activa: scopea Inicio/Tabla/2027/Staff 2027 (Mercado es LEC).
+  // Liga activa: scopea Inicio/Tabla/2027/Staff 2027 y Mercado.
   const league = state.league;
   const leaguePlayers = useMemo(
     () => players.filter((p) => p.league === league),
@@ -80,7 +80,7 @@ export default function App() {
         ) : view === 'staff2027' ? (
           <Staff2027 league={league} onLeagueChange={(l) => update({ league: l })} />
         ) : view === 'market' ? (
-          <MarketView />
+          <MarketView league={league} onLeagueChange={(l) => update({ league: l })} />
         ) : (
           <>
             <FilterBar state={state} update={update} matchCount={matchCount} total={leaguePlayers.length} />

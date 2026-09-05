@@ -88,6 +88,16 @@ export const es = {
   'drawer.unknownDate': 'fecha desconocida',
   'drawer.viewLeaguepedia': 'Ver en Leaguepedia',
   'drawer.web': 'web',
+  'drawer.agentAssign': 'asignar',
+  'drawer.agentNamePlaceholder': 'Nombre del agente (p. ej. Carlos Rodríguez)',
+  'drawer.agentAgencyPlaceholder': 'Agencia (opcional, p. ej. Prodigy Agency)',
+  'drawer.agentSave': 'Guardar',
+  'drawer.agentCancel': 'Cancelar',
+  'drawer.agentPending': 'pendiente de commitear en overrides.json',
+  'drawer.agentEdit': 'Editar',
+  'drawer.agentClear': 'Quitar',
+  'drawer.agentPendingCount': '{n} asignación(es) pendientes de commitear',
+  'drawer.agentExport': 'Exportar JSON',
 
   // Roster 2027
   'r27.title': 'Roster 2027',
@@ -168,7 +178,7 @@ export const es = {
 
   // Mercado (Feature D: gráficos de contratos y nacionalidades)
   'market.title': 'Mercado',
-  'market.hint': 'Datos: Sheet LEC · solo jugadores (los coaches van en Staff 2027)',
+  'market.hint': 'Datos: Sheet (según liga) · solo jugadores (los coaches van en Staff 2027)',
   'market.block1Title': 'Fin de contratos por equipo',
   'market.block1Subtitle':
     'Jugadores por año de fin de contrato; la anchura de cada segmento es proporcional al total del equipo.',
