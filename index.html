@@ -45,6 +45,7 @@
 				background: var(--bg);
 				color: var(--fg);
 				display: flex;
+				flex-direction: column;
 			}
 			.container {
 				width: 100%;
@@ -66,6 +67,25 @@
 			a.project:hover { transform: translateY(-2px); transition: 150ms; border-color: var(--muted); }
 			.project h3 { margin: 0; font-size: 16px; }
 			.project .arrow { color: var(--muted); }
+			/* Footer "Made by BrunoB" — mismo formato que el de Scouting LEC 2026 */
+			footer.site {
+				margin-top: auto;
+				border-top: 1px solid var(--border);
+				padding: 20px 24px;
+				text-align: center;
+				font-size: 12px;
+				color: var(--muted);
+			}
+			footer.site a {
+				color: var(--fg);
+				font-weight: 700;
+				text-decoration: none;
+			}
+			footer.site a:hover {
+				text-decoration: underline;
+				text-decoration-color: #1c69d4;
+				text-underline-offset: 4px;
+			}
 		</style>
 	</head>
 	<body>
@@ -79,5 +99,8 @@
 				</a>
 			</div>
 		</div>
+		<footer class="site">
+			<a href="https://brunob.dev" target="_blank" rel="noreferrer">Made by BrunoB</a>
+		</footer>
 	</body>
 	</html>
